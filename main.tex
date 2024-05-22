@@ -71,12 +71,21 @@
 \usepackage{multirow} %Tabellenzeilen kombinieren
 \usepackage{multicol} %Mehrspaltige Dokumentdarstellung
 \usepackage{adjustbox}%Bessere Version von \resizebox
-\usepackage{glossaries-extra}%Abkürzung- und Begriffverwaltung
+\usepackage[acronym,automake]{glossaries-extra}%Abkürzung- und Begriffverwaltung
+    \makeglossaries
+    \setabbreviationstyle[acronym]{long-short}
+    \input{matter/backmatter/acronyms}
 \usepackage{siunitx}  %Bessere Einheitenimplementation
 \usepackage{pgfplots} %Akademische Diagramme
     \pgfplotsset{compat=1.18}
 \usepackage{tikz}     %Erweiterte Zeichnungs- und Grafikkapazitäten
 \usepackage{pdfpages} %Einbinden von PDF-Dateien
+\usepackage{orcidlink} %Einbinden von ORCID
+\usepackage[nopatch=footnote]{microtype} %Mikrotypographische ästhetische Verbesserungen
+\usepackage{pdfcomment}
+\usepackage[nomargin,lang=ngerman,singleuser,author=DK]{fixme}
+    \fxsetup{draft,layout=pdfcnote,theme=color}
+    \definecolor{fxtarget}{rgb}{0.8000,0.0000,0.0000}
 
 %% Neue Befehle und Variabeln
 \input{config/possessive_citation} %\posscite-Befehl für besitzanzeigende Zitate im Englischen einbinden
@@ -121,7 +130,7 @@
 %Anmerkung: Das Bibliografieformat muss oben unter Dokumentpakete eingestellt werden
 
 %% Hauptdokument %%
-%\includeonly{content/einfuehrung} %Selektive Dokumentgenerierung
+%\includeonly{content/einfuehrung,content/modul2} %Selektive Dokumentgenerierung
 \begin{document}
     %% Vorderer Teil
     \frontmatter
@@ -134,11 +143,12 @@
     %% Hauptteil
     \mainmatter
         \include{content/einfuehrung}
-        \include{content/beispielkapitel}
+        \include{content/modul2}
     %
     %% Hinterer Teil
     {\backmatter%GESCHWEIFTE KLAMMERN NICHT LÖSCHEN! Beeinflusst sonst den Appendix!
         \emergencystretch=1em\printbibliography %Bibliografie mit besserem Umbruch
+        \printglossary[type=\acronymtype]
     }%GESCHWEIFTE KLAMMERN NICHT LÖSCHEN! Beeinflusst sonst den Appendix!
     %
     %% Appendix
