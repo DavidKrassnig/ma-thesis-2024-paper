@@ -42,8 +42,11 @@
 \usepackage{fontspec}                   %LuaLaTeX Standard-Fontpackage
 \usepackage{amsmath}                    %Erweiterte Mathematik
 \usepackage{unicode-math}               %Unicode-Mathematikmodus erzwingen
-    \setmainfont{TeX Gyre Termes}       %Allgemeine Schriftart setzen
-    \setmathfont{TeX Gyre Termes Math}  %Mathematische Schriftart setzen
+    \setmainfont{XCharter}       %Allgemeine Schriftart setzen
+    \setmathfont{XCharter Math}  %Mathematische Schriftart setzen
+    \setsansfont[Scale=MatchLowercase]{Tex Gyre Heros} %Serifenlose Schriftart setzen
+    \setmonofont[Scale=MatchLowercase]{DejaVu Sans Mono} %Nicht-proportionale Schriftart setzen
+\usepackage{xcharter-otf} %XCharter-Einstellungen (macht obige Einstellungen teils redundant)
 \usepackage{xcolor}   %Verbessertes Farbmanagement
 \usepackage[%
     english=british,  %Anführungszeichen für Englisch auf britischen Stil setzen
