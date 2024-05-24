@@ -24,7 +24,8 @@
     captions=tableheading,  %Setzt Formatierung für Tabellenüberschriften
     toc=index,              %Index zum Inhaltsverzeichnis hinzufügen
     hidelinks,				%Um Hyperlink-Boxen zu deaktivieren, falls Unterstrich gelöscht wird
-    pdfa, headings=twolinechapter,                  %PDF/A Voreinstellungen
+    pdfa,                   %PDF/A Voreinstellungen
+    headings=twolinechapter,%Zweizweilige Kapiteltitel
     %twocolumn,              %Für zweispaltige Darstellung
     %draft,                  %Auskommentieren für den Entwurfsmodus
     %final                   %Auskommentieren für den endgültigen Druck
@@ -108,7 +109,7 @@
 %\AfterCalculatingTypearea{\setlength{\marginparwidth}{\marginparwidth}}
 %\AfterCalculatingTypearea{\setlength{\textwidth}{0.925\textwidth}}
 \recalctypearea %Passt den Textbereich an Einstellungen an
-\usepackage[pass]{geometry}
+\usepackage[pass]{geometry} %Erlaube Textbereichveränderung ohne aktuelle Änderungen
 
 
 %% Dokumentmetadaten %%
@@ -145,7 +146,7 @@
         %\include{matter/titlepage/titlepage}    %Titelseite ohne Logo
         %\include{matter/titlepage/titlepage_logo_bw}%Titelseite mit Logo (schwarz-weiß)
         \include{matter/titlepage/titlepage_logo_colour}%Titelseite mit Logo (farbig)
-        \newgeometry{left=35mm,right=35mm,marginparwidth=20mm}%
+        \newgeometry{left=35mm,right=35mm,marginparwidth=20mm}%Erhöhe Seitenränder für Randnotizen
         \include{matter/frontmatter/abstract}      %Deutscher und Englischer Abstract
         \include{matter/frontmatter/content_list}  %Inhalts-, Tabellen- und Abbildungsverzeichnis
     %
@@ -161,7 +162,6 @@
     %% Hinterer Teil
     {\backmatter%GESCHWEIFTE KLAMMERN NICHT LÖSCHEN! Beeinflusst sonst den Appendix!
         \emergencystretch=1em\printbibliography %Bibliografie mit besserem Umbruch
-        \printglossary[type=\acronymtype]
     }%GESCHWEIFTE KLAMMERN NICHT LÖSCHEN! Beeinflusst sonst den Appendix!
     %
     %% Appendix
