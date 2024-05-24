@@ -24,7 +24,7 @@
     captions=tableheading,  %Setzt Formatierung für Tabellenüberschriften
     toc=index,              %Index zum Inhaltsverzeichnis hinzufügen
     hidelinks,				%Um Hyperlink-Boxen zu deaktivieren, falls Unterstrich gelöscht wird
-    pdfa, headings=twolinechapter                  %PDF/A Voreinstellungen
+    pdfa, headings=twolinechapter,                  %PDF/A Voreinstellungen
     %twocolumn,              %Für zweispaltige Darstellung
     %draft,                  %Auskommentieren für den Entwurfsmodus
     %final                   %Auskommentieren für den endgültigen Druck
@@ -70,12 +70,16 @@
 \usepackage{array}    %Tabellenfeineinstellungen
 \usepackage{multirow} %Tabellenzeilen kombinieren
 \usepackage{multicol} %Mehrspaltige Dokumentdarstellung
+\usepackage{enumitem}
+    \setitemize[0]{leftmargin=*,itemsep=.05\baselineskip}
+    \setenumerate[0]{leftmargin=*,itemsep=.05\baselineskip}
 \usepackage{adjustbox}%Bessere Version von \resizebox
 \usepackage[acronym,automake]{glossaries-extra}%Abkürzung- und Begriffverwaltung
     \makeglossaries
     \setabbreviationstyle[acronym]{long-short}
     \input{matter/backmatter/acronyms}
 \usepackage{siunitx}  %Bessere Einheitenimplementation
+\usepackage{soul}
 \usepackage{pgfplots} %Akademische Diagramme
     \pgfplotsset{compat=1.18}
 \usepackage{tikz}     %Erweiterte Zeichnungs- und Grafikkapazitäten
@@ -101,7 +105,11 @@
 \hypersetup{ pdfborderstyle={/W 1 /S /U} } %Unterstrichene Links die nicht gedruckt werden
 \input{config/intentionally_empty} %Leere Seiten mit Absichtlich-Text
 \renewcommand{\emptypageline}{Diese Seite wurde absichtlich leer gelassen} %Diesen Wert neu definieren, um die gewünschte Meldung anzuzeigen
+%\AfterCalculatingTypearea{\setlength{\marginparwidth}{\marginparwidth}}
+%\AfterCalculatingTypearea{\setlength{\textwidth}{0.925\textwidth}}
 \recalctypearea %Passt den Textbereich an Einstellungen an
+\usepackage[pass]{geometry}
+
 
 %% Dokumentmetadaten %%
 \subject{Publikationspraktiken von Forschungsdaten in Hochschulschriften}
@@ -137,13 +145,18 @@
         %\include{matter/titlepage/titlepage}    %Titelseite ohne Logo
         %\include{matter/titlepage/titlepage_logo_bw}%Titelseite mit Logo (schwarz-weiß)
         \include{matter/titlepage/titlepage_logo_colour}%Titelseite mit Logo (farbig)
+        \newgeometry{left=35mm,right=35mm,marginparwidth=20mm}%
         \include{matter/frontmatter/abstract}      %Deutscher und Englischer Abstract
         \include{matter/frontmatter/content_list}  %Inhalts-, Tabellen- und Abbildungsverzeichnis
     %
     %% Hauptteil
     \mainmatter
         \include{content/einfuehrung}
-        \include{content/modul2}
+        \include{content/forschungsstand}
+        \include{content/fdm-policies}
+        \include{content/luh-repo-evaluation}
+        \include{content/machine-learning}
+        \include{content/schluss}
     %
     %% Hinterer Teil
     {\backmatter%GESCHWEIFTE KLAMMERN NICHT LÖSCHEN! Beeinflusst sonst den Appendix!
