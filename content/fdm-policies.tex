@@ -134,6 +134,161 @@ In diesem Fall wurde dies stattdessen als Klassifikationsstufe vermerkt.
 Es wurde zusätzlich notiert, ob die promotionsspezifischen Richtlinien für alle Promovierenden gelten oder ob dies nur auf eine Teilmenge zutrifft.
 
 \section{Resultate}\label{sec:policy-results}
+\begin{table}[!htbp]
+	\caption{Klassifikation der allgemeingültigen verwaltungsrechtlichen Dokumente in relativer Angabenach Hochschultyp. Absolute Werte in Klammern angegeben.}
+    \input{content/tables/stichprobe-klassifikation.tex}
+	\label{tab:stichprobe-klassifikation}
+\end{table}
+
+\hspace{-7.5mm}%
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=\textwidth,
+            height=.5\textwidth,
+            ybar stacked,
+            bar width=18pt,
+            nodes near coords,
+            xticklabel style = {font=\footnotesize},
+            enlargelimits=0.075,
+            legend style={at={(1,1.05)},
+              anchor=south east,legend columns=-1},
+            symbolic x coords={Baden-Württemberg, Bayern, Berlin, Brandenburg, 
+                Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thüringen},
+            xtick=data,
+            x tick label style={rotate=45,anchor=east},
+            ]
+        \pgfplotstableread[col sep=comma]{content/plots/policy_klassifikation_allgemein_prozent.csv}\datatable
+        \addplot+[ybar] table[x=Region,y=never]{\datatable};
+        \addplot+[ybar] table[x=Region,y=rarely]{\datatable};
+        \addplot+[ybar] table[x=Region,y=sometimes]{\datatable};
+        \addplot+[ybar] table[x=Region,y=often]{\datatable};
+    
+        \legend{\strut never, \strut rarely, \strut sometimes, \strut often}
+        \end{axis}
+    \end{tikzpicture}
+
+
+% Preprocess data to calculate percentages
+\pgfplotstableread[col sep=comma]{content/plots/policy_klassifikation_allgemein_prozent.csv}\datatable
+
+% Create total column
+\pgfplotstablecreatecol[create col/expr={\thisrow{never} + \thisrow{rarely} + \thisrow{sometimes} + \thisrow{often}}]{total}{\datatable}
+
+\pgfplotsset{
+    percentage plot/.style={
+        ybar stacked,
+        point meta=explicit,
+        every node near coord/.append style={
+            align=center,
+            text width=2.5cm,
+            font=\scriptsize
+        },
+        nodes near coords={
+            \pgfmathtruncatemacro\iszero{\originalvalue==0}
+            \ifnum\iszero=0
+                \pgfmathprintnumber{\originalvalue} \\ (\pgfmathprintnumber[fixed zerofill,precision=1]{\pgfplotspointmeta}\,\%)
+            \fi
+        },
+        nodes near coords align=vertical,
+        ymin=0,
+        ymax=100,
+        enlarge y limits={upper,value=0.18},
+        visualization depends on={y \as \originalvalue}
+    },
+    percentage series/.style={
+        table/y expr=\thisrow{#1}/\thisrow{total}*100,
+        table/meta=#1
+    }
+}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        width=\textwidth,
+        height=.5\textwidth,
+        percentage plot,
+        xticklabel style = {font=\footnotesize},
+        enlargelimits=0.075,
+        legend style={at={(1,1.05)},
+          anchor=south east,legend columns=-1},
+        symbolic x coords={Baden-Württemberg, Bayern, Berlin, Brandenburg, 
+            Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thüringen},
+        xtick=data,
+        x tick label style={rotate=45,anchor=east},
+        ]
+
+    \addplot table [percentage series=never] {\datatable};
+    \addplot table [percentage series=rarely] {\datatable};
+    \addplot table [percentage series=sometimes] {\datatable};
+    \addplot table [percentage series=often] {\datatable};
+
+    \legend{\strut never, \strut rarely, \strut sometimes, \strut often}
+    \end{axis}
+\end{tikzpicture}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    \pgfplotstableread[col sep=comma,header=false]{
+Category 1,6,0,0
+Category 2,2,2,0
+Category 3,3.5,2.5,4
+}\data
+
+\pgfplotstablecreatecol[
+    create col/expr={
+        \thisrow{1} + \thisrow{2} + \thisrow{3}
+    }
+]{sum}{\data}
+
+\pgfplotsset{
+    percentage plot/.style={
+        point meta=explicit,
+    every node near coord/.append style={
+        align=center,
+        text width=1cm
+    },
+        nodes near coords={
+        \pgfmathtruncatemacro\iszero{\originalvalue==0}
+        \ifnum\iszero=0
+            \pgfmathprintnumber{\originalvalue}$\,\%$\\ \pgfmathprintnumber[fixed zerofill,precision=1]{\pgfplotspointmeta}
+        \fi},
+    nodes near coords align=vertical,
+        yticklabel=\pgfmathprintnumber{\tick}\,$\%$,
+        ymin=0,
+        ymax=100,
+        enlarge y limits={upper,value=0.18},
+    visualization depends on={y \as \originalvalue}
+    },
+    percentage series/.style={
+        table/y expr=\thisrow{#1}/\thisrow{sum}*100,table/meta=#1
+    }
+}
+
+\begin{tikzpicture}
+\begin{axis}[
+    axis on top,
+    width=10cm,
+    percentage plot,ybar,bar width=0.75cm,
+    enlarge x limits=0.25,
+    symbolic x coords={Category 1,Category 2,Category 3},
+    xtick=data
+]
+\addplot table [percentage series=1] {\data};
+\addplot table [percentage series=2] {\data};
+\addplot table [percentage series=3] {\data};
+\end{axis}
+\end{tikzpicture}
 
 \subsection{Allgemeingültige Dokumente}
 
