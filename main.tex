@@ -80,6 +80,7 @@
     \setabbreviationstyle[acronym]{long-short}
     \input{matter/backmatter/acronyms}
 \usepackage{siunitx}  %Bessere Einheitenimplementation
+    \sisetup{group-minimum-digits=4,output-decimal-marker={,},locale=DE,}
 \usepackage{soul}
 \usepackage{pgfplots} %Akademische Diagramme
     \pgfplotsset{compat=1.18}
@@ -97,6 +98,25 @@
 \input{config/titlepage_commands}
 \input{config/include_missing_file_error}
 \input{config/paragraphtitle}
+%Kartenbefehle
+\definecolor{ce7e7e7}{RGB}{231,231,231}
+\input{config/map_commands/drawbw}
+\input{config/map_commands/drawbav}
+\input{config/map_commands/drawberlin}
+\input{config/map_commands/drawbrandenburg}
+\input{config/map_commands/drawbremen}
+\input{config/map_commands/drawgermany}
+\input{config/map_commands/drawhamburg}
+\input{config/map_commands/drawhessen}
+\input{config/map_commands/drawmecklenburg}
+\input{config/map_commands/drawniedersachsen}
+\input{config/map_commands/drawnrw}
+\input{config/map_commands/drawrheinland}
+\input{config/map_commands/drawsaarland}
+\input{config/map_commands/drawsachsen}
+\input{config/map_commands/drawsachsenanhalt}
+\input{config/map_commands/drawschleswig}
+\input{config/map_commands/drawthuringen}
 
 %% Formatierung
 \input{config/chapter_no_vertical_space_before}%Eliminiert vertikalen Einzug vor Kapitel
@@ -139,7 +159,7 @@
 %Anmerkung: Das Bibliografieformat muss oben unter Dokumentpakete eingestellt werden
 
 %% Hauptdokument %%
-\includeonly{content/fdm-policies} %Selektive Dokumentgenerierung
+%\includeonly{content/fdm-policies} %Selektive Dokumentgenerierung
 \begin{document}
     %% Vorderer Teil
     \frontmatter

@@ -1,11 +1,80 @@
-\chapter{Richtlinien zu Forschungsdaten aus Promotionsvorhaben in Deutschland}\label{ch:richtlinien}
+\chapter{Richtlinien zu Forschungsdaten aus deutschen Promotionsvorhaben}\label{ch:richtlinien}
 
-\section{Material \&\ Methoden}
+\parsum{Thema des Kapitels}
+Dieses Kapitel behandelt die verschiedenen verwaltungsrechtlichen Dokumente wissenschaftlicher Institutionen, die ein Promotionsvorhaben in Bezug auf \gls{fdm} entweder spezifisch oder auch nur allgemein betreffen.
+Es wird überprüft, inwiefern promotionsberechtigte Institutionen in Deutschland bereits derlei Richtlinien erlassen haben, in welcher Form diese existieren und welche Anforderungen diese stellen.
 
-\subsection{Material}
+\parsum{Aufbau des Kapitels}
+Hierfür wird in \cref{sec:policy-material-methods} aufgeführt, wie die zu untersuchenden Institutionen ausgewählt wurden, wie welche Materialien der Institutionen ausgesucht wurden und mit welchen Methoden das gesammelte Material daraufhin ausgewertet wurde.
+In \cref{sec:policy-results} werden die entsprechenden Ergebnisse der Materialauswertung dargestellt.
+Abschließend werden in \cref{sec:policy-discussion} die dargestellten Ergebnisse evaluiert und diskutiert.
 
-\subsection{Methodik}
+\section{Material \&\ Methoden}\label{sec:policy-material-methods}
+\parsum{Aufbau des Abschnitts}
+In diesem Abschnitt wird das zu untersuchende Material in \cref{sec:policy-material} und die Methoden der Untersuchung in \cref{sec:policy-methods} dargestellt.
+\subsection{Material}\label{sec:policy-material}
+\parsum{Datengrundlage}
+Da es in Deutschland hierzu keine offizielle und öffentlich zugängliche Liste aller Universitäten mit Promotionsrecht seitens des Bundesministeriums für Bildung gibt, wird als Datengrundlage für dieses Kapitel die von der \citeauthor{Hochschulkompass-Liste} geführte Liste aller wissenschaftlichen Institutionen aus dem tertiären Bildungsbereich in Deutschland \autocite{Hochschulkompass-Liste} genutzt.
+Diese Liste wird tagesaktuell geführt, basiert auf der Selbstauskunft aller involvierten Institutionen ($n=428$), kodifiziert unter anderem welche Institutionen das Promotions- und Habilationsrecht führen, umfasst auch Institutionen, die nicht Mitglied der \citeauthor{Hochschulkompass-Liste} sind und besitzt einen \textit{de facto} wenn auch nicht \textit{de jure} Status als Datengrundlage für allgemeine Informationen zu wissenschaftlichen Institutionen aus Deutschland. Für die tagesspezifische Version der Liste, die für diese Arbeit genutzt wurde, siehe \fxfatal*{ADD LINK TO DIGITAL APPENDIX!}{FIXME!}.
 
-\section{Resultate}
+\parsum{Grundmengenbeschreibung}
+Um die zentrale Forschungsfrage dieses Kapitels zu beantworten, wurde diese Liste auf nur jene Institutionen gefiltert, welche das Promotionsrecht besitzen ($n=163$).
+Die resultierende Liste promotionsberechtigter Institutionen besteht aus Forschungsinstutionen verschiedener Hochschultypen sowie unterschiedlicher Trägerschaften.
+Von den Hochschultypen her umfasst die Liste Universitäten, \glspl{fh}, \glspl{haw}, \glspl{kh}, eine \gls{vh} sowie eine \gls{hset}.
+Von den Trägerschaften her umfasst die Liste öffentlich-rechtliche, private sowie kirchliche Institutionen. Alle Institutionen sind staatlich anerkannt.
+Die relative sowie die absolute Distribution aller promotionsberechtigter Institutionen in Deutschland nach Hochschultyp und Trägerschaft ist in \cref{tab:grundmenge-beschreibung-art} gegeben.
+\begin{table}[!htbp]
+	\caption{Die Verteilung aller promotionsberechtigter Institutionen in Deutschland nach $\text{\textit{Hochschultyp}}\times\text{\textit{Trägerschaft}}$ aufgegliedert. Absolute Werte in Klammern angegeben.}
+    \input{content/tables/grundmenge-beschreibung-art.tex}
+	\label{tab:grundmenge-beschreibung-art}
+\end{table}
 
-\section{Diskussion}
+\noindent Geografisch gesehen sind, in der gefilterten Liste, zu unterschiedlich hohen Anteilen, Institutionen aus allen deutschen Bundesländern vertreten.
+Die genaue Verteilung ist in \cref{fig:DE-grundmenge-beschreibung} wiedergegeben.
+\begin{figure}[!htbp]
+    \centering
+    \input{content/images/DE-grundmenge-beschreibung.tikz}
+    \caption{Die absolute Anzahl promotionsberechtigter Institutionen nach Bundesland.}
+    \label{fig:DE-grundmenge-beschreibung}
+\end{figure}
+
+\noindent Für die gesamte Liste promotionsberechtigter Institutionen, siehe \fxfatal*{ADD LINK TO DIGITAL APPENDIX!}{FIXME!}
+
+\parsum{Stichprobenziehung}
+Diese Liste promotionsberechtigter Institutionen bildete die Grundmenge für die Ziehung einer einfachen Zufallsstichprobe.
+Bei der Auswahl der Stichprobe wurde ein Konfidenzintervall von \SI{95}{\percent} und eine Fehlerspanne von \SI{5}{\percent} zugrunde gelegt.
+Diese Parameter gewährleisten, dass die Ergebnisse der Stichprobe mit hoher Wahrscheinlichkeit repräsentativ für die gesamte Population sind und die Unsicherheit der Schätzungen innerhalb akzeptabler Grenzen bleibt.
+Um den Prozess der Stichprobenziehung zu automatisieren und eine zufällige Auswahl zu gewährleisten, wurde eine auf Python basierende Software \autocite{Krassnig2024-csv} genutzt, welche im Rahmen dieser Arbeit geschrieben wurde.
+\footnote{%
+Die Software von \citeauthor{Krassnig2024-csv} \autocite{Krassnig2024-csv} nutzt standardmäßig die Anzahl an Nanosekunden seit dem Beginn der System-Epoche (1970-01-01T00:00:00Z) als Startwert für die Zufallsfunktion.
+Der genutzte Startwert wird als begleitendes Metadatum der Stichprobe abgespeichert.
+Die Ziehung ist somit wiederholbar und das Datum der Ziehung verifizierbar.} 
+
+\parsum{Stichprobenbeschreibung}
+Die so gezogene Stichprobe ($n=115$) besteht aus ca. \SI{71}{\percent} aller promotionsberechtigter Institutionen.
+Die Stichprobe umfasst Institutionen aller Trägerschaften aus der Grundmenge: öffentlich-rechtliche, private sowie kirchliche Institutionen.
+Darüber hinaus umfasst die Stichprobe von den Hochschultypen her Universitäten, \glspl{fh}, \glspl{haw} und eine \gls{hset}.
+In der Stichprobe befindet sich nicht die \gls{vh}, die sich in der Grundmenge befindet.
+Mit dieser Ausnahme sind somit alle anderen Hochschultypen vertreten.
+Die relative sowie die absolute Distribution aller Institutionen in der Stichprobe nach Hochschultyp und Trägerschaft ist in \cref{tab:stichprobe-beschreibung-art} gegeben.
+\begin{table}[!htbp]
+	\caption{Die Verteilung der Institutionen in der Stichprobe nach $\text{\textit{Hochschultyp}}\times\text{\textit{Trägerschaft}}$ aufgegliedert. Absolute Werte in Klammern angegeben.}
+    \input{content/tables/stichprobe-beschreibung-art.tex}
+	\label{tab:stichprobe-beschreibung-art}
+\end{table}
+
+\noindent Geografisch gesehen sind, in der Stichprobe, zu unterschiedlich hohen Anteilen, Institutionen aus allen deutschen Bundesländern vertreten.
+Die genaue Verteilung ist in \cref{fig:DE-stichprobe-beschreibung} wiedergegeben.
+\begin{figure}[!htbp]
+    \centering
+    \input{content/images/DE-stichprobe-beschreibung.tikz}
+    \caption{Verteilung der Institutionen in der gezogenen Stichprobe nach Bundesland. \textbf{(A)}~Die absolute Anzahl der Institutionen nach Bundesland. \fxfatal*{Deutlicher formulieren!}{\textbf{(B)}~Der relative Anteil der aus der Grundmenge gezogenen Institutionen nach Bundesland.}}
+    \label{fig:DE-stichprobe-beschreibung}
+\end{figure}
+
+\subsection{Methoden}\label{sec:policy-methods}
+
+
+\section{Resultate}\label{sec:policy-results}
+
+\section{Diskussion}\label{sec:policy-discussion}
