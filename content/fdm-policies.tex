@@ -44,7 +44,7 @@ Die genaue Verteilung ist in \cref{fig:DE-grundmenge-beschreibung} wiedergegeben
 Diese Liste promotionsberechtigter Institutionen bildete die Grundmenge für die Ziehung einer einfachen Zufallsstichprobe.
 Bei der Auswahl der Stichprobe wurde ein Konfidenzintervall von \SI{95}{\percent} und eine Fehlerspanne von \SI{5}{\percent} zugrunde gelegt.
 Diese Parameter gewährleisten, dass die Ergebnisse der Stichprobe mit hoher Wahrscheinlichkeit repräsentativ für die gesamte Population sind und die Unsicherheit der Schätzungen innerhalb akzeptabler Grenzen bleibt.
-Um den Prozess der Stichprobenziehung zu automatisieren und eine zufällige Auswahl zu gewährleisten, wurde eine auf Python basierende Software \autocite{Krassnig2024-csv} genutzt, welche im Rahmen dieser Arbeit geschrieben wurde.
+Um den Prozess der Stichprobenziehung zu automatisieren und eine zufällige Auswahl zu gewährleisten, wurde eine auf Python basierende Software \autocite{Krassnig2024-csv} genutzt, welche im Rahmen dieser Arbeit geschrieben wurde.%
 \footnote{%
 Die Software von \citeauthor{Krassnig2024-csv} \autocite{Krassnig2024-csv} nutzt standardmäßig die Anzahl an Nanosekunden seit dem Beginn der System-Epoche (1970-01-01T00:00:00Z) als Startwert für die Zufallsfunktion.
 Der genutzte Startwert wird als begleitendes Metadatum der Stichprobe abgespeichert.
@@ -71,6 +71,31 @@ Die genaue Verteilung ist in \cref{fig:DE-stichprobe-beschreibung} wiedergegeben
     \caption{Verteilung der Institutionen in der gezogenen Stichprobe nach Bundesland. \textbf{(A)}~Die absolute Anzahl der Institutionen nach Bundesland. \fxfatal*{Deutlicher formulieren!}{\textbf{(B)}~Der relative Anteil der aus der Grundmenge gezogenen Institutionen nach Bundesland.}}
     \label{fig:DE-stichprobe-beschreibung}
 \end{figure}
+
+\parsum{Dokumente der Stichprobe}
+Für die Evaluation, inwiefern die Institutionen der Stichprobe verwaltungsrechtliche Dokumente besitzen, die entweder allgemeine \gls{fdm}-Richtlinien für alle Forschenden der Institution oder spezifische Regelungen für Promovierende beinhalten, wurde deren gesamte öffentlich zugängliche Online-Präsenz nach relevanten Dateien und Webseiten durchsucht.
+Diese Suche fand im Allgemeinen auf zwei Wege statt: über die interne Suchfunktion der Institution und die externe Durchsuchung der Institutions-Domäne via der Suchmaschine \href{https://www.duckduckgo.com/}{DuckDuckGo}.
+
+\parsum{Allgemeine Dokumente}
+Für allgemeingültige Richtlinien wurden in erster Linie eigenständige \gls{fdm}-Richtlinien gesucht.
+Hierfür wurde, jenseits der allgemeinen Suchmethode auch die dedizierte Forschungsdatenpolicies-Liste der Informationsplattform \citeauthor{Forschungsdaten2024} genutzt \autocite{Forschungsdaten2024}.%
+\footnote{%
+    Die \gls{fdm}-Richtlinien, welche sich nicht auf diesem Portal haben finden lassen, werden vom Autor nach Beendigung dieser Arbeit dort nach Möglichkeit eingetragen.%
+}
+Jenseits von spezifischen \gls{fdm}-Richtlinien wurden auch Richtlinien zur Sicherung guter wissenschaftlicher Praxis sowie andere Richtlinien gesucht, die anderweitige allgemeine wissenschaftliche Empfehlungen bzw. Auflagen für Forschende aussprechen.
+Wenn es von einem Dokument sowohl eine HTML- wie auch eine PDF-Datei gab, so wurde nur die PDF-Datei zur Evaluation weitergenutzt.
+Hierbei wurden insgesamt 142 Dokumente zur Weiterverarbeitung aufgenommen.
+
+\parsum{Promotionsspezifische Dokumente}
+Für promotionsspezifische Richtlinien wurden Promotions- und Prüfungsordnungen gesucht.
+Dabei wurden sowohl fachspezifische Ordnungen wie auch verbindliche Rahmenbedingungen und anderweitige übergreifende Ordnungen aufgenommen.
+Die heterogene Handhabung dieser Dokumente seitens der Institutionen führte zu folgenden Selektionsregeln bei der Auswahl:
+Forschungsdaten.org
+(i)~Wenn es eine aktuelle Lesefassung der Promotionsordnung gibt, so wird diese bevorzugt.
+(ii)~Sollte es keine aktuelle Lesefassung der Promotionsordnung geben, so wird die aktuellste Gesamtversion der Promotionsordnung bevorzugt.
+(iii)~Sollte es keine aktuelle Gesamtversion geben, so werden zusätzlich zu der letzten Version der Promotionsordnung auch alle seither erschienen relevanten verwaltungsrechtlichen Addenda aufgenommen.
+(iv)~Wenn es von einem Dokument sowohl eine HTML- wie auch eine PDF-Datei gab, so wurde nur die PDF-Datei zur Evaluation weitergenutzt.
+Hierbei wurden insgesamt 754 Dokumente zur Weiterverarbeitung aufgenommen.
 
 \subsection{Methoden}\label{sec:policy-methods}
 
