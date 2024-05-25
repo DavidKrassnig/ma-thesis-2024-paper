@@ -1,0 +1,19 @@
+\begin{tikzpicture}[y=1cm, x=1cm, yscale=.8,xscale=.8, every node/.append style={scale=1}, inner sep=0pt, outer sep=0pt]
+  \drawgermany
+  \drawbw{red!93}{25}
+  \drawbav{red!78}{21}
+  \drawbrandenburg{red!15}{4}
+  \drawhessen{red!59}{16}
+  \drawmecklenburg{red!11}{3}
+  \drawniedersachsen{red!48}{13}
+  \drawnrw{red!100}{27}
+  \drawrheinland{red!30}{8}
+  \drawsaarland{red!11}{3}
+  \drawsachsen{red!33}{9}
+  \drawsachsenanhalt{red!26}{7}
+  \drawschleswig{red!19}{5}
+  \drawthuringen{red!19}{5}
+  \drawbremen{red!7}{2}
+  \drawhamburg{red!30}{8}
+  \drawberlin{red!26}{7}
+\end{tikzpicture}

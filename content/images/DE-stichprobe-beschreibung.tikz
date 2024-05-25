@@ -1,0 +1,40 @@
+\begin{tikzpicture}[y=1cm, x=1cm, yscale=.8,xscale=.8, every node/.append style={scale=1}, inner sep=0pt, outer sep=0pt]
+  \node[text=black,line width=0.0092cm,anchor=west] (title1) at (0,7){\textbf{(A)}};
+  \drawgermany
+  \drawbw{red!77}{17}
+  \drawbav{red!55}{12}
+  \drawbrandenburg{red!18}{4}
+  \drawhessen{red!45}{10}
+  \drawmecklenburg{red!9}{2}
+  \drawniedersachsen{red!50}{11}
+  \drawnrw{red!100}{22}
+  \drawrheinland{red!23}{5}
+  \drawsaarland{red!9}{2}
+  \drawsachsen{red!23}{5}
+  \drawsachsenanhalt{red!27}{6}
+  \drawschleswig{red!9}{2}
+  \drawthuringen{red!9}{2}
+  \drawbremen{red!9}{2}
+  \drawhamburg{red!36}{8}
+  \drawberlin{red!23}{5}
+\end{tikzpicture}\hfill%
+\begin{tikzpicture}[y=1cm, x=1cm, yscale=.8,xscale=.8, every node/.append style={scale=1}, inner sep=0pt, outer sep=0pt]
+  \node[text=black,line width=0.0092cm,anchor=west] (title1) at (-0.4,7){\textbf{(B)}};
+  \drawgermany
+  \drawbw{red!68}{\SI{68}{\percent}}
+  \drawbav{red!57}{\SI{57}{\percent}}
+  \drawbrandenburg{red!100}{\SI{100}{\percent}}
+  \drawhessen{red!63}{\SI{63}{\percent}}
+  \drawmecklenburg{red!67}{\SI{67}{\percent}}
+  \drawniedersachsen{red!85}{\SI{85}{\percent}}
+  \drawnrw{red!81}{\SI{81}{\percent}}
+  \drawrheinland{red!63}{\SI{63}{\percent}}
+  \drawsaarland{red!67}{\SI{67}{\percent}}
+  \drawsachsen{red!56}{\SI{56}{\percent}}
+  \drawsachsenanhalt{red!86}{\SI{86}{\percent}}
+  \drawschleswig{red!40}{\SI{40}{\percent}}
+  \drawthuringen{red!40}{\SI{40}{\percent}}
+  \drawbremen{red!100}{\SI{100}{\percent}}
+  \drawhamburg{red!100}{\SI{100}{\percent}}
+  \drawberlin{red!71}{\SI{71}{\percent}}
+\end{tikzpicture}
