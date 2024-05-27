@@ -1,8 +1,8 @@
 
 % Preprocess data to calculate percentages
-\pgfplotstableread[col sep=comma]{content/plots/policy_klassifikation_allgemein_absolut.csv}\datatable
+\pgfplotstableread[col sep=comma]{content/plots/policy_klassifikation_spezifisch_absolut.csv}\datatable
 % Create total column
-\pgfplotstablecreatecol[create col/expr={\thisrow{never} + \thisrow{rarely} + \thisrow{sometimes} + \thisrow{often}}]{total}{\datatable}
+\pgfplotstablecreatecol[create col/expr={\thisrow{0-NA} + \thisrow{1-NOMENTION} + \thisrow{2-GWPMENTION} + \thisrow{3-GWPPFLICHT} + \thisrow{4-PRIMÄRDATENEMPFEHLUNG} + \thisrow{5-PRIMÄRDATENPFLICHT}}]{total}{\datatable}
 \pgfplotsset{
     percentage plot/.style={
         ybar stacked,
@@ -10,7 +10,7 @@
         bar width=18pt,
         point meta=explicit,
         every node near coord/.append style={
-            font=\scriptsize\linespread{0.8}\selectfont,
+            font=\scriptsize\linespread{0.85}\selectfont,
             anchor=center,
             text width=2.5cm,
             align=center,
@@ -45,7 +45,7 @@
         legend style={
             at={(1,1.02)},
             anchor=south east,
-            legend columns=-1
+            legend columns=3
         },
         symbolic x coords={
             DE-BW, DE-BY, DE-BE, DE-BB, 
@@ -57,11 +57,14 @@
         x tick label style={rotate=45,anchor=east},
     ]
 
-    \addplot[fill=colorblindC7] table [percentage series=never] {\datatable};
-    \addplot[fill=colorblindC6] table [percentage series=rarely] {\datatable};
-    \addplot[fill=colorblindC1] table [percentage series=often] {\datatable};
+    \addplot[fill=colorblindC9] table [percentage series=0-NA] {\datatable};
+    \addplot[fill=colorblindC7] table [percentage series=1-NOMENTION] {\datatable};
+    \addplot[fill=colorblindC5] table [percentage series=2-GWPMENTION] {\datatable};
+    \addplot[fill=colorblindC6] table [percentage series=3-GWPPFLICHT] {\datatable};
+    \addplot[fill=colorblindC2] table [percentage series=4-PRIMÄRDATENEMPFEHLUNG] {\datatable};
+    \addplot[fill=colorblindC1] table [percentage series=5-PRIMÄRDATENPFLICHT] {\datatable};
 
-    \legend{\strut Keine, \strut \gls{gwp}-Richtlinie, \strut \gls{forschungsdaten}-Richtlinie}
+    \legend{\strut Nicht zugänglich, \strut Keine \gls{forschungsdaten}-Richtlinie, \strut \gls{gwp}-Empfehlung, \strut \gls{gwp}-Pflicht, \strut \gls{forschungsdaten}-Empfehlung, \strut \gls{forschungsdaten}-Pflicht}
     \end{axis}
 \end{tikzpicture}
 \vspace{-3.5mm}

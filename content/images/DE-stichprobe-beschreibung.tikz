@@ -1,40 +1,42 @@
 \begin{tikzpicture}[y=1cm, x=1cm, yscale=.8,xscale=.8, every node/.append style={scale=1}, inner sep=0pt, outer sep=0pt]
   \node[text=black,line width=0.0092cm,anchor=west] (title1) at (0,7){\textbf{(A)}};
+  \footnotesize
   \drawgermany
-  \drawbw{red!77}{17}
-  \drawbav{red!55}{12}
-  \drawbrandenburg{red!18}{4}
-  \drawhessen{red!45}{10}
-  \drawmecklenburg{red!9}{2}
-  \drawniedersachsen{red!50}{11}
-  \drawnrw{red!100}{22}
-  \drawrheinland{red!23}{5}
-  \drawsaarland{red!9}{2}
-  \drawsachsen{red!23}{5}
-  \drawsachsenanhalt{red!27}{6}
-  \drawschleswig{red!9}{2}
-  \drawthuringen{red!9}{2}
-  \drawbremen{red!9}{2}
-  \drawhamburg{red!36}{8}
-  \drawberlin{red!23}{5}
+  \drawbw{colorblindC1!77}{17}
+  \drawbav{colorblindC1!55}{12}
+  \drawbrandenburg{colorblindC1!18}{4}
+  \drawhessen{colorblindC1!45}{10}
+  \drawmecklenburg{colorblindC1!9}{2}
+  \drawniedersachsen{colorblindC1!50}{11}
+  \drawnrw{colorblindC1!100}{22}
+  \drawrheinland{colorblindC1!23}{5}
+  \drawsaarland{colorblindC1!9}{2}
+  \drawsachsen{colorblindC1!23}{5}
+  \drawsachsenanhalt{colorblindC1!27}{6}
+  \drawschleswig{colorblindC1!9}{2}
+  \drawthuringen{colorblindC1!9}{2}
+  \drawbremen{colorblindC1!9}{2}
+  \drawhamburg{colorblindC1!36}{8}
+  \drawberlin{colorblindC1!23}{5}
 \end{tikzpicture}\hfill%
 \begin{tikzpicture}[y=1cm, x=1cm, yscale=.8,xscale=.8, every node/.append style={scale=1}, inner sep=0pt, outer sep=0pt]
   \node[text=black,line width=0.0092cm,anchor=west] (title1) at (-0.4,7){\textbf{(B)}};
+  \footnotesize
   \drawgermany
-  \drawbw{red!68}{\SI{68}{\percent}}
-  \drawbav{red!57}{\SI{57}{\percent}}
-  \drawbrandenburg{red!100}{\SI{100}{\percent}}
-  \drawhessen{red!63}{\SI{63}{\percent}}
-  \drawmecklenburg{red!67}{\SI{67}{\percent}}
-  \drawniedersachsen{red!85}{\SI{85}{\percent}}
-  \drawnrw{red!81}{\SI{81}{\percent}}
-  \drawrheinland{red!63}{\SI{63}{\percent}}
-  \drawsaarland{red!67}{\SI{67}{\percent}}
-  \drawsachsen{red!56}{\SI{56}{\percent}}
-  \drawsachsenanhalt{red!86}{\SI{86}{\percent}}
-  \drawschleswig{red!40}{\SI{40}{\percent}}
-  \drawthuringen{red!40}{\SI{40}{\percent}}
-  \drawbremen{red!100}{\SI{100}{\percent}}
-  \drawhamburg{red!100}{\SI{100}{\percent}}
-  \drawberlin{red!71}{\SI{71}{\percent}}
+  \drawbw{colorblindC1!68}{\SI{68}{\percent}}
+  \drawbav{colorblindC1!57}{\SI{57}{\percent}}
+  \drawbrandenburg{colorblindC1!100}{\SI{100}{\percent}}
+  \drawhessen{colorblindC1!63}{\SI{63}{\percent}}
+  \drawmecklenburg{colorblindC1!67}{\SI{67}{\percent}}
+  \drawniedersachsen{colorblindC1!85}{\SI{85}{\percent}}
+  \drawnrw{colorblindC1!81}{\SI{81}{\percent}}
+  \drawrheinland{colorblindC1!63}{\SI{63}{\percent}}
+  \drawsaarland{colorblindC1!67}{\SI{67}{\percent}}
+  \drawsachsen{colorblindC1!56}{\SI{56}{\percent}}
+  \drawsachsenanhalt{colorblindC1!86}{\SI{86}{\percent}}
+  \drawschleswig{colorblindC1!40}{\SI{40}{\percent}}
+  \drawthuringen{colorblindC1!40}{\SI{40}{\percent}}
+  \drawbremen{colorblindC1!100}{\SI{100}{\percent}}
+  \drawhamburg{colorblindC1!100}{\SI{100}{\percent}}
+  \drawberlin{colorblindC1!71}{\SI{71}{\percent}}
 \end{tikzpicture}
