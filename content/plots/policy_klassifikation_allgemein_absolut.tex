@@ -1,0 +1,67 @@
+
+% Preprocess data to calculate percentages
+\pgfplotstableread[col sep=comma]{content/plots/policy_klassifikation_allgemein_absolut.csv}\datatable
+% Create total column
+\pgfplotstablecreatecol[create col/expr={\thisrow{never} + \thisrow{rarely} + \thisrow{sometimes} + \thisrow{often}}]{total}{\datatable}
+\pgfplotsset{
+    percentage plot/.style={
+        ybar stacked,
+        yticklabel=\pgfmathprintnumber{\tick}\,$\%$,
+        bar width=18pt,
+        point meta=explicit,
+        every node near coord/.append style={
+            font=\scriptsize\linespread{0.8}\selectfont,
+            anchor=center,
+            text width=2.5cm,
+            align=center,
+            yshift=0ex, % Adjust vertical position
+            xshift=-.15em
+        },
+        nodes near coords={
+            \pgfmathtruncatemacro\iszero{\originalvalue==0}
+            \ifnum\iszero=0
+                \centering\pgfmathprintnumber[fixed zerofill,precision=0]{\originalvalue}\\\hspace{.15em}(\pgfmathprintnumber[fixed zerofill,precision=0]{\pgfplotspointmeta})
+            \fi
+        },
+        ymin=0,
+        ymax=100,
+        enlarge y limits={upper,value=0.18},
+        visualization depends on={y \as \originalvalue}
+    },
+    percentage series/.style={
+        table/y expr=\thisrow{#1}/\thisrow{total}*100,
+        table/meta=#1
+    }
+}
+\begin{tikzpicture}
+    \begin{axis}[
+        width=\textwidth,
+        height=.7\textwidth,
+        legend cell align={left},
+        percentage plot,
+        xticklabel style={font=\footnotesize,yshift=-2pt},
+        ylabel={Anteil in Prozent (\%)},
+        enlargelimits=0.075,
+        legend style={
+            at={(1,1.02)},
+            anchor=south east,
+            legend columns=-1
+        },
+        symbolic x coords={
+            DE-BW, DE-BY, DE-BE, DE-BB, 
+            DE-HB, DE-HH, DE-HE, DE-MV, 
+            DE-NI, DE-NW, DE-RP, 
+            DE-SL, DE-SN, DE-ST, DE-SH, DE-TH
+        },
+        xtick=data,
+        x tick label style={rotate=45,anchor=east},
+    ]
+
+    \addplot[fill=colorblindC7] table [percentage series=never] {\datatable};
+    \addplot[fill=colorblindC6] table [percentage series=rarely] {\datatable};
+    \addplot[fill=colorblindC1] table [percentage series=often] {\datatable};
+
+    \legend{\strut Keine, \strut \gls{gwp}-Richtlinie, \strut \gls{forschungsdaten}-Richtlinie}
+    \end{axis}
+\end{tikzpicture}
+\vspace{-3.5mm}

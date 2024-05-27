@@ -1,0 +1,20 @@
+\begin{tikzpicture}[y=1cm, x=1cm, yscale=.8,xscale=.8, every node/.append style={scale=1}, inner sep=0pt, outer sep=0pt]
+  \footnotesize
+  \drawgermany
+  \drawbw{colorblindC1!93}{25}
+  \drawbav{colorblindC1!78}{21}
+  \drawbrandenburg{colorblindC1!15}{4}
+  \drawhessen{colorblindC1!59}{16}
+  \drawmecklenburg{colorblindC1!11}{3}
+  \drawniedersachsen{colorblindC1!48}{13}
+  \drawnrw{colorblindC1!100}{27}
+  \drawrheinland{colorblindC1!30}{8}
+  \drawsaarland{colorblindC1!11}{3}
+  \drawsachsen{colorblindC1!33}{9}
+  \drawsachsenanhalt{colorblindC1!26}{7}
+  \drawschleswig{colorblindC1!19}{5}
+  \drawthuringen{colorblindC1!19}{5}
+  \drawbremen{colorblindC1!7}{2}
+  \drawhamburg{colorblindC1!30}{8}
+  \drawberlin{colorblindC1!26}{7}
+\end{tikzpicture}

@@ -12,7 +12,7 @@
 %% Dokumentkonfiguration %%
 \directlua{pdf.setminorversion(7)} %Notwendig für korrekte Versionsanzeige wegen LuaLaTeX+pdfx Interaktion 
 \documentclass[%
-    fontsize=12pt,          %Schriftgröße festlegen
+    fontsize=11pt,          %Schriftgröße festlegen
     a4paper,                %Seitenformat auf A4 setzen
     openright,              %Kapitel sollen auf der rechten Seite beginnen
     twoside=semi,           %Zweiseitiges Layout ohne abwechselnde Ränder
@@ -80,14 +80,35 @@
     \setabbreviationstyle[acronym]{long-short}
     \input{matter/backmatter/acronyms}
 \usepackage{siunitx}  %Bessere Einheitenimplementation
+    \sisetup{group-minimum-digits=4,output-decimal-marker={,},locale=DE,}
 \usepackage{soul}
 \usepackage{pgfplots} %Akademische Diagramme
     \pgfplotsset{compat=1.18}
+    \definecolor{colorblindA1}{RGB}{61,150,210}
+    \definecolor{colorblindA2}{RGB}{166,206,227}
+    \definecolor{colorblindA3}{RGB}{208,253,168}
+    \definecolor{colorblindB1}{RGB}{102,194,165}
+    \definecolor{colorblindB2}{RGB}{252,141,98}
+    \definecolor{colorblindB3}{RGB}{141,160,203}
+    \definecolor{colorblindC1}{RGB}{119,170,221} %From https://personal.sron.nl/~pault/#sec:qualitative
+    \definecolor{colorblindC2}{RGB}{153,221,225}
+    \definecolor{colorblindC3}{RGB}{68,187,153}
+    \definecolor{colorblindC4}{RGB}{187,204,51}
+    \definecolor{colorblindC5}{RGB}{170,170,0}
+    \definecolor{colorblindC6}{RGB}{238,221,136}
+    \definecolor{colorblindC7}{RGB}{238,136,102}
+    \definecolor{colorblindC8}{RGB}{255,170,187}
+    \definecolor{colorblindC9}{RGB}{221,221,221}
+\usepackage{pgfplotstable}
+\usepackage{pgf-pie}
 \usepackage{tikz}     %Erweiterte Zeichnungs- und Grafikkapazitäten
 \usepackage{pdfpages} %Einbinden von PDF-Dateien
 \usepackage{orcidlink} %Einbinden von ORCID
 \usepackage[nopatch=footnote]{microtype} %Mikrotypographische ästhetische Verbesserungen
 \usepackage{pdfcomment}
+\usepackage{listings}
+    \input{config/listings.tex}
+\usepackage[all]{nowidow}
 \usepackage[nomargin,lang=ngerman,singleuser,author=DK]{fixme}
     \fxsetup{draft,layout=pdfcnote,theme=color}
     \definecolor{fxtarget}{rgb}{0.8000,0.0000,0.0000}
@@ -97,6 +118,25 @@
 \input{config/titlepage_commands}
 \input{config/include_missing_file_error}
 \input{config/paragraphtitle}
+%Kartenbefehle
+\definecolor{ce7e7e7}{RGB}{231,231,231}
+\input{config/map_commands/drawbw}
+\input{config/map_commands/drawbav}
+\input{config/map_commands/drawberlin}
+\input{config/map_commands/drawbrandenburg}
+\input{config/map_commands/drawbremen}
+\input{config/map_commands/drawgermany}
+\input{config/map_commands/drawhamburg}
+\input{config/map_commands/drawhessen}
+\input{config/map_commands/drawmecklenburg}
+\input{config/map_commands/drawniedersachsen}
+\input{config/map_commands/drawnrw}
+\input{config/map_commands/drawrheinland}
+\input{config/map_commands/drawsaarland}
+\input{config/map_commands/drawsachsen}
+\input{config/map_commands/drawsachsenanhalt}
+\input{config/map_commands/drawschleswig}
+\input{config/map_commands/drawthuringen}
 
 %% Formatierung
 \input{config/chapter_no_vertical_space_before}%Eliminiert vertikalen Einzug vor Kapitel
@@ -139,7 +179,7 @@
 %Anmerkung: Das Bibliografieformat muss oben unter Dokumentpakete eingestellt werden
 
 %% Hauptdokument %%
-%\includeonly{content/einfuehrung,content/modul2} %Selektive Dokumentgenerierung
+%\includeonly{content/fdm-policies} %Selektive Dokumentgenerierung
 \begin{document}
     %% Vorderer Teil
     \frontmatter
@@ -167,7 +207,7 @@
     %% Appendix
     \appendix
     \part*{Appendix}
-    \include{appendices/beispielappendix}
+    \include{appendices/richtlinienklassifikation}
     %% Selbstständigkeitserklärung
     % Wichtig: Ersetze die PDF-Datei mit einer ausgefüllten Variante vor der Abgabe!
     % Wichtig: Die hier beigefügte Datei entspricht der Vorlage des Instituts für Bibliotheks- und Informationswissenschaft. Nutze die Vorlage des entsprechend gültigen Fachbereichs!
