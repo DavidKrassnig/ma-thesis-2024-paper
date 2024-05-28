@@ -37,7 +37,8 @@ Der Name der Fakultät wird fortan nur noch separat erwähnt, wenn dieser releva
 Der Zeitraum von 2012--2023 wurde für die weitere Bearbeitung wiederum in drei kontinuierliche Zeitintervalle von jeweils vier Jahren aufgeteilt.
 Die relative sowie die absolute Distribution aller Metadateneinträge nach Zeitraum und Fakultät ist in \cref{tab:luh-repo-grundmenge-beschreibung} gegeben.
 \begin{table}[!htbp]
-	\caption{Die Verteilung der Grundmengen-Metadateneinträge nach $\text{\textit{Fakultät}}\times\text{\textit{Zeitraum}}$ aufgegliedert. Absolute Werte in Klammern angegeben.}
+	\caption{Die Verteilung der Grundmengen-Metadateneinträge nach $\text{\textit{Fakultät}}\times\text{\textit{Zeitraum}}$ aufgegliedert.
+    Absolute Werte in Klammern angegeben.}
     \input{content/tables/luh-repo-grundmenge-beschreibung.tex}
 	\label{tab:luh-repo-grundmenge-beschreibung}
 \end{table}
@@ -47,7 +48,8 @@ Die relative sowie die absolute Distribution aller Metadateneinträge nach Zeitr
 \parsum{Stichprobenziehung}
 Diese Liste an Dissertationsmetadaten bildete die Grundmenge für die Ziehung einer mehrschichtigen Zufallsstichprobe.
 Die Schichten der Zufallsstichprobe entsprachen dabei $\text{\textit{Fakultät}}\times\text{\textit{Jahresspanne}}$ und ergaben daher insgesamt $\num{9}\times\num{3}=\num{27}$ Stichprobengruppierungen.
-Auf die einzelnen Stichprobengruppierungen wurde jeweils das Verfahren einer einfachen Stichprobenziehung angewandt. 
+Für jede Stichprobengruppierung wurde durch \cref{lst:python-luh-repo-stratification} eine eigene CSV-Tabellendatei erstellt.
+Auf die einzelnen Stichprobengruppierungen wurde dann jeweils das Verfahren einer einfachen Stichprobenziehung angewandt.
 Bei der Auswahl der Stichproben wurde jeweils ein Konfidenzintervall von \SI{95}{\percent} und eine Fehlerspanne von \SI{5}{\percent} zugrunde gelegt.
 Diese Parameter gewährleisten, dass die Ergebnisse der Stichprobe mit hoher Wahrscheinlichkeit repräsentativ für die gesamte Population sowie der einzelnen Stichprobengruppierungen sind und die Unsicherheit der Schätzungen innerhalb akzeptabler Grenzen bleibt.
 Um den Prozess der Stichprobenziehung zu automatisieren und eine zufällige Auswahl zu gewährleisten, wurde eine auf Python basierende Software \autocite{Krassnig2024-csv} genutzt, welche im Rahmen dieser Arbeit geschrieben wurde.%
@@ -57,16 +59,18 @@ Der genutzte Startwert wird als begleitendes Metadatum der Stichprobe abgespeich
 Die Ziehung ist somit wiederholbar und das Datum der Ziehung verifizierbar.} 
 
 \parsum{Stichprobenbeschreibung}
-Die so gezogene Stichprobe ($n=1441$) besteht aus ca. \SI{76}{\percent} aller Metadateneinträge der Grundmenge.
+Die so gezogene Stichprobe ($n=1441$) besteht aus ca.~\SI{76}{\percent} aller Metadateneinträge der Grundmenge.
 Die relative sowie die absolute Distribution aller Institutionen in der Stichprobe nach \textit{Fakultät} und \textit{Zeitraum} ist in \cref{tab:luh-repo-stichprobe-beschreibung} gegeben.
 \begin{table}[!htbp]
-	\caption{Die Verteilung der Stichproben-Metadateneinträge nach $\text{\textit{Fakultät}}\times\text{\textit{Zeitraum}}$ aufgegliedert. Absolute Werte in Klammern angegeben.}
+	\caption{Die Verteilung der Stichproben-Metadateneinträge nach $\text{\textit{Fakultät}}\times\text{\textit{Zeitraum}}$ aufgegliedert.
+    Absolute Werte in Klammern angegeben.}
     \input{content/tables/luh-repo-stichprobe-beschreibung.tex}
 	\label{tab:luh-repo-stichprobe-beschreibung}
 \end{table}
 Der jeweils relative Anteil der Stichprobengruppierungen zu dem entsprechenden Datensatz aus der Grundmenge sowie die Differenz zwischen der respektiven Anzahl ist, auch nach \textit{Fakultät} und \textit{Zeitraum} aufgegliedert, in \cref{tab:luh-repo-stichprobe-beschreibung-relativ} gegeben.
 \begin{table}[!htbp]
-	\caption{Die Stichproben-Metadateneinträge nach $\text{\textit{Fakultät}}\times\text{\textit{Zeitraum}}$ aufgegliedert relativ zu der Anzahl an Metadateneinträgen aus der Grundmenge. Absolute Differenzwerte in Klammern angegeben.}
+	\caption{Die Stichproben-Metadateneinträge nach $\text{\textit{Fakultät}}\times\text{\textit{Zeitraum}}$ aufgegliedert relativ zu der Anzahl an Metadateneinträgen aus der Grundmenge.
+    Absolute Differenzwerte in Klammern angegeben.}
     \input{content/tables/luh-repo-stichprobe-beschreibung-relativ.tex}
 	\label{tab:luh-repo-stichprobe-beschreibung-relativ}
 \end{table}
@@ -84,23 +88,23 @@ Hierbei wurden insgesamt \num{1480} Dateien zur Weiterverarbeitung gefunden, her
 \parsum{Klassifikation}
 Die in \cref{sec:luh-repo-material} gesammelten Dissertationsdateien wurden dann, um die zentrale Forschungsfrage dieses Kapitels zu beantworten, nach ihrem Inhalt klassifiziert, ob und auf welche Arte und Weise sie primäre \glspl{forschungsdaten} beinhalten:
 \glspl{forschungsdaten} konnten entweder in die PDF-Datei integriert, als Begleitdaten im \gls{luh-repo} eingereicht worden oder auf ein externes \gls{forschungsdaten}-Repositorium hochgeladen worden sein.
-Damit diese Klassifikation stattfinden konnte, musste jedoch zuerst bestimmt werden, welcher Inhalt als \gls{forschungsdaten} gewertet wird (hierbei orientierte sich diese Arbeit an \autocite{dfg-richtlinie}) und wo sich dieser typischerweise im Dokument befindet.
+Damit diese Klassifikation stattfinden konnte, musste jedoch zuerst bestimmt werden, welcher Inhalt als \gls{forschungsdaten} gewertet wird (hierbei orientierte sich diese Arbeit an \autocite{dfg-richtlinie,Simukovic2014InterviewFD}) und wo sich dieser typischerweise im Dokument befindet.
 Hierfür wurden von jeder Fakultät, gleichmäßig auf die drei Zeiträume aufgeteilt, zwölf zufällige Dissertationen ausgewählt und vorläufig evaluiert.
 Bei Stichprobengruppierungen von weniger als vier Dissertationen wurden stattdessen alle Dokumente vorläufig ausgewertet.
 
 \parsum{Klassifikationshierarchie}
 Bei dieser Auswertung wurde ein provisorisches Klassifikationssystem aufgebaut, welches für den Rest der Arbeit beibehalten wurde.
 Hierbei wurden \glspl{forschungsdaten} in drei hierarchische Stufen eingeteilt.
-Diese reichen von \textit{Stufe 1}, welche eindeutige und zweifelsfreie Primärdaten beinhalten, zu \textit{Stufe 3}, welche Daten beinhalten, die entweder kompromittiert worden sind (z.B. durch starke Kompression), keine besondere Leistung darstellen (z.B. einfache Fragebögen) oder durch den Autor kaum auf Originalität überprüfbar waren.
+Diese reichen von \textit{Stufe 1}, welche eindeutige und zweifelsfreie Primärdaten beinhalten, zu \textit{Stufe 3}, welche Daten beinhalten, die entweder kompromittiert worden sind (z.B.~durch starke Kompression), keine besondere Leistung darstellen (z.B.~einfache Fragebögen) oder durch den Autor kaum auf Originalität überprüfbar waren.
 Unter \textit{Stufe 2} befinden sich jene \glspl{forschungsdaten}, welche zwar originell sind, jedoch weniger direkte Wiederverwendbarkeit oder Qualität im Vergleich zu \glspl{forschungsdaten} aus \textit{Stufe 1} haben.
 Es folgt eine Auflistung der verschiedenen \gls{forschungsdaten}-Klassifikationen der entsprechenden Klassifikationsstufen.\\
-\textbf{Stufe 1:} rohe Mess-/Beobachtungsdaten, unkomprimierte Rohbilder, Videos, Skripte / Software, Transkriptionen von Interviews, (anonymisierte) Beantwortungen von Fragebögen\\
-\textbf{Stufe 2:} Pseudocode, Algorithmen, komprimierte Bilder von Gelfärbungen\\
+\textbf{Stufe 1:} rohe Beobachtungs-~/~Messdaten, unkomprimierte Rohbilder, Videos, Skripte~/~Software, Transkriptionen von Interviews, (anonymisierte) Beantwortungen von Fragebögen\\
+\textbf{Stufe 2:} Pseudocode, Algorithmen, komprimierte Bilder von Gelfärbungen\footnote{Für komprimierte Bilder von Gelfärbungen wurde auf Anraten einer Wissenschaftlerin aus dem Bereich \textit{Life Science} eine Ausnahme gemacht und als \gls{forschungsdaten} der zweiten Stufe kategorisiert \autocite{SarahPC}.}\\
 \textbf{Stufe 3:} komprimierte Bilder, Spektraldiagramme, Gensequenzen, Fragebögen, Leitfäden, Montagezeichnungen
 
 \parsum{Ort der \glspl{forschungsdaten}}
 Bei der vorlläufigen Testklassifikation konnten keine bestimmten Teile eines Dokumentes vollständig ausgeschlossen werden.
-Während die meisten hochstufigen \glspl{forschungsdaten} in dem jeweiligen Appendix zu finden waren, waren z.B. \glspl{forschungsdaten} der zweiten und dritten Stufe zu großen Teilen im gesamten Dokument verteilt.
+Während die meisten hochstufigen \glspl{forschungsdaten} in dem jeweiligen Appendix zu finden waren, waren z.B.~\glspl{forschungsdaten} der zweiten und dritten Stufe zu großen Teilen im gesamten Dokument verteilt.
 Auch \glspl{forschungsdaten} aus \textit{Stufe 1} waren teilweise in anderen Bereichen der Dissertationen zu finden.
 Dies galt auch für externe Forschungsdaten.
 Hier wurde teilweise in der Präambel darauf hingewiesen, dass einige oder alle \glspl{forschungsdaten} auf ein externes Repositorium hochgeladen wurde.
@@ -109,8 +113,24 @@ Für den restlichen Verlauf der Klassifikation wurde daher beschlossen, dass sä
 
 \parsum{Klassifikationsstrategie}
 Nach Abschluss der vorläufigen Testklassifikation und Aufbau des hierarchischen Klassifikationssystems wurde dann wie folgt vorgegangen.
+Es wurden alle PDF-Dateien einzeln evaluiert.
+Insofern ein Typ an \gls{forschungsdaten} im Dokument gefunden wurde, so wurde die \gls{forschungsdaten}-Art und Publikationsart des \gls{forschungsdaten} in der zur Stichprobengruppierungen zugehörigen CSV-Tabellendatei vermerkt.
+Hierbei wurde für interne und beigefügte \glspl{forschungsdaten} nur der Typ und nicht die Seite innerhalb des Dokumentes vermerkt.
+Für extern publizierte \glspl{forschungsdaten} wurden zusätzlich noch die jeweilig dazugehörigen Seiten und Art des externen Repositoriums vermerkt (z.B.~Git-Repositorium oder dediziertes \gls{forschungsdaten}-Repositorium).
+Bei externen \glspl{forschungsdaten} wurden zusätzlich die \gls{doi}, das relevante Stichwort oder die dazugehörige Domäne notiert und in einer separaten Datei eingetragen.
+Diese Liste wurde dann am Ende der Evaluation genutzt, um \cref{lst:luh-repo-document-search} zu erstellen.
+Dieses Skript durchsuchte automatisch den Text aller Textdatei mit den notierten Wörtern, um etwaige übersehene externe \glspl{forschungsdaten} im Nachhinein noch erfassen zu können.
 
-
+\parsum{Auswertung der Ergebnisse}
+Nach der Klassifizierung aller Dateien wurden die vollständig evaluierten CSV-Dateien der Stichprobengruppierungen durch \cref{lst:bash-luh-repo-csv-combiner} zurück in eine Gesamttabelle zusammengeführt.
+Die vorhandenen Metadaten wurden dann auf plausible Faktoren untersucht, die einen etwaigen Einfluss auf die Präsenz, Art und Publikationsform von \glspl{forschungsdaten}.
+Für die Kreuzprodukte aller vermuteter Faktoren sowie für die Ergebnisse der Klassifikationsarbeit aller \gls{forschungsdaten}-Publikationsarten wurden Chi-Quadrat-Tests für Unabhängigkeit durchgeführt, um zu überprüfen, ob statistisch signifikante Relationen zwischen den jeweiligen Faktoren bzw.~Ergebnissen besteht.
+Hierbei wurden für alle zu überprüfenden Relationen die Nullhypothese angenommen.
+Die Nullhypothese gilt als widerlegt wenn der respektive Chi-Quadrat-Test für Unabhängigkeit einen Signifikanzwert von $p<0,05$ erzeugt.
+Bei Signifikanzwerten von $p\geqslant0,05$ gilt die Nullhypothese als bestätigt.
+Die zu jeweils zu überprüfende Nullhypothese wird an der jeweiligen Stelle in \cref{sec:luh-repo-results} formuliert.
+Da p-Werte nichts über die Stärke einer Abhängigkeit aussagen, wurden für alle Testergebnisse mit $p<0,05$ zusätzlich noch der respektive Cramérs V-Wert ($\phi_C$) berechnet, um zu überprüfen, wie stark die statistisch signifikante Abhängigkeit ist.
+Bei einem Cramérs V-Wert von $\phi_C>\num{0,1}$ ist von einem schwachem, bei $\phi_C>\num{0,3}$ von einem moderaten und bei $\phi_C>\num{0,5}$ von einem starken Zusammenhang bzw.~Einfluss auszugehen.
 
 \section{Resultate}\label{sec:luh-repo-results}
 \subsection{Allgemeingültige Dokumente}\label{sec:luh-repo-results-general}
