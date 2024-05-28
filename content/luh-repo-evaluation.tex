@@ -1,1 +1,122 @@
 \chapter{Forschungsdaten im Repositorium der Leibniz Universität Hannover}\label{ch:luh-repo}
+\parsum{Thema des Kapitels}
+Dieses Kapitel behandelt die Auswertung von eingebetteten, begleitenden sowie referenzierten \glspl{forschungsdaten} von Dissertationen der \gls{luh}, die im institutionellen \gls{luh-repo} veröffentlicht worden sind.
+Die Arbeit beschränkt sich hierbei exklusiv auf \glspl{forschungsdaten}, die originelle Primärdaten darstellen, die im Rahmen des Promotionsvorhabens entstanden sind.
+Es wird hierbei überprüft, welcher Anteil an Dissertationen originelle \glspl{forschungsdaten} beinhaltet, auf welche Art und Weise die \glspl{forschungsdaten} inkludiert wurden, wie sich diese über die einzelnen Fakultäten verteilen, wie sich diese über die letzten zwölf Jahre entwickelt haben und wie die Existenz von \glspl{forschungsdaten} in den Metadaten kenntlich gemacht wurden (sowohl im \gls{luh-repo} wie auch in etwaigen externen \gls{forschungsdaten}-Repositorien).
+
+\parsum{Aufbau des Kapitels}
+Hierfür wird in \cref{sec:luh-repo-material-methods} aufgeführt, wie die zu untersuchenden Dissertationen ausgewählt wurden, wie das entsprechende Material gesammelt wurde und mit welchen Methoden dieses daraufhin ausgewertet wurde.
+In \cref{sec:luh-repo-results} werden die entsprechenden Ergebnisse der Materialauswertung dargestellt.
+Abschließend werden in \cref{sec:luh-repo-discussion} die dargestellten Ergebnisse evaluiert und diskutiert.
+
+\section{Material \&\ Methoden}\label{sec:luh-repo-material-methods}
+\parsum{Aufbau des Abschnitts}
+In diesem Abschnitt wird das zu untersuchende Material in \cref{sec:luh-repo-material} und die Methoden der Untersuchung in \cref{sec:luh-repo-methods} dargestellt.
+
+\subsection{Material}\label{sec:luh-repo-material}
+\parsum{Datengrundlage}
+Als Datengrundlage für dieses Kapitel gilt die Metadaten-Datenbank aller Dissertationen des \gls{luh-repo}, welche via \gls{oai-pmh} der Öffentlichkeit frei zugänglich sind \autocite{luh-repo}.
+Da sich das Thema dieses Kapitels explizit auf Dissertationen beschränkt, wurden von der Metadaten-Datenbank des \gls{luh-repo} alle Einträge der Sammlung \textit{Dissertationen} die am 21.03.2024 um 10:41 Uhr (UTC+01:00) existierten ($n=5095$) über die Administrationsübersicht des \gls{luh-repo} heruntergeladen \autocite{my-dataset}.
+
+\parsum{Grundmengenbeschreibung}
+Da die zentrale Forschungsfrage dieses Kapitels sich auf den Zeitraum von 2012--2023 beschränkt, wurde diese Liste durch \cref{lst:python-luh-repo-stratification} auf nur jene Metadateneinträge gefiltert, deren Publikationsjahr in diese Zeitspanne fällt und deren Sperrfrist auch, insofern vorhanden, spätestens 2023 endete ($n=1898$).
+Die daraus resultierende Dissertationsliste enthält Einträge zu jeder Fakultät der \gls{luh}.
+Aus Gründen der Übersichtlichkeit und des Platzes nutzen wir folgende Abkürzungen für die Fakultäten der \gls{luh}:
+\begin{itemize}
+    \item \gls{fakultät2}
+    \item \gls{fakultät3}
+    \item \gls{fakultät4}
+    \item \gls{fakultät5}
+    \item \gls{fakultät6}
+    \item \gls{fakultät7}
+    \item \gls{fakultät8}
+    \item \gls{fakultät9}
+    \item \gls{fakultät10}
+\end{itemize}
+Der Name der Fakultät wird fortan nur noch separat erwähnt, wenn dieser relevant zur Diskussion und Verständlichkeit der Daten erscheint.
+Der Zeitraum von 2012--2023 wurde für die weitere Bearbeitung wiederum in drei kontinuierliche Zeitintervalle von jeweils vier Jahren aufgeteilt.
+Die relative sowie die absolute Distribution aller Metadateneinträge nach Zeitraum und Fakultät ist in \cref{tab:luh-repo-grundmenge-beschreibung} gegeben.
+\begin{table}[!htbp]
+	\caption{Die Verteilung der Grundmengen-Metadateneinträge nach $\text{\textit{Fakultät}}\times\text{\textit{Zeitraum}}$ aufgegliedert. Absolute Werte in Klammern angegeben.}
+    \input{content/tables/luh-repo-grundmenge-beschreibung.tex}
+	\label{tab:luh-repo-grundmenge-beschreibung}
+\end{table}
+
+\noindent Für eine Liste aller inkludierter Dissertationsmetadaten, siehe \fxfatal*{Fix bibliographic data}{\autocite{my-dataset}}.
+
+\parsum{Stichprobenziehung}
+Diese Liste an Dissertationsmetadaten bildete die Grundmenge für die Ziehung einer mehrschichtigen Zufallsstichprobe.
+Die Schichten der Zufallsstichprobe entsprachen dabei $\text{\textit{Fakultät}}\times\text{\textit{Jahresspanne}}$ und ergaben daher insgesamt $\num{9}\times\num{3}=\num{27}$ Stichprobengruppierungen.
+Auf die einzelnen Stichprobengruppierungen wurde jeweils das Verfahren einer einfachen Stichprobenziehung angewandt. 
+Bei der Auswahl der Stichproben wurde jeweils ein Konfidenzintervall von \SI{95}{\percent} und eine Fehlerspanne von \SI{5}{\percent} zugrunde gelegt.
+Diese Parameter gewährleisten, dass die Ergebnisse der Stichprobe mit hoher Wahrscheinlichkeit repräsentativ für die gesamte Population sowie der einzelnen Stichprobengruppierungen sind und die Unsicherheit der Schätzungen innerhalb akzeptabler Grenzen bleibt.
+Um den Prozess der Stichprobenziehung zu automatisieren und eine zufällige Auswahl zu gewährleisten, wurde eine auf Python basierende Software \autocite{Krassnig2024-csv} genutzt, welche im Rahmen dieser Arbeit geschrieben wurde.%
+\footnote{%
+Die Software von \citeauthor{Krassnig2024-csv} \autocite{Krassnig2024-csv} nutzt standardmäßig die Anzahl an Nanosekunden seit dem Beginn der System-Epoche (1970-01-01T00:00:00Z) als Startwert für die Zufallsfunktion.
+Der genutzte Startwert wird als begleitendes Metadatum der Stichprobe abgespeichert.
+Die Ziehung ist somit wiederholbar und das Datum der Ziehung verifizierbar.} 
+
+\parsum{Stichprobenbeschreibung}
+Die so gezogene Stichprobe ($n=1441$) besteht aus ca. \SI{76}{\percent} aller Metadateneinträge der Grundmenge.
+Die relative sowie die absolute Distribution aller Institutionen in der Stichprobe nach \textit{Fakultät} und \textit{Zeitraum} ist in \cref{tab:luh-repo-stichprobe-beschreibung} gegeben.
+\begin{table}[!htbp]
+	\caption{Die Verteilung der Stichproben-Metadateneinträge nach $\text{\textit{Fakultät}}\times\text{\textit{Zeitraum}}$ aufgegliedert. Absolute Werte in Klammern angegeben.}
+    \input{content/tables/luh-repo-stichprobe-beschreibung.tex}
+	\label{tab:luh-repo-stichprobe-beschreibung}
+\end{table}
+Der jeweils relative Anteil der Stichprobengruppierungen zu dem entsprechenden Datensatz aus der Grundmenge sowie die Differenz zwischen der respektiven Anzahl ist, auch nach \textit{Fakultät} und \textit{Zeitraum} aufgegliedert, in \cref{tab:luh-repo-stichprobe-beschreibung-relativ} gegeben.
+\begin{table}[!htbp]
+	\caption{Die Stichproben-Metadateneinträge nach $\text{\textit{Fakultät}}\times\text{\textit{Zeitraum}}$ aufgegliedert relativ zu der Anzahl an Metadateneinträgen aus der Grundmenge. Absolute Differenzwerte in Klammern angegeben.}
+    \input{content/tables/luh-repo-stichprobe-beschreibung-relativ.tex}
+	\label{tab:luh-repo-stichprobe-beschreibung-relativ}
+\end{table}
+
+\parsum{Dateisammlung}
+Für die Evaluation, inwiefern die Dissertationen der Stichprobe \glspl{forschungsdaten} beinhalten oder auf solche verweisen wurden alle Dateien, die mit Metadateneinträgen assoziiert werden, heruntergeladen.
+Dieser Prozess wurde dadurch verkompliziert, dass DSpace~5, auf welches das \gls{luh-repo} zum Zeitpunkt dieser Arbeit noch basierte, keine eingebaute Möglichkeit anbietet, alle Dateien einer Sammlung (jenseits einer schnell erreichten Grenze) oder einer bestimmten Metadatenliste herunterzuladen:
+weder intern mit administrativen Rechten noch extern durch die Nutzung einer Schnittstelle.
+Daher wurde im Rahmen dieser Arbeit \cref{lst:simple-dspace5-downloader} entwickelt, welches alle Links zu den entsprechenden Dateien aus dem öffentlichen Quellcode der Webseiten extrahiert und automatisch herunterlädt und nach dem Metadaten-Handle sortiert \autocite{Krassnig2024-dspace}.
+
+Hierbei wurden insgesamt \num{1480} Dateien zur Weiterverarbeitung gefunden, heruntergeladen und sortiert.
+
+
+\subsection{Methoden}\label{sec:luh-repo-methods}
+\parsum{Klassifikation}
+Die in \cref{sec:luh-repo-material} gesammelten Dissertationsdateien wurden dann, um die zentrale Forschungsfrage dieses Kapitels zu beantworten, nach ihrem Inhalt klassifiziert, ob und auf welche Arte und Weise sie primäre \glspl{forschungsdaten} beinhalten:
+\glspl{forschungsdaten} konnten entweder in die PDF-Datei integriert, als Begleitdaten im \gls{luh-repo} eingereicht worden oder auf ein externes \gls{forschungsdaten}-Repositorium hochgeladen worden sein.
+Damit diese Klassifikation stattfinden konnte, musste jedoch zuerst bestimmt werden, welcher Inhalt als \gls{forschungsdaten} gewertet wird (hierbei orientierte sich diese Arbeit an \autocite{dfg-richtlinie}) und wo sich dieser typischerweise im Dokument befindet.
+Hierfür wurden von jeder Fakultät, gleichmäßig auf die drei Zeiträume aufgeteilt, zwölf zufällige Dissertationen ausgewählt und vorläufig evaluiert.
+Bei Stichprobengruppierungen von weniger als vier Dissertationen wurden stattdessen alle Dokumente vorläufig ausgewertet.
+
+\parsum{Klassifikationshierarchie}
+Bei dieser Auswertung wurde ein provisorisches Klassifikationssystem aufgebaut, welches für den Rest der Arbeit beibehalten wurde.
+Hierbei wurden \glspl{forschungsdaten} in drei hierarchische Stufen eingeteilt.
+Diese reichen von \textit{Stufe 1}, welche eindeutige und zweifelsfreie Primärdaten beinhalten, zu \textit{Stufe 3}, welche Daten beinhalten, die entweder kompromittiert worden sind (z.B. durch starke Kompression), keine besondere Leistung darstellen (z.B. einfache Fragebögen) oder durch den Autor kaum auf Originalität überprüfbar waren.
+Unter \textit{Stufe 2} befinden sich jene \glspl{forschungsdaten}, welche zwar originell sind, jedoch weniger direkte Wiederverwendbarkeit oder Qualität im Vergleich zu \glspl{forschungsdaten} aus \textit{Stufe 1} haben.
+Es folgt eine Auflistung der verschiedenen \gls{forschungsdaten}-Klassifikationen der entsprechenden Klassifikationsstufen.\\
+\textbf{Stufe 1:} rohe Mess-/Beobachtungsdaten, unkomprimierte Rohbilder, Videos, Skripte / Software, Transkriptionen von Interviews, (anonymisierte) Beantwortungen von Fragebögen\\
+\textbf{Stufe 2:} Pseudocode, Algorithmen, komprimierte Bilder von Gelfärbungen\\
+\textbf{Stufe 3:} komprimierte Bilder, Spektraldiagramme, Gensequenzen, Fragebögen, Leitfäden, Montagezeichnungen
+
+\parsum{Ort der \glspl{forschungsdaten}}
+Bei der vorlläufigen Testklassifikation konnten keine bestimmten Teile eines Dokumentes vollständig ausgeschlossen werden.
+Während die meisten hochstufigen \glspl{forschungsdaten} in dem jeweiligen Appendix zu finden waren, waren z.B. \glspl{forschungsdaten} der zweiten und dritten Stufe zu großen Teilen im gesamten Dokument verteilt.
+Auch \glspl{forschungsdaten} aus \textit{Stufe 1} waren teilweise in anderen Bereichen der Dissertationen zu finden.
+Dies galt auch für externe Forschungsdaten.
+Hier wurde teilweise in der Präambel darauf hingewiesen, dass einige oder alle \glspl{forschungsdaten} auf ein externes Repositorium hochgeladen wurde.
+Teilweise wurden diese externen Datensätze aber auch erst an der jeweils relevanten Stelle im Hauptteil des Dokumentes zitiert.
+Für den restlichen Verlauf der Klassifikation wurde daher beschlossen, dass sämtliche Seiten der PDF-Dateien zumindest kurzzeitig begutachtet werden müssen.
+
+\parsum{Klassifikationsstrategie}
+Nach Abschluss der vorläufigen Testklassifikation und Aufbau des hierarchischen Klassifikationssystems wurde dann wie folgt vorgegangen.
+
+
+
+\section{Resultate}\label{sec:luh-repo-results}
+\subsection{Allgemeingültige Dokumente}\label{sec:luh-repo-results-general}
+\subsection{Promotionsspezifische Dokumente}\label{sec:luh-repo-results-specific}
+
+\section{Diskussion}\label{sec:luh-repo-discussion}
+\subsection{Allgemeingültige Dokumente}\label{sec:luh-repo-discussion-general}
+\subsection{Promotionsspezifische Dokumente}\label{sec:luh-repo-discussion-specific}
+
