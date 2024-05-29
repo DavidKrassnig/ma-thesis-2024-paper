@@ -124,6 +124,7 @@ Für extern publizierte \glspl{forschungsdaten} wurden zusätzlich noch die jewe
 Bei externen \glspl{forschungsdaten} wurden zusätzlich die \gls{doi}, das relevante Stichwort oder die dazugehörige Domäne notiert und in einer separaten Datei eingetragen.
 Diese Liste wurde dann am Ende der Evaluation genutzt, um \cref{lst:luh-repo-document-search} zu erstellen.
 Dieses Skript durchsuchte automatisch den Text aller Textdatei mit den notierten Wörtern, um etwaige übersehene externe \glspl{forschungsdaten} im Nachhinein noch erfassen zu können.
+Zusätzlich wurde für jede Dissertation auch eingetragen, ob für sie überhaupt Primärdaten produziert worden sind; diese Information wurden wiederum genutzt, um relative Werte zu der jeweiligen Gesamtsumme aller Dissertationen minus jenen ohne produzierte Primärdaten zu erstellen.
 
 \parsum{Auswertung der Ergebnisse}
 Nach der Klassifizierung aller Dateien wurden die vollständig evaluierten CSV-Dateien der Stichprobengruppierungen durch \cref{lst:bash-luh-repo-csv-combiner} einerseits in kombinierte Fakultätstabellen und andererseits in eine Gesamttabelle zusammengeführt.
@@ -156,6 +157,70 @@ In \cref{sec:luh-repo-results-general} werden die Resultate und die statistische
 In \cref{sec:luh-repo-results-specific} werden die Resultate und die statistische Auswertung der Dissertationen relativ zu den einzelnen Fakultäten aufgelistet.
 
 \subsection{Allgemeine Resultate}\label{sec:luh-repo-results-general}
+
+
+\begin{table}[!htbp]
+	\caption{Anteil an Dissertationen aus der Stichprobe, die Primärdaten produziert haben müssten, relativ zu der respektiven $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}$-Gesamtanzahl.
+    Absolute Werte in Klammern angegeben.}
+    \input{content/tables/luh-repo-classification-realrd.tex}
+    \label{tab:luh-repo-classification-realrd}
+\end{table}
+
+\begin{table}[!htbp]
+	\caption{\gls{forschungsdaten}-Klassifizierung der Dissertationen aus der Stichprobe nach $\text{\textit{Publikationsart}}\times\text{\textit{Klassifikationsstufe}}\times\text{\textit{Jahresgruppe}}$ aufgegliedert.
+    Angaben relativ zu der Gesamtanzahl der Jahresgruppe.
+    Absolute Werte in Klammern angegeben.}
+    \input{content/tables/luh-repo-classification-general-publication.tex}
+    \label{tab:luh-repo-classification-general-publication}
+\end{table}
+
+\begin{table}[!htbp]
+	\caption{\gls{forschungsdaten}-Klassifizierung der Dissertationen aus der Stichprobe nach $\text{\textit{Publikationsart}}\times\text{\textit{Klassifikationsstufe}}\times\text{\textit{Jahresgruppe}}$ aufgegliedert.
+    Angaben relativ zu der angepassten Gesamtanzahl der Jahresgruppe.
+    Absolute Werte in Klammern angegeben.}
+    \input{content/tables/luh-repo-classification-general-publication-adjusted.tex}
+    \label{tab:luh-repo-classification-general-publication-adjusted}
+\end{table}
+
+
+\begin{table}[!htbp]
+	\caption{\gls{forschungsdaten}-Klassifizierung der Dissertationen aus der Stichprobe nach $\text{\textit{Fakultät}}\times\text{\textit{Klassifikationsstufe}}$ aufgegliedert.
+    Angabe relativ zu der respektiven Gesamtanzahl für \textit{Fakultät}.
+    Absolute Werte in Klammern angegeben.}
+    \input{content/tables/luh-repo-classification-general-all-faculty.tex}
+    \label{tab:luh-repo-classification-general-all-faculty}
+\end{table}
+
+\begin{table}[!htbp]
+	\caption{\gls{forschungsdaten}-Klassifizierung der Dissertationen aus der Stichprobe nach $\text{\textit{Fakultät}}\times\text{\textit{Klassifikationsstufe}}$ aufgegliedert.
+    Angabe relativ zu der respektiven angepassten Gesamtanzahl für \textit{Fakultät}.
+    Absolute Werte in Klammern angegeben.}
+    \input{content/tables/luh-repo-classification-general-all-faculty-adjusted.tex}
+    \label{tab:luh-repo-classification-general-all-faculty-adjusted}
+\end{table}
+
+
+
+
+
+
+Zeitraum X Klassifikationsstufe
+Fakultät X Klassifikationsstufe
+
+
+
+
+\begin{figure}[!htbp]
+\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{\input{content/images/luh-repo-faculty-yeargroup-classification.tikz}}
+\caption{\gls{forschungsdaten}-Klassifikation der Dissertationen aus der Stichprobe nach Fakultät, Zeitgruppe und Klassifikationsstufe.
+Die Höhe der Barren entsprechen dem relativen Anteil zur jeweiligen $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}$-Gesamtanzahl.
+Absolute Werte in Klammern angegeben.}
+\label{fig:luh-repo-general-absolute}
+\end{figure}
+
+
+
+
 \subsection{Fakultätsspezifische Resultate}\label{sec:luh-repo-results-specific}
 \subsubsection{\gls{fakultät2}}
 \subsubsection{\gls{fakultät3}}

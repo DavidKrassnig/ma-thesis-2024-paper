@@ -1,0 +1,313 @@
+\begin{tikzpicture}[y=1cm, x=1cm, yscale=1,xscale=1, every node/.append style={scale=1}, inner sep=0pt, outer sep=0pt]  \path[draw=black!50,line join=round,line width=0.03cm] (11.693, 0.3129) --   (1.686, 0.3129) -- (1.686, 8.1021) -- (21.6983, 8.1021) -- (21.6983, 0.3129)   -- cycle;
+  %%% Achsen und Linien
+  \path[draw=black!50,line join=round,line width=0.03cm] (21.6967, 0.3139) --   (1.686, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (21.6967, 1.0935) --   (1.686, 1.0935);
+  \path[draw=black!50,line join=round,line width=0.03cm] (21.6967, 1.8721) --   (1.686, 1.8721);
+  \path[draw=black!50,line join=round,line width=0.03cm] (21.6967, 2.6518) --   (1.686, 2.6518);
+  \path[draw=black!50,line join=round,line width=0.03cm] (21.6967, 3.4304) --   (1.686, 3.4304);
+  \path[draw=black!50,line join=round,line width=0.03cm] (21.6967, 4.208) --   (1.686, 4.208);
+  \path[draw=black!50,line join=round,line width=0.03cm] (21.6967, 4.9876) --   (1.686, 4.9876);
+  \path[draw=black!50,line join=round,line width=0.03cm] (21.6967, 5.7663) --   (1.686, 5.7663);
+  \path[draw=black!50,line join=round,line width=0.03cm] (21.6967, 6.5459) --   (1.686, 6.5459);
+  \path[draw=black!50,line join=round,line width=0.03cm] (21.6967, 7.3245) --   (1.686, 7.3245);
+  \path[draw=black!50,line join=round,line width=0.03cm] (21.6967, 8.1031) --   (1.686, 8.1031);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.686, 0.164) --   (1.686, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.686, 0.164) --   (1.686, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (3.9093, 0.164) --   (3.9093, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (3.9093, 0.164) --   (3.9093, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (6.1325, 0.164) --   (6.1325, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (6.1325, 0.164) --   (6.1325, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (8.3557, 0.164) --   (8.3557, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (8.3557, 0.164) --   (8.3557, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (10.5806, 0.164) --   (10.5806, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (10.5806, 0.164) --   (10.5806, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (12.8022, 0.164) --   (12.8022, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (12.8022, 0.164) --   (12.8022, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (15.0254, 0.164) --   (15.0254, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (15.0254, 0.164) --   (15.0254, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (17.2503, 0.164) --   (17.2503, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (17.2503, 0.164) --   (17.2503, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (19.4735, 0.164) --   (19.4735, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (19.4735, 0.164) --   (19.4735, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (21.6967, 0.164) --   (21.6967, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (21.6967, 0.164) --   (21.6967, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.686, 0.3139) --   (21.6967, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 0.3139) --   (1.686, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 0.3139) --   (1.686, 0.3139);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 1.0935) --   (1.686, 1.0935);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 1.0935) --   (1.686, 1.0935);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 1.8721) --   (1.686, 1.8721);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 1.8721) --   (1.686, 1.8721);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 2.6518) --   (1.686, 2.6518);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 2.6518) --   (1.686, 2.6518);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 3.4304) --   (1.686, 3.4304);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 3.4304) --   (1.686, 3.4304);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 4.208) --   (1.686, 4.208);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 4.208) --   (1.686, 4.208);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 4.9876) --   (1.686, 4.9876);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 4.9876) --   (1.686, 4.9876);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 5.7663) --   (1.686, 5.7663);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 5.7663) --   (1.686, 5.7663);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 6.5459) --   (1.686, 6.5459);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 6.5459) --   (1.686, 6.5459);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 7.3245) --   (1.686, 7.3245);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 7.3245) --   (1.686, 7.3245);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 8.1031) --   (1.686, 8.1031);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.4439, 8.1031) --   (1.686, 8.1031);
+  \path[draw=black!50,line join=round,line width=0.03cm] (1.686, 0.3139) --   (1.686, 8.1031);
+
+  %%% Barren
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (2.4431, 0.3289) --   (3.0523, 0.3289) -- (3.0523, 3.1639) -- (2.4431, 3.1639) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (2.4431, 3.1639) --   (3.0523, 3.1639) -- (3.0523, 6.7049) -- (2.4431, 6.7049) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (2.4431, 6.7049) --   (3.0523, 6.7049) -- (3.0523, 8.1219) -- (2.4431, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (1.7612, 0.3289) --   (2.3704, 0.3289) -- (2.3704, 2.7279) -- (1.7612, 2.7279) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (1.7612, 2.7279) --   (2.3704, 2.7279) -- (2.3704, 6.9229) -- (1.7612, 6.9229) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (1.7612, 6.9229) --   (2.3704, 6.9229) -- (2.3704, 8.1219) -- (1.7612, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (3.125, 0.3289) --   (3.7343, 0.3289) -- (3.7343, 4.0699) -- (3.125, 4.0699) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (3.125, 4.0699) --   (3.7343, 4.0699) -- (3.7343, 7.4989) -- (3.125, 7.4989) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (3.125, 7.4989) --   (3.7343, 7.4989) -- (3.7343, 8.1219) -- (3.125, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (4.6765, 0.3289) --   (5.2858, 0.3289) -- (5.2858, 3.7389) -- (4.6765, 3.7389) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (4.6765, 3.7389) --   (5.2858, 3.7389) -- (5.2858, 5.1999) -- (4.6765, 5.1999) -- cycle;
+  \path[fill=colorblindC2,line join=round,line width=0.0265cm] (4.6765, 5.1999) --   (5.2858, 5.1999) -- (5.2858, 5.6869) -- (4.6765, 5.6869) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (4.6765, 5.6869) --   (5.2858, 5.6869) -- (5.2858, 8.1219) -- (4.6765, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (3.9946, 0.3289) --   (4.6038, 0.3289) -- (4.6038, 4.0199) -- (3.9946, 4.0199) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (3.9946, 4.0199) --   (4.6038, 4.0199) -- (4.6038, 5.6609) -- (3.9946, 5.6609) -- cycle;
+  \path[fill=colorblindC2,line join=round,line width=0.0265cm] (3.9946, 5.6609) --   (4.6038, 5.6609) -- (4.6038, 7.3019) -- (3.9946, 7.3019) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (3.9946, 7.3019) --   (4.6038, 7.3019) -- (4.6038, 8.1219) -- (3.9946, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (5.3584, 0.3289) --   (5.9677, 0.3289) -- (5.9677, 4.6879) -- (5.3584, 4.6879) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (5.3584, 4.6879) --   (5.9677, 4.6879) -- (5.9677, 5.0839) -- (5.3584, 5.0839) -- cycle;
+  \path[fill=colorblindC2,line join=round,line width=0.0265cm] (5.3584, 5.0839) --   (5.9677, 5.0839) -- (5.9677, 6.0089) -- (5.3584, 6.0089) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (5.3584, 6.0089) --   (5.9677, 6.0089) -- (5.9677, 8.1219) -- (5.3584, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (6.9091, 0.3289) --   (7.5174, 0.3289) -- (7.5174, 3.9669) -- (6.9091, 3.9669) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (6.9091, 3.9669) --   (7.5174, 3.9669) -- (7.5174, 5.1779) -- (6.9091, 5.1779) -- cycle;
+  \path[fill=colorblindC2,line join=round,line width=0.0265cm] (6.9091, 5.1779) --   (7.5174, 5.1779) -- (7.5174, 6.5639) -- (6.9091, 6.5639) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (6.9091, 6.5639) --   (7.5174, 6.5639) -- (7.5174, 8.1219) -- (6.9091, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (6.228, 0.3289) --   (6.8364, 0.3289) -- (6.8364, 3.6359) -- (6.228, 3.6359) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (6.228, 3.6359) --   (6.8364, 3.6359) -- (6.8364, 5.2879) -- (6.228, 5.2879) -- cycle;
+  \path[fill=colorblindC2,line join=round,line width=0.0265cm] (6.228, 5.2879) --   (6.8364, 5.2879) -- (6.8364, 6.7049) -- (6.228, 6.7049) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (6.228, 6.7049) --   (6.8364, 6.7049) -- (6.8364, 8.1219) -- (6.228, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (7.5901, 0.3289) --   (8.1984, 0.3289) -- (8.1984, 3.1209) -- (7.5901, 3.1209) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (7.5901, 3.1209) --   (8.1984, 3.1209) -- (8.1984, 4.5159) -- (7.5901, 4.5159) -- cycle;
+  \path[fill=colorblindC2,line join=round,line width=0.0265cm] (7.5901, 4.5159) --   (8.1984, 4.5159) -- (8.1984, 4.9819) -- (7.5901, 4.9819) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (7.5901, 4.9819) --   (8.1984, 4.9819) -- (8.1984, 8.1219) -- (7.5901, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (9.138, 0.3289) --   (9.7473, 0.3289) -- (9.7473, 8.1219) -- (9.138, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (9.82, 0.3289) --   (10.4292, 0.3289) -- (10.4292, 8.1219) -- (9.82, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (11.3715, 0.3289) --   (11.9807, 0.3289) -- (11.9807, 4.9129) -- (11.3715, 4.9129) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (11.3715, 4.9129) --   (11.9807, 4.9129) -- (11.9807, 7.2059) -- (11.3715, 7.2059) -- cycle;
+  \path[fill=colorblindC2,line join=round,line width=0.0265cm] (11.3715, 7.2059) --   (11.9807, 7.2059) -- (11.9807, 7.4349) -- (11.3715, 7.4349) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (11.3715, 7.4349) --   (11.9807, 7.4349) -- (11.9807, 8.1219) -- (11.3715, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (10.6895, 0.3289) --   (11.2988, 0.3289) -- (11.2988, 4.4849) -- (10.6895, 4.4849) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (10.6895, 4.4849) --   (11.2988, 4.4849) -- (11.2988, 7.3429) -- (10.6895, 7.3429) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (10.6895, 7.3429) --   (11.2988, 7.3429) -- (11.2988, 8.1219) -- (10.6895, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (12.0534, 0.3289) --   (12.6626, 0.3289) -- (12.6626, 6.0709) -- (12.0534, 6.0709) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (12.0534, 6.0709) --   (12.6626, 6.0709) -- (12.6626, 6.3449) -- (12.0534, 6.3449) -- cycle;
+  \path[fill=colorblindC2,line join=round,line width=0.0265cm] (12.0534, 6.3449) --   (12.6626, 6.3449) -- (12.6626, 6.8919) -- (12.0534, 6.8919) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (12.0534, 6.8919) --   (12.6626, 6.8919) -- (12.6626, 8.1219) -- (12.0534, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (13.6049, 0.3289) --   (14.2141, 0.3289) -- (14.2141, 4.7819) -- (13.6049, 4.7819) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (13.6049, 4.7819) --   (14.2141, 4.7819) -- (14.2141, 6.8979) -- (13.6049, 6.8979) -- cycle;
+  \path[fill=colorblindC2,line join=round,line width=0.0265cm] (13.6049, 6.8979) --   (14.2141, 6.8979) -- (14.2141, 7.3429) -- (13.6049, 7.3429) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (13.6049, 7.3429) --   (14.2141, 7.3429) -- (14.2141, 8.1219) -- (13.6049, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (12.9229, 0.3289) --   (13.5322, 0.3289) -- (13.5322, 5.3319) -- (12.9229, 5.3319) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (12.9229, 5.3319) --   (13.5322, 5.3319) -- (13.5322, 7.2559) -- (12.9229, 7.2559) -- cycle;
+  \path[fill=colorblindC2,line join=round,line width=0.0265cm] (12.9229, 7.2559) --   (13.5322, 7.2559) -- (13.5322, 7.4489) -- (12.9229, 7.4489) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (12.9229, 7.4489) --   (13.5322, 7.4489) -- (13.5322, 8.1219) -- (12.9229, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (14.2868, 0.3289) --   (14.896, 0.3289) -- (14.896, 5.3569) -- (14.2868, 5.3569) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (14.2868, 5.3569) --   (14.896, 5.3569) -- (14.896, 6.1949) -- (14.2868, 6.1949) -- cycle;
+  \path[fill=colorblindC2,line join=round,line width=0.0265cm] (14.2868, 6.1949) --   (14.896, 6.1949) -- (14.896, 6.5299) -- (14.2868, 6.5299) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (14.2868, 6.5299) --   (14.896, 6.5299) -- (14.896, 8.1219) -- (14.2868, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (15.8374, 0.3289) --   (16.4457, 0.3289) -- (16.4457, 1.4269) -- (15.8374, 1.4269) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (15.8374, 1.4269) --   (16.4457, 1.4269) -- (16.4457, 4.6649) -- (15.8374, 4.6649) -- cycle;
+  \path[fill=colorblindC2,line join=round,line width=0.0265cm] (15.8374, 4.6649) --   (16.4457, 4.6649) -- (16.4457, 6.3109) -- (15.8374, 6.3109) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (15.8374, 6.3109) --   (16.4457, 6.3109) -- (16.4457, 8.1219) -- (15.8374, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (15.1564, 0.3289) --   (15.7647, 0.3289) -- (15.7647, 1.4499) -- (15.1564, 1.4499) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (15.1564, 1.4499) --   (15.7647, 1.4499) -- (15.7647, 4.8619) -- (15.1564, 4.8619) -- cycle;
+  \path[fill=colorblindC2,line join=round,line width=0.0265cm] (15.1564, 4.8619) --   (15.7647, 4.8619) -- (15.7647, 6.6959) -- (15.1564, 6.6959) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (15.1564, 6.6959) --   (15.7647, 6.6959) -- (15.7647, 8.1219) -- (15.1564, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (16.5184, 0.3289) --   (17.1268, 0.3289) -- (17.1268, 1.9359) -- (16.5184, 1.9359) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (16.5184, 1.9359) --   (17.1268, 1.9359) -- (17.1268, 4.7689) -- (16.5184, 4.7689) -- cycle;
+  \path[fill=colorblindC2,line join=round,line width=0.0265cm] (16.5184, 4.7689) --   (17.1268, 4.7689) -- (17.1268, 6.1859) -- (16.5184, 6.1859) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (16.5184, 6.1859) --   (17.1268, 6.1859) -- (17.1268, 8.1219) -- (16.5184, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (18.069, 0.3289) --   (18.6783, 0.3289) -- (18.6783, 5.6009) -- (18.069, 5.6009) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (18.069, 5.6009) --   (18.6783, 5.6009) -- (18.6783, 7.4349) -- (18.069, 7.4349) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (18.069, 7.4349) --   (18.6783, 7.4349) -- (18.6783, 8.1219) -- (18.069, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (17.3871, 0.3289) --   (17.9963, 0.3289) -- (17.9963, 5.2279) -- (17.3871, 5.2279) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (17.3871, 5.2279) --   (17.9963, 5.2279) -- (17.9963, 6.7859) -- (17.3871, 6.7859) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (17.3871, 6.7859) --   (17.9963, 6.7859) -- (17.9963, 8.1219) -- (17.3871, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (18.751, 0.3289) --   (19.3602, 0.3289) -- (19.3602, 5.8549) -- (18.751, 5.8549) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (18.751, 5.8549) --   (19.3602, 5.8549) -- (19.3602, 7.1309) -- (18.751, 7.1309) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (18.751, 7.1309) --   (19.3602, 7.1309) -- (19.3602, 8.1219) -- (18.751, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (20.3025, 0.3289) --   (20.9117, 0.3289) -- (20.9117, 6.4219) -- (20.3025, 6.4219) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (20.3025, 6.4219) --   (20.9117, 6.4219) -- (20.9117, 7.2719) -- (20.3025, 7.2719) -- cycle;
+  \path[fill=colorblindC2,line join=round,line width=0.0265cm] (20.3025, 7.2719) --   (20.9117, 7.2719) -- (20.9117, 7.4139) -- (20.3025, 7.4139) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (20.3025, 7.4139) --   (20.9117, 7.4139) -- (20.9117, 8.1219) -- (20.3025, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (19.6205, 0.3289) --   (20.2298, 0.3289) -- (20.2298, 6.6519) -- (19.6205, 6.6519) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (19.6205, 6.6519) --   (20.2298, 6.6519) -- (20.2298, 7.9749) -- (19.6205, 7.9749) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (19.6205, 7.9749) --   (20.2298, 7.9749) -- (20.2298, 8.1219) -- (19.6205, 8.1219) -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0265cm] (20.9844, 0.3289) --   (21.5936, 0.3289) -- (21.5936, 6.8039) -- (20.9844, 6.8039) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0265cm] (20.9844, 6.8039) --   (21.5936, 6.8039) -- (21.5936, 7.8829) -- (20.9844, 7.8829) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0265cm] (20.9844, 7.8829) --   (21.5936, 7.8829) -- (21.5936, 8.1219) -- (20.9844, 8.1219) -- cycle;
+  \path[fill=colorblindC1,line join=round,line width=0.0282cm] (20.3721, 8.4596) --   (20.2661, 8.4596) -- (20.2661, 8.6706) -- (20.4771, 8.6706) -- (20.4771,   8.4596) -- cycle;
+  \path[fill=colorblindC2,line join=round,line width=0.0282cm] (18.7162, 8.4596) --   (18.6102, 8.4596) -- (18.6102, 8.6706) -- (18.8212, 8.6706) -- (18.8212,   8.4596) -- cycle;
+  \path[fill=colorblindC6,line join=round,line width=0.0282cm] (17.058, 8.4596) --   (16.952, 8.4596) -- (16.952, 8.6706) -- (17.163, 8.6706) -- (17.163, 8.4596)   -- cycle;
+  \path[fill=colorblindC7,line join=round,line width=0.0282cm] (15.6945, 8.4661) --   (15.5885, 8.4661) -- (15.5885, 8.6771) -- (15.7995, 8.6771) -- (15.7995,   8.4661) -- cycle;
+
+  %%% X-Achse
+  %% Beschriftung
+  \node[text=black,line join=round,line width=0.02cm,anchor=south west]   (text757) at (2.0095, -0.5){Fakultät A};
+  \node[text=black,line join=round,line width=0.02cm,anchor=south west]   (text757-5) at (4.2437, -0.5){Fakultät B};
+  \begin{scope}[line join=round,line width=0.0282cm,shift={(4.608, 1.5782)}]    \node[text=black,line join=round,line width=0.02cm,anchor=south west]   (text757-2) at (1.8619, -2.0782){Fakultät C};
+  \end{scope}  \begin{scope}[line join=round,line width=0.0282cm,shift={(6.9376, 1.5782)}]    \node[text=black,line join=round,line width=0.02cm,anchor=south west]   (text757-27) at (1.7619, -2.0782){Fakultät D};
+  \end{scope}  \begin{scope}[line join=round,line width=0.0282cm,shift={(9.0752, 1.5782)}]    \node[text=black,line join=round,line width=0.02cm,anchor=south west]   (text757-3) at (1.8619, -2.0782){Fakultät E};
+  \end{scope}  \node[text=black,line join=round,line width=0.02cm,anchor=south west]   (text758) at (13.1708, -0.5){Fakultät F};
+  \node[text=black,line join=round,line width=0.02cm,anchor=south west]   (text759) at (15.3031, -0.5){Fakultät G};
+  \node[text=black,line join=round,line width=0.02cm,anchor=south west]   (text760) at (17.5355, -0.5){Fakultät H};
+  \node[text=black,line join=round,line width=0.02cm,anchor=south west]   (text761) at (19.7776, -0.5){Fakultät I};
+
+  %%% Y-Achse
+  %% Prozentzeichen
+  \node[text=black,line join=round,line width=0.0282cm,anchor=south west]   (text769) at (0.4615, 7.9931){100 \%};
+  \node[text=black,line join=round,line width=0.0282cm,anchor=south west]   (text770) at (0.6431, 7.2141){90 \%};
+  \node[text=black,line join=round,line width=0.0282cm,anchor=south west]   (text771) at (0.6431, 6.4351){80 \%};
+  \node[text=black,line join=round,line width=0.0282cm,anchor=south west]   (text772) at (0.6431, 5.6551){70 \%};
+  \node[text=black,line join=round,line width=0.0282cm,anchor=south west]   (text773) at (0.6431, 4.8761){60 \%};
+  \node[text=black,line join=round,line width=0.0282cm,anchor=south west]   (text774) at (0.6431, 4.0961){50 \%};
+  \node[text=black,line join=round,line width=0.0282cm,anchor=south west]   (text775) at (0.6431, 3.3181){40 \%};
+  \node[text=black,line join=round,line width=0.0282cm,anchor=south west]   (text776) at (0.6431, 2.5391){30 \%};
+  \node[text=black,line join=round,line width=0.0282cm,anchor=south west]   (text777) at (0.6431, 1.7591){20 \%};
+  \node[text=black,line join=round,line width=0.0282cm,anchor=south west]   (text778) at (0.6431, 0.9801){10 \%};
+  \node[text=black,line join=round,line width=0.0282cm,anchor=south west]   (text779) at (0.8247, 0.2001){0 \%};
+  %%Schriftzug
+  \node[text=black,line join=round,line width=0.0282cm,rotate=90.0,anchor=south   west] (text780) at (0.2413, 2.7409){Anteil in Prozent (\%)};
+
+  %%% Legende
+  \node[text=black,line join=round,line width=0.0282cm,anchor=south west]   (text781) at (15.8976, 8.4562){Keine};
+  \node[text=black,line join=round,line width=0.0282cm,anchor=south west]   (text782) at (17.2612, 8.4525){Stufe 3};
+  \node[text=black,line join=round,line width=0.0282cm,anchor=south west]   (text783) at (18.9193, 8.4525){Stufe 2};
+  \node[text=black,line join=round,line width=0.0282cm,anchor=south west]   (text784) at (20.5752, 8.4525){Stufe 1};
+
+  %%% Zahlenwerte
+  %% Fakultät A
+  % Zeitgruppe 2012-2015
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text786)   at (2.0664, 7.4074){2};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text787)   at (2.0666, 4.712){7};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text788)   at (2.0656, 1.4144){4};
+  % Zeitgruppe 2016-2019
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text789)   at (2.7476, 7.2994){4};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text790)   at (2.7414, 4.8209){10};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text791)   at (2.7479, 1.633){8};
+  % Zeitgruppe 2020-2023
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text792)   at (3.4303, 7.6954){2};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text793)   at (3.4198, 5.564){11};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text794)   at (3.4238, 2.0844){12};
+  %% Fakultät B
+  % Zeitgruppe 2012-2015
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text795)   at (4.2998, 7.5969){2};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text796)   at (4.2991, 6.3674){4};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text797)   at (4.2991, 4.7264){4};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text798)   at (4.2995, 2.061){9};
+  % Zeitgruppe 2016-2019
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text799)   at (4.9748, 6.7909){10};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text800)   at (4.9818, 5.3284){2};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text801)   at (4.9799, 4.356){6};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text802)   at (4.9702, 1.9199){14};
+  % Zeitgruppe 2020-2023
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text803)   at (5.6564, 6.952){16};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text804)   at (5.6639, 5.433){7};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text805)   at (5.665, 4.7725){3};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text806)   at (5.665, 2.395){33};
+  %% Fakultät C
+  % Zeitgruppe 2012-2015
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text807)   at (6.5309, 7.3){6};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text808)   at (6.5309, 5.883){6};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text809)   at (6.533, 4.3485){7};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text810)   at (6.5212, 1.8684){14};
+  % Zeitgruppe 2016-2019
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text811)   at (7.2135, 7.2295){9};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text812)   at (7.2134, 5.7575){8};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text813)   at (7.214, 4.459){7};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text814)   at (7.2401, 2.0329){21};
+  % Zeitgruppe 2020-2023
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text815)   at (7.8944, 6.4369){27};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text816)   at (7.8941, 4.6349){4};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text817)   at (7.8884, 3.7034){12};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text818)   at (7.8898, 1.6099){24};
+  %% Fakultät D
+  % Zeitgruppe 2016-2019
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text819)   at (9.4446, 4.112){3};
+  % Zeitgruppe 2020-2023
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text820)   at (10.1449, 4.112){1};
+  %% Fakultät E
+  % Zeitgruppe 2012-2015
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text821)   at (10.9961, 7.619){3};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text822)   at (11.0145, 5.8005){11};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text823)   at (10.9875, 2.2935){16};
+  % Zeitgruppe 2016-2019
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text824)   at (11.678, 7.665){3};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text825)   at (11.6964, 7.207){1};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text826)   at (11.6697, 5.9459){10};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text827)   at (11.6762, 2.5074){20};
+  % Zeitgruppe 2020-2023
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text828)   at (12.3583, 7.3935){9};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text829)   at (12.3578, 6.5044){4};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text830)   at (12.3586, 6.0929){2};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text831)   at (12.3629, 3.0849){42};
+  %% Fakultät F
+  % Zeitgruppe 2012-2015
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text832)   at (13.2284, 7.672){7};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text833)   at (13.2282, 7.2374){2};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text834)   at (13.2277, 6.1804){20};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text835)   at (13.2258, 2.717){52};
+  % Zeitgruppe 2016-2019
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text836)   at (13.9103, 7.619){7};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text837)   at (13.9093, 7.0064){4};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text838)   at (13.9036, 5.7265){19};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text839)   at (13.9139, 2.4419){40};
+  % Zeitgruppe 2020-2023
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text840)   at (14.5855, 7.2125){19};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text841)   at (14.5913, 6.2484){4};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text842)   at (14.5851, 5.6624){10};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text843)   at (14.5905, 2.7294){60};
+  %% Fakultät G
+  % Zeitgruppe 2012-2015
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text844)   at (15.4608, 7.2955){28};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text845)   at (15.4608, 5.6655){36};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text846)   at (15.4596, 3.0425){67};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text847)   at (15.4612, 0.7744){22};
+  % Zeitgruppe 2016-2019
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text848)   at (16.1435, 7.103){33};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text849)   at (16.1422, 5.3744){30};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text850)   at (16.1398, 2.9325){59};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text851)   at (16.1417, 0.7644){20};
+  % Zeitgruppe 2020-2023
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text852)   at (16.8537, 7.0399){41};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text853)   at (16.8233, 5.3639){30};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text854)   at (16.8217, 3.2389){60};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text855)   at (16.8186, 1.019){34};
+  %% Fakultät H
+  % Zeitgruppe 2012-2015
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text856)   at (17.6905, 7.3405){6};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text857)   at (17.6925, 5.8935){7};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text858)   at (17.6924, 2.6634){22};
+  % Zeitgruppe 2016-2019
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text859)   at (18.3756, 7.665){3};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text860)   at (18.3738, 6.4045){8};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text861)   at (18.3751, 2.8515){23};
+  % Zeitgruppe 2020-2023
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text862)   at (19.0564, 7.513){7};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text863)   at (19.0559, 6.3795){9};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text864)   at (19.0567, 2.9785){39};
+  %% Fakultät I
+  % Zeitgruppe 2012-2015
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text865)   at (19.9455, 7.935){1};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text866)   at (19.9255, 7.2){9};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text867)   at (19.9309, 3.377){43};
+  % Zeitgruppe 2016-2019
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text868)   at (20.6061, 7.6561){5};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text874)   at (20.6274, 7.2295){1};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text869)   at (20.6058, 6.7335){6};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text870)   at (20.6128, 3.262){43};
+  % Zeitgruppe 2020-2023
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text871)   at (21.2896, 7.8874){2};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text872)   at (21.2893, 7.23){9};
+  \node[text=black,anchor=south,line join=round,line width=0.0282cm] (text873)   at (21.2822, 3.454){54};
+\end{tikzpicture}
