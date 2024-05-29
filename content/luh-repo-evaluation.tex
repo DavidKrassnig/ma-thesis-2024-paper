@@ -126,6 +126,15 @@ Diese Liste wurde dann am Ende der Evaluation genutzt, um \cref{lst:luh-repo-doc
 Dieses Skript durchsuchte automatisch den Text aller Textdatei mit den notierten Wörtern, um etwaige übersehene externe \glspl{forschungsdaten} im Nachhinein noch erfassen zu können.
 Zusätzlich wurde für jede Dissertation auch eingetragen, ob für sie überhaupt Primärdaten produziert worden sind; diese Information wurden wiederum genutzt, um relative Werte zu der jeweiligen Gesamtsumme aller Dissertationen minus jenen ohne produzierte Primärdaten zu erstellen.
 
+\parsum{Gesamtklassifikation}
+Nach Beendigung der Klassifikationsarbeit wurden jeder Dissertation jeweils vier Werte zugeordnet: 
+\begin{itemize}
+    \item die höchste Klassifikationstufe aller gefundenen \glspl{forschungsdaten} der Dissertation
+    \item die höchste Klassifikationsstufe aller gefunden \glspl{forschungsdaten} die in der PDF-Datei der Dissertation integriert waren
+    \item die höchste Klassifikationsstufe aller gefunden \glspl{forschungsdaten} die der Dissertation als separate Datei beigefügt wurden
+    \item die höchste Klassifikationsstufe aller gefunden \glspl{forschungsdaten} die auf einem externen Repositorium hochgeladen wurden.
+\end{itemize}
+
 \parsum{Auswertung der Ergebnisse}
 Nach der Klassifizierung aller Dateien wurden die vollständig evaluierten CSV-Dateien der Stichprobengruppierungen durch \cref{lst:bash-luh-repo-csv-combiner} einerseits in kombinierte Fakultätstabellen und andererseits in eine Gesamttabelle zusammengeführt.
 Die vorhandenen Metadaten wurden dann auf plausible Faktoren untersucht, die einen etwaigen Einfluss auf die Präsenz, Art und Publikationsform von \glspl{forschungsdaten}.
@@ -141,10 +150,13 @@ Bei einem Cramérs V-Wert von $\phi_C>\num{0,1}$ ist von einem schwachem, bei $\
 Die in \cref{sec:luh-repo-material} gesammelten Zahlenspiegel der \gls{luh} wurden dann wie folgt ausgewertet.
 Es wurden alle Gesamtanzahlen der Dissertationen pro Fakultät für jeden Jahrgang extrahiert und in eine gemeinsame Tabelle eingetragen, wo sie in die Jahresgruppen 2012--2015, 2016--2019 und 2020--2023 geklumpt wurden.
 Da die offiziellen Zahlen des Jahres 2023 zum Zeitpunkt dieser Arbeit noch nicht veröffentlicht waren, wurden diese durch das arithmetische Mittel der Fakultätswerte aus den Jahren 2012--2022 simuliert, um Werte vergleichbare Werte zu derivieren.
+Die Ausnahme zu dieser Regel sind jene Fakultätswerte für das Jahr 2023, die durch das arithmetische Mittel kleiner gewesen wären, als der entsprechende Wert aus dem \gls{luh-repo}.
+In diesem Fall wurde der entsprechende Wert aus dem \gls{luh-repo} übernommen.
 Die resultierende Verteilung ist in \cref{tab:luh-repo-zahlenspiegel-summary} zu sehen.
 \begin{table}[!htbp]
 	\caption{Die Verteilung der Dissertationen laut den Zahlenspiegeln der \gls{luh} nach $\text{\textit{Fakultät}}\times\text{\textit{Zeitraum}}$ aufgegliedert.
-    Absolute Werte in Klammern angegeben.}
+    Absolute Werte in Klammern angegeben.
+    Spalten, die zumindest teilweise auf simulierten Werten basieren, sind mit einem Asterisk (*) markiert.}
     \input{content/tables/luh-repo-zahlenspiegel-summary.tex}
 	\label{tab:luh-repo-zahlenspiegel-summary}
 \end{table}
@@ -156,7 +168,49 @@ In diesem Abschnitt werden die Klassifizierungsresultate und die statistische Au
 In \cref{sec:luh-repo-results-general} werden die Resultate und die statistische Auswertung der Dissertationen relativ zu der gesamten Stichpobe aufgelistet.
 In \cref{sec:luh-repo-results-specific} werden die Resultate und die statistische Auswertung der Dissertationen relativ zu den einzelnen Fakultäten aufgelistet.
 
+\parsum{Identifizierung möglicher Faktoren}
+Die Untersuchung der Metadaten-Datenbank auf mögliche Faktoren, die Einfluss auf die Existenz von \glspl{forschungsdaten} haben könnten ergab, zusätzlich zu \textit{Zeitgruppe} und \textit{Fakultät}, nur noch \textit{Sprache}.
+
+\parsum{Unabhängigkeit der Faktoren}
+Zur Überprüfung, ob die zu untersuchenden Faktoren von einander abhängig sind, wurden für die Kreuzprodukte aller Faktorenkombinationen Chi-Quadrat Tests der Unabhängigkeit durchgeführt.
+Der Chi-Quadrat-Test für $\text{\textit{Zeitgruppe}}\times\text{\textit{Fakultät}}$ ergab einen Wert von $\chi^2 (\num{16}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{30.11595}$, $p = \num[round-mode=places,round-precision=3]{0.01741020}$.
+Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=3]{0.10222362}$.
+Für $\text{\textit{Zeitgruppe}}\times\text{\textit{Sprache}}$ ergab der Chi-Quadrat-Test einen Wert von $\chi^2 (\num{6}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{81.2042334}$, $p = \num[round-mode=places,round-precision=3]{2.014543e-15}$.
+Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=3]{0.16785812}$.
+Der Chi-Quadrat-Test für $\text{\textit{Fakultät}}\times\text{\textit{Sprache}}$ ergab einen Wert von $\chi^2 (\num{24}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{239.3091384}$, $p = \num[round-mode=places,round-precision=3]{2.148979e-37}$.
+Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=3]{0.23528109}$.
+
+
 \subsection{Allgemeine Resultate}\label{sec:luh-repo-results-general}
+Der Chi-Quadrat-Test für $\text{\textit{Zeitgruppe}}\times\text{\textit{Allgemeine \gls{forschungsdaten}}}$ ergab einen Wert von $\chi^2 (\num{6}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{30.12192}$, $p = \num[round-mode=places,round-precision=3]{3.726510e-05}$.
+Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=3]{0.10223375}$.
+Der Chi-Quadrat-Test für $\text{\textit{Zeitgruppe}}\times\text{\textit{Integrierte \gls{forschungsdaten}}}$ ergab einen Wert von $\chi^2 (\num{6}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{24.796514}$, $p = \num[round-mode=places,round-precision=3]{3.723785e-04}$.
+Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=3]{0.09275735}$.
+Der Chi-Quadrat-Test für $\text{\textit{Zeitgruppe}}\times\text{\textit{Beigefügte \gls{forschungsdaten}}}$ ergab einen Wert von $\chi^2 (\num{4}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{2.9397640}$, $p = \num[round-mode=places,round-precision=3]{0.5679558}$.
+Der Chi-Quadrat-Test für $\text{\textit{Zeitgruppe}}\times\text{\textit{Externe \gls{forschungsdaten}}}$ ergab einen Wert von $\chi^2 (\num{6}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{72.1426120}$, $p = \num[round-mode=places,round-precision=3]{1.485226e-13}$.
+Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=3]{0.15821547}$.
+
+Der Chi-Quadrat-Test für $\text{\textit{Fakultät}}\times\text{\textit{Allgemeine \gls{forschungsdaten}}}$ ergab einen Wert von $\chi^2 (\num{24}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{394.95062}$, $p = \num[round-mode=places,round-precision=3]{8.162113e-69}$.
+Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=3]{0.30225868}$.
+Der Chi-Quadrat-Test für $\text{\textit{Fakultät}}\times\text{\textit{Integrierte \gls{forschungsdaten}}}$ ergab einen Wert von $\chi^2 (\num{24}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{369.073591}$, $p = \num[round-mode=places,round-precision=3]{1.618005e-63}$.
+Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=3]{0.29218900}$.
+Der Chi-Quadrat-Test für $\text{\textit{Fakultät}}\times\text{\textit{Beigefügte \gls{forschungsdaten}}}$ ergab einen Wert von $\chi^2 (\num{16}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{21.0750319}$, $p = \num[round-mode=places,round-precision=3]{0.1756444}$.
+Der Chi-Quadrat-Test für $\text{\textit{Fakultät}}\times\text{\textit{Externe \gls{forschungsdaten}}}$ ergab einen Wert von $\chi^2 (\num{24}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{84.6628826}$, $p = \num[round-mode=places,round-precision=3]{1.081516e-08}$.
+Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=3]{0.13994388}$.
+
+Der Chi-Quadrat-Test für $\text{\textit{Sprache}}\times\text{\textit{Allgemeine \gls{forschungsdaten}}}$ ergab einen Wert von $\chi^2 (\num{9}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{42.78629}$, $p = \num[round-mode=places,round-precision=3]{2.359277e-06}$.
+Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=3]{0.09948548}$.
+Der Chi-Quadrat-Test für $\text{\textit{Sprache}}\times\text{\textit{Integrierte \gls{forschungsdaten}}}$ ergab einen Wert von $\chi^2 (\num{9}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{44.154703}$, $p = \num[round-mode=places,round-precision=3]{1.321736e-06}$.
+Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=3]{0.10106386}$.
+Der Chi-Quadrat-Test für $\text{\textit{Sprache}}\times\text{\textit{Beigefügte \gls{forschungsdaten}}}$ ergab einen Wert von $\chi^2 (\num{6}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{0.4469951}$, $p = \num[round-mode=places,round-precision=3]{0.9984250}$.
+Der Chi-Quadrat-Test für $\text{\textit{Sprache}}\times\text{\textit{Externe \gls{forschungsdaten}}}$ ergab einen Wert von $\chi^2 (\num{9}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{36.4433014}$, $p = \num[round-mode=places,round-precision=3]{3.307083e-05}$.
+Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=3]{0.09181555}$.
+
+\fxfatal*{CORRECT VALUES!}{Der Chi-Quadrat-Test für $\text{\textit{Integrierte}}\times\text{\textit{Beigefügte \gls{forschungsdaten}}}$ ergab einen Wert von $\chi^2 (\num{9}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{42.78629}$, $p = \num[round-mode=places,round-precision=3]{2.359277e-06}$.
+Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=3]{0.09948548}$.
+Der Chi-Quadrat-Test für $\text{\textit{Integrierte}}\times\text{\textit{Externe \gls{forschungsdaten}}}$ ergab einen Wert von $\chi^2 (\num{9}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{44.154703}$, $p = \num[round-mode=places,round-precision=3]{1.321736e-06}$.
+Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=3]{0.10106386}$.
+Der Chi-Quadrat-Test für $\text{\textit{Beigefügte}}\times\text{\textit{Externe \gls{forschungsdaten}}}$ ergab einen Wert von $\chi^2 (\num{6}, N = \num{1441}) = \num[round-mode=places,round-precision=3]{0.4469951}$, $p = \num[round-mode=places,round-precision=3]{0.9984250}$.}
 
 
 \begin{table}[!htbp]
@@ -164,6 +218,14 @@ In \cref{sec:luh-repo-results-specific} werden die Resultate und die statistisch
     Absolute Werte in Klammern angegeben.}
     \input{content/tables/luh-repo-classification-realrd.tex}
     \label{tab:luh-repo-classification-realrd}
+\end{table}
+
+\begin{table}[!htbp]
+	\caption{Der Anteil der Grundmenge nach $\text{\textit{Fakultät}}\times\text{\textit{Zeitraum}}$ aufgegliedert relativ zu der respektiven $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}$-Gesamtanzahl aller publizierten Dissertationen.
+    Absolute Differenzwerte in Klammern angegeben.
+    Spalten, die zumindest teilweise auf simulierten Werten basieren, sind mit einem Asterisk (*) markiert.}
+    \input{content/tables/luh-repo-zahlenspiegel-relative-grundmenge.tex}
+    \label{tab:luh-repo-zahlenspiegel-relative-grundmenge}
 \end{table}
 
 \begin{table}[!htbp]
@@ -215,9 +277,15 @@ Fakultät X Klassifikationsstufe
 \caption{\gls{forschungsdaten}-Klassifikation der Dissertationen aus der Stichprobe nach Fakultät, Zeitgruppe und Klassifikationsstufe.
 Die Höhe der Barren entsprechen dem relativen Anteil zur jeweiligen $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}$-Gesamtanzahl.
 Absolute Werte in Klammern angegeben.}
-\label{fig:luh-repo-general-absolute}
+\label{fig:luh-repo-faculty-yeargroup-classification}
 \end{figure}
-
+\begin{figure}[!htbp]
+    \resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{\input{content/images/luh-repo-faculty-yeargroup-classification-adjusted.tikz}}
+    \caption{\gls{forschungsdaten}-Klassifikation der Dissertationen aus der Stichprobe nach Fakultät, Zeitgruppe und Klassifikationsstufe.
+    Die Höhe der Barren entsprechen dem relativen Anteil zur jeweiligen angepassten $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}$-Gesamtanzahl.
+    Absolute Werte in Klammern angegeben.}
+    \label{fig:luh-repo-faculty-yeargroup-classification-adjusted}
+    \end{figure}
 
 
 
