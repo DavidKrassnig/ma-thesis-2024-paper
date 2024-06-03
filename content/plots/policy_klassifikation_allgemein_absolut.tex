@@ -1,67 +1,934 @@
-
-% Preprocess data to calculate percentages
-\pgfplotstableread[col sep=comma]{content/plots/policy_klassifikation_allgemein_absolut.csv}\datatable
-% Create total column
-\pgfplotstablecreatecol[create col/expr={\thisrow{never} + \thisrow{rarely} + \thisrow{sometimes} + \thisrow{often}}]{total}{\datatable}
-\pgfplotsset{
-    percentage plot/.style={
-        ybar stacked,
-        yticklabel=\pgfmathprintnumber{\tick}\,$\%$,
-        bar width=18pt,
-        point meta=explicit,
-        every node near coord/.append style={
-            font=\scriptsize\linespread{0.8}\selectfont,
-            anchor=center,
-            text width=2.5cm,
-            align=center,
-            yshift=0ex, % Adjust vertical position
-            xshift=-.15em
-        },
-        nodes near coords={
-            \pgfmathtruncatemacro\iszero{\originalvalue==0}
-            \ifnum\iszero=0
-                \centering\pgfmathprintnumber[fixed zerofill,precision=0]{\originalvalue}\\\hspace{.15em}(\pgfmathprintnumber[fixed zerofill,precision=0]{\pgfplotspointmeta})
-            \fi
-        },
-        ymin=0,
-        ymax=100,
-        enlarge y limits={upper,value=0.18},
-        visualization depends on={y \as \originalvalue}
-    },
-    percentage series/.style={
-        table/y expr=\thisrow{#1}/\thisrow{total}*100,
-        table/meta=#1
-    }
-}
-\begin{tikzpicture}
-    \begin{axis}[
-        width=\textwidth,
-        height=.7\textwidth,
-        legend cell align={left},
-        percentage plot,
-        xticklabel style={font=\footnotesize,yshift=-2pt},
-        ylabel={Anteil in Prozent (\%)},
-        enlargelimits=0.075,
-        legend style={
-            at={(1,1.02)},
-            anchor=south east,
-            legend columns=-1
-        },
-        symbolic x coords={
-            DE-BW, DE-BY, DE-BE, DE-BB, 
-            DE-HB, DE-HH, DE-HE, DE-MV, 
-            DE-NI, DE-NW, DE-RP, 
-            DE-SL, DE-SN, DE-ST, DE-SH, DE-TH
-        },
-        xtick=data,
-        x tick label style={rotate=45,anchor=east},
-    ]
-
-    \addplot[fill=colorblindC7] table [percentage series=never] {\datatable};
-    \addplot[fill=colorblindC6] table [percentage series=rarely] {\datatable};
-    \addplot[fill=colorblindC1] table [percentage series=often] {\datatable};
-
-    \legend{\strut Keine, \strut \gls{gwp}-Richtlinie, \strut \gls{forschungsdaten}-Richtlinie}
-    \end{axis}
-\end{tikzpicture}
-\vspace{-3.5mm}
+\begin{tikzpicture}[y=1cm, x=1cm, yscale=\globalscale,xscale=\globalscale, every node/.append style={scale=\globalscale}, inner sep=0pt, outer sep=0pt]
+    \path[fill=cebebeb,line cap=round,line join=round,line width=0.04cm,miter 
+    limit=10.0] (1.62, 15.49) rectangle (23.94, 2.09);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.02cm,miter 
+    limit=10.0] (1.62, 4.22) -- (23.94, 4.22);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.02cm,miter 
+    limit=10.0] (1.62, 7.27) -- (23.94, 7.27);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.02cm,miter 
+    limit=10.0] (1.62, 10.31) -- (23.94, 10.31);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.02cm,miter 
+    limit=10.0] (1.62, 13.36) -- (23.94, 13.36);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (1.62, 2.7) -- (23.94, 2.7);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (1.62, 5.75) -- (23.94, 5.75);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (1.62, 8.79) -- (23.94, 8.79);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (1.62, 11.84) -- (23.94, 11.84);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (1.62, 14.88) -- (23.94, 14.88);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (2.45, 2.09) -- (2.45, 15.49);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (3.83, 2.09) -- (3.83, 15.49);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (5.21, 2.09) -- (5.21, 15.49);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (6.58, 2.09) -- (6.58, 15.49);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (7.96, 2.09) -- (7.96, 15.49);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (9.34, 2.09) -- (9.34, 15.49);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (10.71, 2.09) -- (10.71, 15.49);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (12.09, 2.09) -- (12.09, 15.49);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (13.47, 2.09) -- (13.47, 15.49);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (14.85, 2.09) -- (14.85, 15.49);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (16.22, 2.09) -- (16.22, 15.49);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (17.6, 2.09) -- (17.6, 15.49);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (18.98, 2.09) -- (18.98, 15.49);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (20.36, 2.09) -- (20.36, 15.49);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (21.73, 2.09) -- (21.73, 15.49);
+  
+  
+  
+    \path[draw=white,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (23.11, 2.09) -- (23.11, 15.49);
+  
+  
+  
+    \path[draw=black,fill=cee8866,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (1.83, 5.57) rectangle (3.07, 2.7);
+  
+  
+  
+    \path[draw=black,fill=ceedd88,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (1.83, 10.58) rectangle (3.07, 5.57);
+  
+  
+  
+    \path[draw=black,fill=c77aadd,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (1.83, 14.88) rectangle (3.07, 10.58);
+  
+  
+  
+    \path[draw=black,fill=cee8866,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (3.21, 4.73) rectangle (4.45, 2.7);
+  
+  
+  
+    \path[draw=black,fill=ceedd88,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (3.21, 10.82) rectangle (4.45, 4.73);
+  
+  
+  
+    \path[draw=black,fill=c77aadd,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (3.21, 14.88) rectangle (4.45, 10.82);
+  
+  
+  
+    \path[draw=black,fill=cee8866,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (4.59, 5.14) rectangle (5.83, 2.7);
+  
+  
+  
+    \path[draw=black,fill=ceedd88,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (4.59, 7.57) rectangle (5.83, 5.14);
+  
+  
+  
+    \path[draw=black,fill=c77aadd,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (4.59, 14.88) rectangle (5.83, 7.57);
+  
+  
+  
+    \path[fill=cee8866,line cap=butt,line join=miter,line width=0.04cm,miter 
+    limit=10.0] ;
+  
+  
+  
+    \path[draw=black,fill=ceedd88,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (5.96, 5.75) rectangle (7.2, 2.7);
+  
+  
+  
+    \path[draw=black,fill=c77aadd,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (5.96, 14.88) rectangle (7.2, 5.75);
+  
+  
+  
+    \path[fill=cee8866,line cap=butt,line join=miter,line width=0.04cm,miter 
+    limit=10.0] ;
+  
+  
+  
+    \path[draw=black,fill=ceedd88,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (7.34, 8.79) rectangle (8.58, 2.7);
+  
+  
+  
+    \path[draw=black,fill=c77aadd,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (7.34, 14.88) rectangle (8.58, 8.79);
+  
+  
+  
+    \path[draw=black,fill=cee8866,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (8.72, 4.22) rectangle (9.96, 2.7);
+  
+  
+  
+    \path[draw=black,fill=ceedd88,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (8.72, 13.36) rectangle (9.96, 4.22);
+  
+  
+  
+    \path[draw=black,fill=c77aadd,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (8.72, 14.88) rectangle (9.96, 13.36);
+  
+  
+  
+    \path[draw=black,fill=cee8866,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (10.1, 3.92) rectangle (11.33, 2.7);
+  
+  
+  
+    \path[draw=black,fill=ceedd88,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (10.1, 8.79) rectangle (11.33, 3.92);
+  
+  
+  
+    \path[draw=black,fill=c77aadd,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (10.1, 14.88) rectangle (11.33, 8.79);
+  
+  
+  
+    \path[draw=black,fill=cee8866,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (11.47, 8.79) rectangle (12.71, 2.7);
+  
+  
+  
+    \path[draw=black,fill=ceedd88,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (11.47, 14.88) rectangle (12.71, 8.79);
+  
+  
+  
+    \path[fill=c77aadd,line cap=butt,line join=miter,line width=0.04cm,miter 
+    limit=10.0] ;
+  
+  
+  
+    \path[draw=black,fill=cee8866,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (12.85, 3.81) rectangle (14.09, 2.7);
+  
+  
+  
+    \path[fill=ceedd88,line cap=butt,line join=miter,line width=0.04cm,miter 
+    limit=10.0] ;
+  
+  
+  
+    \path[draw=black,fill=c77aadd,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (12.85, 14.88) rectangle (14.09, 3.81);
+  
+  
+  
+    \path[draw=black,fill=cee8866,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (14.23, 3.81) rectangle (15.47, 2.7);
+  
+  
+  
+    \path[draw=black,fill=ceedd88,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (14.23, 8.79) rectangle (15.47, 3.81);
+  
+  
+  
+    \path[draw=black,fill=c77aadd,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (14.23, 14.88) rectangle (15.47, 8.79);
+  
+  
+  
+    \path[fill=cee8866,line cap=butt,line join=miter,line width=0.04cm,miter 
+    limit=10.0] ;
+  
+  
+  
+    \path[draw=black,fill=ceedd88,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (15.6, 12.45) rectangle (16.84, 2.7);
+  
+  
+  
+    \path[draw=black,fill=c77aadd,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (15.6, 14.88) rectangle (16.84, 12.45);
+  
+  
+  
+    \path[fill=cee8866,line cap=butt,line join=miter,line width=0.04cm,miter 
+    limit=10.0] ;
+  
+  
+  
+    \path[draw=black,fill=ceedd88,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (16.98, 8.79) rectangle (18.22, 2.7);
+  
+  
+  
+    \path[draw=black,fill=c77aadd,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (16.98, 14.88) rectangle (18.22, 8.79);
+  
+  
+  
+    \path[fill=cee8866,line cap=butt,line join=miter,line width=0.04cm,miter 
+    limit=10.0] ;
+  
+  
+  
+    \path[draw=black,fill=ceedd88,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (18.36, 10.01) rectangle (19.6, 2.7);
+  
+  
+  
+    \path[draw=black,fill=c77aadd,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (18.36, 14.88) rectangle (19.6, 10.01);
+  
+  
+  
+    \path[fill=cee8866,line cap=butt,line join=miter,line width=0.04cm,miter 
+    limit=10.0] ;
+  
+  
+  
+    \path[draw=black,fill=ceedd88,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (19.74, 10.82) rectangle (20.98, 2.7);
+  
+  
+  
+    \path[draw=black,fill=c77aadd,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (19.74, 14.88) rectangle (20.98, 10.82);
+  
+  
+  
+    \path[draw=black,fill=cee8866,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (21.11, 8.79) rectangle (22.35, 2.7);
+  
+  
+  
+    \path[draw=black,fill=ceedd88,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (21.11, 14.88) rectangle (22.35, 8.79);
+  
+  
+  
+    \path[fill=c77aadd,line cap=butt,line join=miter,line width=0.04cm,miter 
+    limit=10.0] ;
+  
+  
+  
+    \path[fill=cee8866,line cap=butt,line join=miter,line width=0.04cm,miter 
+    limit=10.0] ;
+  
+  
+  
+    \path[draw=black,fill=ceedd88,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (22.49, 8.79) rectangle (23.73, 2.7);
+  
+  
+  
+    \path[draw=black,fill=c77aadd,line cap=butt,line join=miter,line 
+    width=0.04cm,miter limit=10.0] (22.49, 14.88) rectangle (23.73, 8.79);
+  
+  
+  
+    \node[anchor=south] (text76) at (2.45, 4.26){24};
+  
+  
+  
+    \node[anchor=south] (text77) at (2.45, 3.75){(4)};
+  
+  
+  
+    \node[anchor=south] (text78) at (2.45, 8.2){41};
+  
+  
+  
+    \node[anchor=south] (text79) at (2.45, 7.7){(7)};
+  
+  
+  
+    \node[anchor=south] (text80) at (2.45, 12.86){35};
+  
+  
+  
+    \node[anchor=south] (text81) at (2.45, 12.35){(6)};
+  
+  
+  
+    \node[anchor=south] (text82) at (3.83, 3.84){17};
+  
+  
+  
+    \node[anchor=south] (text83) at (3.83, 3.34){(2)};
+  
+  
+  
+    \node[anchor=south] (text84) at (3.83, 7.9){50};
+  
+  
+  
+    \node[anchor=south] (text85) at (3.83, 7.4){(6)};
+  
+  
+  
+    \node[anchor=south] (text86) at (3.83, 12.98){33};
+  
+  
+  
+    \node[anchor=south] (text87) at (3.83, 12.47){(4)};
+  
+  
+  
+    \node[anchor=south] (text88) at (5.21, 4.05){20};
+  
+  
+  
+    \node[anchor=south] (text89) at (5.21, 3.54){(1)};
+  
+  
+  
+    \node[anchor=south] (text90) at (5.21, 6.48){20};
+  
+  
+  
+    \node[anchor=south] (text91) at (5.21, 5.98){(1)};
+  
+  
+  
+    \node[anchor=south] (text92) at (5.21, 11.35){60};
+  
+  
+  
+    \node[anchor=south] (text93) at (5.21, 10.85){(3)};
+  
+  
+  
+    \node[anchor=south] (text94) at (6.58, 4.35){25};
+  
+  
+  
+    \node[anchor=south] (text95) at (6.58, 3.84){(1)};
+  
+  
+  
+    \node[anchor=south] (text96) at (6.58, 10.44){75};
+  
+  
+  
+    \node[anchor=south] (text97) at (6.58, 9.94){(3)};
+  
+  
+  
+    \node[anchor=south] (text98) at (7.96, 5.87){50};
+  
+  
+  
+    \node[anchor=south] (text99) at (7.96, 5.37){(1)};
+  
+  
+  
+    \node[anchor=south] (text100) at (7.96, 11.96){50};
+  
+  
+  
+    \node[anchor=south] (text101) at (7.96, 11.46){(1)};
+  
+  
+  
+    \node[anchor=south] (text102) at (9.34, 3.59){12};
+  
+  
+  
+    \node[anchor=south] (text103) at (9.34, 3.08){(1)};
+  
+  
+  
+    \node[anchor=south] (text104) at (9.34, 8.92){75};
+  
+  
+  
+    \node[anchor=south] (text105) at (9.34, 8.41){(6)};
+  
+  
+  
+    \node[anchor=south] (text106) at (9.34, 14.25){12};
+  
+  
+  
+    \node[anchor=south] (text107) at (9.34, 13.74){(1)};
+  
+  
+  
+    \node[anchor=south] (text108) at (10.71, 3.44){10};
+  
+  
+  
+    \node[anchor=south] (text109) at (10.71, 2.93){(1)};
+  
+  
+  
+    \node[anchor=south] (text110) at (10.71, 6.48){40};
+  
+  
+  
+    \node[anchor=south] (text111) at (10.71, 5.98){(4)};
+  
+  
+  
+    \node[anchor=south] (text112) at (10.71, 11.96){50};
+  
+  
+  
+    \node[anchor=south] (text113) at (10.71, 11.46){(5)};
+  
+  
+  
+    \node[anchor=south] (text114) at (12.09, 5.87){50};
+  
+  
+  
+    \node[anchor=south] (text115) at (12.09, 5.37){(1)};
+  
+  
+  
+    \node[anchor=south] (text116) at (12.09, 11.96){50};
+  
+  
+  
+    \node[anchor=south] (text117) at (12.09, 11.46){(1)};
+  
+  
+  
+    \node[anchor=south] (text118) at (13.47, 3.38){9};
+  
+  
+  
+    \node[anchor=south] (text119) at (13.47, 2.88){(1)};
+  
+  
+  
+    \node[anchor=south] (text120) at (13.47, 9.47){91};
+  
+  
+  
+    \node[anchor=south] (text121) at (13.47, 8.97){(10)};
+  
+  
+  
+    \node[anchor=south] (text122) at (14.85, 3.38){9};
+  
+  
+  
+    \node[anchor=south] (text123) at (14.85, 2.88){(2)};
+  
+  
+  
+    \node[anchor=south] (text124) at (14.85, 6.43){41};
+  
+  
+  
+    \node[anchor=south] (text125) at (14.85, 5.92){(9)};
+  
+  
+  
+    \node[anchor=south] (text126) at (14.85, 11.96){50};
+  
+  
+  
+    \node[anchor=south] (text127) at (14.85, 11.46){(11)};
+  
+  
+  
+    \node[anchor=south] (text128) at (16.22, 7.7){80};
+  
+  
+  
+    \node[anchor=south] (text129) at (16.22, 7.19){(4)};
+  
+  
+  
+    \node[anchor=south] (text130) at (16.22, 13.79){20};
+  
+  
+  
+    \node[anchor=south] (text131) at (16.22, 13.29){(1)};
+  
+  
+  
+    \node[anchor=south] (text132) at (17.6, 5.87){50};
+  
+  
+  
+    \node[anchor=south] (text133) at (17.6, 5.37){(1)};
+  
+  
+  
+    \node[anchor=south] (text134) at (17.6, 11.96){50};
+  
+  
+  
+    \node[anchor=south] (text135) at (17.6, 11.46){(1)};
+  
+  
+  
+    \node[anchor=south] (text136) at (18.98, 6.48){60};
+  
+  
+  
+    \node[anchor=south] (text137) at (18.98, 5.98){(3)};
+  
+  
+  
+    \node[anchor=south] (text138) at (18.98, 12.57){40};
+  
+  
+  
+    \node[anchor=south] (text139) at (18.98, 12.07){(2)};
+  
+  
+  
+    \node[anchor=south] (text140) at (20.36, 6.89){67};
+  
+  
+  
+    \node[anchor=south] (text141) at (20.36, 6.38){(4)};
+  
+  
+  
+    \node[anchor=south] (text142) at (20.36, 12.98){33};
+  
+  
+  
+    \node[anchor=south] (text143) at (20.36, 12.47){(2)};
+  
+  
+  
+    \node[anchor=south] (text144) at (21.73, 5.87){50};
+  
+  
+  
+    \node[anchor=south] (text145) at (21.73, 5.37){(1)};
+  
+  
+  
+    \node[anchor=south] (text146) at (21.73, 11.96){50};
+  
+  
+  
+    \node[anchor=south] (text147) at (21.73, 11.46){(1)};
+  
+  
+  
+    \node[anchor=south] (text148) at (23.11, 5.87){50};
+  
+  
+  
+    \node[anchor=south] (text149) at (23.11, 5.37){(1)};
+  
+  
+  
+    \node[anchor=south] (text150) at (23.11, 11.96){50};
+  
+  
+  
+    \node[anchor=south] (text151) at (23.11, 11.46){(1)};
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (2.45, 1.99) -- (2.45, 2.09);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (3.83, 1.99) -- (3.83, 2.09);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (5.21, 1.99) -- (5.21, 2.09);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (6.58, 1.99) -- (6.58, 2.09);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (7.96, 1.99) -- (7.96, 2.09);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (9.34, 1.99) -- (9.34, 2.09);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (10.71, 1.99) -- (10.71, 2.09);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (12.09, 1.99) -- (12.09, 2.09);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (13.47, 1.99) -- (13.47, 2.09);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (14.85, 1.99) -- (14.85, 2.09);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (16.22, 1.99) -- (16.22, 2.09);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (17.6, 1.99) -- (17.6, 2.09);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (18.98, 1.99) -- (18.98, 2.09);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (20.36, 1.99) -- (20.36, 2.09);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (21.73, 1.99) -- (21.73, 2.09);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (23.11, 1.99) -- (23.11, 2.09);
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east,cm={ 0.71,0.71,-0.71,0.71,(2.66, 
+    -16.08)}] (text168) at (0.0, 17.78){DE-BW};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east,cm={ 0.71,0.71,-0.71,0.71,(4.04, 
+    -16.08)}] (text169) at (0.0, 17.78){DE-BY};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east,cm={ 0.71,0.71,-0.71,0.71,(5.42, 
+    -16.08)}] (text170) at (0.0, 17.78){DE-BE};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east,cm={ 0.71,0.71,-0.71,0.71,(6.8, -16.08)}]
+     (text171) at (0.0, 17.78){DE-BB};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east,cm={ 0.71,0.71,-0.71,0.71,(8.17, 
+    -16.08)}] (text172) at (0.0, 17.78){DE-HB};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east,cm={ 0.71,0.71,-0.71,0.71,(9.55, 
+    -16.08)}] (text173) at (0.0, 17.78){DE-HH};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east,cm={ 0.71,0.71,-0.71,0.71,(10.93, 
+    -16.08)}] (text174) at (0.0, 17.78){DE-HE};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east,cm={ 0.71,0.71,-0.71,0.71,(12.31, 
+    -16.08)}] (text175) at (0.0, 17.78){DE-MV};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east,cm={ 0.71,0.71,-0.71,0.71,(13.68, 
+    -16.08)}] (text176) at (0.0, 17.78){DE-NI};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east,cm={ 0.71,0.71,-0.71,0.71,(15.06, 
+    -16.08)}] (text177) at (0.0, 17.78){DE-NW};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east,cm={ 0.71,0.71,-0.71,0.71,(16.44, 
+    -16.08)}] (text178) at (0.0, 17.78){DE-RP};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east,cm={ 0.71,0.71,-0.71,0.71,(17.81, 
+    -16.08)}] (text179) at (0.0, 17.78){DE-SL};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east,cm={ 0.71,0.71,-0.71,0.71,(19.19, 
+    -16.08)}] (text180) at (0.0, 17.78){DE-SN};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east,cm={ 0.71,0.71,-0.71,0.71,(20.57, 
+    -16.08)}] (text181) at (0.0, 17.78){DE-ST};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east,cm={ 0.71,0.71,-0.71,0.71,(21.95, 
+    -16.08)}] (text182) at (0.0, 17.78){DE-SH};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east,cm={ 0.71,0.71,-0.71,0.71,(23.32, 
+    -16.08)}] (text183) at (0.0, 17.78){DE-TH};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east] (text184) at (1.45, 2.59){0\%};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east] (text185) at (1.45, 5.63){25\%};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east] (text186) at (1.45, 8.68){50\%};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east] (text187) at (1.45, 11.73){75\%};
+  
+  
+  
+    \node[text=c4d4d4d,anchor=south east] (text188) at (1.45, 14.77){100\%};
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (1.53, 2.7) -- (1.62, 2.7);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (1.53, 5.75) -- (1.62, 5.75);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (1.53, 8.79) -- (1.62, 8.79);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (1.53, 11.84) -- (1.62, 11.84);
+  
+  
+  
+    \path[draw=c333333,line cap=butt,line join=round,line width=0.04cm,miter 
+    limit=10.0] (1.53, 14.88) -- (1.62, 14.88);
+  
+  
+  
+    \node[anchor=south,cm={ 0.0,1.0,-1.0,0.0,(0.47, -8.99)}] (text192) at (0.0, 
+    17.78){Anteil in Prozent (\%)};
+  
+  
+  
+    \begin{scope}[shift={(-0.47, -0.0)}]
+      \path[fill=cebebeb,line cap=round,line join=round,line width=0.04cm,miter 
+    limit=10.0] (8.67, 16.71) rectangle (9.28, 16.1);
+  
+  
+  
+      \path[fill=c77aadd,line cap=butt,line join=miter,line width=0.04cm,miter 
+    limit=10.0] (8.7, 16.68) rectangle (9.26, 16.12);
+  
+  
+  
+      \path[fill=cebebeb,line cap=round,line join=round,line width=0.04cm,miter 
+    limit=10.0] (12.27, 16.71) rectangle (12.88, 16.1);
+  
+  
+  
+      \path[fill=ceedd88,line cap=butt,line join=miter,line width=0.04cm,miter 
+    limit=10.0] (12.29, 16.68) rectangle (12.85, 16.12);
+  
+  
+  
+      \path[fill=cebebeb,line cap=round,line join=round,line width=0.04cm,miter 
+    limit=10.0] (16.22, 16.71) rectangle (16.83, 16.1);
+  
+  
+  
+      \path[fill=cee8866,line cap=butt,line join=miter,line width=0.04cm,miter 
+    limit=10.0] (16.24, 16.68) rectangle (16.8, 16.12);
+  
+  
+  
+      \node[shift={(-0.11, -0.69)},anchor=south west] (text198) at (9.48, 
+    16.96){\gls{forschungsdaten}-Richtlinie};
+  
+  
+  
+      \node[shift={(0.42, -0.69)},anchor=south west] (text199) at (12.54, 
+    16.96){\gls{gwp}-Richtlinie};
+  
+  
+  
+      \node[shift={(0.95, -0.69)},anchor=south west] (text200) at (15.96, 
+    16.96){Keine};
+  
+  
+  
+    \end{scope}
+  
+  \end{tikzpicture}

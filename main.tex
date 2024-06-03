@@ -78,7 +78,7 @@
 \usepackage[acronym,automake]{glossaries-extra}%Abkürzung- und Begriffverwaltung
     \makeglossaries
     \setabbreviationstyle[acronym]{long-short}
-    \input{matter/backmatter/acronyms}
+    \input{matter/frontmatter/acronyms}
 \usepackage{siunitx}  %Bessere Einheitenimplementation
     \sisetup{group-minimum-digits=4,output-decimal-marker={,},locale=DE,}
 \usepackage{soul}
@@ -99,6 +99,17 @@
     \definecolor{colorblindC7}{RGB}{238,136,102}
     \definecolor{colorblindC8}{RGB}{255,170,187}
     \definecolor{colorblindC9}{RGB}{221,221,221}
+    \definecolor{cebebeb}{RGB}{235,235,235}
+    \definecolor{cdddddd}{RGB}{221,221,221}
+    \definecolor{cee8866}{RGB}{238,136,102}
+    \definecolor{caaaa00}{RGB}{170,170,0}
+    \definecolor{ceedd88}{RGB}{238,221,136}
+    \definecolor{c99dde1}{RGB}{153,221,225}
+    \definecolor{c77aadd}{RGB}{119,170,221}
+    \definecolor{c333333}{RGB}{51,51,51}
+    \definecolor{c4d4d4d}{RGB}{77,77,77}
+    \definecolor{c1a1a1a}{RGB}{26,26,26}
+    \def \globalscale {1.000000}
 \usepackage{pgfplotstable}
 \usepackage{pgf-pie}
 \usepackage{tikz}     %Erweiterte Zeichnungs- und Grafikkapazitäten
@@ -179,7 +190,7 @@
 %Anmerkung: Das Bibliografieformat muss oben unter Dokumentpakete eingestellt werden
 
 %% Hauptdokument %%
-%\includeonly{content/fdm-policies} %Selektive Dokumentgenerierung
+%\includeonly{content/luh-repo-evaluation} %Selektive Dokumentgenerierung
 \begin{document}
     %% Vorderer Teil
     \frontmatter
@@ -196,7 +207,7 @@
         \include{content/forschungsstand}
         \include{content/fdm-policies}
         \include{content/luh-repo-evaluation}
-        \include{content/machine-learning}
+        %\include{content/machine-learning}
         \include{content/schluss}
     %
     %% Hinterer Teil
@@ -208,6 +219,7 @@
     \appendix
     \part*{Appendix}
     \include{appendices/richtlinienklassifikation}
+    \include{appendices/luh-repo-code}
     %% Selbstständigkeitserklärung
     % Wichtig: Ersetze die PDF-Datei mit einer ausgefüllten Variante vor der Abgabe!
     % Wichtig: Die hier beigefügte Datei entspricht der Vorlage des Instituts für Bibliotheks- und Informationswissenschaft. Nutze die Vorlage des entsprechend gültigen Fachbereichs!
