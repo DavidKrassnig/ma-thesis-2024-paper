@@ -165,24 +165,20 @@ Aus diesem Vergleich wurde dann jeweils abgeleitet, zu welchem Anteil die Promov
 
 \section{Resultate}\label{sec:luh-repo-results}
 \parsum{Aufbau des Abschnitts}
-In diesem Abschnitt werden die Klassifizierungsresultate und die statistische Auswertung jener Resultate dargestellt.
-In \cref{sec:luh-repo-results-general} werden die Resultate und die statistische Auswertung der Dissertationen relativ zu der gesamten Stichpobe aufgelistet.
-In \cref{sec:luh-repo-results-specific} werden die Resultate und die statistische Auswertung der Dissertationen relativ zu den einzelnen Fakultäten aufgelistet.
+In diesem Abschnitt werden die Resultate der Zeitspiegelauswertung und der \gls{luh-repo} Datenklassifizierung sowie deren statistische Auswertung dargestellt.
+In \cref{sec:luh-repo-results-zahlenspiegel} werden die Zahlen der \gls{luh}-Zahlenspiegel ausgewertet und in Relation zu den Zahlen des \gls{luh-repo}s gesetzt.
+Hiermit wird eine Nutzungsrate für die Fakultäten über die einzelnen Zeitgruppen hergestellt.
+Fakultäten, deren Verhalten sich ähneln, werden in entsprechende Gruppen zusammengefasst.
+In \cref{sec:luh-repo-results-factors} werden mögliche Faktoren für unterschiedliche Produktionsraten und -arten für \glspl{forschungsdaten} identifiziert und auf Unabhängigkeit voneinander überprüft.
+In \cref{sec:luh-repo-results-pd} wird die manuelle Klassifikation der Dissertationen genutzt, um zu beurteilen, wie viele der Dissertationen überhaupt \glspl{pd} produziert haben.
+Dieser Wert wird für die Auswertung des \gls{forschungsdaten}-Verhaltens in den darauffolgenden Abschnitten genutzt.
+In \cref{sec:luh-repo-results-time} werden die \gls{forschungsdaten}-Klassifikationsresultate in einen zeitlichen Kontext dargestellt und gezeigt, inwiefern sich diese über die verschiedenen Zeitgruppen verhalten.
+In \cref{sec:luh-repo-results-language} wird der etwaige Faktor \textit{Sprache} untersucht und in Relation zu den Fakultäten sowie den einzelnen Zeitgruppen gebracht.
+In \cref{sec:luh-repo-results-faculties} werden die Resultate der Klassifikationsarbeit im Kontext der Fakultäten dargestellt.
+Hier wird untersucht, ob und, falls ja, inwiefern sich  die Fakultäten in Bezeug auf \gls{forschungsdaten}-Verhalten unterscheiden.
+In \cref{sec:luh-repo-results-external-metadata} werden die Ergebnisse zu den Metadaten gezeigt, die bei den gefundenen externen \glspl{forschungsdaten} betrachtet wurden.
 
-\parsum{Mögliche Faktoren}
-Die Untersuchung der Metadaten-Datenbank auf mögliche Faktoren, die Einfluss auf die Existenz von \glspl{forschungsdaten} haben könnten ergab, zusätzlich zu \textit{Zeitgruppe} und \textit{Fakultät}, nur noch \textit{Sprache}.
-
-\parsum{Unabhängigkeit der Faktoren}
-Zur Überprüfung, ob die zu untersuchenden Faktoren von einander abhängig sind, wurden für die Kreuzprodukte aller Faktorenkombinationen Chi-Quadrat Tests der Unabhängigkeit durchgeführt.
-Der Chi-Quadrat-Test für $\text{\textit{Zeitgruppe}}\times\text{\textit{Fakultät}}$ ergab einen Wert von $\chi^2 (\num{16}, N = \num{1441}) = \num[round-mode=places,round-precision=2]{30.11595}$, $p = \num[round-mode=places,round-precision=2]{0.01741020}$.
-Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=2]{0.10222362}$.
-Für $\text{\textit{Zeitgruppe}}\times\text{\textit{Sprache}}$ ergab der Chi-Quadrat-Test einen Wert von $\chi^2 (\num{6}, N = \num{1441}) = \num[round-mode=places,round-precision=2]{81.2042334}$, $p = \num[round-mode=places,round-precision=2]{2.014543e-15}$.
-Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=2]{0.16785812}$.
-Der Chi-Quadrat-Test für $\text{\textit{Fakultät}}\times\text{\textit{Sprache}}$ ergab einen Wert von $\chi^2 (\num{24}, N = \num{1441}) = \num[round-mode=places,round-precision=2]{239.3091384}$, $p = \num[round-mode=places,round-precision=2]{2.148979e-37}$.
-Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=2]{0.23528109}$.
-
-
-\subsection{Allgemeine Resultate}\label{sec:luh-repo-results-general}
+\subsection{Nutzungsrate des LUH-Repos}\label{sec:luh-repo-results-zahlenspiegel}
 \parsum{Zahlenspiegel}
 Die Auswertung des Zahlenspiegels und der Grundmenge dieser Arbeit ergab, dass nur \SI[round-mode=places,round-precision=2]{45,23}{\percent} ($n=\num{1898},\Delta=\num{-2298}$) aller Dissertationen im Zeitraum von 2012--2023 im \gls{luh-repo} Erst- oder Zweitveröffentlich worden sind.
 Der relative Anteil und die absolute Differenz zwischen der Grundmenge und den Werten aus den Zahlenspiegel der \gls{luh} nach \textit{Zeitgruppe} und \textit{Fakultät} aufgegliedert sind in \cref{tab:luh-repo-classification-realrd} gegeben.
@@ -204,8 +200,23 @@ Die durchschnittliche Nutzungsrate durch die Fakultäten hat sich 2012--2023* um
 So lag 2012--2015 für \SI[round-mode=places,round-precision=2]{66,6666666666667}{\percent} ($n=\num{6}$) der Fakultäten die Nutzungsrate noch unter \SI[round-mode=places,round-precision=2]{50}{\percent}, während in 2020--2023 dies nur noch für \SI[round-mode=places,round-precision=2]{33,333333333}{\percent} ($n=\num{3}$) der Fall.
 Hierbei ist zusätzlich noch anzumerken, dass eine dieser Fakultäten---\gls{fakultät9}---nur \SI[round-mode=places,round-precision=2]{2.2388059701493}{\percent P} von \SI[round-mode=places,round-precision=2]{50}{\percent} entfernt war.
 
+\subsection{Mögliche relevante Faktoren}\label{sec:luh-repo-results-factors}
+\parsum{Mögliche Faktoren}
+Die Untersuchung der Metadaten-Datenbank auf mögliche Faktoren, die Einfluss auf die Existenz von \glspl{forschungsdaten} haben könnten ergab, zusätzlich zu \textit{Zeitgruppe} und \textit{Fakultät}, nur noch \textit{Sprache}.
+
+\parsum{Unabhängigkeit der Faktoren}
+Zur Überprüfung, ob die zu untersuchenden Faktoren von einander abhängig sind, wurden für die Kreuzprodukte aller Faktorenkombinationen Chi-Quadrat Tests der Unabhängigkeit durchgeführt.
+Der Chi-Quadrat-Test für $\text{\textit{Zeitgruppe}}\times\text{\textit{Fakultät}}$ ergab einen Wert von $\chi^2 (\num{16}, n=\num{1441}) = \num[round-mode=places,round-precision=2]{30.11595}$, $p = \num[round-mode=places,round-precision=2]{0.01741020}$.
+Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=2]{0.10222362}$.
+Für $\text{\textit{Zeitgruppe}}\times\text{\textit{Sprache}}$ ergab der Chi-Quadrat-Test einen Wert von $\chi^2 (\num{6}, n=\num{1441}) = \num[round-mode=places,round-precision=2]{81.2042334}$, $p = \num[round-mode=places,round-precision=2]{2.014543e-15}$.
+Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=2]{0.16785812}$.
+Der Chi-Quadrat-Test für $\text{\textit{Fakultät}}\times\text{\textit{Sprache}}$ ergab einen Wert von $\chi^2 (\num{24}, n=\num{1441}) = \num[round-mode=places,round-precision=2]{239.3091384}$, $p = \num[round-mode=places,round-precision=2]{2.148979e-37}$.
+Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=2]{0.23528109}$.
+
+\subsection{Rate an erzeugten Primärdaten}\label{sec:luh-repo-results-pd}
 \parsum{Produktion von \glspl{pd}}
-Die Evaluation aller Stichproben-Einträge ergab, dass nur \SI[round-mode=places,round-precision=2]{86,81}{\percent} ($n=\num{1252}$) \glspl{pdd} sind. Die relative und absolute Verteilung nach \textit{Zeitgruppe} und \textit{Fakultät} ist hierfür in \cref{tab:luh-repo-classification-realrd} gegeben.
+Die Evaluation aller Stichproben-Einträge ergab, dass nur \SI[round-mode=places,round-precision=2]{86,81}{\percent} ($n=\num{1252}$) \glspl{pdd} sind.
+Die relative und absolute Verteilung nach \textit{Zeitgruppe} und \textit{Fakultät} ist hierfür in \cref{tab:luh-repo-classification-realrd} gegeben.
 \begin{table}[!htbp]
 	\caption{Anteil an Dissertationen aus der Stichprobe, die \glspl{pd} produziert haben müssten, relativ zu der respektiven $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}$-Gesamtanzahl.
     Absolute Werte in Klammern angegeben.}
@@ -219,10 +230,12 @@ Die Nicht-Erzeuger bestehen nur aus \gls{fakultät5} ($\bar{x}=\SI[round-mode=pl
 Die Intermediärerzeuger bestehen aus \gls{fakultät9} ($\bar{x}=\SI[round-mode=places,round-precision=2]{58.8286223580341}{\percent},s=\SI[round-mode=places,round-precision=2]{9.74026073887661}{\percent}$) und \gls{fakultät10} ($\bar{x}=\SI[round-mode=places,round-precision=2]{55.7452610282799}{\percent},s=\SI[round-mode=places,round-precision=2]{6.91115129013917}{\percent}$).
 Die Intensiverzeuger bestehen aus \gls{fakultät2} ($\bar{x}=\SI[round-mode=places,round-precision=2]{86.0419580419581}{\percent},s=\SI[round-mode=places,round-precision=2]{5.53485790795261}{\percent}$), \gls{fakultät3} ($\bar{x}=\SI[round-mode=places,round-precision=2]{94.5556422836753}{\percent},s=\SI[round-mode=places,round-precision=2]{3.84324738431341}{\percent}$), \gls{fakultät4} ($\bar{x}=\SI[round-mode=places,round-precision=2]{96.026936026936}{\percent},s=\SI[round-mode=places,round-precision=2]{4.51881456425795}{\percent}$), \gls{fakultät6} ($\bar{x}=\SI[round-mode=places,round-precision=2]{98.8888888888889}{\percent},s=\SI[round-mode=places,round-precision=2]{1.92450089729875}{\percent}$), \gls{fakultät7} ($\bar{x}=\SI[round-mode=places,round-precision=2]{86.8136390358613}{\percent},s=\SI[round-mode=places,round-precision=2]{11.4834499748825}{\percent}$) und \gls{fakultät8} ($\bar{x}=\SI[round-mode=places,round-precision=2]{98.9244558258643}{\percent},s=\SI[round-mode=places,round-precision=2]{0.953711879617725}{\percent}$).
 
+\subsection{Zeitliche Entwicklung der Forschungsdaten}\label{sec:luh-repo-results-time}
 \parsum{Klassifikation Zeitgruppen}
 Von den \num{1252} \glspl{pdd} haben \SI[round-mode=places,round-precision=2]{61.3418530351}{\percent} ($n=\num{768}$) zumindest Teile dieser \glspl{pd} veröffentlicht.
 Bei einer Beschränkung auf \glspl{forschungsdaten} von \textit{Stufe~1} und \textit{Stufe~2}, haben nur \SI[round-mode=places,round-precision=2]{31.5495207668}{\percent} ($n=\num{395}$) zumindest Teile ihrer \glspl{pd} veröffentlicht.
-Von allen \glspl{pdd} waren insgesamt nur als \textit{Stufe~1} \SI[round-mode=places,round-precision=2]{20.1277955271566}{\percent} ($n=252$) klassifiziert. Die relative und absolute Verteilung der Klassifikationsstufen ist für $\text{\textit{\gls{forschungsdaten}-Publikationsart}}\times\text{\textit{Zeitgruppe}}\times\text{\textit{Klassifikationsstufe}}$ von \glspl{pdd} in \cref{tab:luh-repo-classification-general-publication-adjusted} gegeben.
+Von allen \glspl{pdd} waren insgesamt nur als \textit{Stufe~1} \SI[round-mode=places,round-precision=2]{20.1277955271566}{\percent} ($n=252$) klassifiziert.
+Die relative und absolute Verteilung der Klassifikationsstufen ist für $\text{\textit{\gls{forschungsdaten}-Publikationsart}}\times\text{\textit{Zeitgruppe}}\times\text{\textit{Klassifikationsstufe}}$ von \glspl{pdd} in \cref{tab:luh-repo-classification-general-publication-adjusted} gegeben.
 \begin{table}[!htbp]
 	\caption{\gls{forschungsdaten}-Klassifizierung der \glspl{pdd} aus der Stichprobe nach $\text{\textit{Publikationsart}}\times\text{\textit{Klassifikationsstufe}}\times\text{\textit{Jahresgruppe}}$ aufgegliedert.
     Angaben relativ zu der Gesamtanzahl der Jahresgruppe.
@@ -234,36 +247,29 @@ Dieselbe Verteilung für alle Dissertationen ist in \cref{tab:luh-repo-classific
 
 Für \glspl{pdd} sind die respektiven Anteile pro Zeitgruppe für \textit{Stufe~1} ($\bar{x}=\SI[round-mode=places,round-precision=2]{19.6030159265453}{\percent},s=\SI[round-mode=places,round-precision=2]{4.23666583797109}{\percent}$), \textit{Stufe~2} ($\bar{x}=\SI[round-mode=places,round-precision=2]{11.6974193444782}{\percent},s=\SI[round-mode=places,round-precision=2]{2.00588363159137}{\percent}$), \textit{Stufe~3} ($\bar{x}=\SI[round-mode=places,round-precision=2]{30.8276496511791}{\percent},s=\SI[round-mode=places,round-precision=2]{7.48186481117491}{\percent}$) und \textit{Keine} ($\bar{x}=\SI[round-mode=places,round-precision=2]{37.8719150777974}{\percent},s=\SI[round-mode=places,round-precision=2]{5.65599658410767}{\percent}$) alle sehr konsistent in ihren Ausmaßen und haben sich über die Jahre nur wenig verändert:
 Der Anteil von \textit{Keine \glspl{forschungsdaten}} und \textit{Stufe~1} stieg über die Zeitgruppen hinweg fast stetig an, während der Anteil an \textit{Stufe~2} und \textit{Stufe 3} abnahm.
-Diese Interaktion ist mit $\chi^2 (\num{6}, N = \num{1252}) = \num[round-mode=places,round-precision=2]{35.1706024082481}$, $p = \num[round-mode=places,round-precision=2]{3.99360804013405E-06}<\num{0.001},\phi_C=\num[round-mode=places,round-precision=2]{0.118514841833938}$ hochsignifikant aber schwach im Effekt.
+Diese Interaktion ist mit $\chi^2 (\num{6}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{35.1706024082481}$, $p = \num[round-mode=places,round-precision=2]{3.99360804013405E-06}<\num{0.001},\phi_C=\num[round-mode=places,round-precision=2]{0.118514841833938}$ hochsignifikant aber schwach im Effekt.
 
 Für integriert publizierte \glspl{forschungsdaten} sind die respektiven Anteile pro Zeitgruppe für \textit{Stufe~1} ($\bar{x}=\SI[round-mode=places,round-precision=2]{12.9817173934821}{\percent},s=\SI[round-mode=places,round-precision=2]{2.06560827754195}{\percent}$), \textit{Stufe~2} ($\bar{x}=\SI[round-mode=places,round-precision=2]{13.6330830448477}{\percent},s=\SI[round-mode=places,round-precision=2]{0.705071887699306}{\percent}$), \textit{Stufe~3} ($\bar{x}=\SI[round-mode=places,round-precision=2]{31.6776459423518}{\percent},s=\SI[round-mode=places,round-precision=2]{6.70385517608004}{\percent}$) und \textit{Keine} ($\bar{x}=\SI[round-mode=places,round-precision=2]{41.7075536193183}{\percent},s=\SI[round-mode=places,round-precision=2]{9.04508811986477}{\percent}$):
 An den entsprechenden Standardabweichungen lässt sich erkennen, dass sich die Anteile über die Zeitgruppen hinweg geändert haben.
 Die Anteile von \textit{Keine \glspl{forschungsdaten}}, \textit{Stufe~1} und \textit{Stufe~3} waren über die ersten zwei Zeitgruppen stabil, stiegen dann aber für \textit{Keine \glspl{forschungsdaten}} stark an, während \textit{Stufe~1} und \textit{Stufe~3} stark abnahmen.
 \textit{Stufe~2} verblieb über alle Jahresgruppen hinweg stabil.
-Diese Interaktion ist mit $\chi^2 (\num{6}, N = \num{1252}) = \num[round-mode=places,round-precision=2]{33.7783606969378}$, $p = \num[round-mode=places,round-precision=2]{7.42382998991651E-06}<\num{0.001},\phi_C=\num[round-mode=places,round-precision=2]{0.116145428931647}$ hochsignifikant aber schwach im Effekt.
+Diese Interaktion ist mit $\chi^2 (\num{6}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{33.7783606969378}$, $p = \num[round-mode=places,round-precision=2]{7.42382998991651E-06}<\num{0.001},\phi_C=\num[round-mode=places,round-precision=2]{0.116145428931647}$ hochsignifikant aber schwach im Effekt.
 
 Für begleitende \glspl{forschungsdaten} verändern sich die respektiven Anteile pro Zeitgruppe für \textit{Stufe~1} ($\bar{x}=\SI[round-mode=places,round-precision=2]{1.80467901056136}{\percent},s=\SI[round-mode=places,round-precision=2]{0.75291204962178}{\percent}$), \textit{Stufe~2} ($\bar{x}=\SI[round-mode=places,round-precision=2]{0,00}{\percent},s=\SI[round-mode=places,round-precision=2]{0.00}{\percent}$), \textit{Stufe~3} ($\bar{x}=\SI[round-mode=places,round-precision=2]{0.467361937950173}{\percent},s=\SI[round-mode=places,round-precision=2]{0.173591068786419}{\percent}$) und \textit{Keine} ($\bar{x}=\SI[round-mode=places,round-precision=2]{97.7279590514885}{\percent},s=\SI[round-mode=places,round-precision=2]{0.579530291358788}{\percent}$) fast überhaupt nicht.
-Entsprechend ist diese Interaktion mit $\chi^2 (\num{4}, N = \num{1252}) = \num[round-mode=places,round-precision=2]{3.08067913427959}$, $p = \num[round-mode=places,round-precision=2]{0.54441589726215}>\num{0.05}$ auch nicht signifikant.
+Entsprechend ist diese Interaktion mit $\chi^2 (\num{4}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{3.08067913427959}$, $p = \num[round-mode=places,round-precision=2]{0.54441589726215}>\num{0.05}$ auch nicht signifikant.
 
 Für externe \glspl{forschungsdaten} sind die respektiven Anteile pro Zeitgruppe für \textit{Stufe~2} und \textit{Stufe~3} mit Maximalwerten von unter $\SI{0,60}{\percent}$ und $s<\SI{0,15}{\percent}$ vernachlässigbar.
 Für \textit{Stufe~1} ($\bar{x}=\SI[round-mode=places,round-precision=2]{6.20179384885267}{\percent},s=\SI[round-mode=places,round-precision=2]{7.07899330022576}{\percent}$) und \textit{Keine} ($\bar{x}=\SI[round-mode=places,round-precision=2]{0.935803794627324}{\percent},s=\SI[round-mode=places,round-precision=2]{7.24376490591247}{\percent}$) zeichnet sich jedoch auch eine eindeutige Veränderung über die Zeitgruppen hinweg ab:
 Während \textit{Keine \glspl{forschungsdaten}} über die Zeitgruppen hinweg um $\SI[round-mode=places,round-precision=2]{13.56}{\percent P}$ abnimmt, steigt \textit{Stufe~1} um $\SI[round-mode=places,round-precision=2]{13.18}{\percent P}$ auf einen Maximalwert von $\SI[round-mode=places,round-precision=2]{14.29}{\percent}$ an.
 Die verbleibenden $\SI[round-mode=places,round-precision=2]{0.38}{\percent P}$ teilten sich dabei gleichmäßig auf \textit{Stufe~2} und \textit{Stufe~3} mit jeweils einer \glspl{pdd} auf.
-Diese Interaktion ist mit $\chi^2 (\num{6}, N = \num{1252}) = \num[round-mode=places,round-precision=2]{70.4530111884674}$, $p = \num[round-mode=places,round-precision=2]{3.3012369430121E-13}<\num{0.001},\phi_C=\num[round-mode=places,round-precision=2]{0.167738446925158}$ hochsignifikant aber schwach im Effekt.
-Hier ist allerdings anzumerken, dass sowohl der Signifikanzwert wie auch die Einflusstärke dieser Interaktion höher bzw. stärker ist als die Werte der anderen bisher untersuchten Interaktionen.
+Diese Interaktion ist mit $\chi^2 (\num{6}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{70.4530111884674}$, $p = \num[round-mode=places,round-precision=2]{3.3012369430121E-13}<\num{0.001},\phi_C=\num[round-mode=places,round-precision=2]{0.167738446925158}$ hochsignifikant aber schwach im Effekt.
+Hier ist allerdings anzumerken, dass sowohl der Signifikanzwert wie auch die Einflusstärke dieser Interaktion höher bzw.~stärker ist als die Werte der anderen bisher untersuchten Interaktionen.
 
 Zusammenfassend lassen sich hier folgende Punkte festhalten:
 Der Anteil publizierter \glspl{forschungsdaten} der \textit{Stufe~1} insgesamt über die Zeitgruppen zugenommen hat, dafür weniger integriert und dafür vermehrt extern publiziert werden.
 Die Option \glspl{forschungsdaten} begleitend zu publizieren, wird von einem sehr kleinen Nutzerkreis konsistent genutzt.
 
-\parsum{Externe Publikation}
-Die Untersuchung von Metadatenangaben für externe Publikationen hat ergeben, dass keine der externen Publikationsformen in ihren Metadaten festhält, dass die Daten einer Dissertation aus dem \gls{luh-repo} zugehörig sind.
-Dies ist zumindest im Teil auch dadurch bedingt, dass die Nutzung dedizierter \gls{forschungsdaten}-Repositorien bei den externen Publikationsmöglichkeiten in der Stichprobe in der Minderheit lag:
-Viele Daten wurden extern in dedizierten Datenbanken (z.B. Gensequenzen), auf GitHub~/~GitLab publiziert oder entsprachen bei kumulativen Dissertationen begleitenden Dateien, die in einem Journal zusammen mit der PDF-Datei hochgeladen wurden.
-Insgesamt wurden fast keine Plattformen genutzt, die von sich aus eine Kodifizierung entsprechender Metadaten ermöglichen.
-Zusätzlich wurden zum Zeitpunkt dieser Arbeit noch keine Informationen zu externen \gls{forschungsdaten}-Publikationen in den Metadaten von \gls{luh-repo} festgehalten.
-Durch die Kombination dieser Faktoren, konnten keine empirischen Daten zur Nutzung unterschiedlicher Metadatenstandards auf Basis des \gls{luh-repo} und der sich darin befindenden Dissertationen gesammelt werden.
-
+\subsection{Sprache und Forschungsdaten}\label{sec:luh-repo-results-language}
 \parsum{Sprache}
 Von allen Dissertationen wurden \SI[round-mode=places,round-precision=2]{54.55}{\percent} ($n=\num{786}$) auf Deutsch und \SI[round-mode=places,round-precision=2]{45,11}{\percent} ($n=\num{650}$) auf Englisch verfasst.
 Die restlichen \SI[round-mode=places,round-precision=2]{0.35}{\percent} ($n=\num{5}$) wurden entweder auf Spanisch oder in mehreren Sprachen verfasst.
@@ -272,9 +278,9 @@ Für die relative und absolute Verteilung nach $\text{\textit{Sprache}}\times\te
 
 Für \glspl{pdd} sind die respektiven Anteile pro Zeitgruppe für \textit{Deutsch} ($\bar{x}=\SI[round-mode=places,round-precision=2]{58.0207461089814}{\percent},s=\SI[round-mode=places,round-precision=2]{14.7111835680779}{\percent}$), \textit{Englisch} ($\bar{x}=\SI[round-mode=places,round-precision=2]{41.7218536336183}{\percent},s=\SI[round-mode=places,round-precision=2]{14.2781240348223}{\percent}$) und \textit{Andere} ($\bar{x}=\SI[round-mode=places,round-precision=2]{0.193050193050193}{\percent},s=\SI[round-mode=places,round-precision=2]{0.334372742773914}{\percent}$).
 Die hohen Standardabweichungen für \textit{Englisch} und \textit{Deutsch} sind dem verschuldet, dass für die ersten zwei Zeitgruppen \textit{Deutsch} vergleichsweise konsistent mit $\bar{x}=\SI[round-mode=places,round-precision=2]{66.2782234105763}{\percent}$ und \textit{Englisch} mit $\bar{x}=\SI[round-mode=places,round-precision=2]{33.7217765894236}{\percent}$  vertreten war (jeweils $s=\SI[round-mode=places,round-precision=2]{4.87054982822638}{\percent}$), in der dritten Zeitgruppe dann aber ein Wechsel der Mehrheit von \textit{Deutsch} ($\SI[round-mode=places,round-precision=2]{41.5057915057915}{\percent}$) auf \textit{Englisch} ($\SI[round-mode=places,round-precision=2]{57.7220077220077}{\percent}$) stattgefunden hat.
-Die Interaktion zwischen \textit{Sprache} und \textit{Zeitgruppe} ist mit $\chi^2 (\num{6}, N = \num{1252}) = \num[round-mode=places,round-precision=2]{81.2042333529611}$, $p = \num[round-mode=places,round-precision=2]{2.01454276715493E-15}<\num{0.01},\phi_C=\num[round-mode=places,round-precision=2]{0.16785811702362}$ statistisch hochsignifikant aber schwach im Effekt.
+Die Interaktion zwischen \textit{Sprache} und \textit{Zeitgruppe} ist mit $\chi^2 (\num{6}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{81.2042333529611}$, $p = \num[round-mode=places,round-precision=2]{2.01454276715493E-15}<\num{0.01},\phi_C=\num[round-mode=places,round-precision=2]{0.16785811702362}$ statistisch hochsignifikant aber schwach im Effekt.
 
-Auch die Interaktion zwischen \textit{Sprache} und \textit{Fakultät} ist mit $\chi^2 (\num{21}, N = \num{1252}) = \num[round-mode=places,round-precision=2]{201.42368756814}$, $p = \num[round-mode=places,round-precision=2]{1.90053471088499E-31}<\num{0.01},\phi_C=\num[round-mode=places,round-precision=2]{0.231575430181447}$ statistisch hochsignifikant aber schwach im Effekt.
+Auch die Interaktion zwischen \textit{Sprache} und \textit{Fakultät} ist mit $\chi^2 (\num{21}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{201.42368756814}$, $p = \num[round-mode=places,round-precision=2]{1.90053471088499E-31}<\num{0.01},\phi_C=\num[round-mode=places,round-precision=2]{0.231575430181447}$ statistisch hochsignifikant aber schwach im Effekt.
 Diese Interaktion ist durch die stark unterschiedliche Verteilung von Sprachwahl unter den Fakultäten bedingt.
 So hat \textit{Deutsch} innerhalb der Fakultäten einen Anteil von $\bar{x}=\SI[round-mode=places,round-precision=2]{59.022318726589}{\percent},s=\SI[round-mode=places,round-precision=2]{23.4782123625139}{\percent}$ und \textit{Englisch} von $\bar{x}=\SI[round-mode=places,round-precision=2]{40.283956329479}{\percent},s=\SI[round-mode=places,round-precision=2]{24.3404020527007}{\percent}$ mit respektiven Maximalwerten von $\SI[round-mode=places,round-precision=2]{91.5492957746479}{\percent}$ und $\SI[round-mode=places,round-precision=2]{71.875}{\percent}$.
 Zusätzlich dazu ändert sich die Sprachverteilung innerhalb der Fakultäten je nach \textit{Zeitgruppe} unterschiedlich stark, wie in \cref{fig:luh-repo_sprache_x_fakultät_x_zeitgruppe} visualisiert wird.
@@ -286,6 +292,18 @@ Zusätzlich dazu ändert sich die Sprachverteilung innerhalb der Fakultäten je 
     \label{fig:luh-repo_sprache_x_fakultät_x_zeitgruppe}
 \end{figure}
 
+Für die Beziehung zwischen \textit{Sprache} und \textit{Allgemeine~\glspl{forschungsdaten}} ist anzumerken, dass $\SI[round-mode=places,round-precision=2]{67.5603217158177}{\percent}$ aller \textit{Stufe~3} \glspl{pdd} auf Deutsch und $\SI[round-mode=places,round-precision=2]{32.171581769437}{\percent}$ auf Englisch geschrieben wurden.
+Für \textit{Stufe~1} sind diese Anteile beide jeweils $\SI[round-mode=places,round-precision=2]{49.6031746031746}{\percent}$.
+Die Abhängigkeit zwischen \textit{Sprache} und \textit{Allgemeine \glspl{forschungsdaten}} ist mit $\chi^2 (\num{9}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{36.3201742371864}$, $p = \num[round-mode=places,round-precision=2]{3.47809061239522E-05}<\num{0.01},\phi_C=\num[round-mode=places,round-precision=2]{0.0983356900818459}$ statistisch hochsignifikant aber sehr schwach im Effekt.
+
+Für \textit{Externe \glspl{forschungsdaten}} ist diese Verteilung umgekehrt und stärker ausgeprägt:
+Für \glspl{pdd} mit externen \glspl{forschungsdaten} die mit \textit{Stufe~1} klassifiziert wurden, wurden nur $\SI[round-mode=places,round-precision=2]{25,5555555555556}{\percent}$ auf Deutsch und $\SI[round-mode=places,round-precision=2]{73,3333333333333}{\percent}$ auf Englisch geschrieben.
+Die Beziehung zwischen \textit{Sprache} und \textit{Externe \glspl{forschungsdaten}} ist mit $\chi^2 (\num{9}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{39.4644044440327}$, $p = \num[round-mode=places,round-precision=2]{9.49823708731411E-06}<\num{0.01},\phi_C=\num[round-mode=places,round-precision=2]{0.102503804500984}$ auch statistisch hochsignifikant und schwach in Effektstärke.
+
+Da \textit{Sprache} und \textit{Fakultät} auch miteinander korrelieren, wie in \cref{sec:luh-repo-results-factors} gezeigt, muss hierbei beachtet werden inwiefern der Effekt von \textit{Sprache} auf \textit{Allgemeine \glspl{forschungsdaten}} und \textit{Externe \glspl{forschungsdaten}} an \textit{Sprache} liegt und wie viel der Effekt durch ihre Korrelation mit \textit{Fakultät} bedingt ist.
+Siehe hierfür die Interaktion zwischen \textit{Fakultät} und den verschiedenen \gls{forschungsdaten}-Publikationsarten in \cref{sec:luh-repo-results-faculties}
+
+\subsection{Fakultäten und Forschungsdaten}\label{sec:luh-repo-results-faculties}
 \parsum{Klassifikation Fakultäten}
 Für \glspl{pdd} ist die relative und absolute Verteilung der Klassifikationsstufen für alle Dokumente sowie die Verteilung nach $\text{\textit{Fakultät}}\times\text{\textit{Klassifikationsstufe}}$ in \cref{tab:luh-repo-classification-general-all-faculty-adjusted} gegeben.
 \begin{table}[!htbp]
@@ -297,7 +315,7 @@ Für \glspl{pdd} ist die relative und absolute Verteilung der Klassifikationsstu
 \end{table}
 Dieselbe Aufteilung für alle Dissertationen ist \cref{tab:luh-repo-classification-general-all-faculty} gegeben.
 
-Die Interaktion für \glspl{pdd} zwischen \textit{Fakultät} und \textit{Allgemeine \glspl{forschungsdaten}} ist mit $\chi^2 (\num{21}, N = \num{1252}) = \num[round-mode=places,round-precision=2]{277.018852269436}$, $p = \num[round-mode=places,round-precision=2]{1.46707274481795E-46}<\num{0.01},\phi_C=\num[round-mode=places,round-precision=2]{0.271576302422829}$ statistisch hochsignifikant mit einer fast moderaten Effektstärke.
+Die Interaktion für \glspl{pdd} zwischen \textit{Fakultät} und \textit{Allgemeine \glspl{forschungsdaten}} ist mit $\chi^2 (\num{21}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{277.018852269436}$, $p = \num[round-mode=places,round-precision=2]{1.46707274481795E-46}<\num{0.01},\phi_C=\num[round-mode=places,round-precision=2]{0.271576302422829}$ statistisch hochsignifikant mit einer fast moderaten Effektstärke.
 Für \glspl{forschungsdaten} sind die respektiven respektiven Anteile pro Fakultät für \textit{Stufe~1} ($\bar{x}=\SI[round-mode=places,round-precision=2]{19.1949536178319}{\percent},s=\SI[round-mode=places,round-precision=2]{7.40146945375256}{\percent}$), \textit{Stufe~2} ($\bar{x}=\SI[round-mode=places,round-precision=2]{7.02727835832392}{\percent},s=\SI[round-mode=places,round-precision=2]{7.64365985309809}{\percent}$), \textit{Stufe~3} ($\bar{x}=\SI[round-mode=places,round-precision=2]{28.4500178056966}{\percent},s=\SI[round-mode=places,round-precision=2]{13.9773224286791}{\percent}$) und \textit{Keine} ($\bar{x}=\SI[round-mode=places,round-precision=2]{45.3277502181475}{\percent},s=\SI[round-mode=places,round-precision=2]{17.3167274633444}{\percent}$).
 Es variieren zwischen den Fakultäten also insbesondere \textit{Stufe~3} und \textit{Keine \glspl{forschungsdaten}}, während \textit{Stufe~1} und \textit{Stufe~2} moderatere interfakultäre Variation erleben.
 Es besteht also ein vergleichsweise kleiner Kern an \glspl{pdd}, die in allen Fakultäten---zu moderat unterschiedlich großen Anteilen---\glspl{forschungsdaten} aus \textit{Stufe~1} oder \textit{Stufe~2} publizieren, während der größte Unterschied zwischen Fakultäten dadurch bestimmt wird, wie groß die jeweilige Verteilung zwischen \textit{Keine~\glspl{forschungsdaten}} und \glspl{forschungsdaten} aus \textit{Stufe~3} ist.
@@ -309,10 +327,12 @@ Dieser Effekt kann in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_fd}, welche di
     Absolute Werte in Klammern angegeben.}
     \label{fig:luh-repo_fakultät_x_zeitgruppe_x_fd}
 \end{figure}
-Mit $\chi^2 (\num{21}, N = \num{1252}) = \num[round-mode=places,round-precision=2]{277.018852269436}$, $p = \num[round-mode=places,round-precision=2]{1.46707274481795E-46},\phi_C=\num[round-mode=places,round-precision=2]{0.271576302422829}$ ist die Interaktion zwischen \textit{Fakultät} und \textit{Allgemeine \glspl{forschungsdaten}} für \glspl{pdd} statistisch hochsignifikant mit einem Effekt fast-moderater Stärke.
+Mit $\chi^2 (\num{21}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{277.018852269436}$, $p = \num[round-mode=places,round-precision=2]{1.46707274481795E-46},\phi_C=\num[round-mode=places,round-precision=2]{0.271576302422829}$ ist die Interaktion zwischen \textit{Fakultät} und \textit{Allgemeine \glspl{forschungsdaten}} für \glspl{pdd} statistisch hochsignifikant mit einem Effekt fast-moderater Stärke.
 
-Von den in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_fd} dargestellten fakultätsspezifischen Interaktionen zwischen \textit{Zeitgruppe} und \textit{Allgemeine \glspl{forschungsdaten}} waren \gls{fakultät6} ($\chi^2 (\num{6}, N = \num{120}) = \num[round-mode=places,round-precision=2]{19.5476964585537}$, $p = \num[round-mode=places,round-precision=2]{0.00333202926016077},\phi_C=\num[round-mode=places,round-precision=2]{0.285392248044641}$) und \gls{fakultät7} ($\chi^2 (\num{6}, N = \num{214}) = \num[round-mode=places,round-precision=2]{16.2992330069594}$, $p = \num[round-mode=places,round-precision=2]{0.0122348687338923},\phi_C=\num[round-mode=places,round-precision=2]{0.195146919293435}$) statistisch signifikant, wobei der Effekt für \gls{fakultät6} etwas stärker ist als für \gls{fakultät7}. Für die restlichen Fakultäten war die Interaktion statistisch nicht signifkant.
+Von den in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_fd} dargestellten fakultätsspezifischen Interaktionen zwischen \textit{Zeitgruppe} und \textit{Allgemeine \glspl{forschungsdaten}} waren \gls{fakultät6} ($\chi^2 (\num{6}, n=\num{120}) = \num[round-mode=places,round-precision=2]{19.5476964585537}$, $p = \num[round-mode=places,round-precision=2]{0.00333202926016077},\phi_C=\num[round-mode=places,round-precision=2]{0.285392248044641}$) und \gls{fakultät7} ($\chi^2 (\num{6}, n=\num{214}) = \num[round-mode=places,round-precision=2]{16.2992330069594}$, $p = \num[round-mode=places,round-precision=2]{0.0122348687338923},\phi_C=\num[round-mode=places,round-precision=2]{0.195146919293435}$) statistisch signifikant, wobei der Effekt für \gls{fakultät6} etwas stärker ist als für \gls{fakultät7}.
+Für die restlichen Fakultäten war die Interaktion statistisch nicht signifkant.
 
+\subsubsection{Integrierte Forschungsdaten}
 Die relative und absolute Verteilung von integrierten \glspl{forschungsdaten} für Fakultäten über die verschiedenen Zeitgruppen hinweg ist in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_intern-fd} dargestellt.
 \begin{figure}[!htbp]
     \resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{\input{content/images/luh-repo_fakultät_x_zeitgruppe_x_intern-fd.tex}}
@@ -321,12 +341,13 @@ Die relative und absolute Verteilung von integrierten \glspl{forschungsdaten} f�
     Absolute Werte in Klammern angegeben.}
     \label{fig:luh-repo_fakultät_x_zeitgruppe_x_intern-fd}
 \end{figure}
-Mit $\chi^2 (\num{21}, N = \num{1252}) = \num[round-mode=places,round-precision=2]{263.002145678598}$, $p = \num[round-mode=places,round-precision=2]{9.94476930299567E-44},\phi_C=\num[round-mode=places,round-precision=2]{0.264616459279196}$ ist die Interaktion zwischen \textit{Fakultät} und \textit{Integrierten \glspl{forschungsdaten}} für \glspl{pdd} statistisch hochsignifikant mit einem Effekt fast-moderater Stärke.
+Mit $\chi^2 (\num{21}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{263.002145678598}$, $p = \num[round-mode=places,round-precision=2]{9.94476930299567E-44},\phi_C=\num[round-mode=places,round-precision=2]{0.264616459279196}$ ist die Interaktion zwischen \textit{Fakultät} und \textit{Integrierten \glspl{forschungsdaten}} für \glspl{pdd} statistisch hochsignifikant mit einem Effekt fast-moderater Stärke.
 
-Von den in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_intern-fd} dargestellten fakultätsspezifischen Interaktionen zwischen \textit{Zeitgruppe} und \textit{Allgemeine \glspl{forschungsdaten}} waren auch hier nur \gls{fakultät6} ($\chi^2 (\num{6}, N = \num{120}) = \num[round-mode=places,round-precision=2]{16.9762583339752}$, $p = \num[round-mode=places,round-precision=2]{0.00937089563575401},\phi_C=\num[round-mode=places,round-precision=2]{0.265959413679788}$) und \gls{fakultät7} ($\chi^2 (\num{6}, N = \num{214}) = \num[round-mode=places,round-precision=2]{14.9081855229165}$, $p = \num[round-mode=places,round-precision=2]{0.0209829722338535},\phi_C=\num[round-mode=places,round-precision=2]{0.186633890721093}$) statistisch signifikant, wobei der Effekt für \gls{fakultät6} etwas stärker ist als für \gls{fakultät7}.
+Von den in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_intern-fd} dargestellten fakultätsspezifischen Interaktionen zwischen \textit{Zeitgruppe} und \textit{Allgemeine \glspl{forschungsdaten}} waren auch hier nur \gls{fakultät6} ($\chi^2 (\num{6}, n=\num{120}) = \num[round-mode=places,round-precision=2]{16.9762583339752}$, $p = \num[round-mode=places,round-precision=2]{0.00937089563575401},\phi_C=\num[round-mode=places,round-precision=2]{0.265959413679788}$) und \gls{fakultät7} ($\chi^2 (\num{6}, n=\num{214}) = \num[round-mode=places,round-precision=2]{14.9081855229165}$, $p = \num[round-mode=places,round-precision=2]{0.0209829722338535},\phi_C=\num[round-mode=places,round-precision=2]{0.186633890721093}$) statistisch signifikant, wobei der Effekt für \gls{fakultät6} etwas stärker ist als für \gls{fakultät7}.
 Hier ist feststellbar, dass die Interaktionen sowohl weniger signifikant wie auch schwächer sind, als die respektiven Interaktionen zwischen \textit{Zeitgruppe} und \textit{Integrierte \gls{forschungsdaten}}.
 Für die restlichen Fakultäten war die Interaktion statistisch nicht signifkant.
 
+\subsubsection{Begleitende Forschungsdaten}
 Die relative und absolute Verteilung von begleitenden \glspl{forschungsdaten} für Fakultäten über die verschiedenen Zeitgruppen hinweg ist in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_begleit-fd} dargestellt.
 \begin{figure}[!htbp]
     \resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{\input{content/images/luh-repo_fakultät_x_zeitgruppe_x_begleit-fd.tex}}
@@ -335,10 +356,11 @@ Die relative und absolute Verteilung von begleitenden \glspl{forschungsdaten} f�
     Absolute Werte in Klammern angegeben.}
     \label{fig:luh-repo_fakultät_x_zeitgruppe_x_begleit-fd}
 \end{figure}
-Mit $\chi^2 (\num{14}, N = \num{1252}) = \num[round-mode=places,round-precision=2]{26.7127108745513}$, $p = \num[round-mode=places,round-precision=2]{0.0209769860572188},\phi_C=\num[round-mode=places,round-precision=2]{0.103286085824667}$ ist die Interaktion zwischen \textit{Fakultät} und \textit{Begleitende \glspl{forschungsdaten}} für \glspl{pdd} statistisch signifikant mit einer schwachen Effektstärke.
+Mit $\chi^2 (\num{14}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{26.7127108745513}$, $p = \num[round-mode=places,round-precision=2]{0.0209769860572188},\phi_C=\num[round-mode=places,round-precision=2]{0.103286085824667}$ ist die Interaktion zwischen \textit{Fakultät} und \textit{Begleitende \glspl{forschungsdaten}} für \glspl{pdd} statistisch signifikant mit einer schwachen Effektstärke.
 
 Von den in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_begleit-fd} dargestellten fakultätsspezifischen Interaktionen zwischen \textit{Zeitgruppe} und \textit{Begleitende \glspl{forschungsdaten}} waren keine Interaktionen statistisch signifikant.
 
+\subsubsection{Externe Forschungsdaten}
 Die relative und absolute Verteilung von externen \glspl{forschungsdaten} für Fakultäten über die verschiedenen Zeitgruppen hinweg ist in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_externe-fd} dargestellt.
 \begin{figure}[!htbp]
     \resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{\input{content/images/luh-repo_fakultät_x_zeitgruppe_x_externe-fd.tex}}
@@ -347,12 +369,18 @@ Die relative und absolute Verteilung von externen \glspl{forschungsdaten} für F
     Absolute Werte in Klammern angegeben.}
     \label{fig:luh-repo_fakultät_x_zeitgruppe_x_externe-fd}
 \end{figure}
-Mit $\chi^2 (\num{21}, N = \num{1252}) = \num[round-mode=places,round-precision=2]{66.7577903096558}$, $p = \num[round-mode=places,round-precision=2]{1.1517458402742E-06},\phi_C=\num[round-mode=places,round-precision=2]{0.133317814235608}$ ist die Interaktion zwischen \textit{Fakultät} und \textit{Begleitende \glspl{forschungsdaten}} für \glspl{pdd} statistisch hochsignifikant mit einer schwachen Effektstärke.
+Mit $\chi^2 (\num{21}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{66.7577903096558}$, $p = \num[round-mode=places,round-precision=2]{1.1517458402742E-06},\phi_C=\num[round-mode=places,round-precision=2]{0.133317814235608}$ ist die Interaktion zwischen \textit{Fakultät} und \textit{Begleitende \glspl{forschungsdaten}} für \glspl{pdd} statistisch hochsignifikant mit einer schwachen Effektstärke.
 
-Von den in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_externe-fd} dargestellten fakultätsspezifischen Interaktionen zwischen \textit{Zeitgruppe} und \textit{Allgemeine \glspl{forschungsdaten}} waren auch hier nur \gls{fakultät4} ($\chi^2 (\num{2}, N = \num{140}) = \num[round-mode=places,round-precision=2]{15.4010432799519}$, $p = \num[round-mode=places,round-precision=4]{0.000452591031724297},\phi_C=\num[round-mode=places,round-precision=2]{0.331673713157459}$) und \gls{fakultät7} ($\chi^2 (\num{2}, N = \num{214}) = \num[round-mode=places,round-precision=2]{15.0873457280576}$, $p = \num[round-mode=places,round-precision=3]{0.000529449450462421},\phi_C=\num[round-mode=places,round-precision=2]{0.265521403189406}$) statistisch signifikant, wobei der Effekt für \gls{fakultät6} etwas stärker ist als für \gls{fakultät7}.
+Von den in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_externe-fd} dargestellten fakultätsspezifischen Interaktionen zwischen \textit{Zeitgruppe} und \textit{Allgemeine \glspl{forschungsdaten}} waren auch hier nur \gls{fakultät4} ($\chi^2 (\num{2}, n=\num{140}) = \num[round-mode=places,round-precision=2]{15.4010432799519}$, $p = \num[round-mode=places,round-precision=4]{0.000452591031724297},\phi_C=\num[round-mode=places,round-precision=2]{0.331673713157459}$) und \gls{fakultät7} ($\chi^2 (\num{2}, n=\num{214}) = \num[round-mode=places,round-precision=2]{15.0873457280576}$, $p = \num[round-mode=places,round-precision=3]{0.000529449450462421},\phi_C=\num[round-mode=places,round-precision=2]{0.265521403189406}$) statistisch signifikant, wobei der Effekt für \gls{fakultät6} etwas stärker ist als für \gls{fakultät7}.
 
-
-
+\subsection{Externe Publikationen und Metadaten}\label{sec:luh-repo-results-external-metadata}
+\parsum{Externe Publikation}
+Die Untersuchung von Metadatenangaben für externe Publikationen hat ergeben, dass keine der externen Publikationsformen in ihren Metadaten festhält, dass die Daten einer Dissertation aus dem \gls{luh-repo} zugehörig sind.
+Dies ist zumindest im Teil auch dadurch bedingt, dass die Nutzung dedizierter \gls{forschungsdaten}-Repositorien bei den externen Publikationsmöglichkeiten in der Stichprobe in der Minderheit lag:
+Viele Daten wurden extern in dedizierten Datenbanken (z.B.~Gensequenzen), auf GitHub~/~GitLab publiziert oder entsprachen bei kumulativen Dissertationen begleitenden Dateien, die in einem Journal zusammen mit der PDF-Datei hochgeladen wurden.
+Insgesamt wurden fast keine Plattformen genutzt, die von sich aus eine Kodifizierung entsprechender Metadaten ermöglichen.
+Zusätzlich wurden zum Zeitpunkt dieser Arbeit noch keine Informationen zu externen \gls{forschungsdaten}-Publikationen in den Metadaten von \gls{luh-repo} festgehalten.
+Durch die Kombination dieser Faktoren, konnten keine empirischen Daten zur Nutzung unterschiedlicher Metadatenstandards auf Basis des \gls{luh-repo} und der sich darin befindenden Dissertationen gesammelt werden.
 
 \section{Diskussion}\label{sec:luh-repo-discussion}
 \subsection{Allgemeingültige Dokumente}\label{sec:luh-repo-discussion-general}
