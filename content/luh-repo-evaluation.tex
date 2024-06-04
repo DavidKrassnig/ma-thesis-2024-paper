@@ -206,12 +206,8 @@ Die Untersuchung der Metadaten-Datenbank auf mögliche Faktoren, die Einfluss au
 
 \parsum{Unabhängigkeit der Faktoren}
 Zur Überprüfung, ob die zu untersuchenden Faktoren von einander abhängig sind, wurden für die Kreuzprodukte aller Faktorenkombinationen Chi-Quadrat Tests der Unabhängigkeit durchgeführt.
-Der Chi-Quadrat-Test für $\text{\textit{Zeitgruppe}}\times\text{\textit{Fakultät}}$ ergab einen Wert von $\chi^2 (\num{16}, n=\num{1441}) = \num[round-mode=places,round-precision=2]{30.11595}$, $p = \num[round-mode=places,round-precision=2]{0.01741020}$.
-Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=2]{0.10222362}$.
-Für $\text{\textit{Zeitgruppe}}\times\text{\textit{Sprache}}$ ergab der Chi-Quadrat-Test einen Wert von $\chi^2 (\num{6}, n=\num{1441}) = \num[round-mode=places,round-precision=2]{81.2042334}$, $p = \num[round-mode=places,round-precision=2]{2.014543e-15}$.
-Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=2]{0.16785812}$.
-Der Chi-Quadrat-Test für $\text{\textit{Fakultät}}\times\text{\textit{Sprache}}$ ergab einen Wert von $\chi^2 (\num{24}, n=\num{1441}) = \num[round-mode=places,round-precision=2]{239.3091384}$, $p = \num[round-mode=places,round-precision=2]{2.148979e-37}$.
-Der dazugehörige Cramérs V-Wert beträgt $\phi_C=\num[round-mode=places,round-precision=2]{0.23528109}$.
+Hierbei zeigte sich, dass $\text{\textit{Zeitgruppe}}\times\text{\textit{Fakultät}}$ ($\chi^2 (\num{16}, n=\num{1441}) = \num[round-mode=places,round-precision=2]{30.11595}$, $p = \num[round-mode=places,round-precision=2]{0.01741020},\phi_C=\num[round-mode=places,round-precision=2]{0.10222362}$), $\text{\textit{Zeitgruppe}}\times\text{\textit{Sprache}}$ ($\chi^2 (\num{6}, n=\num{1441}) = \num[round-mode=places,round-precision=2]{81.2042334}$, $p = \num[round-mode=places,round-precision=2]{2.014543e-15}, \phi_C=\num[round-mode=places,round-precision=2]{0.16785812}$) und $\text{\textit{Fakultät}}\times\text{\textit{Sprache}}$ ($\chi^2 (\num{24}, n=\num{1441}) = \num[round-mode=places,round-precision=2]{239.3091384}$, $p = \num[round-mode=places,round-precision=2]{2.148979e-37},\phi_C=\num[round-mode=places,round-precision=2]{0.23528109}$) alle statistisch signifikant voneinander abhängig sind.
+Die Effektstärken sind dabei leicht unterschiedlich ausgeprägt aber konsistent schwacher Natur.
 
 \subsection{Rate an erzeugten Primärdaten}\label{sec:luh-repo-results-pd}
 \parsum{Produktion von \glspl{pd}}
@@ -383,6 +379,87 @@ Zusätzlich wurden zum Zeitpunkt dieser Arbeit noch keine Informationen zu exter
 Durch die Kombination dieser Faktoren, konnten keine empirischen Daten zur Nutzung unterschiedlicher Metadatenstandards auf Basis des \gls{luh-repo} und der sich darin befindenden Dissertationen gesammelt werden.
 
 \section{Diskussion}\label{sec:luh-repo-discussion}
-\subsection{Allgemeingültige Dokumente}\label{sec:luh-repo-discussion-general}
-\subsection{Promotionsspezifische Dokumente}\label{sec:luh-repo-discussion-specific}
+Die Ergebnisse in \cref{sec:luh-repo-results-factors} zeigten, dass alle evaluierten Faktoren zu unterschiedlich starken---aber insgesamt dennoch schwachen---Graden voneinander abhängig sind.
+Dies verkompliziert die Analyse der jeweiligen Faktoren in Bezug auf deren Wirkung auf \glspl{forschungsdaten} und deren unterschiedlichen Publikationsformen.
+
+\subsection{Sprache}
+Ein gutes Beispiel hierfür ist der Faktor \textit{Sprache}.
+Die Annahme hinter diesem Faktor war, dass die Nutzung einer internationalen Sprache (i.e.~\textit{Englisch}) eventuell einen Einfluss auf die Beachtung und Einhaltung internationaler \gls{fdm}-Standards haben könnte.
+Auf ersten Blick scheint sich dies auch zu bewahrheiten, wie an zwei Beispielen gezeigt werden kann: 
+Einerseits wurden ca.~zwei Drittel aller \glspl{pdd} mit externen \glspl{forschungsdaten} auf Englisch verfasst, obwohl die Mehrheit aller \glspl{pdd} auf Deutsch verfasst wurden, wie in \cref{sec:luh-repo-results-language} aufgezeigt wurde.
+Andererseits sinkt die Nutzungsrate von \textit{Deutsch} und steigt für \textit{Englisch} an, je höher die Klassifikationsstufe einer \gls{pdd} ist---bis sie schließlich auf \textit{Level~1} Parität erreichen.
+Beachtet man jedoch die Verteilung von \textit{Sprache} in \cref{fig:luh-repo_sprache_x_fakultät_x_zeitgruppe} über \textit{Fakultät}, so zeigt sich, dass die Nutzung von \textit{Englisch} für die meisten Fakultäten über die Jahre zugenommen hat.
+In dem selben Zeitrahmen stieg auch die Nutzung von externen \glspl{forschungsdaten} an, wie sich in der Verteilung von \textit{Externe \glspl{forschungsdaten}} über die verschiedenen Fakultäten und Zeitgruppen hinweg in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_externe-fd} gezeigt wurde.
+
+Dazu kommt, dass in einigen Fakultäten, die vergleichsweise viel \glspl{pdd} der dritten Stufe generieren, wie z.B.~in \gls{fakultät2}, der Anteil an englischsprachigen \glspl{pdd} sehr gering ist und auch nicht über die Jahre zugenommen hat, was die relative Verteilung von \textit{Stufe~3} unter den zwei Sprachen maßgeblich beeinflusst.
+
+Insgesamt ergibt sich für \textit{Sprache} das Bild, dass der Faktor nur indirekt mit denen der \glspl{forschungsdaten} korreliert.
+Es erscheint maßgeblicher, wie \textit{Sprache} durch \textit{Fakulät} geprägt wird und wie Fakultäten unterschiedliches Publikationsverhalten besitzen (wie in \cref{sec:luh-repo-results-faculties} gezeigt wurde).
+
+\subsection{Externe Forschungsdaten}
+Besonders interessant ist das Publikationsverhalten zu externen \glspl{forschungsdaten}---auch da diese die eigentlich ideale Publikationsform darstellen.
+Betrachtet man \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_externe-fd}, so ist deutlich erkennbar, dass nur drei der neun Fakultäten für den Hauptteil aller extern publizierten \glspl{forschungsdaten} verantwortlich sind und in mehr als einer Zeitgruppe externe \glspl{forschungsdaten} produzierten: \gls{fakultät3}, \gls{fakultät4} und \gls{fakultät8}.
+Von diesen ist nutzt insbesondere \gls{fakultät4} externe \glspl{forschungsdaten} zu einem besonders hohen Anteil.
+Jedoch nutzen, auch von diesen Fakultäten, nur die wenigsten dedizierte \gls{forschungsdaten}-Repositorien.
+Stattdessen sind die meisten externen Publikationen Code auf GitHub~/~GitLab (für \gls{fakultät4}), in Datenbanken eingereichte Gensequenzen (für \gls{fakultät8}) oder Beireichungen zu Journal-Artikeln für kumulative Dissertationen.
+Das bedeutet, dass der Anteil an extern publizierten \glspl{forschungsdaten} zwar insgesamt zunimmt, die Nutzung von entsprechenden Fachrepositorien bei Dissertationen jedoch weiterhin verschwindend gering bleibt.
+Tatsächlich war der Anteil so gering, dass es keine externe \gls{forschungsdaten} Veröffentlichung gab, in deren Metadaten spezifiziert wurde, dass diese dem Werk einer Dissertation zugehörig sei, was es unmöglich machte, empirisch zu untersuchen, welche Metadateneinträge hierfür am häufigsten genutzt werden.
+Insgesamt besteht dennoch ein Trend dazu, besonders hochwertige Daten eher extern zu publizieren, statt diese in der Dissertation integriert zu veröffentlichen.
+Dies lässt sich daran erkennen, dass der Gesamtanteil an allgemeinen und externen \textit{Stufe~1} \glspl{pdd} über die Zeitgruppen stetig zugenommen hat, gleichzeitig aber für integrierte \glspl{forschungsdaten} abgenommen hat, wie in \cref{tab:luh-repo-classification-general-publication-adjusted} gezeigt wurde.
+
+\subsection{Zeitliche Entwicklung von Forschungsdaten und Fakultäten}
+Abgesehen davon, dass extern publizierte \glspl{forschungsdaten} über die Jahre zugenommen haben, lassen sich einige andere allgemeine Trends für \glspl{pdd} im \gls{luh-repo} erkennen.
+Ein auf ersten Blick kontraintuitiver Trend ist, dass der Anteil an allgemeinen \glspl{pdd} ohne publizierte \glspl{forschungsdaten} für die letzte Jahresgruppe 2020--2023 stark zugenommen hat.
+Betrachtet man jedoch die allgemeine Nutzungsrate des \gls{luh-repo}s nach Fakultäten und Zeitgruppen in \cref{tab:luh-repo-zahlenspiegel-summary}, lässt sich feststellen, dass sich die Nutzungsrate für die letzte Zeitgruppe besonders stark verändert hat:
+Insbesondere in der vorherigen Zeitgruppe schwach vertretene Fakultäten wie \gls{fakultät3}, \gls{fakultät4} und \gls{fakultät9} haben ihren Anteil an \gls{luh-repo}-Dissertationen stark erhöht.
+Auch \gls{fakultät6}, welche besonders notorisch zu sein scheint, wenige \glspl{forschungsdaten} zu veröffentlichen, hat seinen Anteil um ca.~$\SI{65}{\percent}$ gegenüber der vorherigen Zeitgruppe erhöht.
+Während diese Kompositionsveränderung des \gls{luh-repo}s den abnehmenden \gls{forschungsdaten} Trend zumindest zum Teil erklären, zeigt \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_fd} dennoch auf, dass dieser Trend auch einige Fakultäten intern betrifft:
+Nämlich \gls{fakultät2}, \gls{fakultät3}, \gls{fakultät5} und \gls{fakultät6} (und in deutlich geringerem Umfang auch \gls{fakultät8} und \gls{fakultät10}).
+Was genau diese Abnahme verursacht ist nicht bekannt und Bedarf weiterer Beobachtung und Erforschung.
+
+Was die Option betrifft, \glspl{forschungsdaten} begleitend zu der Dissertation im \gls{luh-repo} zu veröffentlichen, so lässt sich hierzu sagen, dass es eine sehr wenig genutzte Möglichkeit ist.
+Wie in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_begleit-fd} gezeigt wurde, gibt es allerdings einen kleinen aber konsistenten Kern an Nutzern, welcher statistisch signifikant insbesondere \gls{fakultät8} und \gls{fakultät9} zugeordnet werden kann.
+Es erscheint unwahrscheinlich, dass die Nutzungsrate dieser Publikationsart sich in über die nächsten Jahre ändern wird, da zumindest bisher Zeit kein statistisch signifikanter Faktor war (siehe \cref{sec:luh-repo-results-time}).
+
+\subsection{Handlungsempfehlungen}
+Die Resultate in \cref{sec:luh-repo-results} zeigen mehrere Möglichkeiten auf, was die \gls{tib}~/~die \gls{luh} tun oder beachten können, um ihre Services weiter auszubauen.
+Diese Möglichkeiten teilen sich in zwei Hauptbereiche: Nutzung des \gls{luh-repo}s und verbessertes \gls{fdm} durch die Promovierenden.
+
+\subsubsection{Nutzung des \gls{luh-repo}s}
+Wie in \cref{sec:luh-repo-results-zahlenspiegel} dargestellt wird das \gls{luh-repo} von den verschiedenen Fakultäten der \gls{luh} unterschiedlich stark für die Publikation von Dissertationen genutzt.
+Während Promovierende aus sieben der neun Fakultäten inzwischen mindestens annäherend die Hälfte aller ihrer neuen Dissertationen auf \gls{luh-repo} publizieren, nämlich die Intermediär- und Intensivnutzer des Repositoriums, gibt es hierbei zwei bedeutende Ausreißer:
+Die Geringnutzer des \gls{luh-repo}, \gls{fakultät5} und \gls{fakultät6}, welche weniger als ein Viertel ihrer neuen Dissertationen im \gls{luh-repo} publizieren.
+Dieser Befund stimmt mit früherer Forschung überein, da diese zeigte, dass sowohl die Ingenieurswissenschaften (und verwandte Unterdisziplinen) wie auch die Rechtswissenschaftne besonders schwach im Open Access Bereich vertreten sind \autocite{Archambault2014,Piwowar2018,Severin2020-Jura,Hamann2019-OA,Fischer2022-Jura}.
+Dennoch bedeuten diese geringen Werte, dass hier aktiver Handlungsbedarf seitens der \gls{luh} und der \gls{tib} besteht.
+So sollte vermehrt Aufklärungs-, Beratungs- und Werbearbeit zielgerichtet auf \gls{fakultät5} und \gls{fakultät6} gerichtet werden.
+
+So kann hier insbesondere im Bereich der Rechtswissenschaft erfolgreiche Aufklärungsarbeit stattfinden, da Rechtswissenschaftler sich häufig nicht der Möglichkeit von Open Access bewusst sind---so sind z.B. die wenigsten mit ihrem Zweitveröffentlichungsrecht vertraut \autocite[91]{Eisentraut}.
+Gleichzeitig ist in den Rechtswissenschaft die Verbreitung von Dissertationen in Deutschland \enquote{äußerst mangelhaft} \autocite[50]{Steinhauer2019-OA}, wobei ein vermehrter Wandel auf Open Access Abhilfe schaffen könnte.
+
+Allgemein sollte bei diesen beiden Fakultäten Kontakt aufgebaut werden und jeweils gemeinsam besprochen werden, welche Bedenken vor einer höheren Nutzung des \gls{luh-repo}s bestehen, die diversen Vorteile von Open Access erörtert \autocite{Bautista-Puig2020} und auch aufgezeigt werden, dass z.B.~ein bisheriger Mangel an High Impact Open Access Publikationen kein Indikator dafür ist, dass ein entsprechender Markt nicht sehr schnell entwickelt werden kann \autocite{Björk2012}.
+
+\subsubsection{Forschungsdaten}
+\cref{sec:luh-repo-results} hat insgesamt gezeigt, dass nur ein Drittel aller Promovierenden von \glspl{pdd} aus dem \gls{luh-repo} \glspl{forschungsdaten} aus \textit{Stufe~1} und \textit{Stufe~2} publiziert hat, während ein weiteres Drittel überhaupt keine \glspl{forschungsdaten} publiziert hat.
+Unter Ausschluss integrierter \glspl{forschungsdaten} stieg hierbei der Anteil jener, die keine \glspl{forschungsdaten} publizieren, sogar auf über \SI{90}{\percent}.
+
+Entsprechend gibt es hier zwei separate aber verwandte Bereiche, bei der Promovierende an der \gls{luh} eventuell zusätzliche Unterstützung erfahren oder durch vermerte Werbearbeit auf existierende Angebote der \gls{luh}~/~\gls{tib} aufmerksam gemaht werden sollten:
+die Identifikation von eigenen \glspl{pd}, die zur Verfügung gestellt werden sollten, und die Möglichkeit, wie dies durch externe Repositorien nach den \gls{fair}-Prinzipien stattfinden kann.
+
+Ersteres kann insofern ein wichtiger Faktor sein, da die \gls{fdm}-Richtlinie der \gls{luh} eigentlich vorsieht, dass die \glspl{forschungsdaten} nach Möglichkeit publiziert werden sollten.
+Dies scheint aber nicht in vollem Umfang durch die Promovierenden umgesetzt zu werden.
+Eine Möglichkeit für diesen Umstand könnte sein, dass Promovierende einfach unterschätzen, welche \glspl{pd} für die Veröffentlichung relevant sein könnten.
+
+Eine Möglichkeit, wie für das bestehende Beratungs- und Informationsangebot zu \gls{fdm} unter den Studierenden und Promovierenden Werbearbeit gemacht und gleichzeitig erweitert werden könnte, ist die Nutzung eines \gls{ki} Modells, welches darauf trainiert wurde, zu erkennen, welche Datensätze in einer Arbeit implizit genutzt werden und daher eventuell auch explizit veröffentlicht werden sollten.
+Eine Möglichkeit hierzu wäre das \textit{DataSeer}-Projekt \autocite{dataseer}, welches entwickelt wurde, um Forschenden und Betreibern von wissenschaftlichen Journals dabei zu helfen, zu identifizieren, welche Datensätze einem Artikel zugrunde liegen und welche idealerweise geteilt werden sollten.
+Da es sich bei \textit{DataSeer} um ein quelloffenes Projekt handelt, wäre hier eine Möglichkeit, dass die \gls{tib} oder die \gls{luh} eine eigene Instanz hostet, welche \gls{luh}-Angehörigen zur Verfügung steht.
+Hier kann dann durch Plakate und andere Medien eine \enquote{Check Your Data}-Kampagne gestartet werden, welche den \gls{ki}-Aspekt des Projektes in den Vordergrund stellt, um die Neugier der Studierenden und Promovierenden dafür zu nutzen, ihre wissenschaftliche Praxis oder zumindest ihren wissenschaftliche \gls{forschungsdaten}-Achtsamkeit zu verbessern.
+
+Was die Möglichkeit betrifft, \glspl{forschungsdaten} in ein externes Repositorium hochzuladen, so könnte ein mangelndes Wissen um welche Repositorien existieren und wie diese genutzt werden können ein Faktor sein, warum so wenige \glspl{pdd} im \gls{luh-repo} externe \glspl{forschungsdaten} in dedizierte \gls{forschungsdaten}-Repositorien hochgeladen haben.
+Hier sollte vermehrt Werbearbeit für das institutionelle \gls{forschungsdaten}-Repositorium und für die allgemeine \gls{fdm}-Informationswebseite der \gls{luh} gemacht werden.
+Eine Option hierfür wäre, den bereits existierenden autodidaktischen \gls{fdm}-Einführungskurs der \gls{luh} für Studierende und Promovierende verpflichtend zu machen, sodass diese einen Nachweis hierzu erbringen müssen.
+Für Studierende müsste dies in den Semestern vor der Abschlussarbeit und für Promovierende in den ersten Semestern ihrer Forschungstätigkeit der Fall sein, um die gewünschte Wirkung zu maximieren.
+Auch könnte, unter Absprache mit den Fakultäten und der Universitätsleitung, eine verpflichtende Erstellung eines \gls{dmp} einerseits die wissenschaftliche Praxis im Allgemeinen verbessern und andererseits die Thematik des \gls{fdm} den Studierenden bzw. Promovierenden eine höhere Relevanz vermitteln.
+
+
+Hierbei Bedarf es einer tatkräftigen und überzeugten Unterstützung durch die Universitätsleitung der \gls{luh}, da die Erfahrung von im \gls{fdm} tätigen Bibliothekaren gezeigt hat, dass dies eine unbedingte Notwendigkeit ist \autocite{Dellmann2022}.
 

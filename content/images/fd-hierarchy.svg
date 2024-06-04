@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="178.42783mm"
+   height="92.845604mm"
+   viewBox="0 0 178.42783 92.845607"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   sodipodi:docname="fd-hierarchy.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4185922"
+     inkscape:cx="350.69979"
+     inkscape:cy="126.53389"
+     inkscape:window-width="2560"
+     inkscape:window-height="1367"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="3.4759079"
+       originy="-75.117815"
+       spacingx="0.99999998"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 41.62827 : 1"
+       inkscape:vp_y="0 : 1000.0001 : 0"
+       inkscape:vp_z="196.41962 : 41.62827 : 1"
+       inkscape:persp3d-origin="98.209806 : 24.555821 : 1"
+       id="perspective42" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(3.4759088,-75.117814)">
+    <path
+       id="path2"
+       style="fill:#77aadd;fill-opacity:1;stroke:#ffffff;stroke-width:0.451611;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:transform-center-y="-14.769034"
+       d="M 139.20391,145.62688 H 32.882254 l -17.674487,22.11073 h 70.835314 70.835309 z"
+       inkscape:transform-center-x="2.0000275e-06" />
+    <path
+       id="path10"
+       style="fill:#77aadd;fill-opacity:1;stroke:#ffffff;stroke-width:0.451611;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:transform-center-y="-14.769038"
+       d="m 50.733079,123.29571 -0.107655,0.1349 -17.74317,22.19627 H 139.20391 l -17.74317,-22.19627 -0.10766,-0.1349 z"
+       inkscape:transform-center-x="2.0019592e-06" />
+    <path
+       id="path9"
+       style="fill:#b2c9e3;fill-opacity:1;stroke:#ffffff;stroke-width:0.451611;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:transform-center-y="-14.769035"
+       d="M 68.584292,100.96455 50.733079,123.29571 H 121.35308 L 103.50187,100.96455 Z"
+       inkscape:transform-center-x="-1.0010763e-06" />
+    <path
+       id="path8"
+       style="fill:#e3ecf6;fill-opacity:1;stroke:#ffffff;stroke-width:0.451611;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:transform-center-y="-14.769033"
+       d="M 86.043081,79.123599 68.584292,100.96455 h 34.917578 z"
+       inkscape:transform-center-x="2.738552e-06" />
+    <path
+       id="rect17"
+       style="fill:#83addb;fill-opacity:1;stroke:#3574b7;stroke-width:0.529167;stroke-dasharray:none;stroke-opacity:1"
+       d="m 136.42969,142.94006 v 7.98556 l -0.0904,0.14469 -18.82935,9.09867 18.91978,-5.94434 v 5.36505 h 38.25761 v -16.64963 z" />
+    <path
+       id="rect17-2"
+       style="fill:#83addb;fill-opacity:1;stroke:#3574b7;stroke-width:0.529167;stroke-dasharray:none;stroke-opacity:1"
+       d="m 120.75728,103.64167 v 24.31894 h 5.19658 l -10.27638,9.77202 17.08217,-9.77202 h 26.17773 v -24.31894 z" />
+    <path
+       id="rect17-2-7-2-9"
+       style="fill:#83addb;fill-opacity:1;stroke:#3574b7;stroke-width:0.529167;stroke-dasharray:none;stroke-opacity:1"
+       d="m -3.2113253,121.12121 v 15.29881 H 44.695832 v -4.45865 l 12.668523,1.30887 -12.668523,-4.43839 v -7.71064 z"
+       sodipodi:nodetypes="cccccccc" />
+    <path
+       id="rect17-2-7-2"
+       style="fill:#83addb;fill-opacity:1;stroke:#3574b7;stroke-width:0.529167;stroke-dasharray:none;stroke-opacity:1"
+       d="M 5.9529731,91.696128 V 105.50048 H 43.300566 l 22.235445,6.35221 -15.178177,-6.35221 h 3.521932 V 91.696128 Z"
+       sodipodi:nodetypes="cccccccc" />
+    <path
+       id="rect17-2-7"
+       style="fill:#83addb;fill-opacity:1;stroke:#3574b7;stroke-width:0.529167;stroke-dasharray:none;stroke-opacity:1"
+       d="m 108.2341,75.382397 0.15737,14.52383 -0.0193,1.826913 -12.607095,5.792313 21.707205,-4.696059 h 29.01064 V 75.382397 Z"
+       sodipodi:nodetypes="cccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       x="139.7151"
+       y="125.69879"
+       id="text4146"><tspan
+         sodipodi:role="line"
+         style="font-size:3.52778px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-opacity:1"
+         x="139.7151"
+         y="125.69879"
+         id="tspan3349">werden</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       x="139.7151"
+       y="121.28906"
+       id="text4646"><tspan
+         sodipodi:role="line"
+         style="font-size:3.52778px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-opacity:1"
+         x="139.7151"
+         y="121.28906"
+         id="tspan7272">Repositorien gelagert</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       x="139.7151"
+       y="116.87934"
+       id="text1334"><tspan
+         sodipodi:role="line"
+         style="font-size:3.52778px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-opacity:1"
+         x="139.7151"
+         y="116.87934"
+         id="tspan812">werden und in</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       x="139.7151"
+       y="112.46961"
+       id="text348"><tspan
+         sodipodi:role="line"
+         style="font-size:3.52778px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-opacity:1"
+         x="139.7151"
+         y="112.46961"
+         id="tspan2162">Artikel referenziert</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       x="139.7151"
+       y="108.05989"
+       id="text2831"><tspan
+         sodipodi:role="line"
+         style="font-size:3.52778px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-opacity:1"
+         x="139.7151"
+         y="108.05989"
+         id="tspan9322">Daten, die vom</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       x="20.597534"
+       y="134.50314"
+       id="text1908"><tspan
+         sodipodi:role="line"
+         style="font-size:3.52778px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-opacity:1"
+         x="20.597534"
+         y="134.50314"
+         id="tspan4593">Datensätze</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       x="20.597534"
+       y="130.09341"
+       id="text2752"><tspan
+         sodipodi:role="line"
+         style="font-size:3.52778px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-opacity:1"
+         x="20.597534"
+         y="130.09341"
+         id="tspan5827">Beschreibung verfügbarer</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       x="20.597534"
+       y="125.68369"
+       id="text9527"><tspan
+         sodipodi:role="line"
+         id="tspan8670"
+         style="font-size:3.52778px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-opacity:1"
+         x="20.597534"
+         y="125.68369">Datenpublikationen,</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       x="30.038174"
+       y="101.7206"
+       id="text8307"><tspan
+         sodipodi:role="line"
+         style="font-size:3.52778px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-opacity:1"
+         x="30.038174"
+         y="101.7206"
+         id="tspan3874">in begleitenden Dateien</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       x="30.038174"
+       y="97.310883"
+       id="text5879"><tspan
+         sodipodi:role="line"
+         id="tspan6948"
+         style="font-size:3.52778px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-opacity:1"
+         x="30.038174"
+         y="97.310883">Weitere Datenerklärungen</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       x="127.33729"
+       y="89.902718"
+       id="text5054"><tspan
+         sodipodi:role="line"
+         style="font-size:3.52778px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-opacity:1"
+         x="127.33729"
+         y="89.902718"
+         id="tspan7244">und erklärt werden</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       x="127.33729"
+       y="85.492989"
+       id="text9982"><tspan
+         sodipodi:role="line"
+         style="font-size:3.52778px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-opacity:1"
+         x="127.33729"
+         y="85.492989"
+         id="tspan7499">enthalten sind </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       x="127.33729"
+       y="81.083267"
+       id="text4688"><tspan
+         sodipodi:role="line"
+         id="tspan4478"
+         style="font-size:3.52778px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-opacity:1"
+         x="127.33729"
+         y="81.083267">Daten, die im Artikel</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       x="155.98907"
+       y="156.99736"
+       id="text4437"><tspan
+         sodipodi:role="line"
+         style="font-size:3.52778px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-opacity:1"
+         x="155.98907"
+         y="156.99736"
+         id="tspan1506">der Institution </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       x="155.53046"
+       y="152.58765"
+       id="text7108"><tspan
+         sodipodi:role="line"
+         style="font-size:3.52778px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-opacity:1"
+         x="155.53046"
+         y="152.58765"
+         id="tspan2083">und auf CDs an </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       x="155.53046"
+       y="148.17792"
+       id="text1065"><tspan
+         sodipodi:role="line"
+         id="tspan7652"
+         style="font-size:3.52778px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-opacity:1"
+         x="155.53046"
+         y="148.17792">Daten in Schubladen</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="86.009216"
+       y="94.209488"
+       id="text544"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:1"
+         x="86.009216"
+         y="94.209488"
+         id="tspan8499">mit Daten</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="86.009216"
+       y="88.917824"
+       id="text9833"><tspan
+         sodipodi:role="line"
+         id="tspan173"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:1"
+         x="86.009216"
+         y="88.917824">Publikationen</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="86.009209"
+       y="118.52246"
+       id="text1981"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:1"
+         x="86.009209"
+         y="118.52246"
+         id="tspan4052">Datenrepräsentationen</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="86.009209"
+       y="113.2308"
+       id="text1462"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:1"
+         x="86.009209"
+         y="113.2308"
+         id="tspan9568">und</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="86.009209"
+       y="107.93913"
+       id="text6671"><tspan
+         sodipodi:role="line"
+         id="tspan1762"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:1"
+         x="86.009209"
+         y="107.93913">Verarbeitete Daten</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="86.106583"
+       y="138.69463"
+       id="text5326"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:1"
+         x="86.106583"
+         y="138.69463"
+         id="tspan6969">strukturierte Datenbanken</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="86.106583"
+       y="133.40297"
+       id="text5243"><tspan
+         sodipodi:role="line"
+         id="tspan1633"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:1"
+         x="86.106583"
+         y="133.40297">Datensammlungen und</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="85.945709"
+       y="158.26974"
+       id="text4460"><tspan
+         sodipodi:role="line"
+         id="tspan305"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:1"
+         x="85.945709"
+         y="158.26974">Rohe Daten und Datensätze</tspan></text>
+  </g>
+</svg>
