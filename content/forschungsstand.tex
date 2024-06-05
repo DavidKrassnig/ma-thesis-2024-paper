@@ -1,30 +1,103 @@
-\chapter{Aktueller Stand der Forschung}\label{ch:forschungsstand}
-\gls{fair}
+\chapter{Aktueller Stand der Forschung}\label{ch:forschungsstand}\glsunset{fair}
+\parsum{Thema des Kapitels}
+In diesem Kapitel werden die, für diese Masterarbeit, notwendigen und wichtigsten Aspekte zum aktuellen Stand der Forschung zusammengefasst, um den Beitrag dieser Abschlussarbeit in dem breiteren wissenschaftlichen Kontext einordnen zu können.
 
+\parsum{Aufbau des Kapitels}
+Hierzu werden in \cref{sec:forschungsstand-basics} allgemeine Informationen zu \glspl{forschungsdaten} und \gls{fdm} dargestellt.
+Dies umfasst, wie \glspl{forschungsdaten} definiert undk klassifiziert werden, welche Prinzipien und Standards nach heutiger Auffassung in Relation zu \glspl{forschungsdaten} befolgt werden sollten und wie und von wem \glspl{forschungsdaten} aus empirischer Sicht bisher veröffentlicht werden.
+Darauf folgend werden in \cref{sec:forschungsstand-guidelines} bisherige Studien zu dem Thema \gls{forschungsdaten}-Richtlinien in Deutschland zusammengefasst.
+Schließlich wird in \cref{sec:forschungsstand-diss} eine Übersicht gegeben, inwiefern das Publizieren von \glspl{forschungsdaten} im Rahmen von Dissertationen bereits erforscht wurde und was die dazugehörigen Ergebnisse waren.
+
+\section{Grundlagen zu Forschungsdaten}\label{sec:forschungsstand-basics}
+\autocite{dfg-positionspapier,hrk-fdm}
+\autocite{bmbf2024,dfg2023-gesetz}
+\autocite{Tenopir2011}
+\autocite{Piwowar2013-DataReuse}
+
+\subsection{Gute wissenschaftliche Praxis und
+FAIRe Forschungsdaten}\label{sec:forschungsstand-basics-gwp-fair}
+\autocite{dfg-gwp}
+
+\subsubsection{FAIRe Daten}
+\parsum{\gls{fair}e Daten}
+Forschungsdaten sollten \gls{fair} sein; i.e., sie sollten \textit{\textbf{F}indable} (dt.~\textit{Auffindbar}), \textit{\textbf{A}ccessible} (dt.~\textit{Zugänglich}), \textit{\textbf{I}nteroperable} (dt.~\textit{Interoperabel}) und \textit {\textbf{R}eusable} (dt.~\textit{Wiederverwendbar}) sein \autocite{Wilkinson2016}.
+Diese Richtlinien lassen sich wiederum in einzelne Unterempfehlungen aufgliedern, wie das entsprechende Ziel erreicht werden sollte oder was notwendig ist, um diese Ziel erreichen zu können.
+Diese Unterempfehlungen werden durch den jeweiligen Anfangsbuchstaben des \gls{fair}-Akronyms und einer aufsteigenden Ziffer voneinander differenziert.
+
+\parsum{Findable}
+Unter \textit{Findable} wird Forschern empfohlen, dass Daten und dazugehörige Metadaten so beschrieben werden sollten, dass sie sowohl für Menschen als auch für Maschinen leicht auffindbar sind.
+Um dies zu erreichen sollten Daten und Metadaten eine global eindeutige und dauerhafte Kennung erhalten (F1), Daten mit umfangreichen Metadaten beschrieben werden (F2), Metadaten eindeutig und explizit die Kennung der beschriebenen Daten enthalten (F3) und in einer durchsuchbaren Ressource registriert oder indiziert worden sein (F4).
+
+\parsum{Accessible}
+Unter \textit{Accessible} wird verstanden, dass, einmal auffindbar, die Daten leicht zugänglich sein sollten.
+Dies bedeutet, dass die Daten so zugänglich gemacht werden, dass diese unter Angabe der (Meta-)Datenkennung nach einem standardisierten Kommunikationsprotokoll abgerufen werden können (A1) und auf die Metadaten auch dann zugegriffen werden kann, wenn die Daten nicht mehr verfügbar sein sollten (A2).
+Hierbei sollte das genutzte Protokoll offen und universell implementierbar sein (A1.1) und, bei Bedarf, ein Authentifizierungs-/Autorisierungsverfahren ermöglichen (A1.2).
+
+\parsum{Interoperable}
+Unter \textit{Interoperable} wird spezifiziert, dass Daten in einem Format vorliegen sollten, das die Integration und das Zusammenspiel mit anderen Daten und Anwendungen ermöglicht.
+
+
+sowohl die Daten wie auch die Metadaten eine zugängliche, gemeinsame, formale und allgemein anwendbare Sprache für die Wissenspre
+
+\parsum{Reusable}
+
+\subsection{Publikationsarten}\label{sec:forschungsstand-basics-publicationtypes}
+\autocite{ReillyEtAl2011}
 \begin{figure}[!htbp]
-    \resizebox{\textwidth}{!}{\input{content/images/fd-hierarchy.tex}}
-    \caption{Die Datenpublikationspyramide nach \citeauthor{ReillyEtAl2011} \autocite{ReillyEtAl2011}.}
+    \centering
+    \resizebox{.8\textwidth}{!}{\input{content/images/fd-hierarchy.tex}}
+    \caption{Die Datenpublikationspyramide nach \citeauthor{ReillyEtAl2011} \autocite{ReillyEtAl2011}, basierend auf der Datenqualitätspyramide nach \citeauthor{Gray2009} \autocite{Gray2009}. Eigene Übersetzung.}
     \label{fig:data-pyramid}
 \end{figure}
 
-GWP \autocite{dfg-gwp}
-FAIR \autocite{Wilkinson2016}
+\subsection{Forschungsdatenrepositorien}\label{sec:forschungsstand-basics-repositories}
+Making repositories accessible \autocite{Pampel2013}
+
+\subsection{Metadaten-Schemata}\label{sec:forschungsstand-basics-metadata}
+DublinCore DataCite \autocite{datacite}
+
+
+\section{Richtlinien zu Forschungsdaten}\label{sec:forschungsstand-guidelines}
+FDM-Policies \autocite{Briney2015-Policy,Hiemenz2018-fdm-report,Hiemenz2018-fdm-title}
+FDM-Policies NUR BIELEFELD \autocite{hrk-fdm}
+
+
+
+\section{Forschungsdaten in Dissertationen}\label{sec:forschungsstand-diss}
+DISSERTATION-FD EMPIRICAL \autocite{Campbell2019}
+\autocite{Weisbrod2017eDissPlus,Weisbrod2018,dnb2017}
+\autocite{Wünsche2018Forschungsdaten}
+\autocite{Schöpfel2015}
+
+
+
+
+--good RD practice--
+
+
+forschungsdatengesetz 
+
+--open--
+Budapest Open Access Initiative
+Berlin Declaration on Open Access to Knowledge in the Sciences and Humanities
+European Commission's Horizon 2020 Open Access Mandate
+
+
+
+
+
+
 
 CITATION ADVANTAGE \autocite{Bautista-Puig2020}
 
 ALLGEMEIN \autocite{Hopf2022}
 
 
-FDM-Policies \autocite{Briney2015-Policy,Hiemenz2018-fdm-report,Hiemenz2018-fdm-title}
-FDM-Policies NUR BIELEFELD \autocite{hrk-fdm}
-
-\autocite{dfg-positionspapier,hrk-fdm}
 
 
-DISSERTATION-FD EMPIRICAL \autocite{Campbell2019}
 
-\autocite{Martin2013Wissenschaftliche,ReillyEtAl2011,Tenopir2011,TenopirEtAl2017,Tröger2016,Wünsche2018Forschungsdaten,Piwowar2013-DataReuse}
 
-\autocite{Weisbrod2017eDissPlus,Weisbrod2018,dnb2017}
+\autocite{Martin2013Wissenschaftliche,TenopirEtAl2017,Tröger2016,}
 
-\autocite{Schöpfel2015}
+
+

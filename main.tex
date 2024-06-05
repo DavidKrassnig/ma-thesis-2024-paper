@@ -27,7 +27,7 @@
     pdfa,                   %PDF/A Voreinstellungen
     headings=twolinechapter,%Zweizweilige Kapiteltitel
     %twocolumn,              %Für zweispaltige Darstellung
-    %draft,                  %Auskommentieren für den Entwurfsmodus
+    draft,                  %Auskommentieren für den Entwurfsmodus
     %final                   %Auskommentieren für den endgültigen Druck
     ]{scrbook}              %Verwendung der KOMA-Script book-Klasse
 
@@ -195,7 +195,7 @@
 %Anmerkung: Das Bibliografieformat muss oben unter Dokumentpakete eingestellt werden
 
 %% Hauptdokument %%
-%\includeonly{content/luh-repo-evaluation} %Selektive Dokumentgenerierung
+\includeonly{content/einfuehrung,content/forschungsstand} %Selektive Dokumentgenerierung
 \begin{document}
     %% Vorderer Teil
     \frontmatter
@@ -208,11 +208,10 @@
     %
     %% Hauptteil
     \mainmatter
-        \include{content/einfuehrung}
-        \include{content/forschungsstand}
-        \include{content/fdm-policies}
-        \include{content/luh-repo-evaluation}
-        %\include{content/machine-learning}
+        \include{content/einfuehrung}\glsresetall
+        \include{content/forschungsstand}\glsresetall
+        \include{content/fdm-policies}\glsresetall
+        \include{content/luh-repo-evaluation}\glsresetall
         \include{content/schluss}
     %
     %% Hinterer Teil

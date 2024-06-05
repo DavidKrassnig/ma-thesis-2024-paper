@@ -16,7 +16,7 @@ In diesem Abschnitt wird das zu untersuchende Material in \cref{sec:luh-repo-mat
 \subsection{Material}\label{sec:luh-repo-material}
 \parsum{Datengrundlage}
 Als Datengrundlage für dieses Kapitel gilt die Metadaten-Datenbank aller Dissertationen des \gls{luh-repo}, welche via \gls{oai-pmh} der Öffentlichkeit frei zugänglich sind \autocite{luh-repo}.
-Da sich das Thema dieses Kapitels explizit auf Dissertationen beschränkt, wurden von der Metadaten-Datenbank des \gls{luh-repo} alle Einträge der Sammlung \textit{Dissertationen} die am 21.03.2024 um 10:41 Uhr (UTC+01:00) existierten ($n=5095$) über die Administrationsübersicht des \gls{luh-repo} heruntergeladen \autocite{my-dataset}.
+Da sich das Thema dieses Kapitels explizit auf Dissertationen beschränkt, wurden von der Metadaten-Datenbank des \gls{luh-repo}s alle Einträge der Sammlung \textit{Dissertationen} die am 21.03.2024 um 10:41 Uhr (UTC+01:00) existierten ($n=5095$) über die Administrationsübersicht des \gls{luh-repo}s heruntergeladen \autocite{my-dataset}.
 
 \parsum{Grundmengenbeschreibung}
 Da die zentrale Forschungsfrage dieses Kapitels sich auf den Zeitraum von 2012--2023 beschränkt, wurde diese Liste durch \cref{lst:python-luh-repo-stratification} auf nur jene Metadateneinträge gefiltert, deren Publikationsjahr in diese Zeitspanne fällt und deren Sperrfrist auch, insofern vorhanden, spätestens 2023 endete ($n=1898$).
@@ -189,7 +189,7 @@ Der relative Anteil und die absolute Differenz zwischen der Grundmenge und den W
     \input{content/tables/luh-repo-zahlenspiegel-relative-grundmenge.tex}
     \label{tab:luh-repo-zahlenspiegel-relative-grundmenge}
 \end{table}
-Mit einem arithmetische Mittel aller $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}$-Kombinationen von $\bar{x}=\SI[round-mode=places,round-precision=2]{42.9875078330178}{\percent}$ und einer Standardabweichung von $s=\SI[round-mode=places,round-precision=2]{26.1457705653948}{\percent}$ ist die relative Nutzung des \gls{luh-repo} für die Veröffentlichung von Dissertationen unter den Fakultäten und Jahresgruppen sehr ungleich.
+Mit einem arithmetische Mittel aller $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}$-Kombinationen von $\bar{x}=\SI[round-mode=places,round-precision=2]{42.9875078330178}{\percent}$ und einer Standardabweichung von $s=\SI[round-mode=places,round-precision=2]{26.1457705653948}{\percent}$ ist die relative Nutzung des \gls{luh-repo}s für die Veröffentlichung von Dissertationen unter den Fakultäten und Jahresgruppen sehr ungleich.
 
 Die Fakultäten lassen sich hierbei durch durchschnittlicher Nutzungsrate in drei relativ klar abgegrenzte Gruppen einteilen: Geringnutzer ($\bar{x}<\SI[round-mode=places,round-precision=2]{20}{\percent}$), Intermediärnutzer ($\bar{x}\approx\SI[round-mode=places,round-precision=2]{33}{\percent}$) und Intensivnutzer ($\bar{x}\approx\SI[round-mode=places,round-precision=2]{66}{\percent}$).
 Die Geringnutzer bestehen aus \gls{fakultät5} ($\bar{x}=\SI[round-mode=places,round-precision=2]{1.9546568627451}{\percent},s=\SI[round-mode=places,round-precision=2]{2.43871779238119}{\percent}$) und \gls{fakultät6} ($\bar{x}=\SI[round-mode=places,round-precision=2]{17.239500265816}{\percent},s=\SI[round-mode=places,round-precision=2]{5.13233379292414}{\percent}$).
@@ -376,7 +376,7 @@ Dies ist zumindest im Teil auch dadurch bedingt, dass die Nutzung dedizierter \g
 Viele Daten wurden extern in dedizierten Datenbanken (z.B.~Gensequenzen), auf GitHub~/~GitLab publiziert oder entsprachen bei kumulativen Dissertationen begleitenden Dateien, die in einem Journal zusammen mit der PDF-Datei hochgeladen wurden.
 Insgesamt wurden fast keine Plattformen genutzt, die von sich aus eine Kodifizierung entsprechender Metadaten ermöglichen.
 Zusätzlich wurden zum Zeitpunkt dieser Arbeit noch keine Informationen zu externen \gls{forschungsdaten}-Publikationen in den Metadaten von \gls{luh-repo} festgehalten.
-Durch die Kombination dieser Faktoren, konnten keine empirischen Daten zur Nutzung unterschiedlicher Metadatenstandards auf Basis des \gls{luh-repo} und der sich darin befindenden Dissertationen gesammelt werden.
+Durch die Kombination dieser Faktoren, konnten keine empirischen Daten zur Nutzung unterschiedlicher Metadatenstandards auf Basis des \gls{luh-repo}s und der sich darin befindenden Dissertationen gesammelt werden.
 
 \section{Diskussion}\label{sec:luh-repo-discussion}
 Die Ergebnisse in \cref{sec:luh-repo-results-factors} zeigten, dass alle evaluierten Faktoren zu unterschiedlich starken---aber insgesamt dennoch schwachen---Graden voneinander abhängig sind.
@@ -439,27 +439,28 @@ Gleichzeitig ist in den Rechtswissenschaft die Verbreitung von Dissertationen in
 Allgemein sollte bei diesen beiden Fakultäten Kontakt aufgebaut werden und jeweils gemeinsam besprochen werden, welche Bedenken vor einer höheren Nutzung des \gls{luh-repo}s bestehen, die diversen Vorteile von Open Access erörtert \autocite{Bautista-Puig2020} und auch aufgezeigt werden, dass z.B.~ein bisheriger Mangel an High Impact Open Access Publikationen kein Indikator dafür ist, dass ein entsprechender Markt nicht sehr schnell entwickelt werden kann \autocite{Björk2012}.
 
 \subsubsection{Forschungsdaten}
-\cref{sec:luh-repo-results} hat insgesamt gezeigt, dass nur ein Drittel aller Promovierenden von \glspl{pdd} aus dem \gls{luh-repo} \glspl{forschungsdaten} aus \textit{Stufe~1} und \textit{Stufe~2} publiziert hat, während ein weiteres Drittel überhaupt keine \glspl{forschungsdaten} publiziert hat.
+\cref{sec:luh-repo-results} hat gezeigt, dass nur ein Drittel aller Autoren von \glspl{pdd} aus dem \gls{luh-repo} \glspl{forschungsdaten} der \textit{Stufe~1} und \textit{Stufe~2} publiziert hat, während ein weiteres Drittel überhaupt keine \glspl{forschungsdaten} publiziert hat.
 Unter Ausschluss integrierter \glspl{forschungsdaten} stieg hierbei der Anteil jener, die keine \glspl{forschungsdaten} publizieren, sogar auf über \SI{90}{\percent}.
 
-Entsprechend gibt es hier zwei separate aber verwandte Bereiche, bei der Promovierende an der \gls{luh} eventuell zusätzliche Unterstützung erfahren oder durch vermerte Werbearbeit auf existierende Angebote der \gls{luh}~/~\gls{tib} aufmerksam gemaht werden sollten:
-die Identifikation von eigenen \glspl{pd}, die zur Verfügung gestellt werden sollten, und die Möglichkeit, wie dies durch externe Repositorien nach den \gls{fair}-Prinzipien stattfinden kann.
+Entsprechend gibt es hier zwei separate aber verwandte Bereiche, bei denen Promovierende an der \gls{luh} eventuell zusätzliche Unterstützung erfahren oder durch vermerte Werbearbeit auf existierende Angebote der \gls{luh}~/~\gls{tib} aufmerksam gemacht werden sollten:
+(i)~die Identifikation von eigenen \glspl{pd}, die zur Verfügung gestellt werden sollten, und (ii)~die Möglichkeit, wie dies durch externe Repositorien nach den \gls{fair}-Prinzipien stattfinden kann.
 
-Ersteres kann insofern ein wichtiger Faktor sein, da die \gls{fdm}-Richtlinie der \gls{luh} eigentlich vorsieht, dass die \glspl{forschungsdaten} nach Möglichkeit publiziert werden sollten.
+Ersteres kann insofern ein wichtiger Faktor sein, da die \gls{forschungsdaten}-Richtlinie der \gls{luh} eigentlich vorsieht, dass die \glspl{forschungsdaten} nach Möglichkeit publiziert werden sollten \autocite{luhfdm-richtlinie}.
 Dies scheint aber nicht in vollem Umfang durch die Promovierenden umgesetzt zu werden.
 Eine Möglichkeit für diesen Umstand könnte sein, dass Promovierende einfach unterschätzen, welche \glspl{pd} für die Veröffentlichung relevant sein könnten.
 
-Eine Möglichkeit, wie für das bestehende Beratungs- und Informationsangebot zu \gls{fdm} unter den Studierenden und Promovierenden Werbearbeit gemacht und gleichzeitig erweitert werden könnte, ist die Nutzung eines \gls{ki} Modells, welches darauf trainiert wurde, zu erkennen, welche Datensätze in einer Arbeit implizit genutzt werden und daher eventuell auch explizit veröffentlicht werden sollten.
-Eine Möglichkeit hierzu wäre das \textit{DataSeer}-Projekt \autocite{dataseer}, welches entwickelt wurde, um Forschenden und Betreibern von wissenschaftlichen Journals dabei zu helfen, zu identifizieren, welche Datensätze einem Artikel zugrunde liegen und welche idealerweise geteilt werden sollten.
+Eine Möglichkeit, wie für das bestehende Beratungs- und Informationsangebot zu \gls{fdm} unter den Studierenden und Promovierenden Werbearbeit gemacht und gleichzeitig auch erweitert werden könnte, wäre die Nutzung eines \gls{ki} Modells, welches darauf trainiert wurde, zu erkennen, welche Datensätze in einer Arbeit implizit genutzt werden und daher eventuell auch explizit veröffentlicht werden sollten.
+Eine Möglichkeit hierzu wäre das \textit{DataSeer}-Projekt \autocite{dataseer}, welches entwickelt wurde, um Forschenden und Herausgebern von wissenschaftlichen Journalen dabei zu helfen, zu identifizieren, welche Datensätze einem Artikel zugrunde liegen und welche daher idealerweise auch geteilt oder referenziert werden sollten.
 Da es sich bei \textit{DataSeer} um ein quelloffenes Projekt handelt, wäre hier eine Möglichkeit, dass die \gls{tib} oder die \gls{luh} eine eigene Instanz hostet, welche \gls{luh}-Angehörigen zur Verfügung steht.
-Hier kann dann durch Plakate und andere Medien eine \enquote{Check Your Data}-Kampagne gestartet werden, welche den \gls{ki}-Aspekt des Projektes in den Vordergrund stellt, um die Neugier der Studierenden und Promovierenden dafür zu nutzen, ihre wissenschaftliche Praxis oder zumindest ihren wissenschaftliche \gls{forschungsdaten}-Achtsamkeit zu verbessern.
+Hier könnte dann durch Plakate und andere Medien eine \enquote{Check Your Data}-Kampagne gestartet werden, welche den \gls{ki}-Aspekt des Projektes in den Vordergrund stellt, um die Neugier der Studierenden und Promovierenden dafür zu nutzen, deren wissenschaftliche Praxis oder zumindest wissenschaftliche \gls{forschungsdaten}-Achtsamkeit zu verbessern.
 
 Was die Möglichkeit betrifft, \glspl{forschungsdaten} in ein externes Repositorium hochzuladen, so könnte ein mangelndes Wissen um welche Repositorien existieren und wie diese genutzt werden können ein Faktor sein, warum so wenige \glspl{pdd} im \gls{luh-repo} externe \glspl{forschungsdaten} in dedizierte \gls{forschungsdaten}-Repositorien hochgeladen haben.
-Hier sollte vermehrt Werbearbeit für das institutionelle \gls{forschungsdaten}-Repositorium und für die allgemeine \gls{fdm}-Informationswebseite der \gls{luh} gemacht werden.
-Eine Option hierfür wäre, den bereits existierenden autodidaktischen \gls{fdm}-Einführungskurs der \gls{luh} für Studierende und Promovierende verpflichtend zu machen, sodass diese einen Nachweis hierzu erbringen müssen.
+Hier sollte vermehrt Werbearbeit für das institutionelle \gls{forschungsdaten}-Repositorium und für die allgemeine \gls{fdm}-Informationswebseite der \gls{luh} gemacht werden---welche bereits auf geeignete Repositorien-Suchmöglichkeiten wie z.B. \textit{re3data} hinweist \autocite{luhfdm-extern}.
+
+Eine Option hierfür wäre, dass die Ressourcen zu externen Beratungsmöglichkeiten prominenter dargestellt werden.
+So könnte ein Link zu der entsprechenden Seite auf der Hauptseite des Informationsportals eingestellt werden.
+
+Eine andere Option hierfür wäre, den bereits existierenden autodidaktischen \gls{fdm}-Einführungskurs der \gls{luh} für Studierende und Promovierende verpflichtend zu machen, sodass diese einen Nachweis hierzu erbringen müssen.
 Für Studierende müsste dies in den Semestern vor der Abschlussarbeit und für Promovierende in den ersten Semestern ihrer Forschungstätigkeit der Fall sein, um die gewünschte Wirkung zu maximieren.
-Auch könnte, unter Absprache mit den Fakultäten und der Universitätsleitung, eine verpflichtende Erstellung eines \gls{dmp} einerseits die wissenschaftliche Praxis im Allgemeinen verbessern und andererseits die Thematik des \gls{fdm} den Studierenden bzw. Promovierenden eine höhere Relevanz vermitteln.
-
-
-Hierbei Bedarf es einer tatkräftigen und überzeugten Unterstützung durch die Universitätsleitung der \gls{luh}, da die Erfahrung von im \gls{fdm} tätigen Bibliothekaren gezeigt hat, dass dies eine unbedingte Notwendigkeit ist \autocite{Dellmann2022}.
+Auch könnte, unter Absprache mit den Fakultäten und der Universitätsleitung, eine verpflichtende Erstellung eines \gls{dmp} einerseits die wissenschaftliche Praxis im Allgemeinen verbessern und andererseits den Studierenden bzw. Promovierenden die hohe Relevanz der Thematik \gls{fdm} zu vermitteln.
 
