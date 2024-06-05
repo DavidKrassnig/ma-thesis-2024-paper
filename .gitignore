@@ -22,4 +22,6 @@ svg-inkscape/
 *.gls
 *.ist
 *.synctex.gz
+*.synctex.(busy)
+"main.synctex(busy)"
 *.upa
