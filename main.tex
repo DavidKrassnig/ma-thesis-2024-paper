@@ -34,7 +34,8 @@
 
 %% Dokumentpaketeausschluss
 \PreventPackageFromLoading{fontenc,lmodern} %Sicherstellen dass Standardfonts nicht geladen werden
-
+\RequirePackage{silence}
+\WarningFilter{xcolor}{Package option `hyperref' is obsolete and ignored}
 %% Dokumentpakete
 %\usepackage{showframe}%Anzeige der Layout-Boxen
 \usepackage{lipsum}   %Generierung von Dummy-Text
@@ -196,7 +197,7 @@
 %Anmerkung: Das Bibliografieformat muss oben unter Dokumentpakete eingestellt werden
 
 %% Hauptdokument %%
-%\includeonly{content/einfuehrung,content/forschungsstand} %Selektive Dokumentgenerierung
+\includeonly{content/schluss} %Selektive Dokumentgenerierung
 \begin{document}
     %% Vorderer Teil
     \frontmatter
@@ -213,7 +214,7 @@
         \include{content/forschungsstand}\glsresetall
         \include{content/fdm-policies}\glsresetall
         \include{content/luh-repo-evaluation}\glsresetall
-        \include{content/schluss}
+        \include{content/schluss}\glsunsetall
     %
     %% Hinterer Teil
     {\backmatter%GESCHWEIFTE KLAMMERN NICHT LÖSCHEN! Beeinflusst sonst den Appendix!
