@@ -1,3 +1,33 @@
+\newcounter{scbookpg}
+
+\makeatletter
+\renewcommand*{\is@thispageodd}{%
+  \@bsphack
+  \begingroup
+    %\@tempcnta=\scr@tpo
+    %\advance\@tempcnta by\@ne
+    \stepcounter{scbookpg}%
+    \xdef\scr@tpo{\thescbookpg}%
+    \protected@write\@auxout{\let\arabic\relax}{%
+      \string\new@tpo@label{\scr@tpo}{\arabic{page}}}%
+    \expandafter\ifx\csname tpo@\scr@tpo\endcsname\relax
+      \protect\G@refundefinedtrue
+      \ClassWarning{\KOMAClassName}{%
+        odd/even page label number \scr@tpo\space undefined}%
+      \edef\@tempa{\the\value{page}}%
+    \else
+      \edef\@tempa{\csname tpo@\scr@tpo\endcsname}%
+    \fi
+    \ifodd\number\@tempa
+      \aftergroup\thispagewasoddtrue
+    \else
+      \aftergroup\thispagewasoddfalse
+    \fi
+  \endgroup
+  \@esphack
+}
+\makeatletter
+
 \newcommand{\parsum}[1]{%
     \leavevmode
     \Ifthispageodd{%

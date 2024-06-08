@@ -26,8 +26,9 @@
     hidelinks,				%Um Hyperlink-Boxen zu deaktivieren, falls Unterstrich gelöscht wird
     pdfa,                   %PDF/A Voreinstellungen
     headings=twolinechapter,%Zweizweilige Kapiteltitel
+    hyperfootnotes=false,
     %twocolumn,              %Für zweispaltige Darstellung
-    draft,                  %Auskommentieren für den Entwurfsmodus
+    %draft,                  %Auskommentieren für den Entwurfsmodus
     %final                   %Auskommentieren für den endgültigen Druck
     ]{scrbook}              %Verwendung der KOMA-Script book-Klasse
 
@@ -221,7 +222,7 @@
     %
     %% Appendix
     \appendix
-    \part*{Appendix}
+    \include{appendices/appendice-part}
     \include{appendices/richtlinienklassifikation}
     \include{appendices/luh-repo-code}
     %% Selbstständigkeitserklärung
