@@ -1,2 +1,208 @@
-\chapter{Aktueller Stand der Forschung}\label{ch:forschungsstand}
-\gls{fair}
+\chapter{Aktueller Stand der Forschung}\label{ch:forschungsstand}\glsunset{fair}
+\parsum{Thema des Kapitels}
+In diesem Kapitel werden die, für diese Masterarbeit, notwendigen und wichtigsten Aspekte zum aktuellen Stand der Forschung zusammengefasst, um den Beitrag dieser Abschlussarbeit in dem breiteren wissenschaftlichen Kontext einordnen zu können.
+
+\parsum{Aufbau des Kapitels}
+Hierzu werden in \cref{sec:forschungsstand-basics} allgemeine Informationen zu \glspl{forschungsdaten} und \gls{fdm} dargestellt.
+Dies umfasst, wie \glspl{forschungsdaten} definiert undk klassifiziert werden, welche Prinzipien und Standards nach heutiger Auffassung in Relation zu \glspl{forschungsdaten} befolgt werden sollten und wie und von wem \glspl{forschungsdaten} aus empirischer Sicht bisher veröffentlicht werden.
+Darauf folgend werden in \cref{sec:forschungsstand-guidelines} bisherige Studien zu dem Thema \gls{forschungsdaten}-Richtlinien in Deutschland zusammengefasst.
+Schließlich wird in \cref{sec:forschungsstand-diss} eine Übersicht gegeben, inwiefern das Publizieren von \glspl{forschungsdaten} im Rahmen von Dissertationen bereits erforscht wurde und was die dazugehörigen Ergebnisse waren.
+
+\section{Grundlagen zu Forschungsdaten}\label{sec:forschungsstand-basics}
+\parsum{Wichtigkeit}
+Seit etwa zehn Jahren rückt der korrekte und nachhaltige Umgang mit \glspl{forschungsdaten} zunehmend in den Fokus der deutschen Wissenschaft.
+Dies lässt sich z.B.~durch die wissenschaftspolitische Entwicklungen der letzten Jahre erkennen.
+
+\parsum{NFDI}
+So betonte bereits 2014 die \gls{hrk}, dass das exponentielle Wachstum und die Komplexität digitaler Forschungsdaten neue Methoden und Werkzeuge erfordern.
+Hier forderte sie Hochschulleitungen explizit dazu auf, Leitlinien zu entwickeln, Informationskompetenz zu fördern und effizientes Forschungsdatenmanagement zu unterstützen.
+Dies solle von Bund und Länder durch übergreifende Maßnahmen koordiniert und zumindest in Teilen finanziert werden \autocite{hrk-fdm}.
+Nur wenig später hat auch der von der \gls{gwk} beschlossene \gls{rfii} entsprechende Empfehlungen veröffentlicht und vorgeschlagen, dass eine \gls{nfdi} aufgebaut werden sollte \autocite{rfii2016}, was auch von der \gls{dfg} unterstützt wurde \autocite{dfg-positionspapier}.
+Dies kulminierte 2018 in einer Vereinbarung zwischen Bund und Ländern, eine entsprechende Infrastruktur aufzubauen \autocite{nfdi-agreement}, was wiederum zu der Gründung des \gls{nfdi} e.V. in 2020 führte \autocite{nfdi-foundation}.
+
+\parsum{\gls{forschungsdaten}-Gesetz}
+Darüber hinaus wird zum Zeitpunkt dieser Abschlussarbeit vom \gls{bmbf} angestrebt, dass ein \gls{forschungsdaten}-Gesetz verabschiedet wird, welches den Zugang auf Daten öffentlicher Hand erleichtern, Datenschutzregelung zu Gunsten besser \gls{forschungsdaten}-Handhabung verändern, \glspl{forschungsdaten} durch neue Metadatenkataloge der Forschungseinrichtungen auffindbarer machen und ein \textit{Micro Data Center} für Statistik- und Registerdaten aufbauen soll \autocite{bmbf2024}.
+Dieses vorhaben wird auch sowohl von der \gls{dfg} \autocite{dfg2023-gesetz} wie auch von dem \gls{rfii} \autocite{rfii-gesetz} unterstützt.
+
+\parsum{Meinung der Wissenschaftler}
+Entsprechend ändert sich auch langsam die Bereitwilligkeit von Forschenden, ihre \glspl{forschungsdaten} anderen Personen zugänglich zu machen \autocite{Kaden2018}.
+So zeigte z.B.~eine Studie in 2019, dass nur \SI{11}{\percent} älterer Forschenden im Bereich der Biologie gewillt sind, Daten auf Anfrage anderer Forschenden zur Verfügung zu stellen, während dieselbe Rate bei \SI{72}{\percent} für Nachwuchsforschende in derselben Disziplin liegt \autocite{Campbell2019}.
+
+
+\parsum{Aufbau des Abschnitts}
+Der korrekten wissenschaftlichen Handhabung von \gls{forschungsdaten} und \gls{fdm} wird also sehr hohe Bedeutung beigemessen.
+In diesem Abschnitt werden hierzu die grundlegenden Informationen zum aktuellen Stand wiedergegeben.
+In \cref{sec:forschungsstand-basics-gwp-fair} werden die die Regeln der \gls{gwp} und die \gls{fair}-Prinzipien, auf die in der \gls{gwp} referenziert werden, erklärkt.
+In \cref{sec:forschungsstand-basics-publicationtypes} werden die unterschiedlichen Publikationsarten für \glspl{forschungsdaten} dargelegt.
+Eine von diesen, die Nutzung von externen \gls{forschungsdaten}-Repositorien, wird in \cref{sec:forschungsstand-basics-repositories} eingehender erklärt.
+In \cref{sec:forschungsstand-basics-metadata} werden dann die am häufigst genutzten Metadaten-Schemata, die für \glspl{forschungsdaten} verwendet werden, grob umrissen.
+
+\subsection{Gute wissenschaftliche Praxis und
+FAIRe Forschungsdaten}\label{sec:forschungsstand-basics-gwp-fair}
+Als Grundlage für das wissenschaftliche Verhalten in Deutschland gelten die Regeln der \gls{gwp} der \gls{dfg} \autocite{dfg-gwp}.
+Diese spezifizieren korrektes wissenschaftliches Verhalten für Forschungsvorhaben und wie deren Umgebung gestaltet werden sollte.
+Dies umfasst organisatorische Angelegenheiten wie die Leitung wissenschaftlicher Einrichtungen bis zu operativen Anforderungen wie die phasenübergreifende Qualitätssicherung innerhalb eines Forschungsprojektes.
+
+Da \glspl{forschungsdaten} ein elementarer Bestandteil des wissenschaftlichen Prozesses sind, geben die Regeln der \gls{gwp} entsprechende Leitlinien für deren Produktion, Bearbeitung und Publikation vor.
+So sollten z.B., gemäß \textit{Leitlinie~7} der \gls{gwp}, die Generierung, Prozessierung und Analyse von \glspl{forschungsdaten} unter Einhaltung fachspezifischer Standards und Methoden vollzogen und deren Umfang und Art ausreichend dokumentiert werden.
+Von besonderem Interesse für diese Abschlussarbeit ist dabei \textit{Leitlinie 13} der \gls{gwp}, welche besagt, dass öffentlicher Zugang zu den Forschungsergebnissen, gemäß den sogenannten \gls{fair}-Prinzipien, hergestellt werden sollte.
+
+%\subsubsection{FAIRe Daten}
+\parsum{\gls{fair}e Daten}
+Die \gls{fair}-Prinizpien besagen, dass \glspl{forschungsdaten} \textit{\textbf{F}indable} (dt.~\textit{Auffindbar}), \textit{\textbf{A}ccessible} (dt.~\textit{Zugänglich}), \textit{\textbf{I}nteroperable} (dt.~\textit{Interoperabel}) und \textit {\textbf{R}eusable} (dt.~\textit{Wiederverwendbar}) sein sollten \autocite{Wilkinson2016}.
+Diese Richtlinien lassen sich wiederum in einzelne Unterempfehlungen aufgliedern, wie das entsprechende Ziel erreicht werden sollte oder was notwendig ist, um diese Ziel erreichen zu können.
+Diese Unterempfehlungen werden durch den jeweiligen Anfangsbuchstaben des \gls{fair}-Akronyms und einer aufsteigenden Ziffer voneinander differenziert.
+
+\parsum{Findable}
+Unter \textit{Findable} wird Forschern empfohlen, dass Daten und dazugehörige Metadaten so beschrieben werden sollten, dass sie sowohl für Menschen als auch für Maschinen leicht auffindbar sind.
+Um dies zu erreichen sollten Daten und Metadaten eine global eindeutige und dauerhafte Kennung erhalten (F1), Daten mit umfangreichen Metadaten beschrieben werden (F2), Metadaten eindeutig und explizit die Kennung der beschriebenen Daten enthalten (F3) und (Meta-)Daten in einer durchsuchbaren Ressource registriert oder indiziert worden sein (F4).
+
+\parsum{Accessible}
+Unter \textit{Accessible} wird verstanden, dass, einmal auffindbar, die Daten auch leicht zugänglich sein sollten.
+Dies bedeutet, dass die Daten so zugänglich gemacht werden, dass diese unter Angabe der (Meta-)Datenkennung nach einem standardisierten Kommunikationsprotokoll abgerufen werden können (A1) und auf die Metadaten auch dann zugegriffen werden kann, wenn die Daten nicht mehr verfügbar sein sollten (A2).
+Hierbei sollte das Protokoll offen sowie universell implementierbar sein (A1.1) und, bei Bedarf, ein Authentifizierungs-/Autorisierungsverfahren ermöglichen (A1.2).
+
+\parsum{Interoperable}
+Unter \textit{Interoperable} wird spezifiziert, dass Daten und Metadaten in Formaten vorliegen sollten, die die Integration und das Zusammenspiel mit anderen Daten und Anwendungen ermöglicht.
+Hierfür soll eine zugängliche, gemeinsame, formale und allgemein anwendbare Sprache für die Wissensrepräsentation in den Daten und Metadaten genutzt werden (I1), Vokabulare verwendet werden, die den \gls{fair}-Prinzipien folgen (I2) und die (Meta-)Daten sollen qualifizierte Verweise auf andere (Meta-)Daten enthalten (I3).
+
+\parsum{Reusable}
+Schlussendlich besagt \textit{Reusable}, dass die Daten so aufbereitet und dokumentiert sein sollten, dass sie von anderen Forschern unter den angegebenen Bedingungen wieder- und weiterverwendet werden können.
+Dies erfordert detaillierte Beschreibungen der Datenquelle, des Datenerstellungsprozesses und der zugrunde liegenden Methoden (R1.2), einer eindeutigen und zugänglichen Nutzungslizenz (R1.1) und die Nutzung domänenrelevanter Community-Standards (R1.3).
+
+Hierbei sollte jedoch erwähnt werden, dass freier Zugriff auf Forschung und deren Ergebnisse unter ethischen und rechtlichen Einschränkungen zwar prinzipiell empfehlenswert ist \autocite{Hopf2022}, und auch einen gewissen Zitationsvorteil für die Publizierenden bietet \autocite{Piwowar2013-DataReuse,Bautista-Puig2020}, jedoch nicht Teil der \gls{fair}-Prinzipien ist.
+Entsprechend müssen \gls{fair}e \glspl{forschungsdaten} nicht unbedingt \textit{Open Data} sein.
+
+\subsection{Publikationsarten}\label{sec:forschungsstand-basics-publicationtypes}
+\parsum{Publikationspyramide}
+In der Literatur zu \glspl{forschungsdaten} wird im Allgemeinen zwischen drei verschiedenen Publikationsarten unterschieden, basierend auf der Integrationsstufe der \glspl{forschungsdaten} in Relation zu eines dazugehörigen wissenschaftlichen Schriftwerkes \autocite{ReillyEtAl2011}.
+Diese Stufen werden mit der sogenannten \textit{Publikationspyramide} dargestellt, welche von oben nach unten die drei Publikationsarten mit abnehmender Integrationsstärke zeigt bevor die unterste Stufe schließlich unveröffentlichte Datensätze repräsentiert \autocite{ReillyEtAl2011}.
+Diese Publikationspyramide ist in \cref{fig:data-pyramid} dargestellt.
+\begin{figure}[!htbp]
+    \centering
+    \resizebox{.8\textwidth}{!}{\input{content/images/fd-hierarchy.tex}}
+    \caption{Die Datenpublikationspyramide nach \citeauthor{ReillyEtAl2011} \autocite{ReillyEtAl2011}, basierend auf der Datenqualitätspyramide nach \citeauthor{Gray2009} \autocite{Gray2009}.
+    Eigene Übersetzung.}
+    \label{fig:data-pyramid}
+\end{figure}
+
+\parsum{Integrierte \glspl{forschungsdaten}}
+Entsprechend der Datenpublikationspyramide, sind die integriertesten \glspl{forschungsdaten} jene, welche als integrierter Bestandteil eines Artikels bzw.~eines wissenschaftlichen Schriftstückes veröffentlicht werden, ohne dass eine Trennung zwischen Dokument und \glspl{forschungsdaten} stattfindet.
+Sie besitzen keine eigene Kennung und sind nicht über eigene Metadaten weiter erschlossen \autocite{ReillyEtAl2011}.
+Entsprechend sind sie nach den \gls{fair}-Prinizipien pinzipiell wenig \textit{findable}, \textit{accessible}, \textit{interoperable} oder \textit{reusable} \autocite[vgl.][]{ReillyEtAl2011}.
+In dieser Abschlussarbeit werden solche \glspl{forschungsdaten} als \textit{integrierte \glspl{forschungsdaten}} bezeichnet.
+
+\parsum{Begleitende \glspl{forschungsdaten}}
+Die nächste Stufe der Publikationsart ist es, wenn \glspl{forschungsdaten} als begleitende Dateien eines Artikels bzw.~eines wissenschaftlichen Schriftstückes auf derselben Plattform publiziert werden.
+Hierbei befinden sich die \glspl{forschungsdaten} auf derselben Plattform und besitzen typischerweise keine eigene Kennung oder erschließende Metadaten, können diese jedoch in wenigen Fällen vorweisen \autocite{ReillyEtAl2011}.
+Während die situation hier bereits ist als bei den integrierten Daten, entsprechen diese Daten meist auch unzureichend den \gls{fair}-Prinzipien \autocite[vgl.][]{ReillyEtAl2011}.
+In dieser Abschlussarbeit werden solche \glspl{forschungsdaten} als \textit{begleitende \glspl{forschungsdaten}} bezeichnet.
+
+\parsum{Externe \glspl{forschungsdaten}}
+Die dritte und letzte Publikationsart ist es, wenn \glspl{forschungsdaten} separat zu dem dazugehörigen Schriftstück auf einer anderen Plattform oder zumindest unter einer anderen Kennung auf derselben Plattform publiziert werden.
+In diesen Fällen werden die Daten im wissenschaftlichen Schriftstück als externer Datensatz zitiert und befinden sich idealerweise in dedizierten \glspl{forschungsdaten}-Repositorien (siehe \cref{sec:forschungsstand-basics-repositories}) oder, was jedoch seltener der Fall ist, in \glspl{forschungsdaten}-Journalen, welche eine eingehendere Beschreibung und Indexierung der Daten über entsprechende Metadaten erlaubt (siehe \cref{sec:forschungsstand-basics-metadata}).
+In solchen Fällen, verweisen die Metadaten des Datensatzes wie auch die des Schriftstückes auf die Existenz des entsprechenden Konterparts \autocite{ReillyEtAl2011}.
+Sie entsprechen, zu unterschiedlich starken Graden, den \gls{fair}-Prinzipien \autocite[vgl.][]{ReillyEtAl2011}.
+In dieser Abschlussarbeit werden solche \glspl{forschungsdaten} als \textit{externe \glspl{forschungsdaten}} bezeichnet.
+
+\parsum{Nicht publiziert}
+Die letzte Stufe der Pyramide betrifft dann jene \glspl{forschungsdaten}, die nicht publiziert worden sind und damit auch keine (offizielle) Beziehung zu einem wissenschaftlichen Schriftstück besitzen.
+Diese Daten befinden sich meistens auf lokalen Servern oder anderen Datenträgern einer wissenschaftlichen Institution \autocite{ReillyEtAl2011}.
+
+
+\subsection{Forschungsdatenrepositorien}\label{sec:forschungsstand-basics-repositories}
+Um eine \gls{fair}e Publizierung von \glspl{forschungsdaten} zu erlauben, wurden über die Jahre einige Repositorien gegründet, deren dedizierter Zweck es ist, \glspl{forschungsdaten} langfristig zu lagern, findbar und verfügbar zu machen.
+Während diese Repositorien früher stark verstreut waren und es schwer war, einen einigermaßen vollständigen Überblick über diese zu erhalten, wurde vor zwölf Jahren ein Großteil dieser Repositorien mit dem offenen \textit{re3data}-Register mit einem zentralen Index auffindbar und nach eigenen Bedürfnissen filterbar gemacht \autocite{Pampel2013}.
+
+\gls{forschungsdaten}-Repositorien lassen sich in drei Kategorien einteilen:
+fachspezifische Repositorien, institutionelle Repositorien und allgemeine Repositorien.
+
+Unter fachspezifische Repositorien werden jene Repositorien verstanden, auf denen nur \glspl{forschungsdaten} einer bestimmten wissenschaftlichen Disziplin hochgeladen werden dürfen.
+Diese machen mit ungefähr zwei Drittel ($n=\num{2212}$) aller Repositorien auf \textit{re3data} ($n=\num{3274}$) den Großteil aller Repositorien aus \autocite{Khan2024}.
+
+Unter institutionellen Repositorien werden jene Repositorien verstanden, auf denen nur \glspl{forschungsdaten} hochgeladen werden, welche an der dazugehörigen Forschungsinstitution produziert wurden oder in Kooperation mit besagter Institution entstanden sind.
+Diese sind hierbei jedoch meist disziplinübergreifend.
+Institutionelle Repositorien machen ungefähr ein Fünftel ($n=\num{761}$) aller Repositorien auf \textit{re3data}  ($n=\num{3274}$) aus \autocite{Khan2024}.
+Von diesen sind wiederum \num{149} institutionelle Repositorien aus Deutschland \autocite{re3data-institutional}, womit Deutschland, nach den Vereinigten Staaten von Amerika, die zweithöchste Anzahl an instituionellen Repositorien aller Länder hat.
+
+Unter allgemeinen Repositorien werden jene Repositorien verstanden, welche disziplinübergreifend \glspl{forschungsdaten} aufnehmen, jedoch nicht an eine bestimmte Forschungsinstitution gebunden sind.
+Die bekanntesten Beispiele hierfür sind \textit{Zenodo}, \textit{Dryad} und \textit{Figshare}.
+
+Als Basis für \gls{forschungsdaten}-Repositorien dienen sowohl speziell dafür entwickelte Software wie auch allgemeine Datenbanksysteme.
+So ist die am häufigsten genutzte Software für \gls{forschungsdaten}-Repositorien \textit{Dataverse}, dicht gefolgt von \textit{DSpace} \autocite{Khan2024}.
+Diese machen respektiv \SI{11.11}{\percent} ($n=\num{119}$) und \SI{10.27}{\percent} ($n=\num{110}$) aller Repositorien auf \textit{re3data}, die Informationen zu der genutzten Software besitzen ($n=\num{1071}$), aus (eigene Berechnung auf Basis von Daten aus \autocite{Khan2024}).
+Das am häufigsten genutzte allgemeine Datenbanksystem---und das dritthäufigst genutzte System insgesamt---ist \textit{MySQL} mit \SI{8.03}{\percent} ($n=\num{86}$; eigene Berechnung auf Basis von Daten aus \autocite{Khan2024}).
+
+Allen \gls{forschungsdaten}-Repositorien gemein ist, dass sie durch Metadaten erlauben, die hochgeladenen \glspl{forschungsdaten} weiter zu beschreiben und zu erschließen, was eine gezieltere Suche nach bestimmten \glspl{forschungsdaten} erlaubt.
+
+\subsection{Metadaten-Schemata}\label{sec:forschungsstand-basics-metadata}
+Für die Erschließung von Metadaten gibt es einige Standards, welche es über multiple Repositorien hinweg erlauben sollen, Daten uniform beschreiben und suchen zu können.
+Die am häufigsten genutzten Metadatenschemata für diesen Zweck sind hierbei \textit{Dublin Core} \autocite{dublincore} und \textit{DataCite Metadata Schema} \autocite{datacite}, welche respektiv \SI{44.37}{\percent} ($n=\num{595}$) und \SI{32.44}{\percent} ($n=\num{435}$) aller \textit{re3data}-Repositorien mit Einträgen zu Metadatenschemata mit einem Eigennamen ($n=\num{1341}$) \autocite{Khan2024,re3data-metadata}.
+Eine Nutzung mehrerer Metadatenschemata ist möglich.
+
+Der \textit{Dublin Core} Metadata Standard ist ein Metadatenschema, das entwickelt wurde, um die Beschreibung von Ressourcen im Internet zu vereinheitlichen und zu vereinfachen.
+Das Schema ist hierbei so konzipiert, dass es nur aus grundlegende Elementen besteht, die vielseitig einsetzbar sind.
+Es besteht aus einem Satz von \num{15} grundlegenden Elementen (z.B.~Titel, Autor, Thema etc.), die auf eine Vielzahl von Ressourcen angewendet werden können.
+Im \textit{DataCite Metadata Schema} werden Einträge zwischen \glspl{forschungsdaten} und den dazugehörigen Schriftstücken jeweils durch \textit{dcterms:isPartOf} und \textit{dcterms:hasPart} verzeichnet.
+
+
+Das \textit{DataCite Metadata Schema}, hingegen, wurde explizit für \glspl{forschungsdaten} entwickelt und beinhaltet eine differenziertere Anzahl an möglichen Metadateneinträgen (insgesamt \num{22}) mit einem kontrollierten Vokabular für viele seiner Einträge.
+Im \textit{DataCite Metadata Schema} werden Einträge zwischen \glspl{forschungsdaten} und den dazugehörigen Schriftstücken typischerweise jeweils durch ein \textit{relatedIdentifier}-Eintrag mit dem \textit{relationType} \textit{IsSupplementTo} und \textit{IsSupplementedBy} verzeichnet \autocite{starr2011iscitedby,Cousijn2019}---idealerweise unter Angabe der entprechenden \glspl{doi}.
+Allerdings wird in einigen Fällen auch der \textit{relationType} \textit{IsReferencedBy} bzw.~\textit{References} genutzt, insofern dies auf die \glspl{forschungsdaten} und dem dazugehörigen Schriftstück zutrifft \autocite{Cousijn2019}.
+
+Eine Zuordnung zwischen den beiden Metadatenschemata wurde von der \textit{DataCite Metadata Working Group} erstellt \autocite{datacite-mapping}.
+Hiermit ist eine Konversion zwischen den beiden Standards möglich---allerdings besteht die Möglichkeit von Informationsverlust, wenn von \textit{DataCite Metadata Schema} zu \textit{Dublin Core} konvertiert wird, da letzteres nur weniger differenziert Informationen encodieren kann \autocite{datacite-mapping}.
+
+\section{Richtlinien zu Forschungsdaten}\label{sec:forschungsstand-guidelines}
+Entsprechend der wachsenden Bedeutung vom korrekten Umgang mit \glspl{forschungsdaten} haben über die letzten zehn Jahre vermehrt Institutionen \gls{forschungsdaten}-Richtlinien verabschiedet, welche den korrekten Umgang mit \glspl{forschungsdaten} regeln oder Empfehlungen hierfür aussprechen.
+So gab es 2014 mit der Universität Bielefeld nur eine Forschungsinstitution in Deutschland die eine dedizierten \gls{forschungsdaten}-Richtlinie verabschiedet hat \autocite[6]{hrk-fdm}, aber bis Ende 2017 wuchs diese Anzahl auf \num{22} institutionelle \gls{forschungsdaten}-Richtlinien in Deutschland an \autocite{Hiemenz2018-fdm-report}.
+In anderen Ländern, wie in den Vereinigten Staaten oder dem Vereinigten Königreich, zeichnet sich ein ähnlicher Trend ab, der allerdings bereits früher begonnen hat als in Deutschland \autocite{hrk-fdm,Briney2015-Policy}.
+
+Eine Besonderheit Deutschlands ist hierbei die Heterogenität der Namen der \gls{forschungsdaten}-Richtlinien, auch wenn diese prinzipiell zweckgleich sein sollen \autocite{Hiemenz2018-fdm-title,Hiemenz2018-fdm-title}.
+So wurden im Jahre 2018 \SI{50}{\percent} ($n=11$) der \gls{forschungsdaten}-Richtlinien als \textit{Leitlinien}, \SI{23}{\percent} ($n=5$) als \textit{Grundsätze}, \SI{18}{\percent} ($n=4$) als \textit{Policies} und \SI{9}{\percent} ($n=2$) als \textit{Richtlinien} bezeichnet \autocite[5]{Hiemenz2018-fdm-title}.
+
+Der Sinn dahinter, eine \gls{forschungsdaten}-Richtlinie zu haben, ist, Open Data nach Möglichkeit zu fördern und die Kosten- und Ressourcensteuerung zu optimieren.
+Solche Richtlinien unterstützen die Idee, dass öffentlich finanzierte Forschung als öffentliches Gut zugänglich sein sollte, was der Forschungscommunity und der Gesellschaft zugutekommt.
+Zudem helfen sie Universitäten, ihre personellen, organisatorischen und technischen Kapazitäten für das \gls{fdm} zu planen.
+Weitere Vorteile sind die Erhöhung der Reputation der Universität, Transparenz für Hochschulangehörige und Vorteile bei der Einwerbung von Fördermitteln \autocite{Hiemenz2018-fdm-title,Hiemenz2018-fdm-report}.
+
+Der Inhalt von deutschen \gls{forschungsdaten}-Richtlinien lässt sich dabei in fünf Kategorien aufteilen, welcher allerdings vom Umfang her zwischen den verschiedenen Richtlinien variiert:
+die Präambel, der Geltungsbereich, die rechtlichen Aspekte, der Umgang mit \glspl{forschungsdaten} sowie die jeweiligen Verantwortlichkeiten der Forschenden und der Institution \autocite{Hiemenz2018-fdm-report}.
+
+Die Präambel beinhaltet hierbei typischerweise eine Aussage zu der Bedeutung von \glspl{forschungsdaten} und dem dazugehörigen Ziel der Institution sowie ein Verweis auf die \gls{gwp} \autocite{Hiemenz2018-fdm-report}.
+
+Der Geltungsbreich beinhaltet die verabschiedende Instanz, das Datum der Veröffentlichung, die Zielgruppe der Richtlinie und der Titel der Richtlinie selber \autocite{Hiemenz2018-fdm-report}.
+
+Die rechtlichen Aspekte umfassen die ethischen und rechtlichen Vorgaben zu \gls{fdm}, sowie Angaben zum Verhältnis zu Dritten (z.B. Forschungsförderer) und allgemeine Richtlinien zur Lizensierung \autocite{Hiemenz2018-fdm-report}.
+
+In dem Umgang mit \glspl{forschungsdaten} wird meist definiert, was \glspl{forschungsdaten} und \gls{fdm} sind sowie wo, wie und wie lange diese gesichert werden sollten.
+Dabei wird auch auf die \gls{gwp} verwiesen und empfohlen, fachspezifische Standards zu etablieren oder zu nutzen, \glspl{dmp} zu erstellen und \glspl{forschungsdaten}, nach Möglichkeit, als \textit{Open Data} zu veröffentlichen \autocite{Hiemenz2018-fdm-report}.
+
+Unter Verantwortlichkeiten wird spezifiziert, wer der Hauptverantwortliche für die \glspl{forschungsdaten} ist (zumeist der Leiter des Forschungsprojektes) und welche Aufgaben dieser zu erfüllen hat.
+Zusätzlich werden häufig auch Verantwortungen seitens der Institution kodifiziert, wie das Bereitstellen der technischen Ausstattung bzw. Infrastruktur und Schulungen bzw. Beratungen zum Thema \glspl{forschungsdaten}~/~\gls{fdm} anzubieten \autocite{Hiemenz2018-fdm-report}.
+
+Für eine genauere Inhaltsdarstellung, sowie wie diese im Vergleich zu internationalen Empfehlungen abschneidet, wird auf existierende Literatur verwiesen \autocite{Hiemenz2018-fdm-report}.
+
+\section{Forschungsdaten in Dissertationen}\label{sec:forschungsstand-diss}
+Was die empirische Landschaft zu \glspl{forschungsdaten} in Dissertationen angeht, so gibt es hierzu bisher kaum Studien---und jene, die es gibt, sind zumeist sehr begrenzt und spezialisiert im Umfang.
+
+So behandelte z.B.~2018 eine Abschlussarbeit an der Humboldt-Universität zu Berlin die \glspl{forschungsdaten} für eine repräsentative Stichprobe der musikwissenschaftlichen und -pädagogischen Dissertationen aus dem Jahre 2015 \autocite{Wünsche2018Forschungsdaten}.
+Diese analysierte einerseits welche Arten von \glspl{forschungsdaten} in derlei Dissertationen vorkommen und andererseits wie diese publiziert wurden.
+Das Ergebnis hierbei war, dass nur zwei der \num{45} untersuchten Dissertationen mit zusätzlichen Datenpublikationen verknüpft wurde---und eine der beiden Datenpublikationen wurde vom Autor nur als halbe Publikation gewertet, da diese nur aus einem ausgelagerten Textanhang eines Buches bestand.
+Dies würde einer \gls{forschungsdaten}-Rate von \SI{3.33}{\percent} ($n=\num{1.5}$) entsprechen (eigene Berechnung auf Basis von Daten aus \autocite{Wünsche2018Forschungsdaten}).
+
+Im Jahr 2015 wurde eine weitere Studie zu geistes- und sozialwissenschaftlichen Dissertationen und ihren \glspl{forschungsdaten} durchgeführt \autocite{Schöpfel2015}.
+Die Studie untersuchte \num{780} Dissertationen der Universitäten von Lille und Ljubljana, die zwischen 1987 und 2015 veröffentlicht wurden und aus mindestens 15 verschiedenen Disziplinen stammten.
+Dabei wurde analysiert, welche \glspl{forschungsdaten} im Anhang der Dissertationen enthalten waren, entweder als fester Bestandteil der Dissertation selbst oder als separate Datei bzw. als separates Dokument.
+Von diesen Dissertation waren \SI{45}{\percent} ($n=\num{353}$) digitaler und \SI{55}{\percent} ($n=\num{427}$) gedruckter Natur.
+Die Ergebnisse zeigten, dass \SI{62}{\percent} ($n=\num{219}\pm 1$) aller digitalen und \SI{49}{\percent} ($n=\num{209}\pm 1$) aller gedruckten Dissertationen den Appendix in das Hauptdokument integriert hatten.\footnote{Die zitierte Studie gab in den meisten Fällen nur relative Werte an. Für diese Fälle wurden die absoluten Werte mit einer Unsicherheit von $\pm 1$ berechnet und werden hier entsprechend gekennzeichnet.}
+Respektive\SI{7}{\percent} ($n=\num{25}\pm 1$) und \SI{16}{\percent} ($n=\num{68}\pm 1$) hatten einen Appendix, der separat vom Hauptdokument war und weitere respektive\SI{28}{\percent} ($n=\num{99}\pm 1$) und \SI{149}{\percent} ($n=\num{25}\pm 1$) hatten keinerlei Appendix.
+Zusätzlich war die Publikationsart des Appendix von \SI{3}{\percent} ($n=\num{11}\pm 1$) nicht spezifiziert.
+Die Mehrheit der Appendixe enthielten dabei, mit einer jeweiligen Frequenz von $n>\num{100}$, Fragebögen (welche, entgegen der DFG-Richtlinie \autocite{dfg-richtlinie}, nicht als \glspl{forschungsdaten} klassifiziert wurden \autocite[14]{Schöpfel2015}), Interviews, Textproben und experimentelle Observationen.
+Das Dateiformat der meisten Anhänge war hierbei PDF, auch für Tabellen, Fotografien und anderen Inhalten, für die es geeignetere und \gls{fair}ere Alternativen gegeben hätte \autocite[14]{Schöpfel2015}.
+Einen statistisch signifikanten Unterschied zwischen gedruckten und digitalen Disserationen wurde nicht gefunden.
+Es wurden befunden, dass nur sehr wenige Dissertationen adäquates \glspl{fdm} bezeugen und dass die Mehrheit der \glspl{forschungsdaten} durch ihre Publikationsart, mangelnde Organisation und generelle Unvollständigkeit nur unter schweren Bedingungen für weitere Forschung direkt weiterverwendbar seien \autocite[S.~20f.]{Schöpfel2015}.
+
+Darüber hinaus besteht die Forschung zu der Beziehung zwischen Dissertationen und \glspl{forschungsdaten} hauptsächlich aus präskriptiven Richtlinien, wie z.B.~das eDissPlus-Projekt \autocite{Weisbrod2017eDissPlus,Weisbrod2018,KleinebergKaden2018} und der daraus resultierenden Richtlinie der \gls{dnb} für die Pflichtabgabe von \glspl{forschungsdaten} aus Dissertationen \autocite{dnb2017}.
+Empirische Studien zu der Umsetzung dieser Pflichtabgabe wurden noch nicht durchgeführt.
+Studien zu der Durchsetzung ähnlich verpflichtender Richtlinien anderer Länder, wie z.B. Frankreich, zeigt jedoch, dass diese nicht konsequent durchgesetzt wird und auch nicht notwendigerweise zu der Publikation von \gls{fair}eren Daten führt \autocite[vgl.][]{Schöpfel2015}.

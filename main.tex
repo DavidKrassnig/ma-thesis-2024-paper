@@ -26,6 +26,7 @@
     hidelinks,				%Um Hyperlink-Boxen zu deaktivieren, falls Unterstrich gelöscht wird
     pdfa,                   %PDF/A Voreinstellungen
     headings=twolinechapter,%Zweizweilige Kapiteltitel
+    hyperfootnotes=false,
     %twocolumn,              %Für zweispaltige Darstellung
     %draft,                  %Auskommentieren für den Entwurfsmodus
     %final                   %Auskommentieren für den endgültigen Druck
@@ -109,6 +110,11 @@
     \definecolor{c333333}{RGB}{51,51,51}
     \definecolor{c4d4d4d}{RGB}{77,77,77}
     \definecolor{c1a1a1a}{RGB}{26,26,26}
+    \definecolor{cb2c9e3}{RGB}{178,201,227}
+    \definecolor{ce3ecf6}{RGB}{227,236,246}
+    \definecolor{c98bfe6}{RGB}{152,191,230}
+    \definecolor{c3574b7}{RGB}{53,116,183}
+    \definecolor{c83addb}{RGB}{131,173,219}
     \def \globalscale {1.000000}
 \usepackage{pgfplotstable}
 \usepackage{pgf-pie}
@@ -190,7 +196,7 @@
 %Anmerkung: Das Bibliografieformat muss oben unter Dokumentpakete eingestellt werden
 
 %% Hauptdokument %%
-%\includeonly{content/luh-repo-evaluation} %Selektive Dokumentgenerierung
+%\includeonly{content/einfuehrung,content/forschungsstand} %Selektive Dokumentgenerierung
 \begin{document}
     %% Vorderer Teil
     \frontmatter
@@ -203,11 +209,10 @@
     %
     %% Hauptteil
     \mainmatter
-        \include{content/einfuehrung}
-        \include{content/forschungsstand}
-        \include{content/fdm-policies}
-        \include{content/luh-repo-evaluation}
-        %\include{content/machine-learning}
+        \include{content/einfuehrung}\glsresetall
+        \include{content/forschungsstand}\glsresetall
+        \include{content/fdm-policies}\glsresetall
+        \include{content/luh-repo-evaluation}\glsresetall
         \include{content/schluss}
     %
     %% Hinterer Teil
@@ -217,7 +222,7 @@
     %
     %% Appendix
     \appendix
-    \part*{Appendix}
+    \include{appendices/appendice-part}
     \include{appendices/richtlinienklassifikation}
     \include{appendices/luh-repo-code}
     %% Selbstständigkeitserklärung
