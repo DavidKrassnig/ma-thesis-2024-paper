@@ -100,12 +100,9 @@ def main(csv_file, base_url):
     print(f"Creating download folder: {download_folder}")
     # Create the download folder if it doesn't exist
     os.makedirs(download_folder, exist_ok=True)
-
     extracted_strings = extract_strings(csv_file)
-
     # Fetch HTML content for each extracted URL and get filtered unique matches
     unique_matches = fetch_html_content(extracted_strings, base_url)
-
     # Download files codified by the links contained in unique_matches
     download_files(unique_matches, download_folder)
 
@@ -115,8 +112,6 @@ if __name__ == "__main__":
         sys.exit(1)
     csv_file_path = sys.argv[1]
     base_url = sys.argv[2]
-
     # Set up logging
     setup_logger()
-
     main(csv_file_path, base_url)

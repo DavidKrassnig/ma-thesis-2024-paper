@@ -1,6 +1,6 @@
 \chapter{Forschungsdaten im Repositorium der Leibniz Universität Hannover}\label{ch:luh-repo}\glsunset{fair}
 \parsum{Thema des Kapitels}
-Dieses Kapitel behandelt die Auswertung von eingebetteten, begleitenden sowie referenzierten \glspl{forschungsdaten} von Dissertationen der \gls{luh}, die im institutionellen \gls{luh-repo} veröffentlicht worden sind.
+Dieses Kapitel behandelt die Auswertung von eingebetteten, begleitenden sowie referenzierten \glspl{forschungsdaten} von Dissertationen der \gls{luh}, die im \gls{luh-repo} veröffentlicht worden sind.
 Die Arbeit beschränkt sich hierbei exklusiv auf \glspl{forschungsdaten}, die originelle \glspl{pd} darstellen, die im Rahmen des Promotionsvorhabens entstanden sind.
 Es wird hierbei überprüft, welcher Anteil an Dissertationen originelle \glspl{forschungsdaten} beinhaltet, auf welche Art und Weise die \glspl{forschungsdaten} inkludiert wurden, wie sich diese über die einzelnen Fakultäten verteilen, wie sich diese über die letzten zwölf Jahre entwickelt haben und wie die Existenz von \glspl{forschungsdaten} in den Metadaten kenntlich gemacht wurden (sowohl im \gls{luh-repo} wie auch in etwaigen externen \gls{forschungsdaten}-Repositorien).
 
@@ -14,12 +14,13 @@ Abschließend werden in \cref{sec:luh-repo-discussion} die dargestellten Ergebni
 In diesem Abschnitt wird das zu untersuchende Material in \cref{sec:luh-repo-material} und die Methoden der Untersuchung in \cref{sec:luh-repo-methods} dargestellt.
 
 \subsection{Material}\label{sec:luh-repo-material}
-\parsum{Datengrundlage}
-Als Datengrundlage für dieses Kapitel gilt die Metadaten-Datenbank aller Dissertationen des \gls{luh-repo}, welche via \gls{oai-pmh} der Öffentlichkeit frei zugänglich sind \autocite{luh-repo}.
+\parsum{Datengrund\-lage}
+Als Datengrundlage für dieses Kapitel dient die Metadaten-Datenbank aller Dissertationen des \gls{luh-repo}, welche via \gls{oai-pmh} der Öffentlichkeit frei zugänglich sind \autocite{luh-repo}.
 Da sich das Thema dieses Kapitels explizit auf Dissertationen beschränkt, wurden von der Metadaten-Datenbank des \gls{luh-repo}s alle Einträge der Sammlung \textit{Dissertationen} die am 21.03.2024 um 10:41 Uhr (UTC+01:00) existierten ($n=5095$) über die Administrationsübersicht des \gls{luh-repo}s heruntergeladen \autocite{my-dataset}.
 
-\parsum{Grundmengenbeschreibung}
-Da die zentrale Forschungsfrage dieses Kapitels sich auf den Zeitraum von 2012--2023 beschränkt, wurde diese Liste durch \cref{lst:python-luh-repo-stratification} auf nur jene Metadateneinträge gefiltert, deren Publikationsjahr in diese Zeitspanne fällt und deren Sperrfrist auch, insofern vorhanden, spätestens 2023 endete ($n=1898$).
+\parsum{Grundmengen\-beschreibung}
+Da die zentrale Forschungsfrage dieses Kapitels sich auf den Zeitraum von 2012--2023 beschränkt, wurde diese Liste durch ein Python-Skript \autocite{my-dataset} auf nur jene Metadateneinträge gefiltert, deren Publikationsjahr in diese Zeitspanne fällt und deren Sperrfrist auch, insofern vorhanden, spätestens 2023 endete ($n=1898$).
+Der entsprechende Zeitraum wurde ausgewählt, da 2012 \textit{re3data} gegründet wurde \autocite{Pampel2013} und die darauffolgenden Jahre von vermehrten Interesse zum korrekten Umgang mit \glspl{forschungsdaten} geprägt waren (siehe \cref{ch:forschungsstand} für Details).
 Die daraus resultierende Dissertationsliste enthält Einträge zu jeder Fakultät der \gls{luh}.
 Aus Gründen der Übersichtlichkeit und des Platzes nutzen wir folgende Abkürzungen für die Fakultäten der \gls{luh}:
 \begin{itemize}
@@ -37,49 +38,51 @@ Der Name der Fakultät wird fortan nur noch separat erwähnt, wenn dieser releva
 Der Zeitraum von 2012--2023 wurde für die weitere Bearbeitung wiederum in drei kontinuierliche Zeitintervalle von jeweils vier Jahren aufgeteilt.
 Die relative sowie die absolute Distribution aller Metadateneinträge nach Zeitraum und Fakultät ist in \cref{tab:luh-repo-grundmenge-beschreibung} gegeben.
 \begin{table}[!htbp]
-	\caption{Die Verteilung der Grundmengen-Metadateneinträge nach $\text{\textit{Fakultät}}\times\text{\textit{Zeitraum}}$ aufgegliedert.
+	\caption{Die Verteilung der Grundmengen-Metadateneinträge nach \textit{Fakultät}~$\times$~\textit{Zeitraum} aufgegliedert.
     Absolute Werte in Klammern angegeben.}
     \input{content/tables/luh-repo-grundmenge-beschreibung.tex}
 	\label{tab:luh-repo-grundmenge-beschreibung}
 \end{table}
 
-\noindent Für eine Liste aller inkludierter Dissertationsmetadaten, siehe \fxfatal*{Fix bibliographic data}{\autocite{my-dataset}}.
+\noindent Für eine Liste aller inkludierter Dissertationsmetadaten, siehe \autocite{my-dataset}.
 
-\parsum{Stichprobenziehung}
+\parsum{Stichproben\-ziehung}
 Diese Liste an Dissertationsmetadaten bildete die Grundmenge für die Ziehung einer mehrschichtigen Zufallsstichprobe.
-Die Schichten der Zufallsstichprobe entsprachen dabei $\text{\textit{Fakultät}}\times\text{\textit{Jahresspanne}}$ und ergaben daher insgesamt $\num{9}\times\num{3}=\num{27}$ Stichprobengruppierungen.
-Für jede Stichprobengruppierung wurde durch \cref{lst:python-luh-repo-stratification} eine eigene CSV-Tabellendatei erstellt.
+Die Schichten der Zufallsstichprobe entsprachen dabei \textit{Fakultät}~$\times$~\textit{Jahresspanne} und ergaben daher insgesamt $\num{9}\times\num{3}=\num{27}$ Stichprobengruppierungen.
+Für jede Stichprobengruppierung wurde durch ein Python-Skript \autocite{my-dataset} eine eigene CSV-Tabellendatei erstellt.
 Auf die einzelnen Stichprobengruppierungen wurde dann jeweils das Verfahren einer einfachen Stichprobenziehung angewandt.
 Bei der Auswahl der Stichproben wurde jeweils ein Konfidenzintervall von \SI[round-mode=places,round-precision=2]{95}{\percent} und eine Fehlerspanne von \SI[round-mode=places,round-precision=2]{5}{\percent} zugrunde gelegt.
 Diese Parameter gewährleisten, dass die Ergebnisse der Stichprobe mit hoher Wahrscheinlichkeit repräsentativ für die gesamte Population sowie der einzelnen Stichprobengruppierungen sind und die Unsicherheit der Schätzungen innerhalb akzeptabler Grenzen bleibt.
-Um den Prozess der Stichprobenziehung zu automatisieren und eine zufällige Auswahl zu gewährleisten, wurde eine auf Python basierende Software \autocite{Krassnig2024-csv} genutzt, welche im Rahmen dieser Arbeit geschrieben wurde.%
+Um den Prozess der Stichprobenziehung zu automatisieren und eine randomisierte Auswahl zu gewährleisten, wurde eine auf Python basierende Software \autocite{Krassnig2024-csv} genutzt, welche im Rahmen dieser Arbeit geschrieben wurde.%
 \footnote{%
 Die Software von \citeauthor{Krassnig2024-csv} \autocite{Krassnig2024-csv} nutzt standardmäßig die Anzahl an Nanosekunden seit dem Beginn der System-Epoche (1970-01-01T00:00:00Z) als Startwert für die Zufallsfunktion.
 Der genutzte Startwert wird als begleitendes Metadatum der Stichprobe abgespeichert.
 Die Ziehung ist somit wiederholbar und das Datum der Ziehung verifizierbar.} 
 
-\parsum{Stichprobenbeschreibung}
+\parsum{Stichproben\-beschreibung}
 Die so gezogene Stichprobe ($n=1441$) besteht aus ca.~\SI[round-mode=places,round-precision=2]{76}{\percent} aller Metadateneinträge der Grundmenge.
 Die relative sowie die absolute Distribution aller Institutionen in der Stichprobe nach \textit{Fakultät} und \textit{Zeitraum} ist in \cref{tab:luh-repo-stichprobe-beschreibung} gegeben.
 \begin{table}[!htbp]
-	\caption{Die Verteilung der Stichproben-Metadateneinträge nach $\text{\textit{Fakultät}}\times\text{\textit{Zeitraum}}$ aufgegliedert.
+	\caption{Die Verteilung der Stichproben-Metadateneinträge nach \textit{Fakultät}~$\times$~\textit{Zeitraum} aufgegliedert.
+    Angaben relativ zur Gesamtsumme der Stichprobe.
     Absolute Werte in Klammern angegeben.}
     \input{content/tables/luh-repo-stichprobe-beschreibung.tex}
 	\label{tab:luh-repo-stichprobe-beschreibung}
 \end{table}
 Der jeweils relative Anteil der Stichprobengruppierungen zu dem entsprechenden Datensatz aus der Grundmenge sowie die Differenz zwischen der respektiven Anzahl ist, auch nach \textit{Fakultät} und \textit{Zeitraum} aufgegliedert, in \cref{tab:luh-repo-stichprobe-beschreibung-relativ} gegeben.
 \begin{table}[!htbp]
-	\caption{Die Stichproben-Metadateneinträge nach $\text{\textit{Fakultät}}\times\text{\textit{Zeitraum}}$ aufgegliedert relativ zu der Anzahl an Metadateneinträgen aus der Grundmenge.
+	\caption{Die Verteilung der Stichproben-Metadateneinträge nach \textit{Fakultät}~$\times$~\textit{Zeitraum} aufgegliedert.
+    Angaben relativ zu dem jeweiligen \textit{Fakultät}~$\times$~\textit{Zeitraum}-Wert der Grundmenge.
     Absolute Differenzwerte in Klammern angegeben.}
     \input{content/tables/luh-repo-stichprobe-beschreibung-relativ.tex}
 	\label{tab:luh-repo-stichprobe-beschreibung-relativ}
 \end{table}
 
-\parsum{Dateisammlung}
+\parsum{Daten\-sammlung}
 Für die Evaluation, inwiefern die Dissertationen der Stichprobe \glspl{forschungsdaten} beinhalten oder auf solche verweisen wurden alle Dateien, die mit Metadateneinträgen assoziiert werden, heruntergeladen.
-Dieser Prozess wurde dadurch verkompliziert, dass DSpace~5, auf welches das \gls{luh-repo} zum Zeitpunkt dieser Arbeit noch basierte, keine eingebaute Möglichkeit anbietet, alle Dateien einer Sammlung (jenseits einer schnell erreichten Grenze) oder einer bestimmten Metadatenliste herunterzuladen:
+Dieser Prozess wurde dadurch verkompliziert, dass \textit{DSpace~5}, auf welches das \gls{luh-repo} zum Zeitpunkt dieser Arbeit noch basierte, keine eingebaute Möglichkeit anbietet, alle Dateien einer Sammlung (jenseits einer schnell erreichten Grenze) oder einer bestimmten Metadatenliste herunterzuladen:
 weder intern mit administrativen Rechten noch extern durch die Nutzung einer Schnittstelle.
-Daher wurde im Rahmen dieser Arbeit \cref{lst:simple-dspace5-downloader} entwickelt, welches alle Links zu den entsprechenden Dateien aus dem öffentlichen Quellcode der Webseiten extrahiert und automatisch herunterlädt und nach dem Metadaten-Handle sortiert \autocite{Krassnig2024-dspace}.
+Daher wurde im Rahmen dieser Arbeit ein Python-Skript \autocite{my-dataset} entwickelt, welches alle Links zu den entsprechenden Dateien aus dem öffentlichen Quellcode der Webseiten extrahiert, automatisch herunterlädt und nach dem Metadaten-Handle sortiert \autocite{Krassnig2024-dspace}.
 
 Hierbei wurden insgesamt \num{1480} Dateien zur Weiterverarbeitung gefunden, heruntergeladen und sortiert.
 
@@ -90,30 +93,30 @@ Die aktuellen Daten für 2023, bzw.~der Zahlenspiegel aus 2024 wurde zum Zeitpun
 
 \subsection{Methoden}\label{sec:luh-repo-methods}
 \parsum{Klassifikation}
-Die in \cref{sec:luh-repo-material} gesammelten Dissertationsdateien wurden dann, um die zentrale Forschungsfrage dieses Kapitels zu beantworten, nach ihrem Inhalt klassifiziert, ob und auf welche Arte und Weise sie primäre \glspl{forschungsdaten} beinhalten:
-\glspl{forschungsdaten} konnten entweder in die PDF-Datei integriert, als Begleitdaten im \gls{luh-repo} eingereicht worden oder auf ein externes \gls{forschungsdaten}-Repositorium hochgeladen worden sein.
-Damit diese Klassifikation stattfinden konnte, musste jedoch zuerst bestimmt werden, welcher Inhalt als \gls{forschungsdaten} gewertet wird (hierbei orientierte sich diese Arbeit an \autocite{dfg-richtlinie,Simukovic2014InterviewFD}) und wo sich dieser typischerweise im Dokument befindet.
+Die in \cref{sec:luh-repo-material} gesammelten Dissertationsdateien wurden dann, um die zentrale Forschungsfrage dieses Kapitels zu beantworten, danach klassifiziert, ob und auf welche Art und Weise sie primäre \glspl{forschungsdaten} beinhalten:
+\glspl{forschungsdaten} konnten entweder in die PDF-Datei integriert, als Begleitdaten im \gls{luh-repo} eingereicht oder auf ein externes \gls{forschungsdaten}-Repositorium hochgeladen worden sein \autocite{ReillyEtAl2011}.
+Damit diese Klassifikation stattfinden konnte, musste jedoch zuerst bestimmt werden, welcher Inhalt als \gls{forschungsdaten} gewertet wird (hierbei orientierte sich diese Arbeit an \autocite{dfg-richtlinie,Simukovic2014InterviewFD}) und wo sich diese typischerweise im Dokument befinden.
 Hierfür wurden von jeder Fakultät, gleichmäßig auf die drei Zeiträume aufgeteilt, zwölf zufällige Dissertationen ausgewählt und vorläufig evaluiert.
 Bei Stichprobengruppierungen von weniger als vier Dissertationen wurden stattdessen alle Dokumente vorläufig ausgewertet.
 
 \parsum{Klassifikationshierarchie}
 Bei dieser Auswertung wurde ein provisorisches Klassifikationssystem aufgebaut, welches für den Rest der Arbeit beibehalten wurde.
 Hierbei wurden \glspl{forschungsdaten} in drei hierarchische Stufen eingeteilt.
-Diese reichen von \textit{Stufe 1}, welche eindeutige und zweifelsfreie \glspl{pd} beinhalten, zu \textit{Stufe 3}, welche Daten beinhalten, die entweder kompromittiert worden sind (z.B.~durch starke Kompression), keine besondere Leistung darstellen (z.B.~einfache Fragebögen) oder durch den Autor kaum auf Originalität überprüfbar waren.
+Diese reichen von \textit{Stufe 1}, welche eindeutige und zweifelsfreie \glspl{pd} beinhalten bis zu \textit{Stufe 3}, welche Daten beinhalten, die entweder kompromittiert worden sind (z.B.~durch starke Kompression), keine besondere Leistung darstellen (z.B.~Fragebögen ohne Antworten) oder durch diese Abschlussarbeit kaum auf Originalität überprüfbar waren.
 Unter \textit{Stufe 2} befinden sich jene \glspl{forschungsdaten}, welche zwar originell sind, jedoch weniger direkte Wiederverwendbarkeit oder Qualität im Vergleich zu \glspl{forschungsdaten} aus \textit{Stufe 1} haben.
 Es folgt eine Auflistung der verschiedenen \gls{forschungsdaten}-Klassifikationen der entsprechenden Klassifikationsstufen.\\
 \textbf{Stufe 1:} rohe Beobachtungs-~/~Messdaten, unkomprimierte Rohbilder, Videos, Skripte~/~Software, Transkriptionen von Interviews, (anonymisierte) Beantwortungen von Fragebögen\\
 \textbf{Stufe 2:} Pseudocode, Algorithmen, komprimierte Bilder von Gelfärbungen\footnote{Für komprimierte Bilder von Gelfärbungen wurde auf Anraten einer Wissenschaftlerin aus dem Bereich \textit{Life Science} eine Ausnahme gemacht und als \gls{forschungsdaten} der zweiten Stufe kategorisiert \autocite{SarahPC}.}\\
-\textbf{Stufe 3:} komprimierte Bilder, Spektraldiagramme, Gensequenzen, Fragebögen, Leitfäden, Montagezeichnungen
+\textbf{Stufe 3:} komprimierte Fotografien und Scans, Spektraldiagramme, Gensequenzen, unbeantwortete Fragebögen, Leitfäden, Montagezeichnungen
 
 \parsum{Ort der \glspl{forschungsdaten}}
-Bei der vorlläufigen Testklassifikation konnten keine bestimmten Teile eines Dokumentes vollständig ausgeschlossen werden.
+Bei der vorläufigen Testklassifikation konnten keine bestimmten Teile eines Dokumentes vollständig ausgeschlossen werden.
 Während die meisten hochstufigen \glspl{forschungsdaten} in dem jeweiligen Appendix zu finden waren, waren z.B.~\glspl{forschungsdaten} der zweiten und dritten Stufe zu großen Teilen im gesamten Dokument verteilt.
 Auch \glspl{forschungsdaten} aus \textit{Stufe 1} waren teilweise in anderen Bereichen der Dissertationen zu finden.
 Dies galt auch für externe Forschungsdaten.
 Hier wurde teilweise in der Präambel darauf hingewiesen, dass einige oder alle \glspl{forschungsdaten} auf ein externes Repositorium hochgeladen wurde.
 Teilweise wurden diese externen Datensätze aber auch erst an der jeweils relevanten Stelle im Hauptteil des Dokumentes zitiert.
-Für den restlichen Verlauf der Klassifikation wurde daher beschlossen, dass sämtliche Seiten der PDF-Dateien zumindest kurzzeitig begutachtet werden müssen.
+Für den restlichen Verlauf der Klassifikation wurde daher beschlossen, dass sämtliche Seiten der Dissertationen zumindest kurzzeitig begutachtet werden müssen.
 
 \parsum{Klassifikationsstrategie}
 Nach Abschluss der vorläufigen Testklassifikation und Aufbau des hierarchischen Klassifikationssystems wurde dann wie folgt vorgegangen.
@@ -122,9 +125,11 @@ Insofern ein Typ an \gls{forschungsdaten} im Dokument gefunden wurde, so wurde d
 Hierbei wurde für interne und beigefügte \glspl{forschungsdaten} nur der Typ und nicht die Seite innerhalb des Dokumentes vermerkt.
 Für extern publizierte \glspl{forschungsdaten} wurden zusätzlich noch die jeweilig dazugehörigen Seiten und Art des externen Repositoriums vermerkt (z.B.~Git-Repositorium oder dediziertes \gls{forschungsdaten}-Repositorium).
 Bei externen \glspl{forschungsdaten} wurden zusätzlich die \gls{doi}, das relevante Stichwort oder die dazugehörige Domäne notiert und in einer separaten Datei eingetragen.
-Diese Liste wurde dann am Ende der Evaluation genutzt, um \cref{lst:luh-repo-document-search} zu erstellen.
-Dieses Skript durchsuchte automatisch den Text aller Textdatei mit den notierten Wörtern, um etwaige übersehene externe \glspl{forschungsdaten} im Nachhinein noch erfassen zu können.
+Diese Liste wurde dann am Ende der Evaluation genutzt, um ein Bash-Skript \autocite{my-dataset} zu erstellen, welches
+% \lstinputlisting[language=Bash,label={lst:luh-repo-document-search},caption={FIXME!}]{content/code/bash-luh-repo-search.sh}
+automatisch den Text aller Dateien nach den notierten Wörtern durchsucht, um etwaige übersehene externe \glspl{forschungsdaten} im Nachhinein noch erfassen zu können.
 Zusätzlich wurde für jede Dissertation auch eingetragen, ob für sie überhaupt \glspl{pd} produziert worden sind; diese Information wurden wiederum genutzt, um relative Werte zu der jeweiligen Gesamtsumme aller Dissertationen minus jenen ohne produzierte \glspl{pd} zu erstellen.
+\pagebreak
 
 \parsum{Gesamtklassifikation}
 Nach Beendigung der Klassifikationsarbeit wurden jeder Dissertation jeweils vier Werte zugeordnet: 
@@ -135,16 +140,21 @@ Nach Beendigung der Klassifikationsarbeit wurden jeder Dissertation jeweils vier
     \item die höchste Klassifikationsstufe aller gefunden \glspl{forschungsdaten} die auf einem externen Repositorium hochgeladen wurden.
 \end{itemize}
 
-\parsum{Auswertung der Ergebnisse}
-Nach der Klassifizierung aller Dateien wurden die vollständig evaluierten CSV-Dateien der Stichprobengruppierungen durch \cref{lst:bash-luh-repo-csv-combiner} einerseits in kombinierte Fakultätstabellen und andererseits in eine Gesamttabelle zusammengeführt.
-Die vorhandenen Metadaten wurden dann auf plausible Faktoren untersucht, die einen etwaigen Einfluss auf die Präsenz, Art und Publikationsform von \glspl{forschungsdaten}.
-Für die Kreuzprodukte aller vermuteter Faktoren sowie für die Ergebnisse der Klassifikationsarbeit aller \gls{forschungsdaten}-Publikationsarten wurden Chi-Quadrat-Tests für Unabhängigkeit durchgeführt, um zu überprüfen, ob statistisch signifikante Relationen zwischen den jeweiligen Faktoren bzw.~Ergebnissen besteht.
+\parsum{Statistische Auswertung}
+Nach der Klassifizierung aller Dateien wurden die vollständig evaluierten CSV-Dateien der Stichprobengruppierungen durch ein Python-Skript \autocite{my-dataset} einerseits in kombinierte Fakultätstabellen und andererseits in eine Gesamttabelle zusammengeführt.
+Die vorhandenen Metadaten wurden dann auf plausible Faktoren untersucht, die einen etwaigen Einfluss auf die Präsenz, Art und Publikationsform von \glspl{forschungsdaten} haben.
+Für die Kreuzprodukte aller vermuteter Faktoren sowie für die Ergebnisse der Klassifikationsarbeit aller \gls{forschungsdaten}-Publikationsarten wurden Chi-Quadrat-Tests für Unabhängigkeit durchgeführt, um zu überprüfen, ob statistisch signifikante Relationen zwischen den jeweiligen Faktoren bzw.~Ergebnissen besteht \autocite{Pearson1900,Pearson1904}.
 Hierbei wurden für alle zu überprüfenden Relationen die Nullhypothese angenommen:
-I.e.~für die Kombination \textit{Faktor A}$\times$\textit{Faktor B} wird angenommen, dass \textit{Faktor A} keinen Einfluss auf \textit{Faktor B} hat und dass, bedingt durch die symmetrische Natur des Chi-Quadrat-Tests, auch andersherum kein Einfluss stattfindet.
-Die Nullhypothese gilt als widerlegt wenn der respektive Chi-Quadrat-Test für Unabhängigkeit einen Signifikanzwert von $p<\num{0,05}$ erzeugt.
-Bei Signifikanzwerten von $p\geqslant0,05$ gilt die Nullhypothese als bestätigt.
-Da p-Werte nichts über die Stärke einer Abhängigkeit aussagen, wurden für alle Testergebnisse mit $p<\num{0,05}$ zusätzlich noch der respektive Cramérs V-Wert ($\phi_C$) berechnet, um zu überprüfen, wie stark die statistisch signifikante Abhängigkeit ist.
-Bei einem Cramérs V-Wert von $\phi_C>\num{0,1}$ ist von einem schwachem, bei $\phi_C>\num{0,3}$ von einem moderaten und bei $\phi_C>\num{0,5}$ von einem starken Zusammenhang bzw.~Einfluss auszugehen.
+I.e.~für die Kombination \textit{Faktor A}~$\times$~\textit{Faktor B} wird angenommen, dass \textit{Faktor A} keinen Einfluss auf \textit{Faktor B} hat und dass, bedingt durch die symmetrische Natur des Chi-Quadrat-Tests, auch andersherum kein Einfluss stattfindet.
+Siehe \cref{sec:policy-methods} für Details zu der Auswertung von Chi-Quadrat-Tests.
+%Die Nullhypothese gilt als widerlegt wenn der respektive Chi-Quadrat-Test für Unabhängigkeit einen Signifikanzwert von $p<\num{0,05}$ erzeugt.
+%Bei Signifikanzwerten von $p\geqslant0,05$ gilt die Nullhypothese als bestätigt.
+Da p-Werte nichts über die Stärke einer Abhängigkeit aussagen, wurden für alle Testergebnisse mit $p<\num{0,05}$ zusätzlich noch der respektive Cramérs V-Wert ($\phi_C$) berechnet, um zu überprüfen, wie stark die statistisch signifikante Abhängigkeit ist \autocite{Cramer1946}.
+Siehe \cref{sec:policy-methods} für Details zu der Auswertung von Cramérs V-Werten.
+%Bei einem Cramérs V-Wert von $\phi_C>\num{0,1}$ ist von einem schwachem, bei $\phi_C>\num{0,3}$ von einem moderaten und bei $\phi_C>\num{0,5}$ von einem starken Zusammenhang bzw.~Einfluss auszugehen.
+
+\parsum{Software}
+Alle statistischen Auswertungen wurden via \textit{R} ausgeführt \autocite{r,dplyr,my-dataset}.
 
 \parsum{Zahlenspiegel der \gls{luh}}
 Die in \cref{sec:luh-repo-material} gesammelten Zahlenspiegel der \gls{luh} wurden dann wie folgt ausgewertet.
@@ -154,13 +164,14 @@ Die Ausnahme zu dieser Regel sind jene Fakultätswerte für das Jahr 2023, die d
 In diesem Fall wurde der entsprechende Wert aus dem \gls{luh-repo} übernommen.
 Die resultierende Verteilung ist in \cref{tab:luh-repo-zahlenspiegel-summary} zu sehen.
 \begin{table}[!htbp]
-	\caption{Die Verteilung der Dissertationen laut den Zahlenspiegeln der \gls{luh} nach $\text{\textit{Fakultät}}\times\text{\textit{Zeitraum}}$ aufgegliedert.
+	\caption{Die Verteilung der Dissertationen laut den Zahlenspiegeln der \gls{luh} nach \textit{Fakultät}~$\times$~\textit{Zeitraum} aufgegliedert.
+    Angaben relativ zu der Gesamtsumme der Zahlenspiegel-Dissertationen.
     Absolute Werte in Klammern angegeben.
-    Spalten, die zumindest teilweise auf simulierten Werten basieren, sind mit einem Asterisk (*) markiert.}
+    Spalten, die zumindest teilweise auf simulierten Werten basieren, sind mit einem Sternchen~(*) markiert.}
     \input{content/tables/luh-repo-zahlenspiegel-summary.tex}
 	\label{tab:luh-repo-zahlenspiegel-summary}
 \end{table}
-Die $\text{\textit{Fakultät}}\times\text{\textit{Jahresgruppe}}$-Zahlen wurden dann mit den Daten aus dem \gls{luh-repo} verglichen.
+Die \textit{Fakultät}~$\times$~\textit{Jahresgruppe}-Zahlen wurden dann mit den Daten aus dem \gls{luh-repo} verglichen.
 Aus diesem Vergleich wurde dann jeweils abgeleitet, zu welchem Anteil die Promovierenden der verschiedenen Fakultäten das \gls{luh-repo} nutzen.
 
 \section{Resultate}\label{sec:luh-repo-results}
@@ -180,47 +191,53 @@ In \cref{sec:luh-repo-results-external-metadata} werden die Ergebnisse zu den Me
 
 \subsection{Nutzungsrate des LUH-Repos}\label{sec:luh-repo-results-zahlenspiegel}
 \parsum{Zahlenspiegel}
-Die Auswertung des Zahlenspiegels und der Grundmenge dieser Arbeit ergab, dass nur \SI[round-mode=places,round-precision=2]{45,23}{\percent} ($n=\num{1898},\Delta=\num{-2298}$) aller Dissertationen im Zeitraum von 2012--2023 im \gls{luh-repo} Erst- oder Zweitveröffentlich worden sind.
-Der relative Anteil und die absolute Differenz zwischen der Grundmenge und den Werten aus den Zahlenspiegel der \gls{luh} nach \textit{Zeitgruppe} und \textit{Fakultät} aufgegliedert sind in \cref{tab:luh-repo-classification-realrd} gegeben.
+Die Auswertung des Zahlenspiegels und der Grundmenge dieser Arbeit ergab, dass nur \SI[round-mode=places,round-precision=2]{45,23}{\percent} ($n=\num{1898},\Delta=\num{-2298}$) aller Dissertationen im Zeitraum von 2012--2023 im \gls{luh-repo} erst- oder zweitveröffentlicht worden sind.
+Der relative Anteil und die absolute Differenz zwischen der Grundmenge und den Werten aus den Zahlenspiegeln der \gls{luh}, nach \textit{Zeitgruppe} und \textit{Fakultät} aufgegliedert, sind in \cref{tab:luh-repo-classification-realrd} gegeben.
 \begin{table}[!htbp]
-	\caption{Der Anteil der Grundmenge nach $\text{\textit{Fakultät}}\times\text{\textit{Zeitraum}}$ aufgegliedert relativ zu der respektiven $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}$-Gesamtanzahl aller publizierten Dissertationen.
+	\caption{Der Anteil der Grundmenge nach \textit{Fakultät}~$\times$~\textit{Zeitraum} aufgegliedert relativ zu der respektiven \textit{Fakultät}~$\times$~\textit{Zeitgruppe}-Gesamtanzahl aller publizierten Dissertationen.
     Absolute Differenzwerte in Klammern angegeben.
-    Spalten, die zumindest teilweise auf simulierten Werten basieren, sind mit einem Asterisk (*) markiert.}
+    Spalten, die zumindest teilweise auf simulierten Werten basieren, sind mit einem Sternchen (*) markiert.}
     \input{content/tables/luh-repo-zahlenspiegel-relative-grundmenge.tex}
     \label{tab:luh-repo-zahlenspiegel-relative-grundmenge}
 \end{table}
-Mit einem arithmetische Mittel aller $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}$-Kombinationen von $\bar{x}=\SI[round-mode=places,round-precision=2]{42.9875078330178}{\percent}$ und einer Standardabweichung von $s=\SI[round-mode=places,round-precision=2]{26.1457705653948}{\percent}$ ist die relative Nutzung des \gls{luh-repo}s für die Veröffentlichung von Dissertationen unter den Fakultäten und Jahresgruppen sehr ungleich.
 
+\noindent Mit einem arithmetische Mittel aller \textit{Fakultät}~$\times$~\textit{Zeitgruppe}-Kombinationen von $\bar{x}=\SI[round-mode=places,round-precision=2]{42.9875078330178}{\percent}$ und einer Standardabweichung von $s=\SI[round-mode=places,round-precision=2]{26.1457705653948}{\percent}$ ist die relative Nutzung des \gls{luh-repo}s für die Veröffentlichung von Dissertationen unter den Fakultäten und Jahresgruppen sehr ungleich.
+
+\parsum{Nutzer\-gruppierung}
 Die Fakultäten lassen sich hierbei durch durchschnittlicher Nutzungsrate in drei relativ klar abgegrenzte Gruppen einteilen: Geringnutzer ($\bar{x}<\SI[round-mode=places,round-precision=2]{20}{\percent}$), Intermediärnutzer ($\bar{x}\approx\SI[round-mode=places,round-precision=2]{33}{\percent}$) und Intensivnutzer ($\bar{x}\approx\SI[round-mode=places,round-precision=2]{66}{\percent}$).
 Die Geringnutzer bestehen aus \gls{fakultät5} ($\bar{x}=\SI[round-mode=places,round-precision=2]{1.9546568627451}{\percent},s=\SI[round-mode=places,round-precision=2]{2.43871779238119}{\percent}$) und \gls{fakultät6} ($\bar{x}=\SI[round-mode=places,round-precision=2]{17.239500265816}{\percent},s=\SI[round-mode=places,round-precision=2]{5.13233379292414}{\percent}$).
 Die Intermediärnutzer bestehen aus \gls{fakultät3} ($\bar{x}=\SI[round-mode=places,round-precision=2]{36.5641933823752}{\percent},s=\SI[round-mode=places,round-precision=2]{19.600244551027}{\percent}$), \gls{fakultät4} ($\bar{x}=\SI[round-mode=places,round-precision=2]{39.4721213624712}{\percent},s=\SI[round-mode=places,round-precision=2]{14.2755155381073}{\percent}$) und \gls{fakultät9} ($\bar{x}=\SI[round-mode=places,round-precision=2]{32.709756719589}{\percent},s=\SI[round-mode=places,round-precision=2]{13.1540563313131}{\percent}$).
 Die Intensivnutzer bestehen aus \gls{fakultät2} ($\bar{x}=\SI[round-mode=places,round-precision=2]{60.4656862745098}{\percent},s=\SI[round-mode=places,round-precision=2]{25.1559080290468}{\percent}$), \gls{fakultät7} ($\bar{x}=\SI[round-mode=places,round-precision=2]{62.2322031039136}{\percent},s=\SI[round-mode=places,round-precision=2]{15.0749409965671}{\percent}$), \gls{fakultät8} ($\bar{x}=\SI[round-mode=places,round-precision=2]{70.8348384042295}{\percent},s=\SI[round-mode=places,round-precision=2]{13.2930667691554}{\percent}$) und \gls{fakultät10} ($\bar{x}=\SI[round-mode=places,round-precision=2]{65.4146141215107}{\percent},s=\SI[round-mode=places,round-precision=2]{19.1432492140529}{\percent}$).
 
+\parsum{Zeitlicher Trend}
 Die durchschnittliche Nutzungsrate durch die Fakultäten hat sich 2012--2023* um \SI[round-mode=places,round-precision=2]{86.8618178445906}{\percent} ($s=\SI[round-mode=places,round-precision=2]{47.0570062551138}{\percent}$) erhöht.
-So lag 2012--2015 für \SI[round-mode=places,round-precision=2]{66,6666666666667}{\percent} ($n=\num{6}$) der Fakultäten die Nutzungsrate noch unter \SI[round-mode=places,round-precision=2]{50}{\percent}, während in 2020--2023 dies nur noch für \SI[round-mode=places,round-precision=2]{33,333333333}{\percent} ($n=\num{3}$) der Fall.
-Hierbei ist zusätzlich noch anzumerken, dass eine dieser Fakultäten---\gls{fakultät9}---nur \SI[round-mode=places,round-precision=2]{2.2388059701493}{\percent P} von \SI[round-mode=places,round-precision=2]{50}{\percent} entfernt war.
+So lag 2012--2015 für \SI[round-mode=places,round-precision=2]{66,6666666666667}{\percent} ($n=\num{6}$) der Fakultäten die Nutzungsrate noch unter \SI[round-mode=places,round-precision=2]{50}{\percent}, während in 2020--2023* dies nur noch für \SI[round-mode=places,round-precision=2]{33,333333333}{\percent} ($n=\num{3}$) der Fall.
+Hierbei ist zusätzlich noch anzumerken, dass eine dieser Fakultäten--\gls{fakultät9}--nur \SI[round-mode=places,round-precision=2]{2.2388059701493}{\percent P} von \SI[round-mode=places,round-precision=2]{50}{\percent} entfernt war.
+\pagebreak
 
 \subsection{Mögliche relevante Faktoren}\label{sec:luh-repo-results-factors}
-\parsum{Mögliche Faktoren}
+\parsum{Faktoren}
 Die Untersuchung der Metadaten-Datenbank auf mögliche Faktoren, die Einfluss auf die Existenz von \glspl{forschungsdaten} haben könnten ergab, zusätzlich zu \textit{Zeitgruppe} und \textit{Fakultät}, nur noch \textit{Sprache}.
 
 \parsum{Unabhängigkeit der Faktoren}
-Zur Überprüfung, ob die zu untersuchenden Faktoren von einander abhängig sind, wurden für die Kreuzprodukte aller Faktorenkombinationen Chi-Quadrat Tests der Unabhängigkeit durchgeführt.
-Hierbei zeigte sich, dass $\text{\textit{Zeitgruppe}}\times\text{\textit{Fakultät}}$ ($\chi^2 (\num{16}, n=\num{1441}) = \num[round-mode=places,round-precision=2]{30.11595}$, $p = \num[round-mode=places,round-precision=2]{0.01741020},\phi_C=\num[round-mode=places,round-precision=2]{0.10222362}$), $\text{\textit{Zeitgruppe}}\times\text{\textit{Sprache}}$ ($\chi^2 (\num{6}, n=\num{1441}) = \num[round-mode=places,round-precision=2]{81.2042334}$, $p = \num[round-mode=places,round-precision=2]{2.014543e-15}, \phi_C=\num[round-mode=places,round-precision=2]{0.16785812}$) und $\text{\textit{Fakultät}}\times\text{\textit{Sprache}}$ ($\chi^2 (\num{24}, n=\num{1441}) = \num[round-mode=places,round-precision=2]{239.3091384}$, $p = \num[round-mode=places,round-precision=2]{2.148979e-37},\phi_C=\num[round-mode=places,round-precision=2]{0.23528109}$) alle statistisch signifikant voneinander abhängig sind.
-Die Effektstärken sind dabei leicht unterschiedlich ausgeprägt aber konsistent schwacher Natur.
+Zur Überprüfung, ob die zu untersuchenden Faktoren voneinander abhängig sind, wurden für die Kreuzprodukte aller Faktorenkombinationen Chi-Quadrat Tests der Unabhängigkeit durchgeführt.
+Hierbei zeigte sich, dass \textit{Zeitgruppe}~$\times$~\textit{Fakultät} ($\chi^2 (\num{16}, n=\num{1441}) = \num[round-mode=places,round-precision=2]{30.11595}$, $p = \num[round-mode=places,round-precision=2]{0.01741020},\phi_C=\num[round-mode=places,round-precision=2]{0.10222362}$), \textit{Zeitgruppe}~$\times$~\textit{Sprache} ($\chi^2 (\num{6}, n=\num{1441}) = \num[round-mode=places,round-precision=2]{81.2042334}$, $p = \num[round-mode=places,round-precision=2]{2.014543e-15}, \phi_C=\num[round-mode=places,round-precision=2]{0.16785812}$) und \textit{Fakultät}~$\times$~\textit{Sprache} ($\chi^2 (\num{24}, n=\num{1441}) = \num[round-mode=places,round-precision=2]{239.3091384}$, $p = \num[round-mode=places,round-precision=2]{2.148979e-37},\phi_C=\num[round-mode=places,round-precision=2]{0.23528109}$) alle statistisch signifikant voneinander abhängig sind.
+Die Effektstärken sind dabei leicht unterschiedlich ausgeprägt aber schwacher Natur.
 
 \subsection{Rate an erzeugten Primärdaten}\label{sec:luh-repo-results-pd}
-\parsum{Produktion von \glspl{pd}}
-Die Evaluation aller Stichproben-Einträge ergab, dass nur \SI[round-mode=places,round-precision=2]{86,81}{\percent} ($n=\num{1252}$) \glspl{pdd} sind.
+\parsum{\gls{pd}-Produktion}
+Die Evaluation aller Stichproben-Einträge ergab, dass nur \SI[round-mode=places,round-precision=2]{86,81}{\percent} ($n=\num{1252}$) der Dissertationen aus der Stichprobe \glspl{pdd} sind.
 Die relative und absolute Verteilung nach \textit{Zeitgruppe} und \textit{Fakultät} ist hierfür in \cref{tab:luh-repo-classification-realrd} gegeben.
 \begin{table}[!htbp]
-	\caption{Anteil an Dissertationen aus der Stichprobe, die \glspl{pd} produziert haben müssten, relativ zu der respektiven $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}$-Gesamtanzahl.
+	\caption{Anteil an \glspl{pdd} aus der Stichprobe.
+    Angaben relativ zu der respektiven \textit{Fakultät}~$\times$~\textit{Zeitgruppe}-Gesamtanzahl.
     Absolute Werte in Klammern angegeben.}
     \input{content/tables/luh-repo-classification-realrd.tex}
     \label{tab:luh-repo-classification-realrd}
 \end{table}
-Mit $\bar{x}=\SI[round-mode=places,round-precision=2]{77.9798542487882}{\percent},s=\SI[round-mode=places,round-precision=2]{28.490769364902}{\percent}$ für die gesamte $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}$-Verteilung ist die Distribution von \glspl{pdd} im \gls{luh-repo} unter den Fakultäten und Jahresgruppen relativ ungleich.
+Mit $\bar{x}=\SI[round-mode=places,round-precision=2]{77.9798542487882}{\percent},s=\SI[round-mode=places,round-precision=2]{28.490769364902}{\percent}$ für die gesamte \textit{Fakultät}~$\times$~\textit{Zeitgruppe}-Verteilung ist die Distribution von \glspl{pdd} im \gls{luh-repo} unter den Fakultäten und Jahresgruppen relativ ungleich.
 
+\parsum{Gruppierung}
 Die Fakultäten lassen sich auch hier durch ihre durchschnittliche Anzahl an \glspl{pdd} in drei relativ klar abgegrenzte Gruppen einteilen: Nicht-Erzeuger ($\bar{x}\approx\SI[round-mode=places,round-precision=2]{0}{\percent}$), Intermediärerzeuger ($\bar{x}\approx\SI[round-mode=places,round-precision=2]{50}{\percent}$) und Intensiverzeuger ($\bar{x}\approx\SI[round-mode=places,round-precision=2]{90}{\percent}$).
 Die Nicht-Erzeuger bestehen nur aus \gls{fakultät5} ($\bar{x}=\SI[round-mode=places,round-precision=2]{0.00}{\percent},s=\SI[round-mode=places,round-precision=2]{0.00}{\percent}$).
 Die Intermediärerzeuger bestehen aus \gls{fakultät9} ($\bar{x}=\SI[round-mode=places,round-precision=2]{58.8286223580341}{\percent},s=\SI[round-mode=places,round-precision=2]{9.74026073887661}{\percent}$) und \gls{fakultät10} ($\bar{x}=\SI[round-mode=places,round-precision=2]{55.7452610282799}{\percent},s=\SI[round-mode=places,round-precision=2]{6.91115129013917}{\percent}$).
@@ -230,30 +247,35 @@ Die Intensiverzeuger bestehen aus \gls{fakultät2} ($\bar{x}=\SI[round-mode=plac
 \parsum{Klassifikation Zeitgruppen}
 Von den \num{1252} \glspl{pdd} haben \SI[round-mode=places,round-precision=2]{61.3418530351}{\percent} ($n=\num{768}$) zumindest Teile dieser \glspl{pd} veröffentlicht.
 Bei einer Beschränkung auf \glspl{forschungsdaten} von \textit{Stufe~1} und \textit{Stufe~2}, haben nur \SI[round-mode=places,round-precision=2]{31.5495207668}{\percent} ($n=\num{395}$) zumindest Teile ihrer \glspl{pd} veröffentlicht.
-Von allen \glspl{pdd} waren insgesamt nur als \textit{Stufe~1} \SI[round-mode=places,round-precision=2]{20.1277955271566}{\percent} ($n=252$) klassifiziert.
-Die relative und absolute Verteilung der Klassifikationsstufen ist für $\text{\textit{\gls{forschungsdaten}-Publikationsart}}\times\text{\textit{Zeitgruppe}}\times\text{\textit{Klassifikationsstufe}}$ von \glspl{pdd} in \cref{tab:luh-repo-classification-general-publication-adjusted} gegeben.
+Von allen \glspl{pdd} waren insgesamt nur \SI[round-mode=places,round-precision=2]{20.1277955271566}{\percent} ($n=252$) als \textit{Stufe~1} klassifiziert.
+Die relative und absolute Verteilung der Klassifikationsstufen ist für \textit{\gls{forschungsdaten}-Publikationsart}~$\times$~\textit{Zeitgruppe}~$\times$~\textit{Klassifikationsstufe} von \glspl{pdd} in \cref{tab:luh-repo-classification-general-publication-adjusted} gegeben.
 \begin{table}[!htbp]
-	\caption{\gls{forschungsdaten}-Klassifizierung der \glspl{pdd} aus der Stichprobe nach $\text{\textit{Publikationsart}}\times\text{\textit{Klassifikationsstufe}}\times\text{\textit{Jahresgruppe}}$ aufgegliedert.
-    Angaben relativ zu der Gesamtanzahl der Jahresgruppe.
+	\caption{\gls{forschungsdaten}-Klassifizierung der \glspl{pdd} aus der Stichprobe nach \textit{Publikationsart}~$\times$~\textit{Klassifikationsstufe}~$\times$~\textit{Jahresgruppe} aufgegliedert.
+    Angaben relativ zu der Gesamtanzahl der jeweiligen Zeitgruppe.
     Absolute Werte in Klammern angegeben.}
     \input{content/tables/luh-repo-classification-general-publication-adjusted.tex}
     \label{tab:luh-repo-classification-general-publication-adjusted}
 \end{table}
 Dieselbe Verteilung für alle Dissertationen ist in \cref{tab:luh-repo-classification-general-publication} gegeben.
 
+\parsum{Allgemein}
 Für \glspl{pdd} sind die respektiven Anteile pro Zeitgruppe für \textit{Stufe~1} ($\bar{x}=\SI[round-mode=places,round-precision=2]{19.6030159265453}{\percent},s=\SI[round-mode=places,round-precision=2]{4.23666583797109}{\percent}$), \textit{Stufe~2} ($\bar{x}=\SI[round-mode=places,round-precision=2]{11.6974193444782}{\percent},s=\SI[round-mode=places,round-precision=2]{2.00588363159137}{\percent}$), \textit{Stufe~3} ($\bar{x}=\SI[round-mode=places,round-precision=2]{30.8276496511791}{\percent},s=\SI[round-mode=places,round-precision=2]{7.48186481117491}{\percent}$) und \textit{Keine} ($\bar{x}=\SI[round-mode=places,round-precision=2]{37.8719150777974}{\percent},s=\SI[round-mode=places,round-precision=2]{5.65599658410767}{\percent}$) alle sehr konsistent in ihren Ausmaßen und haben sich über die Jahre nur wenig verändert:
 Der Anteil von \textit{Keine \glspl{forschungsdaten}} und \textit{Stufe~1} stieg über die Zeitgruppen hinweg fast stetig an, während der Anteil an \textit{Stufe~2} und \textit{Stufe 3} abnahm.
 Diese Interaktion ist mit $\chi^2 (\num{6}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{35.1706024082481}$, $p = \num[round-mode=places,round-precision=2]{3.99360804013405E-06}<\num{0.001},\phi_C=\num[round-mode=places,round-precision=2]{0.118514841833938}$ hochsignifikant aber schwach im Effekt.
+\pagebreak
 
+\parsum{Integrierte \glspl{forschungsdaten}}
 Für integriert publizierte \glspl{forschungsdaten} sind die respektiven Anteile pro Zeitgruppe für \textit{Stufe~1} ($\bar{x}=\SI[round-mode=places,round-precision=2]{12.9817173934821}{\percent},s=\SI[round-mode=places,round-precision=2]{2.06560827754195}{\percent}$), \textit{Stufe~2} ($\bar{x}=\SI[round-mode=places,round-precision=2]{13.6330830448477}{\percent},s=\SI[round-mode=places,round-precision=2]{0.705071887699306}{\percent}$), \textit{Stufe~3} ($\bar{x}=\SI[round-mode=places,round-precision=2]{31.6776459423518}{\percent},s=\SI[round-mode=places,round-precision=2]{6.70385517608004}{\percent}$) und \textit{Keine} ($\bar{x}=\SI[round-mode=places,round-precision=2]{41.7075536193183}{\percent},s=\SI[round-mode=places,round-precision=2]{9.04508811986477}{\percent}$):
 An den entsprechenden Standardabweichungen lässt sich erkennen, dass sich die Anteile über die Zeitgruppen hinweg geändert haben.
 Die Anteile von \textit{Keine \glspl{forschungsdaten}}, \textit{Stufe~1} und \textit{Stufe~3} waren über die ersten zwei Zeitgruppen stabil, stiegen dann aber für \textit{Keine \glspl{forschungsdaten}} stark an, während \textit{Stufe~1} und \textit{Stufe~3} stark abnahmen.
 \textit{Stufe~2} verblieb über alle Jahresgruppen hinweg stabil.
 Diese Interaktion ist mit $\chi^2 (\num{6}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{33.7783606969378}$, $p = \num[round-mode=places,round-precision=2]{7.42382998991651E-06}<\num{0.001},\phi_C=\num[round-mode=places,round-precision=2]{0.116145428931647}$ hochsignifikant aber schwach im Effekt.
 
+\parsum{Begleitende \glspl{forschungsdaten}}
 Für begleitende \glspl{forschungsdaten} verändern sich die respektiven Anteile pro Zeitgruppe für \textit{Stufe~1} ($\bar{x}=\SI[round-mode=places,round-precision=2]{1.80467901056136}{\percent},s=\SI[round-mode=places,round-precision=2]{0.75291204962178}{\percent}$), \textit{Stufe~2} ($\bar{x}=\SI[round-mode=places,round-precision=2]{0,00}{\percent},s=\SI[round-mode=places,round-precision=2]{0.00}{\percent}$), \textit{Stufe~3} ($\bar{x}=\SI[round-mode=places,round-precision=2]{0.467361937950173}{\percent},s=\SI[round-mode=places,round-precision=2]{0.173591068786419}{\percent}$) und \textit{Keine} ($\bar{x}=\SI[round-mode=places,round-precision=2]{97.7279590514885}{\percent},s=\SI[round-mode=places,round-precision=2]{0.579530291358788}{\percent}$) fast überhaupt nicht.
 Entsprechend ist diese Interaktion mit $\chi^2 (\num{4}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{3.08067913427959}$, $p = \num[round-mode=places,round-precision=2]{0.54441589726215}>\num{0.05}$ auch nicht signifikant.
 
+\parsum{Externe \glspl{forschungsdaten}}
 Für externe \glspl{forschungsdaten} sind die respektiven Anteile pro Zeitgruppe für \textit{Stufe~2} und \textit{Stufe~3} mit Maximalwerten von unter $\SI{0,60}{\percent}$ und $s<\SI{0,15}{\percent}$ vernachlässigbar.
 Für \textit{Stufe~1} ($\bar{x}=\SI[round-mode=places,round-precision=2]{6.20179384885267}{\percent},s=\SI[round-mode=places,round-precision=2]{7.07899330022576}{\percent}$) und \textit{Keine} ($\bar{x}=\SI[round-mode=places,round-precision=2]{0.935803794627324}{\percent},s=\SI[round-mode=places,round-precision=2]{7.24376490591247}{\percent}$) zeichnet sich jedoch auch eine eindeutige Veränderung über die Zeitgruppen hinweg ab:
 Während \textit{Keine \glspl{forschungsdaten}} über die Zeitgruppen hinweg um $\SI[round-mode=places,round-precision=2]{13.56}{\percent P}$ abnimmt, steigt \textit{Stufe~1} um $\SI[round-mode=places,round-precision=2]{13.18}{\percent P}$ auf einen Maximalwert von $\SI[round-mode=places,round-precision=2]{14.29}{\percent}$ an.
@@ -261,21 +283,33 @@ Die verbleibenden $\SI[round-mode=places,round-precision=2]{0.38}{\percent P}$ t
 Diese Interaktion ist mit $\chi^2 (\num{6}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{70.4530111884674}$, $p = \num[round-mode=places,round-precision=2]{3.3012369430121E-13}<\num{0.001},\phi_C=\num[round-mode=places,round-precision=2]{0.167738446925158}$ hochsignifikant aber schwach im Effekt.
 Hier ist allerdings anzumerken, dass sowohl der Signifikanzwert wie auch die Einflusstärke dieser Interaktion höher bzw.~stärker ist als die Werte der anderen bisher untersuchten Interaktionen.
 
+\parsum{Zusammenfassung}
 Zusammenfassend lassen sich hier folgende Punkte festhalten:
-Der Anteil publizierter \glspl{forschungsdaten} der \textit{Stufe~1} insgesamt über die Zeitgruppen zugenommen hat, dafür weniger integriert und dafür vermehrt extern publiziert werden.
-Die Option \glspl{forschungsdaten} begleitend zu publizieren, wird von einem sehr kleinen Nutzerkreis konsistent genutzt.
+Der Anteil publizierter \glspl{forschungsdaten} der \textit{Stufe~1} hat insgesamt über die Zeitgruppen zugenommen.
+Dafür wurden die \glspl{forschungsdaten} aber weniger integriert und vermehrt extern publiziert.
+Die Option \glspl{forschungsdaten} als begleitende Dateien zu publizieren, wurde von einem sehr kleinen Nutzerkreis konsistent genutzt.
 
 \subsection{Sprache und Forschungsdaten}\label{sec:luh-repo-results-language}
 \parsum{Sprache}
 Von allen Dissertationen wurden \SI[round-mode=places,round-precision=2]{54.55}{\percent} ($n=\num{786}$) auf Deutsch und \SI[round-mode=places,round-precision=2]{45,11}{\percent} ($n=\num{650}$) auf Englisch verfasst.
 Die restlichen \SI[round-mode=places,round-precision=2]{0.35}{\percent} ($n=\num{5}$) wurden entweder auf Spanisch oder in mehreren Sprachen verfasst.
 Für \glspl{pdd} ändern sich diese Anteile auf jeweils \SI[round-mode=places,round-precision=2]{55.9904153355}{\percent} ($n=\num{701}$), \SI[round-mode=places,round-precision=2]{43.6900958466}{\percent} ($n=\num{547}$) und \SI[round-mode=places,round-precision=2]{0.319488817891}{\percent} ($n=\num{4}$).
-Für die relative und absolute Verteilung nach $\text{\textit{Sprache}}\times\text{\textit{Zeitgruppe}}$, siehe \cref{tab:luh-repo-sprache-zeitgruppe}.
+Für die relative und absolute Verteilung nach \textit{Sprache}~$\times$~\textit{Zeitgruppe}, siehe \cref{tab:luh-repo-sprache-zeitgruppe-adjusted}.
+\begin{table}[!htbp]
+	\caption{\gls{forschungsdaten}-Klassifizierung der \glspl{pdd} aus der Stichprobe nach \textit{Sprache}~$\times$~\textit{Zeitgruppe} aufgegliedert.
+    Angaben relativ zu der Gesamtanzahl der jeweiligen Zeitgruppe.
+    Absolute Werte in Klammern angegeben.}
+    \input{content/tables/luh-repo-classification-language-adjusted.tex}
+    \label{tab:luh-repo-sprache-zeitgruppe-adjusted}
+\end{table}
+Dieselbe Aufteilung für alle Dissertationen ist in \cref{tab:luh-repo-sprache-zeitgruppe} gegeben.
 
+\parsum{Zeitlicher Trend}
 Für \glspl{pdd} sind die respektiven Anteile pro Zeitgruppe für \textit{Deutsch} ($\bar{x}=\SI[round-mode=places,round-precision=2]{58.0207461089814}{\percent},s=\SI[round-mode=places,round-precision=2]{14.7111835680779}{\percent}$), \textit{Englisch} ($\bar{x}=\SI[round-mode=places,round-precision=2]{41.7218536336183}{\percent},s=\SI[round-mode=places,round-precision=2]{14.2781240348223}{\percent}$) und \textit{Andere} ($\bar{x}=\SI[round-mode=places,round-precision=2]{0.193050193050193}{\percent},s=\SI[round-mode=places,round-precision=2]{0.334372742773914}{\percent}$).
 Die hohen Standardabweichungen für \textit{Englisch} und \textit{Deutsch} sind dem verschuldet, dass für die ersten zwei Zeitgruppen \textit{Deutsch} vergleichsweise konsistent mit $\bar{x}=\SI[round-mode=places,round-precision=2]{66.2782234105763}{\percent}$ und \textit{Englisch} mit $\bar{x}=\SI[round-mode=places,round-precision=2]{33.7217765894236}{\percent}$  vertreten war (jeweils $s=\SI[round-mode=places,round-precision=2]{4.87054982822638}{\percent}$), in der dritten Zeitgruppe dann aber ein Wechsel der Mehrheit von \textit{Deutsch} ($\SI[round-mode=places,round-precision=2]{41.5057915057915}{\percent}$) auf \textit{Englisch} ($\SI[round-mode=places,round-precision=2]{57.7220077220077}{\percent}$) stattgefunden hat.
 Die Interaktion zwischen \textit{Sprache} und \textit{Zeitgruppe} ist mit $\chi^2 (\num{6}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{81.2042333529611}$, $p = \num[round-mode=places,round-precision=2]{2.01454276715493E-15}<\num{0.01},\phi_C=\num[round-mode=places,round-precision=2]{0.16785811702362}$ statistisch hochsignifikant aber schwach im Effekt.
 
+\parsum{Fakultäten}
 Auch die Interaktion zwischen \textit{Sprache} und \textit{Fakultät} ist mit $\chi^2 (\num{21}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{201.42368756814}$, $p = \num[round-mode=places,round-precision=2]{1.90053471088499E-31}<\num{0.01},\phi_C=\num[round-mode=places,round-precision=2]{0.231575430181447}$ statistisch hochsignifikant aber schwach im Effekt.
 Diese Interaktion ist durch die stark unterschiedliche Verteilung von Sprachwahl unter den Fakultäten bedingt.
 So hat \textit{Deutsch} innerhalb der Fakultäten einen Anteil von $\bar{x}=\SI[round-mode=places,round-precision=2]{59.022318726589}{\percent},s=\SI[round-mode=places,round-precision=2]{23.4782123625139}{\percent}$ und \textit{Englisch} von $\bar{x}=\SI[round-mode=places,round-precision=2]{40.283956329479}{\percent},s=\SI[round-mode=places,round-precision=2]{24.3404020527007}{\percent}$ mit respektiven Maximalwerten von $\SI[round-mode=places,round-precision=2]{91.5492957746479}{\percent}$ und $\SI[round-mode=places,round-precision=2]{71.875}{\percent}$.
@@ -283,90 +317,101 @@ Zusätzlich dazu ändert sich die Sprachverteilung innerhalb der Fakultäten je 
 \begin{figure}[!htbp]
     \resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{\input{content/images/luh-repo_sprache_x_fakultät_x_zeitgruppe.tex}}
     \caption{Sprachen der \glspl{pdd} nach Fakultät und Zeitgruppe.
-    Die Höhe der Barren entsprechen dem relativen Anteil zur jeweiligen angepassten $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}\times\text{\textit{Sprache}}$-Gesamtanzahl.
+    Die Höhe der Balken entsprechen dem relativen Anteil zur jeweiligen angepassten \textit{Fakultät}~$\times$~\textit{Zeitgruppe}~$\times$~\textit{Sprache}-Gesamtanzahl.
     Absolute Werte in Klammern angegeben.}
     \label{fig:luh-repo_sprache_x_fakultät_x_zeitgruppe}
 \end{figure}
 
+\parsum{Allgemeine \glspl{forschungsdaten}}
 Für die Beziehung zwischen \textit{Sprache} und \textit{Allgemeine~\glspl{forschungsdaten}} ist anzumerken, dass $\SI[round-mode=places,round-precision=2]{67.5603217158177}{\percent}$ aller \textit{Stufe~3} \glspl{pdd} auf Deutsch und $\SI[round-mode=places,round-precision=2]{32.171581769437}{\percent}$ auf Englisch geschrieben wurden.
 Für \textit{Stufe~1} sind diese Anteile beide jeweils $\SI[round-mode=places,round-precision=2]{49.6031746031746}{\percent}$.
 Die Abhängigkeit zwischen \textit{Sprache} und \textit{Allgemeine \glspl{forschungsdaten}} ist mit $\chi^2 (\num{9}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{36.3201742371864}$, $p = \num[round-mode=places,round-precision=2]{3.47809061239522E-05}<\num{0.01},\phi_C=\num[round-mode=places,round-precision=2]{0.0983356900818459}$ statistisch hochsignifikant aber sehr schwach im Effekt.
 
+\parsum{Externe \glspl{forschungsdaten}}
 Für \textit{Externe \glspl{forschungsdaten}} ist diese Verteilung umgekehrt und stärker ausgeprägt:
 Für \glspl{pdd} mit externen \glspl{forschungsdaten} die mit \textit{Stufe~1} klassifiziert wurden, wurden nur $\SI[round-mode=places,round-precision=2]{25,5555555555556}{\percent}$ auf Deutsch und $\SI[round-mode=places,round-precision=2]{73,3333333333333}{\percent}$ auf Englisch geschrieben.
 Die Beziehung zwischen \textit{Sprache} und \textit{Externe \glspl{forschungsdaten}} ist mit $\chi^2 (\num{9}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{39.4644044440327}$, $p = \num[round-mode=places,round-precision=2]{9.49823708731411E-06}<\num{0.01},\phi_C=\num[round-mode=places,round-precision=2]{0.102503804500984}$ auch statistisch hochsignifikant und schwach in Effektstärke.
 
+\parsum{Abhängigkeit}
 Da \textit{Sprache} und \textit{Fakultät} auch miteinander korrelieren, wie in \cref{sec:luh-repo-results-factors} gezeigt, muss hierbei beachtet werden inwiefern der Effekt von \textit{Sprache} auf \textit{Allgemeine \glspl{forschungsdaten}} und \textit{Externe \glspl{forschungsdaten}} an \textit{Sprache} liegt und wie viel der Effekt durch ihre Korrelation mit \textit{Fakultät} bedingt ist.
 Siehe hierfür die Interaktion zwischen \textit{Fakultät} und den verschiedenen \gls{forschungsdaten}-Publikationsarten in \cref{sec:luh-repo-results-faculties}
 
 \subsection{Fakultäten und Forschungsdaten}\label{sec:luh-repo-results-faculties}
 \parsum{Klassifikation Fakultäten}
-Für \glspl{pdd} ist die relative und absolute Verteilung der Klassifikationsstufen für alle Dokumente sowie die Verteilung nach $\text{\textit{Fakultät}}\times\text{\textit{Klassifikationsstufe}}$ in \cref{tab:luh-repo-classification-general-all-faculty-adjusted} gegeben.
+Für \glspl{pdd} ist die relative und absolute Verteilung der Klassifikationsstufen für alle Dokumente sowie die Verteilung nach \textit{Fakultät}~$\times$~\textit{Klassifikationsstufe} in \cref{tab:luh-repo-classification-general-all-faculty-adjusted} gegeben.
 \begin{table}[!htbp]
-	\caption{\gls{forschungsdaten}-Klassifizierung der Dissertationen aus der Stichprobe nach $\text{\textit{Fakultät}}\times\text{\textit{Klassifikationsstufe}}$ aufgegliedert.
-    Angabe relativ zu der respektiven angepassten Gesamtanzahl für \textit{Fakultät}.
+	\caption{\gls{forschungsdaten}-Klassifizierung der \glspl{pdd} aus der Stichprobe nach \textit{Fakultät}~$\times$~\textit{Klassifikationsstufe} aufgegliedert.
+    Angabe relativ zu der respektiven Gesamtanzahl für \textit{Fakultät}.
     Absolute Werte in Klammern angegeben.}
     \input{content/tables/luh-repo-classification-general-all-faculty-adjusted.tex}
     \label{tab:luh-repo-classification-general-all-faculty-adjusted}
 \end{table}
-Dieselbe Aufteilung für alle Dissertationen ist \cref{tab:luh-repo-classification-general-all-faculty} gegeben.
+Dieselbe Aufteilung für alle Dissertationen ist in \cref{tab:luh-repo-classification-general-all-faculty} gegeben.
 
+\parsum{Allgemeine \glspl{forschungsdaten}}
 Die Interaktion für \glspl{pdd} zwischen \textit{Fakultät} und \textit{Allgemeine \glspl{forschungsdaten}} ist mit $\chi^2 (\num{21}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{277.018852269436}$, $p = \num[round-mode=places,round-precision=2]{1.46707274481795E-46}<\num{0.01},\phi_C=\num[round-mode=places,round-precision=2]{0.271576302422829}$ statistisch hochsignifikant mit einer fast moderaten Effektstärke.
-Für \glspl{forschungsdaten} sind die respektiven respektiven Anteile pro Fakultät für \textit{Stufe~1} ($\bar{x}=\SI[round-mode=places,round-precision=2]{19.1949536178319}{\percent},s=\SI[round-mode=places,round-precision=2]{7.40146945375256}{\percent}$), \textit{Stufe~2} ($\bar{x}=\SI[round-mode=places,round-precision=2]{7.02727835832392}{\percent},s=\SI[round-mode=places,round-precision=2]{7.64365985309809}{\percent}$), \textit{Stufe~3} ($\bar{x}=\SI[round-mode=places,round-precision=2]{28.4500178056966}{\percent},s=\SI[round-mode=places,round-precision=2]{13.9773224286791}{\percent}$) und \textit{Keine} ($\bar{x}=\SI[round-mode=places,round-precision=2]{45.3277502181475}{\percent},s=\SI[round-mode=places,round-precision=2]{17.3167274633444}{\percent}$).
+Für \glspl{forschungsdaten} sind die respektiven Anteile pro Fakultät für \textit{Stufe~1} ($\bar{x}=\SI[round-mode=places,round-precision=2]{19.1949536178319}{\percent},s=\SI[round-mode=places,round-precision=2]{7.40146945375256}{\percent}$), \textit{Stufe~2} ($\bar{x}=\SI[round-mode=places,round-precision=2]{7.02727835832392}{\percent},s=\SI[round-mode=places,round-precision=2]{7.64365985309809}{\percent}$), \textit{Stufe~3} ($\bar{x}=\SI[round-mode=places,round-precision=2]{28.4500178056966}{\percent},s=\SI[round-mode=places,round-precision=2]{13.9773224286791}{\percent}$) und \textit{Keine} ($\bar{x}=\SI[round-mode=places,round-precision=2]{45.3277502181475}{\percent},s=\SI[round-mode=places,round-precision=2]{17.3167274633444}{\percent}$).
 Es variieren zwischen den Fakultäten also insbesondere \textit{Stufe~3} und \textit{Keine \glspl{forschungsdaten}}, während \textit{Stufe~1} und \textit{Stufe~2} moderatere interfakultäre Variation erleben.
-Es besteht also ein vergleichsweise kleiner Kern an \glspl{pdd}, die in allen Fakultäten---zu moderat unterschiedlich großen Anteilen---\glspl{forschungsdaten} aus \textit{Stufe~1} oder \textit{Stufe~2} publizieren, während der größte Unterschied zwischen Fakultäten dadurch bestimmt wird, wie groß die jeweilige Verteilung zwischen \textit{Keine~\glspl{forschungsdaten}} und \glspl{forschungsdaten} aus \textit{Stufe~3} ist.
+Es besteht also ein vergleichsweise kleiner Kern an \glspl{pdd}, die in allen Fakultäten--zu moderat unterschiedlich großen Anteilen--\glspl{forschungsdaten} aus \textit{Stufe~1} oder \textit{Stufe~2} publizieren, während der größte Unterschied zwischen Fakultäten dadurch bestimmt wird, wie groß die jeweilige Verteilung zwischen \textit{Keine~\glspl{forschungsdaten}} und \glspl{forschungsdaten} aus \textit{Stufe~3} ist.
 Dieser Effekt kann in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_fd}, welche die relative und absolute Verteilung von \glspl{forschungsdaten} für Fakultäten über die verschiedenen Zeitgruppen darstellt, gesehen werden.
 \begin{figure}[!htbp]
     \resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{\input{content/images/luh-repo_fakultät_x_zeitgruppe_x_fd.tex}}
     \caption{\gls{forschungsdaten} für \glspl{pdd} nach Fakultät, Zeitgruppe und Klassifikationsstufe.
-    Die Höhe der Barren entsprechen dem relativen Anteil zur jeweiligen angepassten $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}\times\text{\textit{\gls{forschungsdaten}}}$-Gesamtanzahl.
+    Die Höhe der Balken entsprechen dem relativen Anteil zur jeweiligen angepassten \textit{Fakultät}~$\times$~\textit{Zeitgruppe}~$\times$~\textit{\gls{forschungsdaten}}-Gesamtanzahl.
     Absolute Werte in Klammern angegeben.}
     \label{fig:luh-repo_fakultät_x_zeitgruppe_x_fd}
 \end{figure}
-Mit $\chi^2 (\num{21}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{277.018852269436}$, $p = \num[round-mode=places,round-precision=2]{1.46707274481795E-46},\phi_C=\num[round-mode=places,round-precision=2]{0.271576302422829}$ ist die Interaktion zwischen \textit{Fakultät} und \textit{Allgemeine \glspl{forschungsdaten}} für \glspl{pdd} statistisch hochsignifikant mit einem Effekt fast-moderater Stärke.
+Mit $\chi^2 (\num{21}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{277.018852269436}$, $p = \num[round-mode=places,round-precision=2]{1.46707274481795E-46},\phi_C=\num[round-mode=places,round-precision=2]{0.271576302422829}$ ist die Interaktion zwischen \textit{Fakultät} und \textit{Allgemeine \glspl{forschungsdaten}} für \glspl{pdd} statistisch hochsignifikant mit einem Effekt fast moderater Stärke.
 
+\parsum{Signifikanz}
 Von den in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_fd} dargestellten fakultätsspezifischen Interaktionen zwischen \textit{Zeitgruppe} und \textit{Allgemeine \glspl{forschungsdaten}} waren \gls{fakultät6} ($\chi^2 (\num{6}, n=\num{120}) = \num[round-mode=places,round-precision=2]{19.5476964585537}$, $p = \num[round-mode=places,round-precision=2]{0.00333202926016077},\phi_C=\num[round-mode=places,round-precision=2]{0.285392248044641}$) und \gls{fakultät7} ($\chi^2 (\num{6}, n=\num{214}) = \num[round-mode=places,round-precision=2]{16.2992330069594}$, $p = \num[round-mode=places,round-precision=2]{0.0122348687338923},\phi_C=\num[round-mode=places,round-precision=2]{0.195146919293435}$) statistisch signifikant, wobei der Effekt für \gls{fakultät6} etwas stärker ist als für \gls{fakultät7}.
 Für die restlichen Fakultäten war die Interaktion statistisch nicht signifkant.
 
 \subsubsection{Integrierte Forschungsdaten}
+\parsum{Integrierte \glspl{forschungsdaten}}
 Die relative und absolute Verteilung von integrierten \glspl{forschungsdaten} für Fakultäten über die verschiedenen Zeitgruppen hinweg ist in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_intern-fd} dargestellt.
 \begin{figure}[!htbp]
     \resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{\input{content/images/luh-repo_fakultät_x_zeitgruppe_x_intern-fd.tex}}
     \caption{Integrierte \gls{forschungsdaten} für \glspl{pdd} nach Fakultät, Zeitgruppe und Klassifikationsstufe.
-    Die Höhe der Barren entsprechen dem relativen Anteil zur jeweiligen angepassten $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}\times\text{\textit{Integrierte \gls{forschungsdaten}}}$-Gesamtanzahl.
+    Die Höhe der Balken entsprechen dem relativen Anteil zur jeweiligen angepassten \textit{Fakultät}~$\times$~\textit{Zeitgruppe}~$\times$~\textit{Integrierte \gls{forschungsdaten}}-Gesamtanzahl.
     Absolute Werte in Klammern angegeben.}
     \label{fig:luh-repo_fakultät_x_zeitgruppe_x_intern-fd}
 \end{figure}
-Mit $\chi^2 (\num{21}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{263.002145678598}$, $p = \num[round-mode=places,round-precision=2]{9.94476930299567E-44},\phi_C=\num[round-mode=places,round-precision=2]{0.264616459279196}$ ist die Interaktion zwischen \textit{Fakultät} und \textit{Integrierten \glspl{forschungsdaten}} für \glspl{pdd} statistisch hochsignifikant mit einem Effekt fast-moderater Stärke.
+Mit $\chi^2 (\num{21}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{263.002145678598}$, $p = \num[round-mode=places,round-precision=2]{9.94476930299567E-44},\phi_C=\num[round-mode=places,round-precision=2]{0.264616459279196}$ ist die Interaktion zwischen \textit{Fakultät} und \textit{Integrierten \glspl{forschungsdaten}} für \glspl{pdd} statistisch hochsignifikant mit einem Effekt fast moderater Stärke.
 
+\parsum{Signifikanz}
 Von den in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_intern-fd} dargestellten fakultätsspezifischen Interaktionen zwischen \textit{Zeitgruppe} und \textit{Allgemeine \glspl{forschungsdaten}} waren auch hier nur \gls{fakultät6} ($\chi^2 (\num{6}, n=\num{120}) = \num[round-mode=places,round-precision=2]{16.9762583339752}$, $p = \num[round-mode=places,round-precision=2]{0.00937089563575401},\phi_C=\num[round-mode=places,round-precision=2]{0.265959413679788}$) und \gls{fakultät7} ($\chi^2 (\num{6}, n=\num{214}) = \num[round-mode=places,round-precision=2]{14.9081855229165}$, $p = \num[round-mode=places,round-precision=2]{0.0209829722338535},\phi_C=\num[round-mode=places,round-precision=2]{0.186633890721093}$) statistisch signifikant, wobei der Effekt für \gls{fakultät6} etwas stärker ist als für \gls{fakultät7}.
 Hier ist feststellbar, dass die Interaktionen sowohl weniger signifikant wie auch schwächer sind, als die respektiven Interaktionen zwischen \textit{Zeitgruppe} und \textit{Integrierte \gls{forschungsdaten}}.
 Für die restlichen Fakultäten war die Interaktion statistisch nicht signifkant.
 
 \subsubsection{Begleitende Forschungsdaten}
+\parsum{Begleitende \glspl{forschungsdaten}}
 Die relative und absolute Verteilung von begleitenden \glspl{forschungsdaten} für Fakultäten über die verschiedenen Zeitgruppen hinweg ist in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_begleit-fd} dargestellt.
 \begin{figure}[!htbp]
     \resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{\input{content/images/luh-repo_fakultät_x_zeitgruppe_x_begleit-fd.tex}}
     \caption{Externe \gls{forschungsdaten} für \glspl{pdd} nach Fakultät, Zeitgruppe und Klassifikationsstufe.
-    Die Höhe der Barren entsprechen dem relativen Anteil zur jeweiligen angepassten $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}\times\text{\textit{Begleitende \gls{forschungsdaten}}}$-Gesamtanzahl.
+    Die Höhe der Balken entsprechen dem relativen Anteil zur jeweiligen angepassten \textit{Fakultät}~$\times$~\textit{Zeitgruppe}~$\times$~\textit{Begleitende \gls{forschungsdaten}}-Gesamtanzahl.
     Absolute Werte in Klammern angegeben.}
     \label{fig:luh-repo_fakultät_x_zeitgruppe_x_begleit-fd}
 \end{figure}
 Mit $\chi^2 (\num{14}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{26.7127108745513}$, $p = \num[round-mode=places,round-precision=2]{0.0209769860572188},\phi_C=\num[round-mode=places,round-precision=2]{0.103286085824667}$ ist die Interaktion zwischen \textit{Fakultät} und \textit{Begleitende \glspl{forschungsdaten}} für \glspl{pdd} statistisch signifikant mit einer schwachen Effektstärke.
 
-Von den in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_begleit-fd} dargestellten fakultätsspezifischen Interaktionen zwischen \textit{Zeitgruppe} und \textit{Begleitende \glspl{forschungsdaten}} waren keine Interaktionen statistisch signifikant.
+\parsum{Signifikanz}
+Von den in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_begleit-fd} dargestellten fakultätsspezifischen Interaktionen zwischen \textit{Zeitgruppe} und \textit{Begleitende \glspl{forschungsdaten}} waren keine Interaktionen statistisch signifikant.\pagebreak
 
 \subsubsection{Externe Forschungsdaten}
+\parsum{Externe \glspl{forschungsdaten}}
 Die relative und absolute Verteilung von externen \glspl{forschungsdaten} für Fakultäten über die verschiedenen Zeitgruppen hinweg ist in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_externe-fd} dargestellt.
 \begin{figure}[!htbp]
     \resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{\input{content/images/luh-repo_fakultät_x_zeitgruppe_x_externe-fd.tex}}
     \caption{Externe \gls{forschungsdaten} für \glspl{pdd} nach Fakultät, Zeitgruppe und Klassifikationsstufe.
-    Die Höhe der Barren entsprechen dem relativen Anteil zur jeweiligen angepassten $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}\times\text{\textit{Externe \gls{forschungsdaten}}}$-Gesamtanzahl.
+    Die Höhe der Balken entsprechen dem relativen Anteil zur jeweiligen angepassten \textit{Fakultät}~$\times$~\textit{Zeitgruppe}~$\times$~\textit{Externe \gls{forschungsdaten}}-Gesamtanzahl.
     Absolute Werte in Klammern angegeben.}
     \label{fig:luh-repo_fakultät_x_zeitgruppe_x_externe-fd}
 \end{figure}
 Mit $\chi^2 (\num{21}, n=\num{1252}) = \num[round-mode=places,round-precision=2]{66.7577903096558}$, $p = \num[round-mode=places,round-precision=2]{1.1517458402742E-06},\phi_C=\num[round-mode=places,round-precision=2]{0.133317814235608}$ ist die Interaktion zwischen \textit{Fakultät} und \textit{Begleitende \glspl{forschungsdaten}} für \glspl{pdd} statistisch hochsignifikant mit einer schwachen Effektstärke.
 
+\parsum{Signifikanz}
 Von den in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_externe-fd} dargestellten fakultätsspezifischen Interaktionen zwischen \textit{Zeitgruppe} und \textit{Allgemeine \glspl{forschungsdaten}} waren auch hier nur \gls{fakultät4} ($\chi^2 (\num{2}, n=\num{140}) = \num[round-mode=places,round-precision=2]{15.4010432799519}$, $p = \num[round-mode=places,round-precision=4]{0.000452591031724297},\phi_C=\num[round-mode=places,round-precision=2]{0.331673713157459}$) und \gls{fakultät7} ($\chi^2 (\num{2}, n=\num{214}) = \num[round-mode=places,round-precision=2]{15.0873457280576}$, $p = \num[round-mode=places,round-precision=3]{0.000529449450462421},\phi_C=\num[round-mode=places,round-precision=2]{0.265521403189406}$) statistisch signifikant, wobei der Effekt für \gls{fakultät6} etwas stärker ist als für \gls{fakultät7}.
 
 \subsection{Externe Publikationen und Metadaten}\label{sec:luh-repo-results-external-metadata}
@@ -379,88 +424,107 @@ Zusätzlich wurden zum Zeitpunkt dieser Arbeit noch keine Informationen zu exter
 Durch die Kombination dieser Faktoren, konnten keine empirischen Daten zur Nutzung unterschiedlicher Metadatenstandards auf Basis des \gls{luh-repo}s und der sich darin befindenden Dissertationen gesammelt werden.
 
 \section{Diskussion}\label{sec:luh-repo-discussion}
-Die Ergebnisse in \cref{sec:luh-repo-results-factors} zeigten, dass alle evaluierten Faktoren zu unterschiedlich starken---aber insgesamt dennoch schwachen---Graden voneinander abhängig sind.
+\parsum{Abhängigkeit}
+Die Ergebnisse in \cref{sec:luh-repo-results-factors} zeigten, dass alle evaluierten Faktoren zu unterschiedlich starken--aber insgesamt eher schwachen--Graden voneinander abhängig sind.
 Dies verkompliziert die Analyse der jeweiligen Faktoren in Bezug auf deren Wirkung auf \glspl{forschungsdaten} und deren unterschiedlichen Publikationsformen.
 
 \subsection{Sprache}
+\parsum{Sprache}
 Ein gutes Beispiel hierfür ist der Faktor \textit{Sprache}.
 Die Annahme hinter diesem Faktor war, dass die Nutzung einer internationalen Sprache (i.e.~\textit{Englisch}) eventuell einen Einfluss auf die Beachtung und Einhaltung internationaler \gls{fdm}-Standards haben könnte.
-Auf ersten Blick scheint sich dies auch zu bewahrheiten, wie an zwei Beispielen gezeigt werden kann: 
+Auf den ersten Blick scheint sich dies auch zu bewahrheiten, wie an zwei Beispielen gezeigt werden kann: 
 Einerseits wurden ca.~zwei Drittel aller \glspl{pdd} mit externen \glspl{forschungsdaten} auf Englisch verfasst, obwohl die Mehrheit aller \glspl{pdd} auf Deutsch verfasst wurden, wie in \cref{sec:luh-repo-results-language} aufgezeigt wurde.
-Andererseits sinkt die Nutzungsrate von \textit{Deutsch} und steigt für \textit{Englisch} an, je höher die Klassifikationsstufe einer \gls{pdd} ist---bis sie schließlich auf \textit{Level~1} Parität erreichen.
-Beachtet man jedoch die Verteilung von \textit{Sprache} in \cref{fig:luh-repo_sprache_x_fakultät_x_zeitgruppe} über \textit{Fakultät}, so zeigt sich, dass die Nutzung von \textit{Englisch} für die meisten Fakultäten über die Jahre zugenommen hat.
-In dem selben Zeitrahmen stieg auch die Nutzung von externen \glspl{forschungsdaten} an, wie sich in der Verteilung von \textit{Externe \glspl{forschungsdaten}} über die verschiedenen Fakultäten und Zeitgruppen hinweg in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_externe-fd} gezeigt wurde.
+Andererseits sinkt die Nutzungsrate von \textit{Deutsch} und steigt für \textit{Englisch} an je höher die Klassifikationsstufe einer \gls{pdd} ist--bis sie schließlich auf \textit{Level~1} Parität erreichen.
+Beachtet man jedoch die Verteilung von \textit{Sprache} in \cref{fig:luh-repo_sprache_x_fakultät_x_zeitgruppe} über die einzelnen Fakultäten, so zeigt sich, dass die Nutzung von \textit{Englisch} für die meisten Fakultäten über die Jahre zugenommen hat.
+In demselben Zeitrahmen stieg auch die Nutzung von externen \glspl{forschungsdaten} an, wie in der Verteilung von \textit{Externe \glspl{forschungsdaten}} über die verschiedenen Fakultäten und Zeitgruppen hinweg in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_externe-fd} gezeigt wurde.
 
+\parsum{Fakultärer Sprachanteil}
 Dazu kommt, dass in einigen Fakultäten, die vergleichsweise viel \glspl{pdd} der dritten Stufe generieren, wie z.B.~in \gls{fakultät2}, der Anteil an englischsprachigen \glspl{pdd} sehr gering ist und auch nicht über die Jahre zugenommen hat, was die relative Verteilung von \textit{Stufe~3} unter den zwei Sprachen maßgeblich beeinflusst.
 
+\parsum{Schluss}
 Insgesamt ergibt sich für \textit{Sprache} das Bild, dass der Faktor nur indirekt mit denen der \glspl{forschungsdaten} korreliert.
-Es erscheint maßgeblicher, wie \textit{Sprache} durch \textit{Fakulät} geprägt wird und wie Fakultäten unterschiedliches Publikationsverhalten besitzen (wie in \cref{sec:luh-repo-results-faculties} gezeigt wurde).
+Es erscheint maßgeblicher, wie \textit{Sprache} durch \textit{Fakulät} geprägt wird und wie die Fakultäten unterschiedliche Publikationsverhalten besitzen (wie in \cref{sec:luh-repo-results-faculties} gezeigt wurde).
 
 \subsection{Externe Forschungsdaten}
-Besonders interessant ist das Publikationsverhalten zu externen \glspl{forschungsdaten}---auch da diese die eigentlich ideale Publikationsform darstellen.
+\parsum{Externe \glspl{forschungsdaten}}
+Besonders interessant ist das Publikationsverhalten zu externen \glspl{forschungsdaten}--auch da diese die eigentlich ideale Publikationsform darstellen.
 Betrachtet man \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_externe-fd}, so ist deutlich erkennbar, dass nur drei der neun Fakultäten für den Hauptteil aller extern publizierten \glspl{forschungsdaten} verantwortlich sind und in mehr als einer Zeitgruppe externe \glspl{forschungsdaten} produzierten: \gls{fakultät3}, \gls{fakultät4} und \gls{fakultät8}.
-Von diesen ist nutzt insbesondere \gls{fakultät4} externe \glspl{forschungsdaten} zu einem besonders hohen Anteil.
+Von diesen nutzt insbesondere \gls{fakultät4} externe \glspl{forschungsdaten} zu einem besonders hohen Anteil.
 Jedoch nutzen, auch von diesen Fakultäten, nur die wenigsten dedizierte \gls{forschungsdaten}-Repositorien.
-Stattdessen sind die meisten externen Publikationen Code auf GitHub~/~GitLab (für \gls{fakultät4}), in Datenbanken eingereichte Gensequenzen (für \gls{fakultät8}) oder Beireichungen zu Journal-Artikeln für kumulative Dissertationen.
+Stattdessen sind die meisten externen Publikationen Programmiercode und Skripte auf GitHub~/~GitLab (für \gls{fakultät4}), in Datenbanken eingereichte Gensequenzen (für \gls{fakultät8}) oder Beireichungen zu Journal-Artikeln für kumulative Dissertationen.
 Das bedeutet, dass der Anteil an extern publizierten \glspl{forschungsdaten} zwar insgesamt zunimmt, die Nutzung von entsprechenden Fachrepositorien bei Dissertationen jedoch weiterhin verschwindend gering bleibt.
 Tatsächlich war der Anteil so gering, dass es keine externe \gls{forschungsdaten} Veröffentlichung gab, in deren Metadaten spezifiziert wurde, dass diese dem Werk einer Dissertation zugehörig sei, was es unmöglich machte, empirisch zu untersuchen, welche Metadateneinträge hierfür am häufigsten genutzt werden.
 Insgesamt besteht dennoch ein Trend dazu, besonders hochwertige Daten eher extern zu publizieren, statt diese in der Dissertation integriert zu veröffentlichen.
 Dies lässt sich daran erkennen, dass der Gesamtanteil an allgemeinen und externen \textit{Stufe~1} \glspl{pdd} über die Zeitgruppen stetig zugenommen hat, gleichzeitig aber für integrierte \glspl{forschungsdaten} abgenommen hat, wie in \cref{tab:luh-repo-classification-general-publication-adjusted} gezeigt wurde.
 
 \subsection{Zeitliche Entwicklung von Forschungsdaten und Fakultäten}
+\parsum{Zeitliche Trends}
 Abgesehen davon, dass extern publizierte \glspl{forschungsdaten} über die Jahre zugenommen haben, lassen sich einige andere allgemeine Trends für \glspl{pdd} im \gls{luh-repo} erkennen.
-Ein auf ersten Blick kontraintuitiver Trend ist, dass der Anteil an allgemeinen \glspl{pdd} ohne publizierte \glspl{forschungsdaten} für die letzte Jahresgruppe 2020--2023 stark zugenommen hat.
-Betrachtet man jedoch die allgemeine Nutzungsrate des \gls{luh-repo}s nach Fakultäten und Zeitgruppen in \cref{tab:luh-repo-zahlenspiegel-summary}, lässt sich feststellen, dass sich die Nutzungsrate für die letzte Zeitgruppe besonders stark verändert hat:
+Ein auf den ersten Blick kontraintuitiver Trend ist, dass der Anteil an allgemeinen \glspl{pdd} ohne publizierte \glspl{forschungsdaten} für die letzte Jahresgruppe 2020--2023* stark zugenommen hat.
+Betrachtet man jedoch die allgemeine Nutzungsrate des \gls{luh-repo}s nach Fakultäten und Zeitgruppen (\cref{tab:luh-repo-zahlenspiegel-summary}), lässt sich feststellen, dass sich die Nutzungsrate für die letzte Zeitgruppe besonders stark verändert hat:
 Insbesondere in der vorherigen Zeitgruppe schwach vertretene Fakultäten wie \gls{fakultät3}, \gls{fakultät4} und \gls{fakultät9} haben ihren Anteil an \gls{luh-repo}-Dissertationen stark erhöht.
-Auch \gls{fakultät6}, welche besonders notorisch zu sein scheint, wenige \glspl{forschungsdaten} zu veröffentlichen, hat seinen Anteil um ca.~$\SI{65}{\percent}$ gegenüber der vorherigen Zeitgruppe erhöht.
-Während diese Kompositionsveränderung des \gls{luh-repo}s den abnehmenden \gls{forschungsdaten} Trend zumindest zum Teil erklären, zeigt \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_fd} dennoch auf, dass dieser Trend auch einige Fakultäten intern betrifft:
+Auch \gls{fakultät6}, welche besonders konsistent wenige \glspl{forschungsdaten} veröffentlicht, hat seinen Anteil um ca.~$\SI{65}{\percent}$ gegenüber der vorherigen Zeitgruppe erhöht.
+Während diese Kompositionsveränderung des \gls{luh-repo}s den abnehmenden \gls{forschungsdaten}-Trend zumindest zum Teil erklären, zeigt \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_fd} dennoch auf, dass dieser Trend auch einige Fakultäten intern betrifft:
 Nämlich \gls{fakultät2}, \gls{fakultät3}, \gls{fakultät5} und \gls{fakultät6} (und in deutlich geringerem Umfang auch \gls{fakultät8} und \gls{fakultät10}).
 Was genau diese Abnahme verursacht ist nicht bekannt und Bedarf weiterer Beobachtung und Erforschung.
 
+\parsum{Begleitende \glspl{forschungsdaten}}
 Was die Option betrifft, \glspl{forschungsdaten} begleitend zu der Dissertation im \gls{luh-repo} zu veröffentlichen, so lässt sich hierzu sagen, dass es eine sehr wenig genutzte Möglichkeit ist.
-Wie in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_begleit-fd} gezeigt wurde, gibt es allerdings einen kleinen aber konsistenten Kern an Nutzern, welcher statistisch signifikant insbesondere \gls{fakultät8} und \gls{fakultät9} zugeordnet werden kann.
-Es erscheint unwahrscheinlich, dass die Nutzungsrate dieser Publikationsart sich in über die nächsten Jahre ändern wird, da zumindest bisher Zeit kein statistisch signifikanter Faktor war (siehe \cref{sec:luh-repo-results-time}).
+Wie in \cref{fig:luh-repo_fakultät_x_zeitgruppe_x_begleit-fd} gezeigt wurde, gibt es allerdings einen statistisch signifikanten kleinen aber konsistenten Kern an Nutzern, welcher insbesondere häufig der \gls{fakultät8} und der \gls{fakultät9} zugeordnet werden kann.
+Es erscheint unwahrscheinlich, dass die Nutzungsrate dieser Publikationsart sich über die nächsten Jahre ändern wird, da zumindest bisher Zeit kein statistisch signifikanter Faktor war (siehe \cref{sec:luh-repo-results-time}).
 
 \subsection{Handlungsempfehlungen}
-Die Resultate in \cref{sec:luh-repo-results} zeigen mehrere Möglichkeiten auf, was die \gls{tib}~/~die \gls{luh} tun oder beachten können, um ihre Services weiter auszubauen.
+\parsum{Empfehlungs\-kategorien}
+Die Resultate in \cref{sec:luh-repo-results} zeigen mehrere Möglichkeiten auf, was die \gls{tib}~/~die \gls{luh} tun oder beachten kann, um ihren Services weiter auszubauen.
 Diese Möglichkeiten teilen sich in zwei Hauptbereiche: Nutzung des \gls{luh-repo}s und verbessertes \gls{fdm} durch die Promovierenden.
 
 \subsubsection{Nutzung des \gls{luh-repo}s}
-Wie in \cref{sec:luh-repo-results-zahlenspiegel} dargestellt wird das \gls{luh-repo} von den verschiedenen Fakultäten der \gls{luh} unterschiedlich stark für die Publikation von Dissertationen genutzt.
+\parsum{Nutzergruppen}
+Wie in \cref{sec:luh-repo-results-zahlenspiegel} dargestellt, wird das \gls{luh-repo} von den verschiedenen Fakultäten der \gls{luh} unterschiedlich stark für die Publikation von Dissertationen genutzt.
 Während Promovierende aus sieben der neun Fakultäten inzwischen mindestens annäherend die Hälfte aller ihrer neuen Dissertationen auf \gls{luh-repo} publizieren, nämlich die Intermediär- und Intensivnutzer des Repositoriums, gibt es hierbei zwei bedeutende Ausreißer:
 Die Geringnutzer des \gls{luh-repo}, \gls{fakultät5} und \gls{fakultät6}, welche weniger als ein Viertel ihrer neuen Dissertationen im \gls{luh-repo} publizieren.
-Dieser Befund stimmt mit früherer Forschung überein, da diese zeigte, dass sowohl die Ingenieurswissenschaften (und verwandte Unterdisziplinen) wie auch die Rechtswissenschaftne besonders schwach im Open Access Bereich vertreten sind \autocite{Archambault2014,Piwowar2018,Severin2020-Jura,Hamann2019-OA,Fischer2022-Jura}.
+Dieser Befund stimmt mit früherer Forschung überein, da diese zeigte, dass sowohl die Ingenieurswissenschaften (und verwandte Unterdisziplinen) wie auch die Rechtswissenschaften besondersf schwach im Open Access Bereich vertreten sind \autocite{Archambault2014,Piwowar2018,Severin2020-Jura,Hamann2019-OA,Fischer2022-Jura}.
 Dennoch bedeuten diese geringen Werte, dass hier aktiver Handlungsbedarf seitens der \gls{luh} und der \gls{tib} besteht.
-So sollte vermehrt Aufklärungs-, Beratungs- und Werbearbeit zielgerichtet auf \gls{fakultät5} und \gls{fakultät6} gerichtet werden.
+So sollte vermehrt Aufklärungs-, Beratungs- und Werbearbeit auf \gls{fakultät5} und \gls{fakultät6} ausgerichtet werden.
 
-So kann hier insbesondere im Bereich der Rechtswissenschaft erfolgreiche Aufklärungsarbeit stattfinden, da Rechtswissenschaftler sich häufig nicht der Möglichkeit von Open Access bewusst sind---so sind z.B. die wenigsten mit ihrem Zweitveröffentlichungsrecht vertraut \autocite[91]{Eisentraut}.
-Gleichzeitig ist in den Rechtswissenschaft die Verbreitung von Dissertationen in Deutschland \enquote{äußerst mangelhaft} \autocite[50]{Steinhauer2019-OA}, wobei ein vermehrter Wandel auf Open Access Abhilfe schaffen könnte.
+\parsum{Rechtswissenschaft}
+Hier kann insbesondere im Bereich der Rechtswissenschaft erfolgreiche Aufklärungsarbeit stattfinden, da Rechtswissenschaftler sich häufig nicht der Möglichkeit von Open Access bewusst sind--so sind z.B. die wenigsten mit ihrem Zweitveröffentlichungsrecht vertraut \autocite[91]{Eisentraut}.
+Gleichzeitig ist in der Rechtswissenschaft die Verbreitung von Dissertationen in Deutschland \enquote{äußerst mangelhaft} \autocite[50]{Steinhauer2019-OA}, wobei ein vermehrter Wandel auf Open Access Abhilfe schaffen könnte.
 
+\parsum{Kontakt}
 Allgemein sollte bei diesen beiden Fakultäten Kontakt aufgebaut werden und jeweils gemeinsam besprochen werden, welche Bedenken vor einer höheren Nutzung des \gls{luh-repo}s bestehen, die diversen Vorteile von Open Access erörtert \autocite{Bautista-Puig2020} und auch aufgezeigt werden, dass z.B.~ein bisheriger Mangel an High Impact Open Access Publikationen kein Indikator dafür ist, dass ein entsprechender Markt nicht sehr schnell entwickelt werden kann \autocite{Björk2012}.
 
 \subsubsection{Forschungsdaten}
+\parsum{Geringe \glspl{forschungsdaten}-Zahlen}
 \cref{sec:luh-repo-results} hat gezeigt, dass nur ein Drittel aller Autoren von \glspl{pdd} aus dem \gls{luh-repo} \glspl{forschungsdaten} der \textit{Stufe~1} und \textit{Stufe~2} publiziert hat, während ein weiteres Drittel überhaupt keine \glspl{forschungsdaten} publiziert hat.
 Unter Ausschluss integrierter \glspl{forschungsdaten} stieg hierbei der Anteil jener, die keine \glspl{forschungsdaten} publizieren, sogar auf über \SI{90}{\percent}.
 
-Entsprechend gibt es hier zwei separate aber verwandte Bereiche, bei denen Promovierende an der \gls{luh} eventuell zusätzliche Unterstützung erfahren oder durch vermerte Werbearbeit auf existierende Angebote der \gls{luh}~/~\gls{tib} aufmerksam gemacht werden sollten:
+\parsum{Empfehlungs\-bereiche}
+Entsprechend gibt es hier zwei separate aber verwandte Bereiche, bei denen Promovierende an der \gls{luh} eventuell zusätzliche Unterstützung erfahren oder durch vermehrte Werbearbeit auf existierende Angebote der \gls{luh}~/~\gls{tib} aufmerksam gemacht werden sollten:
 (i)~die Identifikation von eigenen \glspl{pd}, die zur Verfügung gestellt werden sollten, und (ii)~die Möglichkeit, wie dies durch externe Repositorien nach den \gls{fair}-Prinzipien stattfinden kann.
 
+\parsum{Identifikation eigener \glspl{pd}}
 Ersteres kann insofern ein wichtiger Faktor sein, da die \gls{forschungsdaten}-Richtlinie der \gls{luh} eigentlich vorsieht, dass die \glspl{forschungsdaten} nach Möglichkeit publiziert werden sollten \autocite{luhfdm-richtlinie}.
 Dies scheint aber nicht in vollem Umfang durch die Promovierenden umgesetzt zu werden.
-Eine Möglichkeit für diesen Umstand könnte sein, dass Promovierende einfach unterschätzen, welche \glspl{pd} für die Veröffentlichung relevant sein könnten.
+Einen Grund für diesen Umstand könnte sein, dass Promovierende einfach unterschätzen, welche \glspl{pd} für die Veröffentlichung relevant sein könnten.
 
-Eine Möglichkeit, wie für das bestehende Beratungs- und Informationsangebot zu \gls{fdm} unter den Studierenden und Promovierenden Werbearbeit gemacht und gleichzeitig auch erweitert werden könnte, wäre die Nutzung eines \gls{ki} Modells, welches darauf trainiert wurde, zu erkennen, welche Datensätze in einer Arbeit implizit genutzt werden und daher eventuell auch explizit veröffentlicht werden sollten.
+\parsum{DataSeer-Kampagne}
+Eine Möglichkeit, wie für das bestehende Beratungs- und Informationsangebot zu \gls{fdm} unter den Studierenden und Promovierenden Werbearbeit gemacht und gleichzeitig auch erweitert werden kann, wäre die Nutzung eines \gls{ki} Modells, welches darauf trainiert wurde, zu erkennen, welche Datensätze in einer Arbeit implizit genutzt werden und daher eventuell auch explizit veröffentlicht werden sollten.
 Eine Möglichkeit hierzu wäre das \textit{DataSeer}-Projekt \autocite{dataseer}, welches entwickelt wurde, um Forschenden und Herausgebern von wissenschaftlichen Journalen dabei zu helfen, zu identifizieren, welche Datensätze einem Artikel zugrunde liegen und welche daher idealerweise auch geteilt oder referenziert werden sollten.
 Da es sich bei \textit{DataSeer} um ein quelloffenes Projekt handelt, wäre hier eine Möglichkeit, dass die \gls{tib} oder die \gls{luh} eine eigene Instanz hostet, welche \gls{luh}-Angehörigen zur Verfügung steht.
 Hier könnte dann durch Plakate und andere Medien eine \enquote{Check Your Data}-Kampagne gestartet werden, welche den \gls{ki}-Aspekt des Projektes in den Vordergrund stellt, um die Neugier der Studierenden und Promovierenden dafür zu nutzen, deren wissenschaftliche Praxis oder zumindest wissenschaftliche \gls{forschungsdaten}-Achtsamkeit zu verbessern.
 
-Was die Möglichkeit betrifft, \glspl{forschungsdaten} in ein externes Repositorium hochzuladen, so könnte ein mangelndes Wissen um welche Repositorien existieren und wie diese genutzt werden können ein Faktor sein, warum so wenige \glspl{pdd} im \gls{luh-repo} externe \glspl{forschungsdaten} in dedizierte \gls{forschungsdaten}-Repositorien hochgeladen haben.
-Hier sollte vermehrt Werbearbeit für das institutionelle \gls{forschungsdaten}-Repositorium und für die allgemeine \gls{fdm}-Informationswebseite der \gls{luh} gemacht werden---welche bereits auf geeignete Repositorien-Suchmöglichkeiten wie z.B. \textit{re3data} hinweist \autocite{luhfdm-extern}.
+\parsum{Repositorien}
+Was die Möglichkeit betrifft, \glspl{forschungsdaten} in ein externes Repositorium hochzuladen, so könnte ein mangelndes Wissen, welche Repositorien existieren und wie diese genutzt werden können, ein Faktor sein, warum so wenige \glspl{pdd} im \gls{luh-repo} externe \glspl{forschungsdaten} in dedizierte \gls{forschungsdaten}-Repositorien hochgeladen haben.
+Hier sollte vermehrt Werbearbeit für das institutionelle \gls{forschungsdaten}-Repositorium und für die allgemeine \gls{fdm}-Informationswebseite der \gls{luh} gemacht werden--welche bereits auf geeignete Repositorien-Suchmöglichkeiten wie z.B. \textit{re3data} hinweist \autocite{luhfdm-extern}.
 
+\parsum{Prominenz}
 Eine Option hierfür wäre, dass die Ressourcen zu externen Beratungsmöglichkeiten prominenter dargestellt werden.
 So könnte ein Link zu der entsprechenden Seite auf der Hauptseite des Informationsportals eingestellt werden.
+\pagebreak
 
+\parsum{Pflichtkurse}
 Eine andere Option hierfür wäre, den bereits existierenden autodidaktischen \gls{fdm}-Einführungskurs der \gls{luh} für Studierende und Promovierende verpflichtend zu machen, sodass diese einen Nachweis hierzu erbringen müssen.
 Für Studierende müsste dies in den Semestern vor der Abschlussarbeit und für Promovierende in den ersten Semestern ihrer Forschungstätigkeit der Fall sein, um die gewünschte Wirkung zu maximieren.
-Auch könnte, unter Absprache mit den Fakultäten und der Universitätsleitung, eine verpflichtende Erstellung eines \gls{dmp} einerseits die wissenschaftliche Praxis im Allgemeinen verbessern und andererseits den Studierenden bzw. Promovierenden die hohe Relevanz der Thematik \gls{fdm} zu vermitteln.
+Auch könnte, unter Absprache mit den Fakultäten und der Universitätsleitung, eine verpflichtende Erstellung eines \gls{dmp} einerseits die wissenschaftliche Praxis im Allgemeinen verbessern und andererseits den Studierenden bzw. Promovierenden die hohe Relevanz der Thematik \gls{fdm} vermitteln.
 

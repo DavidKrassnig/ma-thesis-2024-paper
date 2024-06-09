@@ -1,41 +1,55 @@
-\chapter{LUH-Repo Skripte}
+\chapter{Forschungsdaten im Repositorium der Leibniz Universität Hannover}
 \section{Tabellen}
 \begin{table}[!htbp]
-	\caption{\gls{forschungsdaten}-Klassifizierung der Dissertationen aus der Stichprobe nach $\text{\textit{Fakultät}}\times\text{\textit{Klassifikationsstufe}}$ aufgegliedert.
+	\caption{\gls{forschungsdaten}-Klassifizierung der Dissertationen aus der Stichprobe nach \textit{Sprache}~$\times$~\textit{Zeitgruppe} aufgegliedert.
+    Angaben relativ zu der Gesamtanzahl der jeweiligen Zeitgruppe.
+    Absolute Werte in Klammern angegeben.}
+    \input{content/tables/luh-repo-classification-language.tex}
+    \label{tab:luh-repo-sprache-zeitgruppe}
+\end{table}
+
+\begin{table}[!htbp]
+	\caption{\gls{forschungsdaten}-Klassifizierung der Dissertationen aus der Stichprobe nach \textit{Fakultät}~$\times$~\textit{Klassifikationsstufe} aufgegliedert.
     Angabe relativ zu der respektiven Gesamtanzahl für \textit{Fakultät}.
     Absolute Werte in Klammern angegeben.}
     \input{content/tables/luh-repo-classification-general-all-faculty.tex}
     \label{tab:luh-repo-classification-general-all-faculty}
 \end{table}
-
+\pagebreak
 \begin{table}[!htbp]
-	\caption{\gls{forschungsdaten}-Klassifizierung der Dissertationen aus der Stichprobe nach $\text{\textit{Publikationsart}}\times\text{\textit{Klassifikationsstufe}}\times\text{\textit{Jahresgruppe}}$ aufgegliedert.
+	\caption{\gls{forschungsdaten}-Klassifizierung der Dissertationen aus der Stichprobe nach \textit{Publikationsart}~$\times$~\textit{Klassifikationsstufe}~$\times$~\textit{Jahresgruppe} aufgegliedert.
     Angaben relativ zu der Gesamtanzahl der Jahresgruppe.
     Absolute Werte in Klammern angegeben.}
     \input{content/tables/luh-repo-classification-general-publication.tex}
     \label{tab:luh-repo-classification-general-publication}
 \end{table}
+\pagebreak
+
 \section{Grafiken}
 \begin{figure}[!htbp]
     \resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{\input{content/images/luh-repo-faculty-yeargroup-classification.tikz}}
     \caption{\gls{forschungsdaten}-Klassifikation der Dissertationen aus der Stichprobe nach Fakultät, Zeitgruppe und Klassifikationsstufe.
-    Die Höhe der Barren entsprechen dem relativen Anteil zur jeweiligen $\text{\textit{Fakultät}}\times\text{\textit{Zeitgruppe}}$-Gesamtanzahl.
+    Die Höhe der Barren entsprechen dem relativen Anteil zur jeweiligen \textit{Fakultät}~$\times$~\textit{Zeitgruppe}-Gesamtanzahl.
     Absolute Werte in Klammern angegeben.}
     \label{fig:luh-repo-faculty-yeargroup-classification}
     \end{figure}
 
-    \begin{figure}[!htbp]
-        \centering%
-        \resizebox{.33\textwidth}{!}{\input{content/images/faculty_a_sampled_evaluated_factors-only_Zeitgruppe_x_FD_absolute_boxplot.tex}}%
-        \resizebox{.33\textwidth}{!}{\input{content/images/faculty_a_sampled_evaluated_factors-only_Zeitgruppe_x_FD_relative_column_boxplot.tex}}%
-        \resizebox{.33\textwidth}{!}{\input{content/images/faculty_a_sampled_evaluated_factors-only_Zeitgruppe_x_FD_relative_row_boxplot.tex}}%
-        \caption{Klassifikation-Kastengrafiken für $\text{\textit{Zeitgruppe}}\times\text{\textit{\gls{forschungsdaten}}}$ für \gls{fakultät2}. \textbf{(A)}~Absolute Streuung. \textbf{(B)}~Streuung relativ zum Stufengesamtwert. \textbf{(C)}~Streuung relativ zum \textit{Zeitgruppe}-Gesamtwert.}
-        \label{fig:faculty_a_sampled_evaluated_factors-only_Zeitgruppe_x_FD_absolute_boxplot}
-    \end{figure}
+% \pagebreak
+% \begin{figure}[!htbp]
+%     \centering%
+%     \resizebox{.33\textwidth}{!}{\input{content/images/faculty_a_sampled_evaluated_factors-only_Zeitgruppe_x_FD_absolute_boxplot.tex}}%
+%     \resizebox{.33\textwidth}{!}{\input{content/images/faculty_a_sampled_evaluated_factors-only_Zeitgruppe_x_FD_relative_column_boxplot.tex}}%
+%     \resizebox{.33\textwidth}{!}{\input{content/images/faculty_a_sampled_evaluated_factors-only_Zeitgruppe_x_FD_relative_row_boxplot.tex}}%
+%     \caption{Klassifikation-Kastengrafiken für $\text{\textit{Zeitgruppe}}\times\text{\textit{\gls{forschungsdaten}}}$ für \gls{fakultät2}. \textbf{(A)}~Absolute Streuung. \textbf{(B)}~Streuung relativ zum Stufengesamtwert. \textbf{(C)}~Streuung relativ zum \textit{Zeitgruppe}-Gesamtwert.}
+%     \label{fig:faculty_a_sampled_evaluated_factors-only_Zeitgruppe_x_FD_absolute_boxplot}
+% \end{figure}
 
-
-\section{Skripte}
-\lstinputlisting[language=Python,label={lst:python-luh-repo-stratification},caption={FIXME!}]{content/code/python-luh-repo-stratification.py}
-\lstinputlisting[language=Python,label={lst:simple-dspace5-downloader},caption={FIXME!}]{content/code/simple-dspace-downloader.py}
-\lstinputlisting[language=Bash,label={lst:luh-repo-document-search},caption={FIXME!}]{content/code/bash-luh-repo-search.sh}
-\lstinputlisting[language=Python,label={lst:bash-luh-repo-csv-combiner},caption={FIXME!}]{content/code/luh-repo-csv-combiner.py}
+% \pagebreak
+% \section{Skripte}
+% \lstinputlisting[language=Python,label={lst:python-luh-repo-stratification},caption={Python-Skript, welches die Grundmenge aus \cref{ch:luh-repo} in die entsprechenden Schichten nach Zeitgruppe und Fakultäten sortiert und in separate CSV-Dateien abspeichert.}]{content/code/python-luh-repo-stratification.py}
+% \newpage
+% \lstinputlisting[language=Python,label={lst:simple-dspace5-downloader},caption={FIXME!}]{content/code/simple-dspace-downloader.py}
+% \newpage
+% \lstinputlisting[language=Bash,label={lst:luh-repo-document-search},caption={FIXME!}]{content/code/bash-luh-repo-search.sh}
+% \newpage
+% \lstinputlisting[language=Python,label={lst:bash-luh-repo-csv-combiner},caption={FIXME!}]{content/code/luh-repo-csv-combiner.py}

@@ -116,6 +116,8 @@
     \definecolor{c98bfe6}{RGB}{152,191,230}
     \definecolor{c3574b7}{RGB}{53,116,183}
     \definecolor{c83addb}{RGB}{131,173,219}
+    \definecolor{c125b85}{RGB}{18,91,133}%Wappen
+    \definecolor{cd5a544}{RGB}{213,165,68}%Wappen
     \def \globalscale {1.000000}
 \usepackage{pgfplotstable}
 \usepackage{pgf-pie}
@@ -197,24 +199,25 @@
 %Anmerkung: Das Bibliografieformat muss oben unter Dokumentpakete eingestellt werden
 
 %% Hauptdokument %%
-\includeonly{content/schluss} %Selektive Dokumentgenerierung
+%\includeonly{appendices/appendice-part,appendices/richtlinienklassifikation,appendices/luh-repo-code} %Selektive Dokumentgenerierung
 \begin{document}
     %% Vorderer Teil
     \frontmatter
-        %\include{matter/titlepage/titlepage}    %Titelseite ohne Logo
+        \include{matter/titlepage/titlepage}    %Titelseite ohne Logo
         %\include{matter/titlepage/titlepage_logo_bw}%Titelseite mit Logo (schwarz-weiß)
-        \include{matter/titlepage/titlepage_logo_colour}%Titelseite mit Logo (farbig)
+        %\include{matter/titlepage/titlepage_logo_colour}%Titelseite mit Logo (farbig)
         \newgeometry{left=35mm,right=35mm,marginparwidth=20mm}%Erhöhe Seitenränder für Randnotizen
         \include{matter/frontmatter/abstract}      %Deutscher und Englischer Abstract
+        \include{matter/frontmatter/danksagung}
         \include{matter/frontmatter/content_list}  %Inhalts-, Tabellen- und Abbildungsverzeichnis
     %
     %% Hauptteil
     \mainmatter
-        \include{content/einfuehrung}\glsresetall
-        \include{content/forschungsstand}\glsresetall
-        \include{content/fdm-policies}\glsresetall
-        \include{content/luh-repo-evaluation}\glsresetall
-        \include{content/schluss}\glsunsetall
+        \include{content/einfuehrung}%\glsresetall
+        \include{content/forschungsstand}%\glsresetall
+        \include{content/fdm-policies}%\glsresetall
+        \include{content/luh-repo-evaluation}%\glsresetall
+        \include{content/schluss}%\glsunsetall
     %
     %% Hinterer Teil
     {\backmatter%GESCHWEIFTE KLAMMERN NICHT LÖSCHEN! Beeinflusst sonst den Appendix!
