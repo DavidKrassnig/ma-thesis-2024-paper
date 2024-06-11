@@ -1,3 +1,12 @@
 \cleardoubleoddstandardpage
 %% Ersetze die folgende PDF-Datei mit einer eigens ausgefüllten Variante
-\includepdf[pages=-]{matter/backmatter/selbststaendigkeitserklaerung.pdf}
+\includepdf[pages=-,pagecommand={\thispagestyle{empty}\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=west] at (0.4, -0.85) {Krassnig};
+    \node[anchor=west] at (8.3, -0.85) {David};
+    \node[anchor=west] at (0.4, -2.125) {632351};
+    \path [fill=black] (-0.1,-6.15) rectangle (0.04,-6.3);
+    \node[draw, align=left, draw=none, anchor=north west, execute at begin node=\setlength{\baselineskip}{1.35\baselineskip}] at (-1.45,-9.775) {Publikationspraktiken für Forschungsdaten in Hochschulschriften: Eine Untersuchung der\\ Veröffentlichungsformate und -methoden};
+    \node[anchor=west] at (0.4, -21.15) {12.06.2024};
+    \node[inner sep=0pt, anchor=west] at (8.85,-21.15)
+    {\includegraphics[width=.25\textwidth]{matter/backmatter/signature.png}};
+  \end{tikzpicture}}]{matter/backmatter/selbststaendigkeitserklaerung.pdf}

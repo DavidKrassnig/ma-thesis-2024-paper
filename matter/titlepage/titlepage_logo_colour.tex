@@ -1,5 +1,6 @@
 \makeatletter
 \begin{titlepage}
+\newgeometry{top=42.5mm,bottom=42.5mm,left=30mm,right=30mm}
 \doublespacing\centering%
 \vspace*{-24.5mm}\noindent\makebox[\textwidth]{\phantom{Vadid Gissnkra}\hspace*{-19mm}\includesvg[height=32.5mm]{matter/titlepage/logo/hu_berlin_logo_text_singleline_simplified.svg}}
 
@@ -63,3 +64,29 @@
 \enlargethispage{16mm}\textbf{\large\sffamily Berlin, \@date}
 \end{titlepage}
 \makeatother
+\thispagestyle{empty}
+\hbox{}\vfill\enlargethispage{15mm}
+\begin{tabbing}
+\noindent\textbf{Autor:}~~~~~\=Dr. David Krassnig\\
+\>\orcidlink{0000-0002-1626-7987} \url{https://orcid.org/0000-0002-1626-7987}\\[\baselineskip]
+\textbf{Lizenz (Dokument):}~~~~~\= \href{https://creativecommons.org/licenses/by/4.0/deed.de}{CC BY 4.0}\\
+\textbf{DOI (Dokument):}\> \href{https://www.doi.org/10.5281/zenodo.11506621}{10.5281/zenodo.11506621}\\[.5\baselineskip]
+\textbf{Lizenz (Daten):}\> \href{https://creativecommons.org/publicdomain/zero/1.0/deed.de}{CC0 1.0}\\
+\textbf{DOI (Daten):}\> \href{https://www.doi.org/10.5281/zenodo.11401021}{10.5281/zenodo.11401021}
+\end{tabbing}\newpage
+\thispagestyle{empty}
+\hbox{}
+\vspace{30mm}
+\begin{flushright}
+{\LARGE\scshape Wasing the always of wanting of knowing}\\[.5\baselineskip]
+{\footnotesize --Brandon Sanderson, \textit{Shadows of Self}}
+\end{flushright}
+\vfill
+\hbox{}
+\enlargethispage{30mm}
+\vfill
+\begin{figure}[b]
+  \centering
+\resizebox{22.5mm}{!}{\input{content/images/familienwappen.tex}}
+\end{figure}
+\restoregeometry

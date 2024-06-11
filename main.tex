@@ -29,7 +29,7 @@
     hyperfootnotes=false,
     %twocolumn,              %Für zweispaltige Darstellung
     %draft,                  %Auskommentieren für den Entwurfsmodus
-    %final                   %Auskommentieren für den endgültigen Druck
+    final                   %Auskommentieren für den endgültigen Druck
     ]{scrbook}              %Verwendung der KOMA-Script book-Klasse
 
 %% Dokumentpaketeausschluss
@@ -129,9 +129,9 @@
 \usepackage{listings}
     \input{config/listings.tex}
 \usepackage[all]{nowidow}
-\usepackage[nomargin,lang=ngerman,singleuser,author=DK]{fixme}
-    \fxsetup{draft,layout=pdfcnote,theme=color}
-    \definecolor{fxtarget}{rgb}{0.8000,0.0000,0.0000}
+% \usepackage[nomargin,lang=ngerman,singleuser,author=DK]{fixme}
+%     \fxsetup{draft,layout=pdfcnote,theme=color}
+%     \definecolor{fxtarget}{rgb}{0.8000,0.0000,0.0000}
 
 %% Neue Befehle und Variabeln
 \input{config/possessive_citation} %\posscite-Befehl für besitzanzeigende Zitate im Englischen einbinden
@@ -199,7 +199,7 @@
 %Anmerkung: Das Bibliografieformat muss oben unter Dokumentpakete eingestellt werden
 
 %% Hauptdokument %%
-%\includeonly{appendices/appendice-part,appendices/richtlinienklassifikation,appendices/luh-repo-code} %Selektive Dokumentgenerierung
+%\includeonly{appendices/dmp} %Selektive Dokumentgenerierung
 \begin{document}
     %% Vorderer Teil
     \frontmatter
@@ -227,6 +227,7 @@
     %% Appendix
     \appendix
     \include{appendices/appendice-part}
+    %\include{appendices/dmp}
     \include{appendices/richtlinienklassifikation}
     \include{appendices/luh-repo-code}
     %% Selbstständigkeitserklärung

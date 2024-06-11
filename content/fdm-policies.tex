@@ -14,9 +14,9 @@ In diesem Abschnitt wird das zu untersuchende Material in \cref{sec:policy-mater
 
 \subsection{Material}\label{sec:policy-material}
 \parsum{Datengrund\-lage}
-Da es in Deutschland hierzu keine offizielle und öffentlich zugängliche Liste aller Universitäten mit Promotionsrecht seitens des \gls{bmbf} gibt, wird als Datengrundlage für dieses Kapitel die von der \citeauthor{Hochschulkompass-Liste} geführte Liste aller wissenschaftlichen Institutionen aus dem tertiären Bildungsbereich in Deutschland \autocite{Hochschulkompass-Liste} genutzt.
-Diese Liste wird tagesaktuell, basieren auf der Selbstauskunft aller involvierten Institutionen ($n=428$), geführt.
-Sie kodifiziert, unter anderem, welche Institutionen das Promotions- und Habilationsrecht führen und umfasst auch Institutionen, die nicht Mitglied der \citeauthor{Hochschulkompass-Liste} sind.
+Da es in Deutschland hierzu keine offizielle und öffentlich zugängliche Liste aller Universitäten mit Promotionsrecht seitens des \gls{bmbf} gibt, wird als Datengrundlage für dieses Kapitel die von der \gls{hrk} geführte Liste aller wissenschaftlichen Institutionen aus dem tertiären Bildungsbereich in Deutschland \autocite{Hochschulkompass-Liste} genutzt.
+Diese Liste wird tagesaktuell, basierend auf der Selbstauskunft aller involvierten Institutionen ($n=428$), geführt.
+Sie kodifiziert, unter anderem, welche Institutionen das Promotions- und Habilationsrecht führen und umfasst auch Institutionen, die nicht Mitglied der \gls{hrk} sind.
 Sie besitzt einen \textit{de facto} wenn auch nicht \textit{de jure} Status als Datengrundlage für allgemeine Informationen zu wissenschaftlichen Institutionen in Deutschland.
 Für die tagesspezifische Version der Liste, die für diese Arbeit genutzt wurde, siehe \autocite{my-dataset}.
 
@@ -25,14 +25,14 @@ Um die zentrale Forschungsfrage dieses Kapitels zu beantworten, wurde diese List
 Die resultierende Liste promotionsberechtigter Institutionen besteht aus Forschungsinstutionen verschiedener Hochschultypen sowie unterschiedlicher Trägerschaften.
 Von den Hochschultypen her umfasst die Liste Universitäten, \glspl{fh}, \glspl{haw}, \glspl{kh}, eine \gls{vh} sowie eine \gls{hset}.
 Von den Trägerschaften her umfasst die Liste öffentlich-rechtliche, private sowie kirchliche Institutionen. Alle Institutionen sind staatlich anerkannt.
-Die relative sowie die absolute Distribution aller promotionsberechtigter Institutionen in Deutschland nach Hochschultyp und Trägerschaft ist in \cref{tab:grundmenge-beschreibung-art} gegeben.
+Die relative sowie absolute Distribution aller promotionsberechtigter Institutionen in Deutschland nach Hochschultyp und Trägerschaft ist in \cref{tab:grundmenge-beschreibung-art} gegeben.
 \begin{table}[!htbp]
 	\caption{Die Verteilung aller promotionsberechtigter Institutionen in Deutschland nach $\text{\textit{Hochschultyp}}\times\text{\textit{Trägerschaft}}$ aufgegliedert. Absolute Werte in Klammern angegeben.}
     \input{content/tables/grundmenge-beschreibung-art.tex}
 	\label{tab:grundmenge-beschreibung-art}
 \end{table}
 
-\noindent Geografisch gesehen sind, in der gefilterten Liste, zu unterschiedlich hohen Anteilen, Institutionen aus allen deutschen Bundesländern vertreten.
+\noindent Geografisch gesehen sind, zu unterschiedlich hohen Anteilen, Institutionen aus allen deutschen Bundesländern in der gefilterten Liste vertreten.
 Die genaue Verteilung ist in \cref{fig:DE-grundmenge-beschreibung} wiedergegeben, um diese mit der späteren Verteilung der Stichprobe vergleichen zu können.
 \begin{figure}[!htbp]
     \centering
@@ -67,27 +67,27 @@ Die relative sowie die absolute Distribution aller Institutionen in der Stichpro
 	\label{tab:stichprobe-beschreibung-art}
 \end{table}
 
-\noindent Geografisch gesehen sind, in der Stichprobe, zu unterschiedlich hohen Anteilen, Institutionen aus allen deutschen Bundesländern vertreten.
+\noindent Geografisch gesehen sind, zu unterschiedlich hohen Anteilen, Institutionen aus allen deutschen Bundesländern in der Stichprobe vertreten.
 Die genaue Verteilung ist in \cref{fig:DE-stichprobe-beschreibung} wiedergegeben.
 \begin{figure}[!htbp]
     \centering
     \input{content/images/DE-stichprobe-beschreibung.tikz}
     \caption{Verteilung der Stichproben-Institutionen nach Bundesland. \textbf{(A)}~Die absolute Anzahl der Institutionen nach Bundesland.
     \textbf{(B)}~Der Anteil der Institutionen, die aus der Grundmenge übernommen wurden, relativ zum jeweiligen Bundesland.
-    Steigende Farbintensivität zeigt relative Nähe zu \SI{100}{\percent} an.}
+    Steigende Farbintensivität zeigt relative Nähe zum Maximalwert an.}
     \label{fig:DE-stichprobe-beschreibung}
 \end{figure}
 
 \parsum{Dokumentesammlung}
 Für die Evaluation, inwiefern die Institutionen der Stichprobe verwaltungsrechtliche Dokumente besitzen, die entweder allgemeine \gls{fdm}-Richtlinien für alle Forschenden der Institution oder spezifische Regelungen für Promovierende beinhalten, wurde deren gesamte öffentlich zugängliche Online-Präsenz nach relevanten Dateien und Webseiten durchsucht.
 Diese Suche fand im Allgemeinen über zwei Wege statt:
-die interne Suchfunktion der Institution und die externe Durchsuchung der Institutions-Domäne via der Suchmaschine \href{https://www.duckduckgo.com/}{DuckDuckGo}.
+die interne Suchfunktion der Institution und die externe Durchsuchung der Institutions-Domäne via der Suchmaschine \href{https://www.duckduckgo.com/}{\textit{DuckDuckGo}}.
 
 \parsum{Allgemeine Dokumente}
-Für allgemeine Richtlinien wurden in erster Linie eigenständige \gls{fdm}-Richtlinien gesucht.
-Hierfür wurde, jenseits der allgemeinen Suchmethode auch die dedizierte Forschungsdatenpolicies-Liste der Informationsplattform \citeauthor{Forschungsdaten2024} genutzt \autocite{Forschungsdaten2024}.%
+Für die allgemeinen Richtlinien wurden in erster Linie eigenständige \gls{fdm}-Richt\-linien gesucht.
+Hierfür wurde, jenseits der bereits beschriebenen allgemeinen Suchmethode auch die dedizierte Forschungsdatenpolicies-Liste der Informationsplattform \citeauthor{Forschungsdaten2024} genutzt \autocite{Forschungsdaten2024}.%
 \footnote{%
-    Die \gls{fdm}-Richtlinien, welche sich nicht auf diesem Portal haben finden lassen, werden vom Autor nach Beendigung dieser Arbeit dort nach Möglichkeit eingetragen.%
+    Die \gls{fdm}-Richtlinien, welche sich nicht auf diesem Portal haben finden lassen, werden vom Autor nach Beendigung dieser Arbeit dort nach Möglichkeit nachgetragen.%
 }
 Jenseits der spezifischen \gls{fdm}-Richtlinien wurden auch Richtlinien zur Sicherung der \gls{gwp} gesucht, da auch diese den Umgang mit \glspl{forschungsdaten} betreffen.
 Zusätzlich wurden auch andere Richtlinien gesucht, die den Forschenden Regeln zu \glspl{forschungsdaten} oder \gls{fdm} auferlegen, aber weder dedizierte \gls{forschungsdaten}-Richtlinien noch Regeln zum Einhalten der \gls{gwk} darstellen (diese Kategorie wird fortan als \textit{Andere Richtlinien} bezeichnet).
@@ -100,7 +100,7 @@ Dabei wurden sowohl fachspezifische Ordnungen wie auch verbindliche Rahmenbeding
 Die heterogene Handhabung dieser Dokumente seitens der Institutionen führte zu folgenden Selektionsregeln bei der Auswahl:
 (i)~Wenn es eine aktuelle Lesefassung der Promotionsordnung gibt, so wird diese bevorzugt.
 (ii)~Sollte es keine aktuelle Lesefassung der Promotionsordnung geben, so wird die aktuellste Gesamtversion der Promotionsordnung bevorzugt.
-(iii)~Sollte es keine aktuelle Gesamtversion geben, so werden zusätzlich zu der letzten Version der Promotionsordnung auch alle seither erschienen relevanten verwaltungsrechtlichen Addenda aufgenommen.
+(iii)~Sollte es keine aktuelle Gesamtversion geben, so werden, zusätzlich zu der letzten Version der Promotionsordnung, auch alle seither erschienen relevanten verwaltungsrechtlichen Addenda aufgenommen.
 (iv)~Wenn es von einem Dokument sowohl eine HTML- wie auch eine PDF-Datei gab, so wurde nur die PDF-Datei zur Evaluation weitergenutzt.
 Hierbei wurden insgesamt \num{754} Dokumente zur Weiterverarbeitung aufgenommen.
 
@@ -125,7 +125,7 @@ Die in \cref{sec:policy-material} gesammelten promotionsspezifischen Dokumente u
 Hierfür wurde mit einem Bash-Skript \autocite{my-dataset} der Anfang und das Ende des eingebetteten Textes via \emph{pdftotext} aus der \emph{Poppler}-Softwaresammlung \autocite{Poppler} angezeigt.
 % \lstinputlisting[language=Bash,label={lst:pdfheadtail},caption={Ein Bash-Skript, welches die ersten und letzten 20 Zeilen aller PDF-Dokumente in allen Unterordnern des jetzigen Ordners anzeigt.}]{content/code/pdfheadtail.sh}
 (ii)~Texte, die sich als maschinell nicht lesbar erwiesen haben, wurden notiert und später manuell klassifiziert.
-(iii)~Die restlichen Texte wurden zuerst mit einem Bash-Skript \autocite{my-dataset} daraufhin überprüft, ob sie Text beinhalten, der \glspl{forschungsdaten}, \gls{fdm} oder \gls{gwp} betrifft.
+(iii)~Die restlichen Texte wurden zuerst mit einem Bash-Skript \autocite{my-dataset} darauf überprüft, ob sie Text beinhalten, der \glspl{forschungsdaten}, \gls{fdm} oder \gls{gwp} betrifft.
 % \lstinputlisting[language=Bash,label={lst:fdmchecker},caption={Ein Bash-Skript, welches Erwähnung von \glspl{forschungsdaten} und \gls{gwp} in PDF-Dateien überprüft und den dazugehörigen Kontext anzeigt.}]{content/code/fdmchecker.sh}
 (iv)~Die durch das Skript angezeigten Treffer wurden dann auf Kontext überprüft und entsprechend manuell klassifiziert.
 Hierbei gab es fünf Klassifkationsstufen:
@@ -138,12 +138,12 @@ Hierbei gab es fünf Klassifkationsstufen:
 \end{enumerate}
 (v)~Jede Institution erhielt dann die Klassifikation des Dokumentes, welche die höchste hierarchische Klassifikationsstufe besitzt, es sei denn, die Institution hatte kein öffentlich zugängliches Dokument dieser Art.
 In diesem Fall wurde dies stattdessen als Klassifikationsstufe vermerkt.
-Es wurde zusätzlich notiert, ob die promotionsspezifischen Richtlinien für alle Promovierenden gelten oder ob dies nur auf eine Teilmenge zutrifft.
+Es wurde zusätzlich notiert, ob die promotionsspezifischen Richtlinien für alle Promovierenden gelten oder ob diese nur eine Teilmenge der Promovierenden betreffen.
 \pagebreak
 
 \parsum{Statistische Auswertung}
 Für die Kreuzprodukte aller vermuteter Faktoren sowie für die Klassifikation beider Dokumentgruppen wurden Chi-Quadrat-Tests für Unabhängigkeit durchgeführt, um zu überprüfen, ob statistisch signifikante Relationen zwischen der Dokumentklassifikationsverteilung, den Institutionstypen, den Bundesländern und den Trägerschaften besteht.
-Hierbei wurden für alle zu überprüfenden Relationen die Nullhypothese angenommen.
+Hierbei wurde für alle zu überprüfenden Relationen von der Nullhypothese ausgegangen.
 Für die Auswertung der Richtlinienklassifikation wurde dabei davon ausgegangen, dass Bundesland, Trägerschaft und Institutionstyp jeweils als unabhängige Variable fungieren und die Klassifikationsstufe der Institutionen als abhängige Variable.
 Die Nullhypothese sagt vorher, dass die Werte der unabhängigen Variable keinen Einfluss auf die Werte der abhängigen Variable haben werden:
 I.e.~für die Kombination \textit{Faktor A}~$\times$~\textit{Faktor B} wird angenommen, dass \textit{Faktor A} keinen Einfluss auf \textit{Faktor B} hat und dass, bedingt durch die symmetrische Natur des Chi-Quadrat-Tests, auch andersherum kein Einfluss besteht.
@@ -154,33 +154,34 @@ Bei einem Cramérs V-Wert von $\phi_C>\num{0,1}$ ist von einem schwachem, bei $\
 
 \parsum{Software}
 Alle statistischen Auswertungen wurden via \textit{R} ausgeführt \autocite{r,dplyr,my-dataset}.
+Für die Klassifikationsarbeit sowie für alle anderweitigen manuellen Bearbeitungen der Datentabellen wurde \textit{LibreOffice Calc} genutzt \autocite{libreoffice}.
 
 \section{Resultate}\label{sec:policy-results}
 \parsum{Aufbau des Abschnitts}
-In diesem Abschnitt werden die Klassifizierungsresultate und die statistische Auswertung jener Resultate dargestellt.
-In \cref{sec:policy-results-general} werden die Resultate und die Auswertung der allgemeinen verwaltungsrechtlichen Dokumente aufgelistet.
-In \cref{sec:policy-results-specific} werden die Resultate und die Auswertung der promotionsspezifischen Dokumente aufgelistet.
+In diesem Abschnitt werden die Resultate der Klassifizierung sowie deren statistische Auswertung dargestellt.
+In \cref{sec:policy-results-general} werden die Resultate und Auswertung der allgemeinen verwaltungsrechtlichen Dokumente aufgelistet.
+In \cref{sec:policy-results-specific} werden die Resultate und Auswertung der promotionsspezifischen Dokumente aufgelistet.
 
 \subsection{Mögliche relevante Faktoren}
 Jenseits der bereits in \cref{sec:policy-material-methods} genannten Faktoren, konnten keine weiteren potenziell relevanten Faktoren identifiziert werden.
 
 \parsum{Unabhängigkeit der Faktoren}
 Zur Überprüfung, ob die zu untersuchenden Faktoren voneinander abhängig sind, wurden für die Kreuzprodukte aller Faktorenkombinationen--Bundesland, Institutionstyp und Trägerschaft--Chi-Quadrat Tests der Unabhängigkeit durchgeführt.
-Die Interaktionen \textit{Bundesland}~$\times$~\textit{Institutionstyp} ($\chi^2 (\num{45}, n=\num{115}) = \num[round-mode=places,round-precision=2]{52,839716}$, $p = \num[round-mode=places,round-precision=2]{0,1970721}>\num{0.05}$), \textit{Bundesland}~$\times$~\textit{Trägerschaft} ($\chi^2 (\num{30}, n=\num{115}) = \num[round-mode=places,round-precision=2]{22,175149}$, $p = \num[round-mode=places,round-precision=2]{0,84759698}>\num{0.05}$) und \textit{Institutionstyp}~$\times$~\textit{Trägerschaft} ($\chi^2 (\num{6}, n=\num{115}) = \num[round-mode=places,round-precision=2]{5,664853}$, $p = \num[round-mode=places,round-precision=2]{0,46176005}>\num{0.05}$) waren alle statistich nicht signifikant und gelten daher als unabhängig voneinander.
+Die Interaktionen \textit{Bundesland}~$\times$~\textit{Institutionstyp} ($\chi^2 (\num{45}, n=\num{115}) = \num[round-mode=places,round-precision=2]{52,839716}$, $p = \num[round-mode=places,round-precision=2]{0,1970721}>\num{0.05}$), \textit{Bundesland}~$\times$~\textit{Trägerschaft} ($\chi^2 (\num{30}, n=\num{115}) = \num[round-mode=places,round-precision=2]{22,175149}$, $p = \num[round-mode=places,round-precision=2]{0,84759698}>\num{0.05}$) und \textit{Institutionstyp}~$\times$~\textit{Trägerschaft} ($\chi^2 (\num{6}, n=\num{115}) = \num[round-mode=places,round-precision=2]{5,664853}$, $p = \num[round-mode=places,round-precision=2]{0,46176005}>\num{0.05}$) waren alle statistich nicht signifikant und gelten daher als voneinander unabhängig.
 
 \subsection{Allgemeine Dokumente}\label{sec:policy-results-general}
 \parsum{Methodenzusammenfassung}
-Die in \cref{sec:policy-material} gesammelten \num{142} Dokumente allgemeiner verwaltungsrechtlicher Natur wurden wie in \cref{sec:policy-methods} beschrieben manuell ausgewertet und in vier verschiedene Klassifikationsstufen aufgeteilt.
+Die in \cref{sec:policy-material} gesammelten \num{142} Dokumente allgemeiner verwaltungsrechtlicher Natur wurden, wie in \cref{sec:policy-methods} beschrieben, manuell ausgewertet und in vier verschiedene Klassifikationsstufen aufgeteilt.
 Das Dokument mit der höchsten Klassifikationsstufe seiner Institution wurde dann als Klassifikationsstufe der Institution verwendet.
 
 \parsum{Allgemeine Auswertung}
 Von den \num{115} Institutionen der Stichprobe besitzen \SI{44,35}{\percent} ($n=\num{51}$) eine dedizierte \gls{forschungsdaten}-Richtlinie für alle Forschenden.
-Weitere \SI{43,48}{\percent} ($n=\num{50}$) der Institutionen besitzen höchstens eine Richtlinie zu \gls{gwp}.
+Weitere \SI{43,48}{\percent} ($n=\num{50}$) der Institutionen besitzen nur eine Richtlinie zu \gls{gwp}.
 Es gab keine Institutionen, die ein Dokument besitzen, was Richtlinien zu \gls{forschungsdaten} jenseits der \gls{gwp} enthält, die nicht auch eine dedizierte \gls{forschungsdaten}-Richtlinie besitzen.
 Die restlichen \SI{12,17}{\percent} ($n=\num{14}$) der Institutionen hatten keine der oben genannten Richtlinien.
 
 \parsum{Institutionstyp}
-Nach Institutionstyp aufgegliedert, ergibt sich hierbei die in \cref{tab:stichprobe-klassifikation-allgemein-hochschultyp} dargestellte Verteilung.
+Nach Institutionstyp aufgegliedert, ergibt sich hierbei die Verteilung aus \cref{tab:stichprobe-klassifikation-allgemein-hochschultyp}.
 \begin{table}[!htbp]
 	\caption{Verteilung der höchsten Klassifizierungsstufe der Institutionen durch ihre allgemeingültigen Dokumente nach \textit{Institutionstyp}~$\times$~\textit{Klassifikationsstufe} aufgegliedert.
     Angabe relativ zum jeweiligen Institutionstyp.
@@ -204,7 +205,7 @@ Nach Trägerschaft aufgegliedert, ergibt sich hierbei die in \cref{tab:stichprob
 Die Interaktion zwischen \textit{Trägerschaft} und \textit{Allgemeine Richtlinien} ist mit $\chi^2 (\num{4}, n=\num{115}) = \num[round-mode=places,round-precision=2]{12,860841467900292}, p = \num[round-mode=places,round-precision=2]{0,011976148280731446}<\num{0.05},\phi_C=\num[round-mode=places,round-precision=2]{0.2364671}$ statistisch signifikant und von schwacher Effektstärke.
 
 \parsum{Bundesländer}
-Nach \textit{Bundesland} aufgegliedert, ergibt sich hierbei die in \cref{fig:policy-klassifikation-allgemein-absolut} dargestellte Verteilung.
+Nach \textit{Bundesland} aufgegliedert, ergibt sich die in \cref{fig:policy-klassifikation-allgemein-absolut} dargestellte Verteilung.
 \begin{figure}[!htbp]
     \centering
     \resizebox{\textwidth}{!}{\input{content/plots/policy_klassifikation_allgemein_absolut}}
@@ -214,7 +215,7 @@ Nach \textit{Bundesland} aufgegliedert, ergibt sich hierbei die in \cref{fig:pol
     Angabe der Bundesländer nach ISO 3166-2:DE \autocite{ISO3166}.}
     \label{fig:policy-klassifikation-allgemein-absolut}
 \end{figure}
-Für eine tabellarische Darstellung von \cref{fig:policy-klassifikation-allgemein-absolut}, siehe \cref{tab:stichprobe-klassifikation-allgemein-bundesland}.
+Für eine tabellarische Darstellung der in \cref{fig:policy-klassifikation-allgemein-absolut} dargestellten Informationen, siehe \cref{tab:stichprobe-klassifikation-allgemein-bundesland}.
 Der Chi-Quadrat-Test für \textit{Bundesland}~$\times$~\textit{Richtlinienklassifikation} ergab einen Wert von $\chi^2 (\num{30}, n=\num{115}) = \num[round-mode=places,round-precision=2]{32,735416910079536}$, $p = \num{0,3341388}>\num{0.05}$.
 Die Interaktion ist somit nicht signifikant.
 
@@ -223,7 +224,7 @@ Die Interaktion ist somit nicht signifikant.
 Es wurde auch überprüft, wie die einzelnen Institutionen ihre \gls{forschungsdaten}-Richtlinien offiziell nennen.
 Hierbei gab es insgesamt sieben verschiedene Bezeichnungen: \textit{Empfehlungen}, \textit{Leitlinie}, \textit{Strategiepapier}, \textit{Policy}, \textit{Leitfaden}, \textit{Grundsätze} und \textit{Richtlinie}.
 Ein Anteil der Institutionen nutzte dabei eine Mehrfachbezeichnung von sowohl \textit{Policy} wie auch \textit{Richtlinie}.
-Die relative und absolute Verteilung dieser Bezeichnungen ist in \cref{fig:policy-klassifikation-fdm-type} gegeben.
+Die relative und absolute Verteilung dieser unterschiedlichen Namensgebung für \glspl{forschungsdaten}-Richtlinien ist in \cref{fig:policy-klassifikation-fdm-type} gegeben.
 \begin{figure}[!htbp]
     \centering
     \begin{tikzpicture}\codesize
@@ -239,10 +240,10 @@ Die relative und absolute Verteilung dieser Bezeichnungen ist in \cref{fig:polic
 \pagebreak
 
 \parsum{Inhalt}
-Inhaltlich sind die Mehrheit der Dokumente zum größten Teil deckungsgleich:
+Inhaltlich ist die Mehrheit der Dokumente zum größten Teil deckungsgleich:
 So verweisen die Richtlinien in der Regel auf die \gls{fair}-Prinzipien, auf die Regeln der \gls{gwp} und auf die Angebote und Kapazitäten der eigenen Universität.
 Von den \num{51} Institutionen mit expliziten \gls{forschungsdaten}-Richtlinien hatten \SI{78,43}{\percent} ($n=\num{40}$) einen entweder verbindlichen oder zumindest scheinbar verbindlichen Charakter für Institution und Forschende.\footnote{Die genaue Aufteilung zwischen verbindlich und scheinbar verbindlich ist durch den Verweis auf externe Dokumente und wegen legalistischer Sprache schwer im Rahmen dieser Arbeit zu unterscheiden. Diese werden daher zusammen gruppiert.}
-In den verbindlichen Richtlinien war zusätzlich zu dem oben angegebenen Inhalt auch meistens eine Klärung der Verantwortlichkeit der verschiedenen Stadien und Tätigkeiten im \gls{fdm} zwischen der Institution und den Forschenden vorhanden.
+In den verbindlichen Richtlinien war zusätzlich zu dem oben angegebenen Inhalt auch meistens eine Klärung der Verantwortlichkeit zwischen der Institution und den Forschenden in Bezug auf die verschiedenen Stadien und Tätigkeiten im \gls{fdm} vorhanden.
 Die restlichen \SI{21,57}{\percent} ($n=\num{11}$) gliedern sich in jene Richtlinien auf, die entweder nicht öffentlich zugänglich waren oder nur einen empfehlenden bzw. fördernden Charakter haben.
 Einen empfehlenden oder fördernden Charakter hatten \SI{19,61}{\percent} ($n=\num{10}$).
 Diese Dokumente beinhalteten meistens eine Bekennung der Universität, dass korrektes \gls{fdm} wichtig ist und dass das Einhalten der \gls{fair}-Regeln und/oder nach Möglichkeit eine Veröffentlichung als Open Data empfohlen wird.
@@ -257,12 +258,12 @@ Nach Dokumentname aufgegliedert, ergibt sich hierbei die in \cref{tab:stichprobe
 \end{table}
 
 \parsum{Signifikanz}
-Ein Chi-Quadrat-Test auf Unabhängigkeit wurde durchgeführt, um zu überprüfen, ob es eine signifikante Relation zwischen dem Namen der \gls{forschungsdaten}-Richtlinie und dessen inhaltlichen Charakter (verpflichtend oder empfehlend bzw. fördernd) gibt.
+Ein Chi-Quadrat-Test auf Unabhängigkeit wurde durchgeführt, um zu überprüfen, ob es eine signifikante Relation zwischen dem Namen einer \gls{forschungsdaten}-Richtlinie und dessen inhaltlichen Charakter (verpflichtend oder empfehlend bzw. fördernd) gibt.
 Die \textit{Dokumentname}~$\times$~\textit{Charakter}-Interaktion ergab einen Wert von $\chi^2 (\num{24}, n=\num{51}) = \num[round-mode=places,round-precision=2]{63,34408}, p = \num[round-mode=places,round-precision=2]{2,122448e-05}<\num{0.001}, \phi_C=\num[round-mode=places,round-precision=2]{0.6434389}>\num{0.5}$ und war somit sowohl statistisch hoch signifikant wie auch vom Effekt her stark.
 
 \subsection{Promotionsspezifische Dokumente}\label{sec:policy-results-specific}
 \parsum{Methodenzusammenfassung}
-Die in \cref{sec:policy-material} gesammelten \num{754} Dokumente promotionsspezifisscher Natur wurden wie in \cref{sec:policy-methods} beschrieben unter Beihilfe maschineller Filter manuell ausgewertet und in fünf verschiedene Klassifikationsstufen aufgeteilt.
+Die in \cref{sec:policy-material} gesammelten \num{754} Dokumente promotionsspezifisscher Natur wurden, wie in \cref{sec:policy-methods} beschrieben, unter Beihilfe maschineller Filter manuell ausgewertet und in fünf verschiedene Klassifikationsstufen aufgeteilt.
 Die Anzahl der Klassifikationsstufen erhöht sich auf sechs, wenn inkludiert wird, dass manche Institutionen ihre Promotions- und Prüfungsordnungen nicht öffentlich zugänglich gemacht haben.
 Das Dokument mit der höchsten Klassifikationsstufe seiner Institution wurde dann als Klassifikationsstufe der Institution verwendet.
 
@@ -273,9 +274,9 @@ Weitere \SI{25,22}{\percent} ($n=\num{29}$) erwähnen weder Richtlinien zu \gls{
 Aus der Stichprobe hatten insgesamt \SI{56,52}{\percent} ($n=\num{65}$) der Institutionen mindestens eine Prüfungs- oder Promotionsordnung, die die Regeln der \gls{gwp} erwähnen.
 Aus diesen Institutionen hatten \SI{6,15}{\percent} ($n=\num{4}$) höchstens eine nicht explizit verbindliche Erwähnung der \gls{gwp}, während die restlichen \SI{93,85}{\percent} ($n=\num{61}$) dieser Institutionen sie für Promovierende explizit verbindlich gültig gemacht haben.
 In Relation zu der gesamten Stichprobe entsprechen diese Institutionen mit \gls{gwp}-Richtlinien jeweils \SI{3,48}{\percent} ($n=\num{4}$) und \SI{53,04}{\percent} ($n=\num{61}$).
-Zuletzt hatten die restlichen \SI{14,78}{\percent} ($n=\num{17}$) Institutionen mindestens eine spezifische Richtlinie zum Umgang mit bzw. der Veröffentlichung von \gls{forschungsdaten}, die im Rahmen des Promotionsvorhabens entstanden sind.
-Aus dieser Menge hatten \SI{5,88}{\percent} ($n=\num{1}$) höchstens eine nicht explizit verbindliche Erwähnung zum Umgang mit den \gls{forschungsdaten}, während die restlichen \SI{94,12}{\percent} ($n=\num{16}$) \gls{forschungsdaten}-Richtlinien verbindlicher Natur beinhalteten.
-In Relation zu der gesamten Stichprobe entsprechen diese Institutionen mit \gls{forschungsdaten}-Richtlinien jeweils \SI{0,87}{\percent} ($n=\num{1}$) und \SI{13,91}{\percent} ($n=\num{16}$).
+Zuletzt hatten die restlichen \SI{14,78}{\percent} ($n=\num{17}$) der Institutionen mindestens eine spezifische Richtlinie zum Umgang mit bzw. der Veröffentlichung von \gls{forschungsdaten}, die im Rahmen des Promotionsvorhabens entstanden sind.
+Aus dieser Menge hatten \SI{5,88}{\percent} ($n=\num{1}$) höchstens eine nicht explizit verbindliche Erwähnung zum Umgang mit \gls{forschungsdaten}, während die restlichen \SI{94,12}{\percent} ($n=\num{16}$) \gls{forschungsdaten}-Richtlinien verbindlicher Natur beinhalteten.
+Diese Institutionen mit \gls{forschungsdaten}-Richtlinien machen jeweils \SI{0,87}{\percent} ($n=\num{1}$) und \SI{13,91}{\percent} ($n=\num{16}$) der gesamten Stichprobe aus.
 \pagebreak
 
 \parsum{Institutionstyp}
@@ -317,7 +318,7 @@ Für eine tabellarischer Darstellung der in \cref{fig:policy-klassifikation-spez
 Für \textit{Bundesland}~$\times$~\textit{Richtlinienklassifikation} wurde mit $\chi^2 (\num{75}, n=\num{115}) = \num[round-mode=places,round-precision=2]{103,65749238406241}, p = \num[round-mode=places,round-precision=2]{0,015877659546371325},\phi_C=\num[round-mode=places,round-precision=2]{0.4245867}$ ein statistisch signifikanter und moderater Effekt gefunden.
 
 \parsum{Allgemeine und spezifische Dokumente}
-Zusätzlich zu beachten sind noch etwaige Interaktionen zwischen den Institutsklassifikationsstufen für allgemeine Dokumente und promotionsspezifische Dokumente.
+Zusätzlich zu beachten sind noch etwaige Interaktionen zwischen den Institutsklassifikationsstufen für allgemeine und promotionsspezifische Dokumente.
 Die Verteilung aller Institutionen nach \textit{Allgemeine Dokumentklassifikation}~$\times$~\textit{Spezifische Dokumentklassifikation} aufgegliedert befindet sich hierfür in \cref{tab:stichprobe-klassifikation-spezifisch-policy}.
 \begin{table}[!htbp]
 	\caption{Verteilung der höchsten Klassifizierungsstufe der Institutionen durch ihre promotionsspezifische Dokumente nach \textit{Allgemeine Dokumentklassifikation}~$\times$~\textit{Spezifische Dokumentklassifikation} aufgegliedert.
@@ -330,8 +331,8 @@ Die Verteilung aller Institutionen nach \textit{Allgemeine Dokumentklassifikatio
 
 \noindent Die höchsten Klassifikationsstufen der beiden Dokumentgruppen stehen jeweils wie folgt in Relation zu einander:
 Institutionen mit Promotions- oder Prüfungsordnungen, die verpflichtenden Inhalt zu \gls{forschungsdaten} haben, waren zu \SI{75,00}{\percent} auch Institutionen, die eine allgemeine verpflichtende \gls{forschungsdaten}-Richtlinie besitzen.
-In umgekehrter Relation hingegen, waren nur \SI{23,53}{\percent} von Institutionen mit \gls{forschungsdaten}-Richtlinien auch Institutionen, welche eine Promotions- oder Prüfungsordnung besitzen, die den Umgang mit \gls{fdm} verbindlich festlegen.
-Die gesamten relativen Verhältnisse nach \textit{Allgemeine Dokumentklassifikation} und nach \textit{Spezifische Dokumentklassifikation} befinden sich respektiv in \cref{tab:stichprobe-klassifikation-spezifisch-policy-relation} und \cref{tab:stichprobe-klassifikation-spezifisch-policy-relation2}.
+In umgekehrter Relation hingegen, waren nur \SI{23,53}{\percent} der Institutionen mit \gls{forschungsdaten}-Richtlinien auch Institutionen, welche midestens eine Promotions- oder Prüfungsordnung besitzen, die den Umgang mit \gls{fdm} verbindlich festlegt.
+Die gesamten relativen Anteile nach \textit{Allgemeine Dokumentklassifikation} und nach \textit{Spezifische Dokumentklassifikation} befinden sich respektiv in \cref{tab:stichprobe-klassifikation-spezifisch-policy-relation} und \cref{tab:stichprobe-klassifikation-spezifisch-policy-relation2}.
 \begin{table}[!htbp]
 	\caption{Die Verteilung der Institutionen nach \textit{Allgemeine Dokumentklassifikation}~$\times$~\textit{Spezifische Dokumentklassifikation} aufgegliedert.
     Angaben relativ zu \textit{Allgemeine Dokumentklassifikation}.
@@ -364,20 +365,20 @@ Diese zwei Chi-Quadrat-Tests haben dementsprechend die respektiven Nullhypothese
 Von den beiden signifikanten Abhängigkeiten hat der Institutionstyp mit einem Cramérs V-Wert von $\phi_C>\num{0.3}$ einen deutlich höheren--jedoch noch immer moderaten--Einfluss als die Trägerschaft, welche mit $\phi_C>\num{0.1}$ einen vergleichsweise schwachen Einfluss hat.
 
 \parsum{Institutionstyp}
-Der Einfluss des Institutionstyps besteht daraus, wie aus \cref{tab:stichprobe-klassifikation-allgemein-hochschultyp} ersichtlich wird, dass Universitäten viel wahrscheinlicher eine \glspl{forschungsdaten}-Richtlinie haben als alle anderen Hochschultypen.
+Der Einfluss des Institutionstyps besteht darin, wie aus \cref{tab:stichprobe-klassifikation-allgemein-hochschultyp} ersichtlich wird, dass Universitäten viel wahrscheinlicher eine \glspl{forschungsdaten}-Richtlinie haben als alle anderen Hochschultypen.
 So haben mehr als die Hälfte aller Universitäten bereits eine dedizierte \gls{forschungsdaten}-Richtlinie. 
 Dieser Anteil reduziert sich bei den \glspl{fh} zu nur einem Viertel.
 Von den \glspl{kh} hat sogar nur ca. jede dreizehnte Institution eine \gls{forschungsdaten}-Richtlinie.
-Diese Ungleichverteilung ergibt Sinn, da Universitäten einerseits forschungsorientierter als andere Hochschulen sind und andererseits meistens ein breiteres fachliches Angebot besitzen:
+Diese Ungleichverteilung ergibt Sinn, da Universitäten einerseits forschungsorientierter als andere Hochschulen agieren und andererseits zumeist auch ein breiteres fachliches Angebot besitzen:
 Die forschungsorientiertere Natur von Universitäten hat als logische Konsequenz, dass es wahrscheinlicher ist, dass an Universitäten mehr \glspl{forschungsdaten} generiert werden und somit damit verbundene externe Faktoren wie z.B.~DFG-Förderregularien stärker oder zumindest breitflächiger greifen und damit für die Universität und deren Forschenden von höherer Relevanz sind.
 Dies würde sich auch mit den Ergebnissen einer früheren Studie aus 2022 decken, welche durch eine Reihe an Interviews aufzeigte, dass Universitätsmitarbeitende eine höhere Dringlichkeit empfinden, auf Auflagen der großen Forschungsförderer zu reagieren, als Mitarbeitende von \glspl{haw} \autocite[9]{Dellmann2022}.
 Dies wurde unter anderem damit in Verbindung gebracht, dass die \glspl{haw} einen Großteil ihrer Drittmittel nicht durch diese Forschungsförderer erhalten, sondern durch Industriekooperationen und andere Geldgeber--welche zumindest zu dem Zeitpunkt der Publikation weniger strikte Auflagen zu \glspl{forschungsdaten} und \gls{fdm} besitzt haben \autocite{Dellmann2022}.
-Das breitere fachliche Angebot erhöht die Wahrscheinlichkeit, dass auch Fachdisziplinen an einer Universität erforscht und unterricht werden, die aus eigener Natur her mehr konkrete \gls{forschungsdaten} generieren als andere, was den Bedarf für derartige Richtlinien erhöht.
+Das breitere fachliche Angebot wiederum erhöht die Wahrscheinlichkeit, dass auch Fachdisziplinen an einer Universität erforscht und unterricht werden, die traditionell \gls{forschungsdaten}-lastiger sind als andere, was den Bedarf für derartige Richtlinien erhöht.
 Bei \glspl{kh} kommt dazu, dass diese Institutionen meistens ein Fächerangebot aufweisen, welches traditionell weniger datenintensive Projekte produziert (z.B. Theologie, Sozialarbeit oder darstellende Kunst), was deren noch niedrigere Rate an \gls{forschungsdaten}-Richtlinien und \gls{gwp}-Verpflichtungen erklären würde.
 
 \parsum{Trägerschaft}
-Für den zweiten signifikanten Faktor, \textit{Trägerschaft} ist die Erklärung ihrer Wirkung weniger offensichtlich--auch wenn diese nur schwacher Natur ist.
-Es ließe sich die Hypothese aufstellen, dass kirchliche und private Institutionen meist ein spezialisierteres Fachangebot aufweisen und durch nicht-öffentliche (privat-industrielle oder kirchliche) Drittmittelquellen weniger Drang verspüren, die \gls{forschungsdaten}-Auflagen der größeren öffentlichen Forschungsförderorganisationen nachzukommen.
+Für den zweiten signifikanten Faktor, \textit{Trägerschaft} ist die Erklärung ihrer Wirkung weniger offensichtlich--auch weil diese nur schwacher Natur ist.
+Es ließe sich die Hypothese aufstellen, dass kirchliche und private Institutionen meist ein spezialisierteres Fachangebot aufweisen und durch nicht-öffentliche (privat-industrielle oder kirchliche) Drittmittelquellen weniger Drang verspüren, den \gls{forschungsdaten}-Auflagen der größeren öffentlichen Forschungsförderorganisationen nachzukommen.
 Im Umkehrschluss würde die Tatsache, dass die Hauptdrittmittelquellen der öffentlichen Institutionen zumeist das \gls{bmbf} und andere Förderoragnisationen wie die \gls{dfg} sind \autocite{Dellmann2022}, bedeuten dass diese einen höheren Druck verspüren, deren striktere \gls{forschungsdaten}-Richtlinien zu implementieren.
 
 \parsum{Insignifikante Faktoren}
@@ -397,9 +398,10 @@ Zukünftige Forschung sollte sich darauf konzentrieren, zu untersuchen, ob die v
 So wurde in früherer Forschung bereits angemerkt, dass die Nutzung anderer Bezeichnungen jenseits von \textit{Richtlinie} und \textit{Policy} zu etwaigen Problemen bei internationalen Projektanträgen führen könnte, da z.B.~\textit{Leitlinie} nicht einfach als \textit{Policy} übersetzt werden könnte und damit etwaigen Auflagen nicht gerecht werden würde \autocite[8]{Hiemenz2018-fdm-report}.
 
 \parsum{Inhalt der Dokumente}
-Der Chi-Square-Test für die Abhängigkeit zwischen Dokumentname und Dokumentcharakter ergab mit einem p-Wert von $p<\num{0.05}$ und $p<\num{0.001}$ einen statistisch hochsignifikanten Wert und widerlegte damit die assoziierte Nullhypothese.
+Der Chi-Square-Test für die Abhängigkeit zwischen \textit{Dokumentname} und \textit{Dokumentcharakter} ergab, mit einem p-Wert von $p<\num{0.001}$, einen statistisch hochsignifikanten Wert und widerlegte damit die hiermit assoziierte Nullhypothese.
 Mit einem Cramérs V-Wert $\phi_C>\num{0,5}$ scheint der Name eines Dokumentes einen starken Zusammenhang zu dessen Inhaltscharakter zu haben.
-Dies ist sehr intuitiv und bietet eine interessante Forschungsmöglichkeit:
+Dies ergibt Sinn, da prinzipiell davon ausgegangen werden können sollte, dass z.B. \textit{Empfehlungen} eher einen empfehlenden Charakter hat als \textit{Richtlinie} oder \textit{Policies}.
+Hier bietet sich dennoch eine lohnenswerte Forschungsmöglichkeit an:
 Da Dokumente mit teils demselben Namen unterschiedlichen Inhaltscharakter besitzen, wäre es interessant, den Textinhalt aller Dokumente z.B. durch Lemmatisierung zu standardisieren, die Texte zu vektorisieren, die kosinale Ähnlichkeit der Dokumente zueinander zu berechnen und dann mit einem statistischen Klumpungsverfahren zu kategorisieren.
 Leider ist der damit verbundene Aufwand in der Vorverarbeitung der Dateien jenseits des Rahmens dieser Arbeit.
 Wir überlassen dies daher einem zukünftigem Forschungsvorhaben.
@@ -420,7 +422,7 @@ Von den beiden signifikanten Abhängigkeiten haben beide Faktoren mit einem Cram
 Dieser Zusammenhang und die stärke des Zusammenhangs stehen dabei in starkem Kontrast zu den allgemeinen verwaltungsrechtlichen Dokumenten.
 Dies lässt sich jedoch dadurch erklären, dass die meisten allgemeinen verwaltungsrechtlichen Dokumente gesetzlich freiwilliger Natur sind.
 Das bedeutet, dass sie sich weniger stark an den landesspezifischen Gesetzgebungen orientieren müssen.
-Promotionsspezifische Dokumente wie Promotions- und Prüfungsordnungen sind hingegen stark abhängig von den respektiven Bildungsgesetzen der Länder.
+Die Existenz promotionsspezifischer Dokumente (z.B.~Promotions- oder Prüfungsordnungen) ist hingegen meist gesetzlich verpflichtender Natur und deren Inhalt daher stark abhängig von den respektiven Bildungsgesetzen der einzelnen Bundesländer.
 Es würde daher Sinn ergeben, dass \textit{Bundesland} ein starker Indikator für den Inhalt eines solchen Dokumentes ist--auch in Hinblick auf \gls{fdm}.
 Dass \textit{Institutionstyp} ebenfalls einen Einfluss auf die Prüfungs- und Promotionsordnungen hat ist ebenfalls wenig verwunderlich.
 Die Erklärung hierzu ist analog zu der Erklärung für den Einfluss von \textit{Institutionstyp} auf die Klassifikation von allgemeinen \gls{forschungsdaten}-Dokumenten.
@@ -430,16 +432,11 @@ Siehe daher \cref{sec:policy-discussion-general} für Details.
 Für \textit{Trägerschaft}~$\times$~\textit{Richtlinienklassifikation}, hingegen, konnte via Chi-Quadrat-Test mit einem Ergebnis von $p\geqslant\num{0,05}$ die Nullhypothese bestätigt werden und damit als relevanter Faktor ausgeschlossen werden.
 Dies ist dadurch erklärbar, dass Promotions- und Prüfungsordnungen--für eine staatliche Anerkennung der Bildungsinstitution--mit denen aus dem öffentlich-rechtlichen Bereich vergleichbar wenn nicht zu großen Teilen identisch sein müssen.
 Es gibt daher keinen Grund davon auszugehen, dass sich Institutionen verschiedener Trägerschaften hier unterschiedlich verhalten sollten.
-\pagebreak
 
 \parsum{Allgemeine Richtlinien}
-Zusätzlich zu den üblichen Faktoren wurde durch ein Chi-Quadrat-Test in \cref{sec:policy-results-specific} auch gezeigt, dass es, mit einem p-Wert von $p<\num{0,05}$, einen statistisch signifikanten Zusammenhang zwischen der höchsten Klassifikationsstufe einer Institution in Bezug auf allgemeine und promotionsspezifische Dokumente gibt.
+Zusätzlich zu den erwarteten Faktoren wurde durch ein Chi-Quadrat-Test in \cref{sec:policy-results-specific} auch gezeigt, dass es, mit einem p-Wert von $p<\num{0,05}$, einen statistisch signifikanten Zusammenhang zwischen der höchsten Klassifikationsstufe einer Institution in Bezug auf allgemeine und promotionsspezifische Dokumente gibt.
 Dieser Zusammenhang hat, mit einem Cramérs V-Wert von $\phi_C>\num{0.3}$, eine moderate Stärke.
-Dies ergibt Sinn, da die Existenz von freiwilligen allgemeinen Richtlinien eine Auswirkung auf den benötigten sowie gewünschten Inhalt einer Promotions- und Prüfungsordnung.
-So können Institutionen, die die Regeln der \gls{gwp} verbindlich gemacht haben, einerseits darauf verzichten, diese explizit zu erwähnen.
-Dies würde die hohe Rate an Institutionen mit \gls{gwp}-Richtlinien ohne Promotionsordnung mit \gls{forschungsdaten}-Bezug erklären.
-Andererseits können diese Institutionen aber auch darauf innerhalb der Promotionsordnungen verweisen (z.B. als Hinweis, dass die Promovierenden über diese Dokumente aufgeklärtwerden müssen.).
-Dies würde dann die noch höhere Rate an Institutionen, die allgemeine \gls{gwp}-Richtlinien haben und diese auch in den Promotionsordnungen verpflichtend machen, erklären.
-Ähnlich sieht zeigt die Existenz einer allgemeinen \gls{forschungsdaten}-Richtlinie an, dass eine Institution sowohl viel Stellenwert auf richtiges \gls{fdm} setzt wie auch zukunftsorientiert versucht zu handeln.
-Institutionen mit dieser Eigenschaft wären entsprechend wahrscheinlichere Kandidaten dafür, dass sie \gls{forschungsdaten}-Richtlinien auch in Promotions- und Prüfungsordnungen integrieren.
+Dies ergibt Sinn, da die Existenz von freiwilligen allgemeinen Richtlinien eine Auswirkung auf den benötigten sowie gewünschten Inhalt einer Promotions- und Prüfungsordnung hat.
+So zeigt die Existenz einer allgemeinen \gls{forschungsdaten}-Richtlinie an, dass eine Institution viel Stellenwert auf richtiges \gls{fdm} setzt und auch versucht zukunftsorientiert oder zumindest dem wissenschaftlichen Zeitgeist nahestehend zu handeln.
+Institutionen mit dieser Eigenschaft wären entsprechend wahrscheinlichere Kandidaten dafür, \gls{forschungsdaten}-Richtlinien auch in Promotions- und Prüfungsordnungen zu integrieren.
 Dies würde erklären, warum drei Viertel aller Institutionen mit einer verpflichtenden \gls{forschungsdaten}-Richtlinie in einer Promotions- oder Prüfungsordnung auch eine allgemeine Richtlinie zum Umgang mit \glspl{forschungsdaten} haben.

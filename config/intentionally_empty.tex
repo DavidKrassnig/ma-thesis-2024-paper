@@ -13,3 +13,11 @@
   ]{blankpage.fg}
 \DeclarePageStyleByLayers{blank}{blankpage.fg}
 \KOMAoptions{cleardoublepage=blank}
+
+\renewcommand*{\partheademptypage}{%
+  \if@twoside\if@openright
+      \null%
+      \thispagestyle{empty}%
+      \blankpage
+  \fi\fi
+}
